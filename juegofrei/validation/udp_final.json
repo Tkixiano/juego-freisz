@@ -1,0 +1,193 @@
+{
+  "failed": 0,
+  "failures": [],
+  "passed": 37,
+  "results": [
+    {
+      "detail": "",
+      "passed": true,
+      "test": "default_mouse_socket_closed"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "external_source_rejected_in_mouse"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "f2_activates_external_and_binds_5005"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "external_starts_frozen"
+    },
+    {
+      "detail": "{ \"coordinate_space\": \"CAMERA\", \"outside_arena\": 0, \"udp\": \"RECIBIENDO\", \"address\": \"127.0.0.1\", \"port\": 5005, \"mode\": \"EXTERNAL\", \"packets_per_second\": 0.0, \"updates_per_second\": 0.0, \"last_sequence\": 101, \"detected\": 1, \"known\": 3, \"age_seconds\": 0.036509, \"tracking\": \"PARCIAL\", \"lost\": [\"right\", \"top\"], \"received\": 1, \"invalid\": 0, \"stale\": 0, \"applied\": 1, \"overloaded_ticks\": 0, \"expired\": 0, \"packet_age_ms\": -1.0, \"source_age_ms\": -1.0, \"modules\": { \"left\": { \"detected\": true, \"age_seconds\": 0.036509, \"target_error_px\": 114.753631591797, \"transform_updates\": 1, \"last_update\": { \"sequence\": 101, \"wire_id\": 1, \"platform\": \"left\", \"target_x\": 500.0, \"target_y\": 400.0, \"angle_degrees\": 15.0, \"received_usec\": 6279096, \"coordinate_space\": \"CAMERA\" } }, \"right\": { \"detected\": false, \"age_seconds\": -1.0, \"target_error_px\": 0.0, \"transform_updates\": 0, \"last_update\": {  } }, \"top\": { \"detected\": false, \"age_seconds\": -1.0, \"target_error_px\": 0.0, \"transform_updates\": 0, \"last_update\": {  } } }, \"suppressed_targets\": 0 }",
+      "passed": true,
+      "test": "real_udp_json_received"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "normalized_coordinates_and_degrees"
+    },
+    {
+      "detail": "(390.2182, 433.4119)",
+      "passed": true,
+      "test": "target_not_teleport"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "only_newest_valid_packet_per_tick"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "old_and_duplicate_sequences_rejected"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "bounded_flood_drains_before_applying_latest"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "highest_sequence_survives_reordered_bounded_drain"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "old_wallclock_and_old_source_rejected_without_poisoning_sequence"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "subpixel_jitter_suppressed_but_tracking_kept_alive"
+    },
+    {
+      "detail": "32",
+      "passed": true,
+      "test": "reject_all_invalid_structures_types_ids_ranges"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "reject_malformed_utf8_and_oversize"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "invalid_packets_do_not_poison_sequence"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "unknown_ids_never_create_platforms"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "external_blocks_mouse_and_rotation_keys"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "manager_rejects_wrong_source"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "per_module_timeout_keeps_other_module_live"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "lost_module_keeps_collider"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "visible_false_stops_immediately"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "tracking_reacquires_without_teleport"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "communication_loss_stops_and_holds_pose"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "age_is_local_receipt_age"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "timeout_does_not_accept_old_sequence"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "pause_drains_udp_without_moving_platforms"
+    },
+    {
+      "detail": "[false, [X: (1.0, 0.000027), Y: (-0.000027, 1.0), O: (555.3719, 402.7435)], [X: (1.0, 0.000027), Y: (-0.000027, 1.0), O: (555.3719, 402.7435)], (555.3719, 402.7435)]",
+      "passed": true,
+      "test": "resume_needs_fresh_pose"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "fresh_pose_after_pause_reacquires"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "both_fighters_collide_with_external_platform"
+    },
+    {
+      "detail": "29.5332854894108",
+      "passed": true,
+      "test": "stream_measured_near_30_packets_per_second"
+    },
+    {
+      "detail": "[(435.9446, 377.1663), (504.9299, 389.3301)]",
+      "passed": true,
+      "test": "udp_translation_rotation_carries_fighters"
+    },
+    {
+      "detail": "14.0",
+      "passed": true,
+      "test": "combat_hits_while_udp_moves_platform"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "no_stock_loss_or_geometry_mutation"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "f2_restores_mouse_and_closes_socket"
+    },
+    {
+      "detail": "[(474.3918, 410.3041), (504.3645, 420.295), &\"left\", true, (504.3918, 420.3041)]",
+      "passed": true,
+      "test": "mouse_drag_still_works_after_udp"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "udp_cannot_override_mouse_mode"
+    }
+  ],
+  "total": 37
+}

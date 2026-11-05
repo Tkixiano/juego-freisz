@@ -1,0 +1,12 @@
+{
+  "preexisting_files_checked": 63,
+  "changed": [],
+  "new_files": [
+    "vision/structure_segmentation.py",
+    "vision/structure_tracking.py",
+    "vision/structure_synthetic.py",
+    "vision/STRUCTURE_PHASE1B.md",
+    "tests/test_structure_merging.py"
+  ],
+  "game_or_protocol_changed": false
+}

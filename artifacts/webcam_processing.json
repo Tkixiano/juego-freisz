@@ -1,0 +1,19 @@
+{
+  "source": "webcam",
+  "processed_frames": 93,
+  "elapsed_seconds": 10.479902199935168,
+  "processing_average_fps": 8.874128615491786,
+  "ids_seen": [],
+  "packets_sent": 0,
+  "send_errors": 0,
+  "camera_closed": true,
+  "snapshot_saved": false,
+  "last_frame_size": [
+    640,
+    480
+  ],
+  "processing_fps_last_window": 18.686503998489822,
+  "opencv": "5.0.0",
+  "numpy": "2.5.3",
+  "exit_code": 0
+}

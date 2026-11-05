@@ -1,0 +1,90 @@
+{
+  "result": [
+    {
+      "detail": "(440.0, 541.9531)",
+      "passed": true,
+      "test": "floor_and_gravity"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "simultaneous_independent_movement"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "acceleration_speed_cap"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "deceleration"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "variable_jump"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "double_jump"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "third_jump_rejected"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "air_control"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "fast_fall"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "one_way_landing"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "drop_through"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "drop_mask_restored_and_solid_floor"
+    },
+    {
+      "detail": "apex=363.219024658203 landing=405.979431152344",
+      "passed": true,
+      "test": "pass_platform_from_below_and_land"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "coyote_time"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "jump_buffer_on_landing"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "player2_jump"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "elimination_respawn"
+    }
+  ],
+  "source": "game"
+}

@@ -1,0 +1,59 @@
+{
+  "source": "webcam",
+  "processed_frames": 0,
+  "elapsed_seconds": 10.020047400146723,
+  "processing_average_fps": 0.0,
+  "ids_seen": [],
+  "packets_sent": 0,
+  "send_errors": 0,
+  "camera_closed": true,
+  "snapshot_saved": false,
+  "last_frame_size": null,
+  "camera_last_state": "CAMERA closed; blocked native worker terminated",
+  "opencv_timing": {
+    "samples": 0,
+    "mean_ms": 0,
+    "p95_ms": 0,
+    "max_ms": 0
+  },
+  "capture_read_timing": {
+    "samples": 0,
+    "mean_ms": 0,
+    "p95_ms": 0,
+    "max_ms": 0
+  },
+  "source_age_timing": {
+    "samples": 0,
+    "mean_ms": 0,
+    "p95_ms": 0,
+    "max_ms": 0
+  },
+  "capture": {
+    "state": "CAMERA closed; blocked native worker terminated",
+    "opened": false,
+    "frames_copied": 0,
+    "capture_read_ms": 0.0,
+    "open_ms": 0.0,
+    "restarts": 1,
+    "forced_stops": 1,
+    "read_errors": 0,
+    "child_alive": false
+  },
+  "udp": null,
+  "modules": {
+    "1": {
+      "state": "ACQUIRING",
+      "age_ms": null,
+      "confirmations": 0
+    },
+    "2": {
+      "state": "ACQUIRING",
+      "age_ms": null,
+      "confirmations": 0
+    }
+  },
+  "processing_fps_last_window": 0.0,
+  "opencv": "5.0.0",
+  "numpy": "2.5.3",
+  "exit_code": 1
+}

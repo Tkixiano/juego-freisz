@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var suite: RefCounted = load(\"res://validation/OfflineReplayValidation.gd\").new()\nget_tree().current_scene.set_meta(\"ui_suite\",suite)\nsuite.run_ui_probe(get_tree())\nreturn \"ui_probe_started\""}}

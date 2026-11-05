@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/AttackData.gd" id="1"]
+[resource]
+script = ExtResource("1")
+title = "Ligero"
+startup_frames = 4
+active_frames = 4
+recovery_frames = 12
+damage = 6.0
+base_knockback = 320.0
+hitstun = 0.16
+radius = 28.0
+reach = 33.0
+hitstop_frames = 3

@@ -1,0 +1,145 @@
+{
+  "replay_version": 1,
+  "scenarios": [
+    {
+      "scenario": "01_creation",
+      "file": "01_creation.json",
+      "frames": 12,
+      "merge": 0,
+      "split": 0
+    },
+    {
+      "scenario": "02_movement",
+      "file": "02_movement.json",
+      "frames": 68,
+      "merge": 0,
+      "split": 0
+    },
+    {
+      "scenario": "03_rotation",
+      "file": "03_rotation.json",
+      "frames": 68,
+      "merge": 0,
+      "split": 0
+    },
+    {
+      "scenario": "04_silhouette",
+      "file": "04_silhouette.json",
+      "frames": 24,
+      "merge": 0,
+      "split": 0
+    },
+    {
+      "scenario": "05_two",
+      "file": "05_two.json",
+      "frames": 15,
+      "merge": 0,
+      "split": 0
+    },
+    {
+      "scenario": "06_merge",
+      "file": "06_merge.json",
+      "frames": 30,
+      "merge": 1,
+      "split": 0
+    },
+    {
+      "scenario": "07_split",
+      "file": "07_split.json",
+      "frames": 45,
+      "merge": 1,
+      "split": 1
+    },
+    {
+      "scenario": "08_three_merge",
+      "file": "08_three_merge.json",
+      "frames": 30,
+      "merge": 1,
+      "split": 0
+    },
+    {
+      "scenario": "09_hole",
+      "file": "09_hole.json",
+      "frames": 15,
+      "merge": 0,
+      "split": 0
+    },
+    {
+      "scenario": "10_corner",
+      "file": "10_corner.json",
+      "frames": 15,
+      "merge": 0,
+      "split": 0
+    },
+    {
+      "scenario": "11_removal",
+      "file": "11_removal.json",
+      "frames": 30,
+      "merge": 0,
+      "split": 0
+    },
+    {
+      "scenario": "12_reappearance",
+      "file": "12_reappearance.json",
+      "frames": 45,
+      "merge": 0,
+      "split": 0
+    },
+    {
+      "scenario": "13_duplicate",
+      "file": "13_duplicate.json",
+      "frames": 16,
+      "merge": 0,
+      "split": 0
+    },
+    {
+      "scenario": "14_out_of_order",
+      "file": "14_out_of_order.json",
+      "frames": 16,
+      "merge": 0,
+      "split": 0
+    },
+    {
+      "scenario": "15_invalid_geometry",
+      "file": "15_invalid_geometry.json",
+      "frames": 15,
+      "merge": 0,
+      "split": 0
+    },
+    {
+      "scenario": "16_occupied_change",
+      "file": "16_occupied_change.json",
+      "frames": 60,
+      "merge": 0,
+      "split": 0
+    },
+    {
+      "scenario": "17_occupied_merge",
+      "file": "17_occupied_merge.json",
+      "frames": 60,
+      "merge": 1,
+      "split": 0
+    },
+    {
+      "scenario": "18_occupied_split",
+      "file": "18_occupied_split.json",
+      "frames": 75,
+      "merge": 1,
+      "split": 1
+    },
+    {
+      "scenario": "19_simultaneous",
+      "file": "19_simultaneous.json",
+      "frames": 68,
+      "merge": 0,
+      "split": 0
+    },
+    {
+      "scenario": "20_long",
+      "file": "20_long.json",
+      "frames": 3600,
+      "merge": 30,
+      "split": 29
+    }
+  ]
+}

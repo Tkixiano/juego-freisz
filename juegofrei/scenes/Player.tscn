@@ -1,0 +1,76 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://scripts/PlayerController.gd" id="1"]
+[ext_resource type="Resource" path="res://resources/PlayerMovement.tres" id="2"]
+[ext_resource type="Script" path="res://scripts/CombatController.gd" id="3"]
+[ext_resource type="Script" path="res://scripts/DamageModel.gd" id="4"]
+[ext_resource type="Script" path="res://scripts/CombatHitbox.gd" id="5"]
+[ext_resource type="Resource" path="res://resources/attacks/Light.tres" id="6"]
+[ext_resource type="Resource" path="res://resources/attacks/Heavy.tres" id="7"]
+[ext_resource type="Resource" path="res://resources/attacks/AirLight.tres" id="8"]
+[ext_resource type="Resource" path="res://resources/attacks/AirHeavy.tres" id="9"]
+[ext_resource type="Script" path="res://scripts/UnstuckGuard.gd" id="10"]
+[sub_resource type="CircleShape2D" id="HitShape"]
+resource_local_to_scene = true
+radius = 28.0
+
+[sub_resource type="RectangleShape2D" id="Shape"]
+size = Vector2(40, 40)
+
+[node name="Player" type="CharacterBody2D" groups=["players"]]
+collision_layer = 4
+collision_mask = 3
+floor_snap_length = 8.0
+script = ExtResource("1")
+movement = ExtResource("2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("Shape")
+
+[node name="Visual" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-20, -20, 20, -20, 20, 20, -20, 20)
+color = Color(0.325, 0.647, 1, 1)
+
+[node name="Highlight" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, -12, -16, -12)
+color = Color(0.7, 0.85, 1, 1)
+
+[node name="Identifier" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -45.0
+offset_right = 20.0
+offset_bottom = -22.0
+theme_override_font_sizes/font_size = 16
+text = "P1"
+horizontal_alignment = 1
+
+[node name="Damage" type="Node" parent="."]
+script = ExtResource("4")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("Shape")
+
+[node name="Combat" type="Node2D" parent="."]
+script = ExtResource("3")
+ground_light = ExtResource("6")
+ground_heavy = ExtResource("7")
+air_light = ExtResource("8")
+air_heavy = ExtResource("9")
+
+[node name="Hitbox" type="Area2D" parent="Combat"]
+collision_layer = 0
+collision_mask = 0
+monitoring = false
+monitorable = false
+script = ExtResource("5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Combat/Hitbox"]
+shape = SubResource("HitShape")
+
+[node name="UnstuckGuard" type="Node" parent="."]
+script = ExtResource("10")

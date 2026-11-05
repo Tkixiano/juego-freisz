@@ -1,0 +1,20 @@
+{
+  "opened_and_read_frame": true,
+  "state": "CAMERA connected",
+  "worker_closed": true,
+  "capture": {
+    "state": "CAMERA connected",
+    "opened": false,
+    "frames_copied": 1,
+    "capture_read_ms": 356.0932001564652,
+    "open_ms": 869.0235000103712,
+    "restarts": 0,
+    "forced_stops": 0,
+    "read_errors": 0,
+    "child_alive": false
+  },
+  "size": [
+    640,
+    480
+  ]
+}

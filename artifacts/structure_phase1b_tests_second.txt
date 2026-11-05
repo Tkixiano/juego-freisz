@@ -1,0 +1,34 @@
+test_birth_already_joined_does_not_invent_constituents (tests.test_structure_merging.StructureTests.test_birth_already_joined_does_not_invent_constituents) ... ok
+test_cache_never_emits_overlapping_shapes (tests.test_structure_merging.StructureTests.test_cache_never_emits_overlapping_shapes) ... ok
+test_color_change_during_birth_resets_confirmation (tests.test_structure_merging.StructureTests.test_color_change_during_birth_resets_confirmation) ... ok
+test_confirmation_is_consecutive (tests.test_structure_merging.StructureTests.test_confirmation_is_consecutive) ... ok
+test_corner_is_one_logical_structure_multiple_simple_rings (tests.test_structure_merging.StructureTests.test_corner_is_one_logical_structure_multiple_simple_rings) ... ok
+test_different_colors_recover_unique_ids (tests.test_structure_merging.StructureTests.test_different_colors_recover_unique_ids) ... ok
+test_global_hysteresis_does_not_inherit_birth_delay (tests.test_structure_merging.StructureTests.test_global_hysteresis_does_not_inherit_birth_delay) ... ok
+test_holes_preserved_not_filled (tests.test_structure_merging.StructureTests.test_holes_preserved_not_filled) ... ok
+test_identical_same_color_split_is_explicitly_ambiguous (tests.test_structure_merging.StructureTests.test_identical_same_color_split_is_explicitly_ambiguous) ... ok
+test_json_snapshot_has_no_udp_schema_or_inherited_angle (tests.test_structure_merging.StructureTests.test_json_snapshot_has_no_udp_schema_or_inherited_angle) ... ok
+test_limits_invalid_inputs_and_configuration (tests.test_structure_merging.StructureTests.test_limits_invalid_inputs_and_configuration) ... ok
+test_loss_holds_then_removes_and_reappearance_confirms (tests.test_structure_merging.StructureTests.test_loss_holds_then_removes_and_reappearance_confirms) ... ok
+test_masks_retained_and_union (tests.test_structure_merging.StructureTests.test_masks_retained_and_union) ... ok
+test_near_split_uses_longer_confirmation (tests.test_structure_merging.StructureTests.test_near_split_uses_longer_confirmation) ... ok
+test_no_bbox_or_hull_and_exact_concavity (tests.test_structure_merging.StructureTests.test_no_bbox_or_hull_and_exact_concavity) ... ok
+test_no_false_merge_when_one_nearby_object_disappears (tests.test_structure_merging.StructureTests.test_no_false_merge_when_one_nearby_object_disappears) ... ok
+test_noise_area_rejected (tests.test_structure_merging.StructureTests.test_noise_area_rejected) ... ok
+test_overlapping_hsv_does_not_duplicate_geometry (tests.test_structure_merging.StructureTests.test_overlapping_hsv_does_not_duplicate_geometry) ... ok
+test_proximity_never_creates_fake_bridge (tests.test_structure_merging.StructureTests.test_proximity_never_creates_fake_bridge) ... ok
+test_random_masks_area_conservation (tests.test_structure_merging.StructureTests.test_random_masks_area_conservation) ... ok
+test_real_shape_change_rebuilds_and_preserves_concavity (tests.test_structure_merging.StructureTests.test_real_shape_change_rebuilds_and_preserves_concavity) ... ok
+test_resolution_change_rejected_without_mutation (tests.test_structure_merging.StructureTests.test_resolution_change_rejected_without_mutation) ... ok
+test_single_frame_merge_does_not_emit (tests.test_structure_merging.StructureTests.test_single_frame_merge_does_not_emit) ... ok
+test_single_frame_split_does_not_emit (tests.test_structure_merging.StructureTests.test_single_frame_split_does_not_emit) ... ok
+test_thin_noise_bridge_remains_ambiguous (tests.test_structure_merging.StructureTests.test_thin_noise_bridge_remains_ambiguous) ... ok
+test_three_colors_ids_recovered_and_no_duplicated_participants (tests.test_structure_merging.StructureTests.test_three_colors_ids_recovered_and_no_duplicated_participants) ... ok
+test_tiny_boundary_noise_does_not_rebuild (tests.test_structure_merging.StructureTests.test_tiny_boundary_noise_does_not_rebuild) ... ok
+test_translation_does_not_rebuild_geometry (tests.test_structure_merging.StructureTests.test_translation_does_not_rebuild_geometry) ... ok
+test_twelve_required_sequences (tests.test_structure_merging.StructureTests.test_twelve_required_sequences) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 16.443s
+
+OK

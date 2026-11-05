@@ -1,0 +1,143 @@
+{
+  "phase": "1C.1 + 1C.2 synthetic only",
+  "compound_mcp_passed": 109,
+  "compound_headless_passed": 109,
+  "physical_probe_pixels": 122880,
+  "false_positive_pixels": 0,
+  "false_negative_pixels": 0,
+  "max_area_error_px2": 0.000159144398821809,
+  "compound_carrier": {
+    "carry_error_px": 3.814697265625e-06,
+    "floor_frames": 60,
+    "frames": 60,
+    "max_overlap_area_px2": 0.0,
+    "max_player_step_px": 1.5,
+    "name": "compound_carrier"
+  },
+  "python_new_and_phase1b": 42,
+  "python_full_passes": 2,
+  "legacy_python": 59,
+  "phase1a": 92,
+  "original_game": 225,
+  "merge_split_scenarios": [
+    12,
+    12
+  ],
+  "performance": [
+    {
+      "label": "before",
+      "workload": "translation",
+      "frames": 360,
+      "total_ms": {
+        "mean": 22.32539138963653,
+        "p50": 21.79084997624159,
+        "p95": 27.998105064034466,
+        "p99": 31.786701970268076,
+        "max": 35.252399975433946
+      },
+      "round_means_ms": [
+        22.215226680661242,
+        22.045186660640564,
+        22.715760827607784
+      ]
+    },
+    {
+      "label": "before",
+      "workload": "topology",
+      "frames": 360,
+      "total_ms": {
+        "mean": 18.551445549302215,
+        "p50": 17.56900001782924,
+        "p95": 24.74400505889207,
+        "p99": 27.3157428810373,
+        "max": 27.69130002707243
+      },
+      "round_means_ms": [
+        18.7406483242133,
+        17.836634162813425,
+        19.077054160879925
+      ]
+    },
+    {
+      "label": "before",
+      "workload": "shape_changes",
+      "frames": 360,
+      "total_ms": {
+        "mean": 32.22812944699803,
+        "p50": 31.648900010623038,
+        "p95": 41.002345038577914,
+        "p99": 47.265952974557884,
+        "max": 67.04720016568899
+      },
+      "round_means_ms": [
+        33.68238335436521,
+        31.466107479839895,
+        31.535897506788995
+      ]
+    },
+    {
+      "label": "after",
+      "workload": "translation",
+      "frames": 360,
+      "total_ms": {
+        "mean": 12.307433336455789,
+        "p50": 11.744000017642975,
+        "p95": 17.23941502859816,
+        "p99": 18.801868970040232,
+        "max": 21.325499983504415
+      },
+      "round_means_ms": [
+        13.38243000015306,
+        12.532431669145202,
+        11.007438340069106
+      ]
+    },
+    {
+      "label": "after",
+      "workload": "topology",
+      "frames": 360,
+      "total_ms": {
+        "mean": 11.211702226298964,
+        "p50": 10.46804990619421,
+        "p95": 15.976435074117036,
+        "p99": 19.697200041264296,
+        "max": 28.811000054702163
+      },
+      "round_means_ms": [
+        12.604984998082122,
+        10.427518336412808,
+        10.602603344401965
+      ]
+    },
+    {
+      "label": "after",
+      "workload": "shape_changes",
+      "frames": 360,
+      "total_ms": {
+        "mean": 17.37894999872272,
+        "p50": 16.75570011138916,
+        "p95": 24.130710144527256,
+        "p99": 25.80622712383047,
+        "max": 37.897099973633885
+      },
+      "round_means_ms": [
+        16.81379916650864,
+        17.39770666657326,
+        17.925344163086265
+      ]
+    }
+  ],
+  "compatibility": {
+    "files_checked": 67,
+    "modified": [
+      "vision\\structure_segmentation.py",
+      "vision\\structure_tracking.py",
+      "juegofrei\\scripts\\geometry\\DynamicGeometryManager.gd",
+      "juegofrei\\scripts\\geometry\\DynamicPolygonObject.gd"
+    ],
+    "original_gameplay_files_modified": []
+  },
+  "hardware_opened": false,
+  "new_geometry_udp_implemented": false,
+  "new_geometry_attached_to_main": false
+}

@@ -1,0 +1,163 @@
+{
+  "controlled_fall": [
+    {
+      "detail": "135.0",
+      "passed": true,
+      "test": "gentle_first_down_frame"
+    },
+    {
+      "detail": "800.0",
+      "passed": true,
+      "test": "hold_down_reaches_controlled_cap"
+    },
+    {
+      "detail": "607.5",
+      "passed": true,
+      "test": "normal_fall_unchanged"
+    },
+    {
+      "detail": "770.0",
+      "passed": true,
+      "test": "release_is_progressive"
+    },
+    {
+      "detail": "640.0",
+      "passed": true,
+      "test": "release_returns_to_normal_cap"
+    },
+    {
+      "detail": "790.0",
+      "passed": true,
+      "test": "player2_down_uses_same_tuning"
+    },
+    {
+      "detail": "153.600006103516",
+      "passed": true,
+      "test": "horizontal_air_control_kept"
+    },
+    {
+      "detail": "[-337.499969482422, -337.499969482422]",
+      "passed": true,
+      "test": "down_does_not_cut_ascent"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "time_step_independent_vertical"
+    }
+  ],
+  "gravity_regression": [
+    {
+      "detail": "0.53333333333333",
+      "passed": true,
+      "test": "slower_200px_fall"
+    },
+    {
+      "detail": "640.0",
+      "passed": true,
+      "test": "normal_terminal_speed"
+    },
+    {
+      "detail": "135.0",
+      "passed": true,
+      "test": "fast_fall_accelerates_without_instant_snap"
+    },
+    {
+      "detail": "800.0",
+      "passed": true,
+      "test": "fast_fall_cap"
+    },
+    {
+      "detail": "{ \"apex_y\": 367.480773925781, \"apex_seconds\": 0.55 }",
+      "passed": true,
+      "test": "agile_reachable_jump"
+    }
+  ],
+  "movement_regression": [
+    {
+      "detail": "(440.0, 541.9966)",
+      "passed": true,
+      "test": "floor_and_gravity"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "simultaneous_independent_movement"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "acceleration_speed_cap"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "deceleration"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "variable_jump"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "double_jump"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "third_jump_rejected"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "air_control"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "fast_fall"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "one_way_landing"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "drop_through"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "drop_mask_restored_and_solid_floor"
+    },
+    {
+      "detail": "apex=363.218475341797 landing=405.978881835938",
+      "passed": true,
+      "test": "pass_platform_from_below_and_land"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "coyote_time"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "jump_buffer_on_landing"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "player2_jump"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "elimination_respawn"
+    }
+  ]
+}

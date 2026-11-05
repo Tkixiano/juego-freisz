@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/AttackData.gd" id="1"]
+[resource]
+script = ExtResource("1")
+title = "Fuerte"
+startup_frames = 12
+active_frames = 5
+recovery_frames = 24
+damage = 14.0
+base_knockback = 560.0
+hitstun = 0.24
+radius = 34.0
+reach = 39.0
+hitstop_frames = 5

@@ -1,0 +1,1206 @@
+{
+  "coordinate_space": "PROJECTOR",
+  "received": 236,
+  "trace": [
+    {
+      "angle_degrees": -4.88829487945581,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313151313,
+      "sequence": 1250441714,
+      "target_x": 269.549072265625,
+      "target_y": 448.871856689453,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 1.149513991556,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313151313,
+      "sequence": 1250441714,
+      "target_x": 976.458129882813,
+      "target_y": 453.864990234375,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -5.07351846051109,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313184651,
+      "sequence": 1250441715,
+      "target_x": 269.70703125,
+      "target_y": 449.907409667969,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 1.45916615119463,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313184651,
+      "sequence": 1250441715,
+      "target_x": 977.780883789063,
+      "target_y": 454.185028076172,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -5.07351787633836,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313218095,
+      "sequence": 1250441716,
+      "target_x": 270.143737792969,
+      "target_y": 450.913970947266,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 1.78356895768642,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313218095,
+      "sequence": 1250441716,
+      "target_x": 979.180236816406,
+      "target_y": 454.628173828125,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -5.40674796914623,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313251303,
+      "sequence": 1250441717,
+      "target_x": 270.31640625,
+      "target_y": 451.969573974609,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 2.00725156332128,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313251303,
+      "sequence": 1250441717,
+      "target_x": 980.589233398438,
+      "target_y": 454.902130126953,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -5.65853250251161,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313284636,
+      "sequence": 1250441718,
+      "target_x": 270.719177246094,
+      "target_y": 453.189880371094,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 2.34548081526106,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313284636,
+      "sequence": 1250441718,
+      "target_x": 981.860595703125,
+      "target_y": 455.040832519531,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -5.83191037686352,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313317964,
+      "sequence": 1250441719,
+      "target_x": 270.968444824219,
+      "target_y": 454.376007080078,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 2.64244742025612,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313317964,
+      "sequence": 1250441719,
+      "target_x": 983.180053710938,
+      "target_y": 455.277984619141,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -6.0443107156857,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313351407,
+      "sequence": 1250441720,
+      "target_x": 271.848205566406,
+      "target_y": 455.485870361328,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 2.96602929600277,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313351407,
+      "sequence": 1250441720,
+      "target_x": 984.292358398438,
+      "target_y": 455.383911132813,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -6.27970668422355,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313384659,
+      "sequence": 1250441721,
+      "target_x": 272.598297119141,
+      "target_y": 456.70458984375,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 3.25212613880379,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313384659,
+      "sequence": 1250441721,
+      "target_x": 985.902282714844,
+      "target_y": 455.610870361328,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -6.49683208649344,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313434721,
+      "sequence": 1250441722,
+      "target_x": 274.052886962891,
+      "target_y": 458.297729492188,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 3.66011129838481,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313434721,
+      "sequence": 1250441722,
+      "target_x": 987.171630859375,
+      "target_y": 455.568115234375,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -6.7141642596067,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313468187,
+      "sequence": 1250441723,
+      "target_x": 275.032165527344,
+      "target_y": 459.229675292969,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 3.94611350423051,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313468187,
+      "sequence": 1250441723,
+      "target_x": 988.486938476563,
+      "target_y": 455.699462890625,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -6.86507613366692,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313501292,
+      "sequence": 1250441724,
+      "target_x": 276.305511474609,
+      "target_y": 460.396820068359,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 4.22246972904845,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313501292,
+      "sequence": 1250441724,
+      "target_x": 989.285400390625,
+      "target_y": 455.627624511719,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -7.07159623118765,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313534863,
+      "sequence": 1250441725,
+      "target_x": 277.490051269531,
+      "target_y": 461.325744628906,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 4.49198278026352,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313534863,
+      "sequence": 1250441725,
+      "target_x": 990.399841308594,
+      "target_y": 455.718780517578,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -7.07159665669815,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313567967,
+      "sequence": 1250441726,
+      "target_x": 278.395202636719,
+      "target_y": 462.654846191406,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 4.78163037176289,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313567967,
+      "sequence": 1250441726,
+      "target_x": 991.684143066406,
+      "target_y": 455.630859375,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -7.51624475589533,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313601475,
+      "sequence": 1250441727,
+      "target_x": 280.081115722656,
+      "target_y": 463.809783935547,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 5.00421030713926,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313601475,
+      "sequence": 1250441727,
+      "target_x": 992.485229492188,
+      "target_y": 455.556549072266,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -7.7255754879734,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313634650,
+      "sequence": 1250441728,
+      "target_x": 281.839447021484,
+      "target_y": 465.095672607422,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 5.32486217107056,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313634650,
+      "sequence": 1250441728,
+      "target_x": 993.427307128906,
+      "target_y": 455.516632080078,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -7.9870860414633,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313668027,
+      "sequence": 1250441729,
+      "target_x": 283.136749267578,
+      "target_y": 466.107971191406,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 5.55236328536235,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313668027,
+      "sequence": 1250441729,
+      "target_x": 993.978515625,
+      "target_y": 455.343688964844,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -8.17027901551762,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313701356,
+      "sequence": 1250441730,
+      "target_x": 284.807891845703,
+      "target_y": 467.292388916016,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 5.81010760684662,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313701356,
+      "sequence": 1250441730,
+      "target_x": 995.281494140625,
+      "target_y": 455.113037109375,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -8.4021036103644,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313734828,
+      "sequence": 1250441731,
+      "target_x": 286.523742675781,
+      "target_y": 468.268463134766,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 6.04760881588442,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313734828,
+      "sequence": 1250441731,
+      "target_x": 995.92138671875,
+      "target_y": 454.679351806641,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -8.56315157415283,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313768724,
+      "sequence": 1250441732,
+      "target_x": 288.423736572266,
+      "target_y": 469.425445556641,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 6.3166932458033,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313768724,
+      "sequence": 1250441732,
+      "target_x": 996.656799316406,
+      "target_y": 454.717193603516,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -8.76906280560619,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313818071,
+      "sequence": 1250441733,
+      "target_x": 290.3427734375,
+      "target_y": 470.677032470703,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 6.63663855448493,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313818071,
+      "sequence": 1250441733,
+      "target_x": 997.444885253906,
+      "target_y": 454.409393310547,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -8.76906301687322,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313834650,
+      "sequence": 1250441734,
+      "target_x": 292.431365966797,
+      "target_y": 471.702697753906,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 6.9291709062705,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313834650,
+      "sequence": 1250441734,
+      "target_x": 998.012451171875,
+      "target_y": 453.943786621094,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -9.0110964415903,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313884749,
+      "sequence": 1250441735,
+      "target_x": 294.544311523438,
+      "target_y": 472.888854980469,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 7.17444593844221,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313884749,
+      "sequence": 1250441735,
+      "target_x": 999.073181152344,
+      "target_y": 453.564056396484,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -9.18607324969188,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313918036,
+      "sequence": 1250441736,
+      "target_x": 296.634094238281,
+      "target_y": 473.856567382813,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 7.46448948392206,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313918036,
+      "sequence": 1250441736,
+      "target_x": 999.817138671875,
+      "target_y": 453.033447265625,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -9.18607338645918,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313955859,
+      "sequence": 1250441737,
+      "target_x": 298.484832763672,
+      "target_y": 474.904693603516,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 7.67272759507779,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313955859,
+      "sequence": 1250441737,
+      "target_x": 1000.15966796875,
+      "target_y": 452.565734863281,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -9.5229581107241,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 313968064,
+      "sequence": 1250441738,
+      "target_x": 300.857788085938,
+      "target_y": 475.895874023438,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 7.89973002886604,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 313968064,
+      "sequence": 1250441738,
+      "target_x": 1000.51220703125,
+      "target_y": 452.177307128906,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -9.52295795311808,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314001334,
+      "sequence": 1250441739,
+      "target_x": 303.396240234375,
+      "target_y": 476.76806640625,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 8.18037571653168,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314001334,
+      "sequence": 1250441739,
+      "target_x": 1001.28631591797,
+      "target_y": 451.632202148438,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -9.84948012523688,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314034597,
+      "sequence": 1250441740,
+      "target_x": 306.262573242188,
+      "target_y": 477.662231445313,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 8.4450134148514,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314034597,
+      "sequence": 1250441740,
+      "target_x": 1001.63446044922,
+      "target_y": 451.030181884766,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -9.84948026903241,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314068132,
+      "sequence": 1250441741,
+      "target_x": 308.727203369141,
+      "target_y": 478.673278808594,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 8.83372626876443,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314068132,
+      "sequence": 1250441741,
+      "target_x": 1001.88031005859,
+      "target_y": 450.384399414063,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -10.0943136888961,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314101276,
+      "sequence": 1250441742,
+      "target_x": 311.014739990234,
+      "target_y": 479.541595458984,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 9.09979065294533,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314101276,
+      "sequence": 1250441742,
+      "target_x": 1002.69000244141,
+      "target_y": 449.799255371094,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -10.2663154704823,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314151363,
+      "sequence": 1250441743,
+      "target_x": 313.405059814453,
+      "target_y": 480.527191162109,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 9.28399780458161,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314151363,
+      "sequence": 1250441743,
+      "target_x": 1002.98681640625,
+      "target_y": 449.148193359375,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -10.2663156150209,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314184642,
+      "sequence": 1250441744,
+      "target_x": 316.380950927734,
+      "target_y": 481.551025390625,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 9.47761280661225,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314184642,
+      "sequence": 1250441744,
+      "target_x": 1003.06500244141,
+      "target_y": 448.308715820313,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -10.4695644890307,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314217956,
+      "sequence": 1250441745,
+      "target_x": 318.99462890625,
+      "target_y": 482.438659667969,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 9.63525115288237,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314217956,
+      "sequence": 1250441745,
+      "target_x": 1003.146484375,
+      "target_y": 447.635345458984,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -10.4695641154739,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314234630,
+      "sequence": 1250441746,
+      "target_x": 322.040222167969,
+      "target_y": 483.306488037109,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 9.83230945234316,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314234630,
+      "sequence": 1250441746,
+      "target_x": 1003.11871337891,
+      "target_y": 446.944915771484,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -10.6721968390101,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314267936,
+      "sequence": 1250441747,
+      "target_x": 324.854675292969,
+      "target_y": 483.955627441406,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 10.0505510502979,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314267936,
+      "sequence": 1250441747,
+      "target_x": 1003.56115722656,
+      "target_y": 446.333831787109,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -10.672197045128,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314301276,
+      "sequence": 1250441748,
+      "target_x": 327.759613037109,
+      "target_y": 484.612274169922,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 10.2153124160047,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314301276,
+      "sequence": 1250441748,
+      "target_x": 1003.81536865234,
+      "target_y": 445.499114990234,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -10.8407385487302,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314334613,
+      "sequence": 1250441749,
+      "target_x": 330.965057373047,
+      "target_y": 485.39306640625,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 10.4316001408909,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314334613,
+      "sequence": 1250441749,
+      "target_x": 1003.73931884766,
+      "target_y": 444.722747802734,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -10.8407387930872,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314384615,
+      "sequence": 1250441750,
+      "target_x": 333.685729980469,
+      "target_y": 486.227020263672,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 10.6360440611374,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314384615,
+      "sequence": 1250441750,
+      "target_x": 1003.83251953125,
+      "target_y": 443.880767822266,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -11.0324224285343,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314417926,
+      "sequence": 1250441751,
+      "target_x": 336.596649169922,
+      "target_y": 486.791168212891,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 10.8469962281592,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314417926,
+      "sequence": 1250441751,
+      "target_x": 1003.74468994141,
+      "target_y": 442.920013427734,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -11.0324220757281,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314451401,
+      "sequence": 1250441752,
+      "target_x": 339.785491943359,
+      "target_y": 487.406127929688,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 11.0942821177108,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314451401,
+      "sequence": 1250441752,
+      "target_x": 1003.62573242188,
+      "target_y": 442.057586669922,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -11.2134869902354,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314484819,
+      "sequence": 1250441753,
+      "target_x": 342.899322509766,
+      "target_y": 488.041198730469,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 11.3053167026215,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314484819,
+      "sequence": 1250441753,
+      "target_x": 1003.66510009766,
+      "target_y": 441.175201416016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -11.2134869755305,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314517957,
+      "sequence": 1250441754,
+      "target_x": 346.002593994141,
+      "target_y": 488.700134277344,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 11.4788571426586,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314517957,
+      "sequence": 1250441754,
+      "target_x": 1003.2783203125,
+      "target_y": 440.16650390625,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -11.3881378824572,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314534750,
+      "sequence": 1250441755,
+      "target_x": 349.309143066406,
+      "target_y": 489.156616210938,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 11.676174238387,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314534750,
+      "sequence": 1250441755,
+      "target_x": 1003.38549804688,
+      "target_y": 439.385528564453,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -11.3881374739287,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314584580,
+      "sequence": 1250441756,
+      "target_x": 352.7451171875,
+      "target_y": 489.717163085938,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 11.6761742351909,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314584580,
+      "sequence": 1250441756,
+      "target_x": 1003.19696044922,
+      "target_y": 438.448455810547,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -11.5515611055159,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314617914,
+      "sequence": 1250441757,
+      "target_x": 355.998352050781,
+      "target_y": 490.224761962891,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 12.0469574276825,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314617914,
+      "sequence": 1250441757,
+      "target_x": 1003.06292724609,
+      "target_y": 437.414337158203,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -11.551559995105,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314651282,
+      "sequence": 1250441758,
+      "target_x": 358.913146972656,
+      "target_y": 490.695892333984,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 12.255813560976,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314651282,
+      "sequence": 1250441758,
+      "target_x": 1002.29644775391,
+      "target_y": 436.324493408203,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -11.7634398776417,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314684600,
+      "sequence": 1250441759,
+      "target_x": 362.278198242188,
+      "target_y": 491.057556152344,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 12.4604785982591,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314684600,
+      "sequence": 1250441759,
+      "target_x": 1002.02349853516,
+      "target_y": 435.312957763672,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -11.7634401471216,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314717932,
+      "sequence": 1250441760,
+      "target_x": 365.571899414063,
+      "target_y": 491.352233886719,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 12.6588911594145,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314717932,
+      "sequence": 1250441760,
+      "target_x": 1001.57788085938,
+      "target_y": 434.23193359375,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -11.7634401471216,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314751232,
+      "sequence": 1250441761,
+      "target_x": 368.740753173828,
+      "target_y": 491.905609130859,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 12.8870427137641,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314751232,
+      "sequence": 1250441761,
+      "target_x": 1001.26843261719,
+      "target_y": 433.217468261719,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -11.7634401471216,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314784730,
+      "sequence": 1250441762,
+      "target_x": 372.221801757813,
+      "target_y": 492.310974121094,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 13.0451227854286,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314784730,
+      "sequence": 1250441762,
+      "target_x": 1000.85150146484,
+      "target_y": 432.143188476563,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -11.9341277866551,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314817949,
+      "sequence": 1250441763,
+      "target_x": 375.356170654297,
+      "target_y": 492.530731201172,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 13.2705009654086,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314817949,
+      "sequence": 1250441763,
+      "target_x": 1000.30926513672,
+      "target_y": 431.138885498047,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -11.9341274282539,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314851366,
+      "sequence": 1250441764,
+      "target_x": 378.881286621094,
+      "target_y": 492.640380859375,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 13.2705008969174,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314851366,
+      "sequence": 1250441764,
+      "target_x": 999.523986816406,
+      "target_y": 430.075622558594,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -11.9341274282539,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314885075,
+      "sequence": 1250441765,
+      "target_x": 382.605041503906,
+      "target_y": 492.686157226563,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 13.4904950078581,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314885075,
+      "sequence": 1250441765,
+      "target_x": 999.011657714844,
+      "target_y": 428.884948730469,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -12.1268385267117,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314918159,
+      "sequence": 1250441766,
+      "target_x": 385.798919677734,
+      "target_y": 492.911590576172,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 13.6671430734785,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314918159,
+      "sequence": 1250441766,
+      "target_x": 998.671752929688,
+      "target_y": 427.815795898438,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -12.1268386543649,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314951258,
+      "sequence": 1250441767,
+      "target_x": 388.979949951172,
+      "target_y": 493.030456542969,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 13.6671436423984,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314951258,
+      "sequence": 1250441767,
+      "target_x": 997.539001464844,
+      "target_y": 426.673706054688,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -12.1268386543649,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 314984618,
+      "sequence": 1250441768,
+      "target_x": 392.448364257813,
+      "target_y": 493.07861328125,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 13.8553292238952,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 314984618,
+      "sequence": 1250441768,
+      "target_x": 996.705322265625,
+      "target_y": 425.465515136719,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -12.1268386543649,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 315017946,
+      "sequence": 1250441769,
+      "target_x": 396.406433105469,
+      "target_y": 493.182281494141,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 14.0064585124893,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 315017946,
+      "sequence": 1250441769,
+      "target_x": 996.346252441406,
+      "target_y": 424.391967773438,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -12.1268386543649,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 315051330,
+      "sequence": 1250441770,
+      "target_x": 399.927734375,
+      "target_y": 493.228424072266,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 14.0064589026282,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 315051330,
+      "sequence": 1250441770,
+      "target_x": 995.203002929688,
+      "target_y": 423.287200927734,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -12.1268386543649,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 315084658,
+      "sequence": 1250441771,
+      "target_x": 402.967681884766,
+      "target_y": 493.149475097656,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 14.257315159179,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 315084658,
+      "sequence": 1250441771,
+      "target_x": 994.377075195313,
+      "target_y": 422.070281982422,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -12.1268386543649,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 315118025,
+      "sequence": 1250441772,
+      "target_x": 406.419952392578,
+      "target_y": 493.088043212891,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 14.2573155291435,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 315118025,
+      "sequence": 1250441772,
+      "target_x": 993.782409667969,
+      "target_y": 421.185363769531,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -12.1268386543649,
+      "coordinate_space": "PROJECTOR",
+      "platform": "left",
+      "received_usec": 315151259,
+      "sequence": 1250441773,
+      "target_x": 410.083923339844,
+      "target_y": 493.036865234375,
+      "wire_id": 1
+    },
+    {
+      "angle_degrees": 14.472690106929,
+      "coordinate_space": "PROJECTOR",
+      "platform": "right",
+      "received_usec": 315151259,
+      "sequence": 1250441773,
+      "target_x": 992.932495117188,
+      "target_y": 420.182922363281,
+      "wire_id": 2
+    }
+  ]
+}

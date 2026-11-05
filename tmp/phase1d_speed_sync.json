@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var lab: Node = get_tree().current_scene\nlab.replay.set_speed(1.0)\nfor i: int in range(12):\n\tawait get_tree().process_frame\nreturn {\"actual_speed\":lab.replay.speed,\"selected_label\":lab.get_node(\"UI/Panel/Speed\").get_item_text(lab.get_node(\"UI/Panel/Speed\").selected)}"}}

@@ -1,0 +1,4 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+UDP_STARTUP {"failed":0,"passed":7,"results":[{"passed":true,"test":"fixture_reserves_port"},{"passed":true,"test":"initial_external_mode_bind_failure_reported"},{"passed":true,"test":"bind_failure_keeps_colliders"},{"passed":true,"test":"bind_error_visible_in_panel"},{"passed":true,"test":"mode_toggle_retries_bind_successfully"},{"passed":true,"test":"mouse_restores_detection_and_closes_socket"},{"passed":true,"test":"exit_releases_port"}],"total":7}

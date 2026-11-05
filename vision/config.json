@@ -1,0 +1,79 @@
+{
+  "camera": {
+    "index": 2,
+    "width": 640,
+    "height": 480,
+    "fps": 30,
+    "backend": "dshow",
+    "mirror": false,
+    "frame_timeout": 0.5,
+    "reconnect_delay": 1.0,
+    "startup_timeout": 8.0,
+    "stall_timeout": 2.5
+  },
+  "tracking": {
+    "confirmation_frames": 3,
+    "loss_tolerance": 0.15,
+    "position_tau": 0.06,
+    "angle_tau": 0.09,
+    "max_jump": 0.14,
+    "max_speed": 1.4,
+    "jitter_allowance": 0.025,
+    "reacquire_radius": 0.045,
+    "min_fill": 0.35,
+    "max_area_fraction": 0.45,
+    "morphology_kernel": 3,
+    "max_angle_jump": 45,
+    "angular_speed": 360,
+    "angular_jitter": 8
+  },
+  "network": {
+    "host": "127.0.0.1",
+    "port": 5005,
+    "hz": 30
+  },
+  "colors": [
+    {
+      "id": 1,
+      "name": "verde",
+      "lower": [
+        35,
+        70,
+        60
+      ],
+      "upper": [
+        85,
+        255,
+        255
+      ],
+      "min_area": 600,
+      "max_area_fraction": 0.35,
+      "min_dimension": 8.0,
+      "max_aspect_ratio": 20.0,
+      "min_saturation": 80,
+      "min_confidence": 0.55,
+      "ambiguity_ratio": 0.8
+    },
+    {
+      "id": 2,
+      "name": "azul",
+      "lower": [
+        95,
+        80,
+        60
+      ],
+      "upper": [
+        135,
+        255,
+        255
+      ],
+      "min_area": 600,
+      "max_area_fraction": 0.35,
+      "min_dimension": 8.0,
+      "max_aspect_ratio": 20.0,
+      "min_saturation": 80,
+      "min_confidence": 0.55,
+      "ambiguity_ratio": 0.8
+    }
+  ]
+}

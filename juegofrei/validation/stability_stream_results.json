@@ -1,0 +1,55 @@
+{
+  "failures": [],
+  "passed": 7,
+  "performance": {
+    "configured_physics_hz": 60,
+    "draw_duration_seconds": 31.082916,
+    "drawn_frames": 1866,
+    "duration_seconds": 21.914713,
+    "frame_ms_max": 19.599,
+    "frame_ms_p95": 17.854,
+    "measured_draw_fps": 60.0329776009432,
+    "measured_game_loop_fps": 60.0053489178708,
+    "measured_physics_hz": 60.0053489178708,
+    "peak_receive_hz": 30.4944028015503,
+    "render_samples": 1315
+  },
+  "results": [
+    {
+      "detail": "2",
+      "passed": true,
+      "test": "detector_closed_and_restarted"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "green_loss_and_recovery"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "blue_loss_and_recovery"
+    },
+    {
+      "detail": "(0.278566, 0.383714)",
+      "passed": true,
+      "test": "both_rotations_received"
+    },
+    {
+      "detail": "(4.000015, 4.000014)",
+      "passed": true,
+      "test": "no_unbounded_pose_step_on_recovery"
+    },
+    {
+      "detail": "{ \"udp\": \"SIN COMUNICACIÓN\", \"address\": \"127.0.0.1\", \"port\": 5005, \"mode\": \"EXTERNAL\", \"packets_per_second\": 15.9984321536489, \"updates_per_second\": 15.9984321536489, \"last_sequence\": 1244326270, \"detected\": 0, \"known\": 3, \"age_seconds\": 1.217075, \"tracking\": \"SEGUIMIENTO PERDIDO\", \"lost\": [\"left\", \"right\", \"top\"], \"received\": 534, \"invalid\": 0, \"stale\": 0, \"applied\": 534, \"overloaded_ticks\": 0, \"expired\": 0, \"packet_age_ms\": 1.8408203125, \"source_age_ms\": -1.0, \"modules\": { \"left\": { \"detected\": false, \"age_seconds\": 1.217075, \"target_error_px\": 0.0 }, \"right\": { \"detected\": false, \"age_seconds\": 1.217075, \"target_error_px\": 0.0 }, \"top\": { \"detected\": false, \"age_seconds\": -1.0, \"target_error_px\": 0.0 } }, \"suppressed_targets\": 34 }",
+      "passed": true,
+      "test": "no_invalid_or_stale_source_packets"
+    },
+    {
+      "detail": "[0, 1]",
+      "passed": true,
+      "test": "crossing_platform_crush_has_bounded_recovery_and_no_permanent_embedding"
+    }
+  ],
+  "total": 7
+}

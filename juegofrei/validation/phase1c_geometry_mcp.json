@@ -1,0 +1,860 @@
+{
+  "failures": [],
+  "label": "mcp",
+  "measurements": [
+    {
+      "area_error_px2": 0.00000610947608947754,
+      "false_negative_pixels": 0,
+      "false_positive_pixels": 0,
+      "name": "convex",
+      "physics_shapes": 46,
+      "reference_pixels": 1591,
+      "tested_pixels": 12288,
+      "total_validation_ms": 198.623
+    },
+    {
+      "area_error_px2": 0.000159144398821809,
+      "false_negative_pixels": 0,
+      "false_positive_pixels": 0,
+      "name": "concave",
+      "physics_shapes": 2,
+      "reference_pixels": 2200,
+      "tested_pixels": 12288,
+      "total_validation_ms": 128.735
+    },
+    {
+      "area_error_px2": 0.0,
+      "false_negative_pixels": 0,
+      "false_positive_pixels": 0,
+      "name": "point_contact",
+      "physics_shapes": 2,
+      "reference_pixels": 1250,
+      "tested_pixels": 12288,
+      "total_validation_ms": 129.553
+    },
+    {
+      "area_error_px2": 0.0000095367431640625,
+      "false_negative_pixels": 0,
+      "false_positive_pixels": 0,
+      "name": "edge_contact",
+      "physics_shapes": 3,
+      "reference_pixels": 2100,
+      "tested_pixels": 12288,
+      "total_validation_ms": 150.449
+    },
+    {
+      "area_error_px2": 0.0,
+      "false_negative_pixels": 0,
+      "false_positive_pixels": 0,
+      "name": "multiple_regions",
+      "physics_shapes": 3,
+      "reference_pixels": 1200,
+      "tested_pixels": 12288,
+      "total_validation_ms": 132.878
+    },
+    {
+      "area_error_px2": 0.0,
+      "false_negative_pixels": 0,
+      "false_positive_pixels": 0,
+      "name": "hole",
+      "physics_shapes": 4,
+      "reference_pixels": 4950,
+      "tested_pixels": 12288,
+      "total_validation_ms": 154.504
+    },
+    {
+      "area_error_px2": 0.0,
+      "false_negative_pixels": 0,
+      "false_positive_pixels": 0,
+      "name": "two_holes",
+      "physics_shapes": 7,
+      "reference_pixels": 4800,
+      "tested_pixels": 12288,
+      "total_validation_ms": 160.072
+    },
+    {
+      "area_error_px2": 0.0000019073486328125,
+      "false_negative_pixels": 0,
+      "false_positive_pixels": 0,
+      "name": "thin",
+      "physics_shapes": 2,
+      "reference_pixels": 134,
+      "tested_pixels": 12288,
+      "total_validation_ms": 126.216
+    },
+    {
+      "area_error_px2": 0.0,
+      "false_negative_pixels": 0,
+      "false_positive_pixels": 0,
+      "name": "notch",
+      "physics_shapes": 3,
+      "reference_pixels": 4800,
+      "tested_pixels": 12288,
+      "total_validation_ms": 149.699
+    },
+    {
+      "area_error_px2": 0.0,
+      "false_negative_pixels": 0,
+      "false_positive_pixels": 0,
+      "name": "rotated_hole",
+      "physics_shapes": 4,
+      "reference_pixels": 4950,
+      "tested_pixels": 12288,
+      "total_validation_ms": 171.232
+    },
+    {
+      "carry_error_px": 0.000003814697265625,
+      "floor_frames": 60,
+      "frames": 60,
+      "max_overlap_area_px2": 0.0,
+      "max_player_step_px": 1.5,
+      "name": "compound_carrier"
+    }
+  ],
+  "passed": 109,
+  "rows": [
+    {
+      "details": {
+
+      },
+      "name": "convex_create",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "convex_committed",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "convex_global_pose",
+      "passed": true
+    },
+    {
+      "details": {
+        "area_error_px2": 0.00000610947608947754,
+        "false_negative_pixels": 0,
+        "false_positive_pixels": 0,
+        "name": "convex",
+        "physics_shapes": 46,
+        "reference_pixels": 1591,
+        "tested_pixels": 12288,
+        "total_validation_ms": 198.623
+      },
+      "name": "convex_physical_mask_exact",
+      "passed": true
+    },
+    {
+      "details": 0.00000610947608947754,
+      "name": "convex_area",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "convex_pose_without_rebuild",
+      "passed": true
+    },
+    {
+      "details": {
+
+      },
+      "name": "concave_create",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "concave_committed",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "concave_global_pose",
+      "passed": true
+    },
+    {
+      "details": {
+        "area_error_px2": 0.000159144398821809,
+        "false_negative_pixels": 0,
+        "false_positive_pixels": 0,
+        "name": "concave",
+        "physics_shapes": 2,
+        "reference_pixels": 2200,
+        "tested_pixels": 12288,
+        "total_validation_ms": 128.735
+      },
+      "name": "concave_physical_mask_exact",
+      "passed": true
+    },
+    {
+      "details": 0.000159144398821809,
+      "name": "concave_area",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "concave_pose_without_rebuild",
+      "passed": true
+    },
+    {
+      "details": {
+
+      },
+      "name": "point_contact_create",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "point_contact_committed",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "point_contact_global_pose",
+      "passed": true
+    },
+    {
+      "details": {
+        "area_error_px2": 0.0,
+        "false_negative_pixels": 0,
+        "false_positive_pixels": 0,
+        "name": "point_contact",
+        "physics_shapes": 2,
+        "reference_pixels": 1250,
+        "tested_pixels": 12288,
+        "total_validation_ms": 129.553
+      },
+      "name": "point_contact_physical_mask_exact",
+      "passed": true
+    },
+    {
+      "details": 0.0,
+      "name": "point_contact_area",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "point_contact_pose_without_rebuild",
+      "passed": true
+    },
+    {
+      "details": {
+
+      },
+      "name": "edge_contact_create",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "edge_contact_committed",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "edge_contact_global_pose",
+      "passed": true
+    },
+    {
+      "details": {
+        "area_error_px2": 0.0000095367431640625,
+        "false_negative_pixels": 0,
+        "false_positive_pixels": 0,
+        "name": "edge_contact",
+        "physics_shapes": 3,
+        "reference_pixels": 2100,
+        "tested_pixels": 12288,
+        "total_validation_ms": 150.449
+      },
+      "name": "edge_contact_physical_mask_exact",
+      "passed": true
+    },
+    {
+      "details": 0.0000095367431640625,
+      "name": "edge_contact_area",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "edge_contact_pose_without_rebuild",
+      "passed": true
+    },
+    {
+      "details": {
+
+      },
+      "name": "multiple_regions_create",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "multiple_regions_committed",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "multiple_regions_global_pose",
+      "passed": true
+    },
+    {
+      "details": {
+        "area_error_px2": 0.0,
+        "false_negative_pixels": 0,
+        "false_positive_pixels": 0,
+        "name": "multiple_regions",
+        "physics_shapes": 3,
+        "reference_pixels": 1200,
+        "tested_pixels": 12288,
+        "total_validation_ms": 132.878
+      },
+      "name": "multiple_regions_physical_mask_exact",
+      "passed": true
+    },
+    {
+      "details": 0.0,
+      "name": "multiple_regions_area",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "multiple_regions_pose_without_rebuild",
+      "passed": true
+    },
+    {
+      "details": {
+
+      },
+      "name": "hole_create",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "hole_committed",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "hole_global_pose",
+      "passed": true
+    },
+    {
+      "details": {
+        "area_error_px2": 0.0,
+        "false_negative_pixels": 0,
+        "false_positive_pixels": 0,
+        "name": "hole",
+        "physics_shapes": 4,
+        "reference_pixels": 4950,
+        "tested_pixels": 12288,
+        "total_validation_ms": 154.504
+      },
+      "name": "hole_physical_mask_exact",
+      "passed": true
+    },
+    {
+      "details": 0.0,
+      "name": "hole_area",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "hole_pose_without_rebuild",
+      "passed": true
+    },
+    {
+      "details": {
+
+      },
+      "name": "two_holes_create",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "two_holes_committed",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "two_holes_global_pose",
+      "passed": true
+    },
+    {
+      "details": {
+        "area_error_px2": 0.0,
+        "false_negative_pixels": 0,
+        "false_positive_pixels": 0,
+        "name": "two_holes",
+        "physics_shapes": 7,
+        "reference_pixels": 4800,
+        "tested_pixels": 12288,
+        "total_validation_ms": 160.072
+      },
+      "name": "two_holes_physical_mask_exact",
+      "passed": true
+    },
+    {
+      "details": 0.0,
+      "name": "two_holes_area",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "two_holes_pose_without_rebuild",
+      "passed": true
+    },
+    {
+      "details": {
+
+      },
+      "name": "thin_create",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "thin_committed",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "thin_global_pose",
+      "passed": true
+    },
+    {
+      "details": {
+        "area_error_px2": 0.0000019073486328125,
+        "false_negative_pixels": 0,
+        "false_positive_pixels": 0,
+        "name": "thin",
+        "physics_shapes": 2,
+        "reference_pixels": 134,
+        "tested_pixels": 12288,
+        "total_validation_ms": 126.216
+      },
+      "name": "thin_physical_mask_exact",
+      "passed": true
+    },
+    {
+      "details": 0.0000019073486328125,
+      "name": "thin_area",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "thin_pose_without_rebuild",
+      "passed": true
+    },
+    {
+      "details": {
+
+      },
+      "name": "notch_create",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "notch_committed",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "notch_global_pose",
+      "passed": true
+    },
+    {
+      "details": {
+        "area_error_px2": 0.0,
+        "false_negative_pixels": 0,
+        "false_positive_pixels": 0,
+        "name": "notch",
+        "physics_shapes": 3,
+        "reference_pixels": 4800,
+        "tested_pixels": 12288,
+        "total_validation_ms": 149.699
+      },
+      "name": "notch_physical_mask_exact",
+      "passed": true
+    },
+    {
+      "details": 0.0,
+      "name": "notch_area",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "notch_pose_without_rebuild",
+      "passed": true
+    },
+    {
+      "details": {
+
+      },
+      "name": "rotated_hole_create",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "rotated_hole_committed",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "rotated_hole_global_pose",
+      "passed": true
+    },
+    {
+      "details": {
+        "area_error_px2": 0.0,
+        "false_negative_pixels": 0,
+        "false_positive_pixels": 0,
+        "name": "rotated_hole",
+        "physics_shapes": 4,
+        "reference_pixels": 4950,
+        "tested_pixels": 12288,
+        "total_validation_ms": 171.232
+      },
+      "name": "rotated_hole_physical_mask_exact",
+      "passed": true
+    },
+    {
+      "details": 0.0,
+      "name": "rotated_hole_area",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "rotated_hole_pose_without_rebuild",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "safe_baseline",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "assign_structure",
+        "reason": "part_fills_hole"
+      },
+      "name": "fills_hole_rejected",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "fills_hole_preserves_last",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "assign_structure",
+        "reason": "coverage_area_mismatch"
+      },
+      "name": "missing_coverage_rejected",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "missing_coverage_preserves_last",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "assign_structure",
+        "reason": "overlapping_convex_parts"
+      },
+      "name": "duplicate_part_rejected",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "duplicate_part_preserves_last",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "assign_structure",
+        "reason": "invalid_convex_part"
+      },
+      "name": "degenerate_rejected",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "degenerate_preserves_last",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "assign_structure",
+        "reason": "invalid_exterior"
+      },
+      "name": "wrong_winding_rejected",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "wrong_winding_preserves_last",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "assign_structure",
+        "reason": "coordinate_space"
+      },
+      "name": "wrong_space_rejected",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "wrong_space_preserves_last",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "hole_still_empty_after_invalid_updates",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "nonfinite_rejected",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "duplicate_geometry_version_rejected",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "identical_shape_new_version",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "identical_shape_does_not_rebuild",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "held_metadata_update_without_new_geometry_version",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "held_pose_stops_and_preserves_geometry",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "pose_for_old_geometry_rejected",
+      "passed": true
+    },
+    {
+      "details": "(55.0, -10.00521)",
+      "name": "character_lands_on_compound",
+      "passed": true
+    },
+    {
+      "details": {
+        "carry_error_px": 0.000003814697265625,
+        "floor_frames": 60,
+        "frames": 60,
+        "max_overlap_area_px2": 0.0,
+        "max_player_step_px": 1.5,
+        "name": "compound_carrier"
+      },
+      "name": "compound_carries_character_without_rebuild",
+      "passed": true
+    },
+    {
+      "details": {
+        "carry_error_px": 0.000003814697265625,
+        "floor_frames": 60,
+        "frames": 60,
+        "max_overlap_area_px2": 0.0,
+        "max_player_step_px": 1.5,
+        "name": "compound_carrier"
+      },
+      "name": "compound_no_jump_or_deep_penetration",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "structure_pose",
+        "reason": "unknown_id_version_or_pose"
+      },
+      "name": "topology_update_0",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "one_logical_body_0",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "structure_pose",
+        "reason": "unknown_id_version_or_pose"
+      },
+      "name": "topology_update_1",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "one_logical_body_1",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "structure_pose",
+        "reason": "unknown_id_version_or_pose"
+      },
+      "name": "topology_update_2",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "one_logical_body_2",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "structure_pose",
+        "reason": "unknown_id_version_or_pose"
+      },
+      "name": "topology_update_3",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "one_logical_body_3",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "structure_pose",
+        "reason": "unknown_id_version_or_pose"
+      },
+      "name": "topology_update_4",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "one_logical_body_4",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "structure_pose",
+        "reason": "unknown_id_version_or_pose"
+      },
+      "name": "topology_update_5",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "one_logical_body_5",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "structure_pose",
+        "reason": "unknown_id_version_or_pose"
+      },
+      "name": "topology_update_6",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "one_logical_body_6",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "structure_pose",
+        "reason": "unknown_id_version_or_pose"
+      },
+      "name": "topology_update_7",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "one_logical_body_7",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "structure_pose",
+        "reason": "unknown_id_version_or_pose"
+      },
+      "name": "topology_update_8",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "one_logical_body_8",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "structure_pose",
+        "reason": "unknown_id_version_or_pose"
+      },
+      "name": "topology_update_9",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "one_logical_body_9",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "structure_pose",
+        "reason": "unknown_id_version_or_pose"
+      },
+      "name": "topology_update_10",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "one_logical_body_10",
+      "passed": true
+    },
+    {
+      "details": {
+        "id": "hole",
+        "operation": "structure_pose",
+        "reason": "unknown_id_version_or_pose"
+      },
+      "name": "topology_update_11",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "one_logical_body_11",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "final_cleanup",
+      "passed": true
+    }
+  ],
+  "synthetic_only": true,
+  "total": 109
+}

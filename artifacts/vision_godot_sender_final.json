@@ -1,0 +1,22 @@
+{
+  "source": "synthetic_images",
+  "processed_frames": 238,
+  "elapsed_seconds": 8.029542400036007,
+  "processing_average_fps": 29.64054340119466,
+  "ids_seen": [
+    1,
+    2
+  ],
+  "packets_sent": 238,
+  "send_errors": 0,
+  "camera_closed": true,
+  "snapshot_saved": false,
+  "last_frame_size": [
+    640,
+    480
+  ],
+  "processing_fps_last_window": 29.62033250073872,
+  "opencv": "5.0.0",
+  "numpy": "2.5.3",
+  "exit_code": 0
+}

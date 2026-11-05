@@ -1,0 +1,269 @@
+{
+  "scene": {
+    "checks": {
+      "aspect_and_resolution_match_game": true,
+      "cancel_hides_output_without_changing_main_scene": true,
+      "fullscreen_on_selected_monitor": true,
+      "monitor_list_matches_display_server": true,
+      "no_combat_or_udp_nodes": true,
+      "pattern_texture_has_known_canvas": true,
+      "preview_button_opens_output": true,
+      "rendered_output_available": true
+    },
+    "passed": 8,
+    "total": 8
+  },
+  "receiver": {
+    "passed": 12,
+    "rows": [
+      {
+        "passed": true,
+        "test": "v2_projects_into_full_game_canvas_without_second_mapping"
+      },
+      {
+        "passed": true,
+        "test": "projector_axis_angle_preserved_after_python_mapping"
+      },
+      {
+        "passed": true,
+        "test": "projector_target_is_not_teleport"
+      },
+      {
+        "passed": true,
+        "test": "v2_old_sequence_rejected"
+      },
+      {
+        "passed": true,
+        "test": "reject_missing_space"
+      },
+      {
+        "passed": true,
+        "test": "reject_bad_resolution"
+      },
+      {
+        "passed": true,
+        "test": "reject_missing_orientation"
+      },
+      {
+        "passed": true,
+        "test": "reject_v1_projection"
+      },
+      {
+        "passed": true,
+        "test": "reject_unknown_id"
+      },
+      {
+        "passed": true,
+        "test": "outside_arena_freezes_instead_of_clamping_incorrect_alignment"
+      },
+      {
+        "passed": true,
+        "test": "legacy_camera_v1_still_uses_arena_normalization"
+      },
+      {
+        "passed": true,
+        "test": "mouse_control_retained_after_projection"
+      }
+    ],
+    "total": 12
+  },
+  "regression": {
+    "engine": "4.6.3-stable (official)",
+    "regression_failed": 0,
+    "regression_passed": 225,
+    "regression_total": 225,
+    "udp_failed": 0,
+    "udp_passed": 37,
+    "udp_total": 37
+  },
+  "vision_udp": {
+    "failed": 0,
+    "live_sample": {
+      "address": "127.0.0.1",
+      "age_seconds": 0.001174,
+      "applied": 235,
+      "coordinate_space": "PROJECTOR",
+      "detected": 2,
+      "expired": 0,
+      "invalid": 0,
+      "known": 3,
+      "last_sequence": 1250441773,
+      "left_movement": 152.762100219727,
+      "lost": [
+        "top"
+      ],
+      "mode": "EXTERNAL",
+      "modules": {
+        "left": {
+          "age_seconds": 0.001174,
+          "detected": true,
+          "last_update": {
+            "angle_degrees": -12.1268386543649,
+            "coordinate_space": "PROJECTOR",
+            "platform": "left",
+            "received_usec": 315151259,
+            "sequence": 1250441773,
+            "target_x": 410.083923339844,
+            "target_y": 493.036865234375,
+            "wire_id": 1
+          },
+          "target_error_px": 14.8016271591187,
+          "transform_updates": 234
+        },
+        "right": {
+          "age_seconds": 0.001174,
+          "detected": true,
+          "last_update": {
+            "angle_degrees": 14.472690106929,
+            "coordinate_space": "PROJECTOR",
+            "platform": "right",
+            "received_usec": 315151259,
+            "sequence": 1250441773,
+            "target_x": 992.932495117188,
+            "target_y": 420.182922363281,
+            "wire_id": 2
+          },
+          "target_error_px": 5.51449155807495,
+          "transform_updates": 234
+        },
+        "top": {
+          "age_seconds": -1.0,
+          "detected": false,
+          "last_update": {},
+          "target_error_px": 0.0,
+          "transform_updates": 0
+        }
+      },
+      "outside_arena": 0,
+      "overloaded_ticks": 0,
+      "packet_age_ms": 7.50634765625,
+      "packets_per_second": 29.5158224485539,
+      "port": 5005,
+      "received": 235,
+      "right_movement": 108.905654907227,
+      "source_age_ms": 10.3204997722059,
+      "stale": 0,
+      "suppressed_targets": 0,
+      "tracking": "PARCIAL",
+      "udp": "RECIBIENDO",
+      "updates_per_second": 29.5158224485539
+    },
+    "passed": 7,
+    "results": [
+      {
+        "detail": "{ \"coordinate_space\": \"PROJECTOR\", \"outside_arena\": 0, \"udp\": \"RECIBIENDO\", \"address\": \"127.0.0.1\", \"port\": 5005, \"mode\": \"EXTERNAL\", \"packets_per_second\": 29.5158224485539, \"updates_per_second\": 29.5158224485539, \"last_sequence\": 1250441773, \"detected\": 2, \"known\": 3, \"age_seconds\": 0.001174, \"tracking\": \"PARCIAL\", \"lost\": [\"top\"], \"received\": 235, \"invalid\": 0, \"stale\": 0, \"applied\": 235, \"overloaded_ticks\": 0, \"expired\": 0, \"packet_age_ms\": 7.50634765625, \"source_age_ms\": 10.3204997722059, \"modules\": { \"left\": { \"detected\": true, \"age_seconds\": 0.001174, \"target_error_px\": 14.8016271591187, \"transform_updates\": 234, \"last_update\": { \"sequence\": 1250441773, \"wire_id\": 1, \"platform\": \"left\", \"target_x\": 410.083923339844, \"target_y\": 493.036865234375, \"angle_degrees\": -12.1268386543649, \"received_usec\": 315151259, \"coordinate_space\": \"PROJECTOR\" } }, \"right\": { \"detected\": true, \"age_seconds\": 0.001174, \"target_error_px\": 5.51449155807495, \"transform_updates\": 234, \"last_update\": { \"sequence\": 1250441773, \"wire_id\": 2, \"platform\": \"right\", \"target_x\": 992.932495117188, \"target_y\": 420.182922363281, \"angle_degrees\": 14.472690106929, \"received_usec\": 315151259, \"coordinate_space\": \"PROJECTOR\" } }, \"top\": { \"detected\": false, \"age_seconds\": -1.0, \"target_error_px\": 0.0, \"transform_updates\": 0, \"last_update\": {  } } }, \"suppressed_targets\": 0, \"left_movement\": 152.762100219727, \"right_movement\": 108.905654907227 }",
+        "passed": true,
+        "test": "independent_python_image_pipeline_received"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "two_color_ids_are_detected"
+      },
+      {
+        "detail": "[152.762100219727, 108.905654907227]",
+        "passed": true,
+        "test": "both_platforms_moved_from_vision"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "loss_or_shutdown_freezes_both"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "fixed_geometry_preserved"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "players_and_floor_remain"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "light_attack_hits_once_on_live_vision_platform"
+      }
+    ],
+    "total": 7
+  },
+  "trace": {
+    "passed": true,
+    "checked_applications": 120,
+    "max_position_error_px": 3.201091892249577e-05,
+    "max_angle_error_degrees": 0.1487620169763204,
+    "checks": [
+      "camera_center_to_homography_once",
+      "wire_to_fixed_platform_id",
+      "projected_angle_to_godot",
+      "bounded_deadband_only"
+    ]
+  },
+  "gui": {
+    "passed": true,
+    "checks": [
+      "real_window_with_synthetic_pattern",
+      "auto_detect_and_save",
+      "repeat_and_load",
+      "manual_mode_cancel_preserves_file"
+    ],
+    "check_max_px": 1.7053025658242404e-13
+  },
+  "hsv_gui": {
+    "total": 10,
+    "passed": 10,
+    "checks": {
+      "camera_preview_and_mask_windows_visible": true,
+      "slider_changes_hsv": true,
+      "s_saves_json": true,
+      "l_loads_json_and_sliders": true,
+      "color_selection": true,
+      "roi_statistics_do_not_auto_apply": true,
+      "explicit_apply_roi_suggestion": true,
+      "independent_filter_settings_saved": true,
+      "details_can_be_hidden": true,
+      "q_requests_clean_exit": true
+    }
+  },
+  "render": {
+    "reference_ids": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "render_size": [
+      960,
+      540
+    ],
+    "errors": {
+      "fit_rms_px": 2.1738427649294117e-13,
+      "fit_max_px": 2.8421709430404007e-13,
+      "check_rms_px": 1.1718571004216928e-13,
+      "check_max_px": 1.6077746776921858e-13,
+      "check_each_px": [
+        1.6077746776921858e-13,
+        1.1368683772161603e-13,
+        1.2710574864626038e-13,
+        0.0
+      ],
+      "units": "logical_projection_pixels"
+    },
+    "physical_projection_tested": false
+  },
+  "python": {
+    "total": 59,
+    "passed": 59,
+    "log": "artifacts/projection_python_tests.log"
+  },
+  "headless": {
+    "passed": true,
+    "loaded_resources": 47
+  },
+  "physical_projector_webcam_validated": false
+}

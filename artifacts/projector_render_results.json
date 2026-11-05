@@ -1,0 +1,30 @@
+{
+  "reference_ids": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "render_size": [
+    960,
+    540
+  ],
+  "errors": {
+    "fit_rms_px": 2.1738427649294117e-13,
+    "fit_max_px": 2.8421709430404007e-13,
+    "check_rms_px": 1.1718571004216928e-13,
+    "check_max_px": 1.6077746776921858e-13,
+    "check_each_px": [
+      1.6077746776921858e-13,
+      1.1368683772161603e-13,
+      1.2710574864626038e-13,
+      0.0
+    ],
+    "units": "logical_projection_pixels"
+  },
+  "physical_projection_tested": false
+}

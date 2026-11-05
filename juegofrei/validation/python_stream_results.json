@@ -1,0 +1,45 @@
+{
+  "after_stop": {
+    "address": "127.0.0.1",
+    "age_seconds": 289.430397,
+    "applied": 1796,
+    "detected": 0,
+    "invalid": 0,
+    "known": 3,
+    "last_sequence": 1239296612,
+    "lost": [
+      "left",
+      "right",
+      "top"
+    ],
+    "mode": "EXTERNAL",
+    "overloaded_ticks": 11,
+    "packets_per_second": 0.0,
+    "port": 5005,
+    "received": 1798,
+    "stale": 0,
+    "tracking": "SEGUIMIENTO PERDIDO",
+    "udp": "SIN COMUNICACIÓN"
+  },
+  "movement_pixels": 68.2185516357422,
+  "sample": {
+    "address": "127.0.0.1",
+    "age_seconds": 0.035026,
+    "applied": 832,
+    "detected": 2,
+    "invalid": 0,
+    "known": 3,
+    "last_sequence": 1239295646,
+    "lost": [
+      "top"
+    ],
+    "mode": "EXTERNAL",
+    "overloaded_ticks": 0,
+    "packets_per_second": 29.5111478360951,
+    "port": 5005,
+    "received": 833,
+    "stale": 0,
+    "tracking": "PARCIAL",
+    "udp": "RECIBIENDO"
+  }
+}

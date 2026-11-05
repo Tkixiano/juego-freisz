@@ -1,0 +1,2620 @@
+[
+  {
+    "path": ".gitignore",
+    "size": 30
+  },
+  {
+    "path": "CalibrateProjector.cmd",
+    "size": 191,
+    "lines": 8,
+    "symbols": [],
+    "sha256": "3f8116a0ad6b38e62f9a516d2dcdfaadaf81693782386b959b3bd713877deb35",
+    "relational_storage_references": []
+  },
+  {
+    "path": "detector.py",
+    "size": 143,
+    "lines": 5,
+    "symbols": [],
+    "sha256": "1ac0416a9ee7bebe231a744ad91171f1aa929290ef2b6caade87dbfc374f153a",
+    "relational_storage_references": []
+  },
+  {
+    "path": "requirements.txt",
+    "size": 37,
+    "lines": 2,
+    "symbols": [],
+    "sha256": "740724418509f80a0b0beeb5768b62c47e2c5cdb33f58fae3ab5f29c06efef14",
+    "relational_storage_references": []
+  },
+  {
+    "path": "RunDetector.cmd",
+    "size": 151,
+    "lines": 8,
+    "symbols": [],
+    "sha256": "49c972de41e1023437a309d144ae7f2313bbaef776219b4c3221892717d46dcb",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/arena.png",
+    "size": 47309
+  },
+  {
+    "path": "artifacts/blue_only_redragon_udp.json",
+    "size": 2175,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "camera_last_state",
+      "opencv_timing",
+      "capture_read_timing",
+      "source_age_timing",
+      "capture"
+    ],
+    "sha256": "0da17a8cf4b9de075e181bf6227638f066231843f94b2b0217ed6191ddc881be",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/blue_only_redragon_udp.jsonl",
+    "size": 120851,
+    "sha256": "c10fbe732dba8605dde49432eb9d5059ffaee3350705740c4e94477c987f5c27",
+    "trace_first_keys": [
+      "event",
+      "config"
+    ],
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/both_redragon_udp.json",
+    "size": 2288,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "camera_last_state",
+      "opencv_timing",
+      "capture_read_timing",
+      "source_age_timing",
+      "capture"
+    ],
+    "sha256": "a69bb5f8de5ce87ce5b756f0ac377b562ec13bf3b2e4e3bf42a8cb7aec7109a7",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/both_redragon_udp.jsonl",
+    "size": 170143,
+    "sha256": "d0bc0649d27c6e8ce4331fe398e2ae525e662f982c40e95c8c132a95fe62a7ad",
+    "trace_first_keys": [
+      "event",
+      "config"
+    ],
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/calibration_green_capture.json",
+    "size": 1787,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "camera_last_state",
+      "opencv_timing",
+      "capture_read_timing",
+      "source_age_timing",
+      "capture"
+    ],
+    "sha256": "ccbe5688dee9752103d44239d441e974d2dab32b2cccd998ce2f5b1a2370842e",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/calibration_green_capture.png",
+    "size": 463462
+  },
+  {
+    "path": "artifacts/color_isolation_summary.json",
+    "size": 4028,
+    "keys": [
+      "python_tests",
+      "gui",
+      "regression",
+      "integration",
+      "trace_smoke",
+      "physical_green",
+      "physical_blue",
+      "physical_both"
+    ],
+    "sha256": "563dbf0da672f429119eba1eba971aa17eea5eea5afb8eba19bbbbdbef4c1c99",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/color_isolation_wire.json",
+    "size": 126568,
+    "keys": [
+      "base",
+      "trace"
+    ],
+    "sha256": "59b4b6f13a878579a41c50dfead74cbd4965e72ac1f0cf143c2a01b55811236c",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/combat_impact.png",
+    "size": 82029
+  },
+  {
+    "path": "artifacts/combat_victory.png",
+    "size": 109645
+  },
+  {
+    "path": "artifacts/dynamic_arena.png",
+    "size": 69288
+  },
+  {
+    "path": "artifacts/external_headless.log",
+    "size": 318,
+    "sha256": "79f12ab0b8470869135c82bcdd98bbf74c344420098b3561d79efd819a7325d7",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/green_only_redragon_repeat.json",
+    "size": 1904,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "camera_last_state",
+      "opencv_timing",
+      "capture_read_timing",
+      "source_age_timing",
+      "capture"
+    ],
+    "sha256": "5f12035f71f6cc172a852fd23a0eaffc94d4550b277b35fd062f095cb4e8f73d",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/green_only_redragon_repeat.jsonl",
+    "size": 268429,
+    "sha256": "f49c0de2689ef435f662cdcc28292cb2672d1e83ebc0855280a053c88368aea8",
+    "trace_first_keys": [
+      "event",
+      "config"
+    ],
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/green_only_redragon_repeat.png",
+    "size": 384502
+  },
+  {
+    "path": "artifacts/green_only_redragon_report.json",
+    "size": 1799,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "camera_last_state",
+      "opencv_timing",
+      "capture_read_timing",
+      "source_age_timing",
+      "capture"
+    ],
+    "sha256": "77cccff825c243c31c35a2e4cd7af26ec15eeac0146d55aab1f3970f9b94b7c2",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/green_only_redragon_trace.jsonl",
+    "size": 2320683,
+    "sha256": "34cfa75c8c0525c10a15efe2ab43e084a0c7bef55498b628d8634da29230315e",
+    "trace_first_keys": [
+      "event",
+      "frame",
+      "time",
+      "overlap_pixels",
+      "candidates",
+      "tracks"
+    ],
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/green_only_redragon_udp.json",
+    "size": 2177,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "camera_last_state",
+      "opencv_timing",
+      "capture_read_timing",
+      "source_age_timing",
+      "capture"
+    ],
+    "sha256": "a8a7db36357358de2bb8881d514d620b9818ba8479e55d1165c31865bf56cecb",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/green_only_redragon_udp.jsonl",
+    "size": 329022,
+    "sha256": "1c9c7f600f7685c1ae4eaa64e735d29d43e372438e220b721328de745c20cdb8",
+    "trace_first_keys": [
+      "event",
+      "config"
+    ],
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/headless_functional_audit.log",
+    "size": 318,
+    "sha256": "fe8f05590ae360b70161e2c1cfa968672aabd141c0c27ff0a9493a7f3f0bb68c",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/headless_qa.log",
+    "size": 318,
+    "sha256": "e2734d0a4500926f4d6b442e525b314c94681e6e89035a7ae485f59222f438fa",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/projected_trace_results.json",
+    "size": 313,
+    "keys": [
+      "passed",
+      "checked_applications",
+      "max_position_error_px",
+      "max_angle_error_degrees",
+      "checks"
+    ],
+    "sha256": "98b53267893fb192e94ed27f470c0bc750ea6bc941541615a64030f993b3a4bc",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/projected_vision_report.json",
+    "size": 2342,
+    "keys": [
+      "source",
+      "processed_frames",
+      "coordinate_space",
+      "calibration_errors",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "camera_last_state",
+      "opencv_timing",
+      "capture_read_timing"
+    ],
+    "sha256": "95fa0047ff12aad8a640f96d9f67799be94a39d1aee023a870b4e3385fd81846",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/projected_vision_trace.jsonl",
+    "size": 388709,
+    "sha256": "adb100efdbdaf50c9934eddab463d418ab754bd3208dd926d44aa03d8d3ca62a",
+    "trace_first_keys": [
+      "event",
+      "config",
+      "coordinate_space",
+      "homography"
+    ],
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/projection_python_tests.log",
+    "size": 7499,
+    "sha256": "8fd1ddae4af00eaca0d914697a46d93e7f222d6682a0e250cf22a4994357774b",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/projection_qa_summary.json",
+    "size": 8574,
+    "keys": [
+      "scene",
+      "receiver",
+      "regression",
+      "vision_udp",
+      "trace",
+      "gui",
+      "hsv_gui",
+      "render",
+      "python",
+      "headless",
+      "physical_projector_webcam_validated"
+    ],
+    "sha256": "80bbd5d8752184495345f343912d39d9cc3d910162cc25a5d27a9e86c1df50c4",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/projector_gui_results.json",
+    "size": 223,
+    "keys": [
+      "passed",
+      "checks",
+      "check_max_px"
+    ],
+    "sha256": "b73f361cf0eb97498c7d87a38f667d58ff9253281ee72e6d7bb7df751027c14e",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/projector_render_results.json",
+    "size": 562,
+    "keys": [
+      "reference_ids",
+      "render_size",
+      "errors",
+      "physical_projection_tested"
+    ],
+    "sha256": "465e00817707ce12d9630d3c5bf067282fab04d406279b7b9586244daa1456b9",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/qa_controls.png",
+    "size": 109297
+  },
+  {
+    "path": "artifacts/qa_menu.png",
+    "size": 73312
+  },
+  {
+    "path": "artifacts/qa_pause.png",
+    "size": 76499
+  },
+  {
+    "path": "artifacts/redragon_camera_probe.json",
+    "size": 466,
+    "keys": [
+      "opened_and_read_frame",
+      "state",
+      "worker_closed",
+      "capture",
+      "size"
+    ],
+    "sha256": "580d6b9b9e03c24bf09b395b97ac3843434397c1c0e34032b0a954a24ba3ab36",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/redragon_detector_verified.json",
+    "size": 1538,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "camera_last_state",
+      "opencv_timing",
+      "capture_read_timing",
+      "source_age_timing",
+      "capture"
+    ],
+    "sha256": "b5657383bce274cc913e1aa5f0368964b90103cba5ab6562c23b858eede0c798",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/stability_camera_measured.json",
+    "size": 1520,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "camera_last_state",
+      "opencv_timing",
+      "capture_read_timing",
+      "source_age_timing",
+      "capture"
+    ],
+    "sha256": "80c9cd10935891d3cfffa04e2f27432ea91f15597d3286d8eda593a7b6589e6f",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/stability_camera_measured.log",
+    "size": 5030,
+    "sha256": "19a0cb9b82bef7da85a16e17825a9621d92fe8c0f6f66b9566311ca6db15816c",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/stability_camera_probe.json",
+    "size": 407,
+    "keys": [
+      "opened_and_read_frame",
+      "state",
+      "worker_closed",
+      "capture",
+      "size"
+    ],
+    "sha256": "4ab59a9412c292b468e70659195700f10e4e84439728345e3ebe29126f2f3d2c",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/stability_detector_alone.json",
+    "size": 1711,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "camera_last_state",
+      "opencv_timing",
+      "capture_read_timing",
+      "source_age_timing",
+      "capture"
+    ],
+    "sha256": "c07546aeb06f88d1baa4d84a55a553ff378d311b930f5ce0b5c137db5f84d8d7",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/stability_detector_alone.log",
+    "size": 4096,
+    "sha256": "a7289a5cef6911e2f2905a37878888d2416d4885d30d2acbfc4b1392045c2655",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/stability_headless.log",
+    "size": 318,
+    "sha256": "45e9a06f5cfe8a4bb75ec96a61b8b6102cb544e52da71f4aad2a480b05c6fb39",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/stability_msmf_bounded.json",
+    "size": 1270,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "camera_last_state",
+      "opencv_timing",
+      "capture_read_timing",
+      "source_age_timing",
+      "capture"
+    ],
+    "sha256": "1cd30b7e5e668e56ecbd9de2938fd4c9c6132e855cea21388773495c95fb6324",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/stability_msmf_bounded.log",
+    "size": 3512,
+    "sha256": "46f753535a9bc3806484e2cf6366ff89ee90a5410953701cfac8066d67f9916b",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/stability_python_tests.json",
+    "size": 55,
+    "keys": [
+      "total",
+      "passed",
+      "failures"
+    ],
+    "sha256": "f166d3cfe4c4b9e3ba6bde42270833c7920d7b613f540b508cf34a3bb36d031a",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/stability_restarts.json",
+    "size": 99,
+    "keys": "array",
+    "sha256": "0058b2052b28de6a301ba54e5304568d65f6e8266c4a0d54299bf7ff38660784",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/stability_sender1.json",
+    "size": 1444,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "camera_last_state",
+      "opencv_timing",
+      "capture_read_timing",
+      "source_age_timing",
+      "capture"
+    ],
+    "sha256": "bde409378c1508b32b681e58b136a4df02801aed74879bcc67ab5195688d3656",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/stability_sender1.log",
+    "size": 4284,
+    "sha256": "08d478800b2ede03fe129454bf5e2f8bb64ef314028765bd351268e3a6f8b03a",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/stability_sender2.json",
+    "size": 1444,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "camera_last_state",
+      "opencv_timing",
+      "capture_read_timing",
+      "source_age_timing",
+      "capture"
+    ],
+    "sha256": "1d57f964fab3183367c0f6a25b1bae04383cbbcfa64bcb65e262669f530dfbbe",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/stability_sender2.log",
+    "size": 4282,
+    "sha256": "6ff855e8133e2708e40dfc09f9ced06f88589dfbf020e26cb620bb0438714a5e",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/synthetic_projection_calibration.json",
+    "size": 1966,
+    "keys": [
+      "version",
+      "pattern",
+      "capture_resolution",
+      "projection_resolution",
+      "homography",
+      "fit_camera",
+      "fit_projection",
+      "check_camera",
+      "check_projection",
+      "mirror",
+      "camera_index",
+      "backend",
+      "created_utc",
+      "errors"
+    ],
+    "sha256": "0b862707eca441128108b9b3c8f9f52be2b7af7d7d57d1fd8eba2303835d912f",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/trace_final_smoke.json",
+    "size": 1885,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "camera_last_state",
+      "opencv_timing",
+      "capture_read_timing",
+      "source_age_timing",
+      "capture"
+    ],
+    "sha256": "3b7629d2bd3b92e396fe35932cd3d225256b414405c1221251ff1919918fae11",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/trace_final_smoke.jsonl",
+    "size": 47211,
+    "sha256": "0f2a804525f8439c3f55587b25560be7f7641216ed30825ef9fa45ad55f9f5a0",
+    "trace_first_keys": [
+      "event",
+      "config"
+    ],
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/udp_simulation.png",
+    "size": 97678
+  },
+  {
+    "path": "artifacts/udp_startup.log",
+    "size": 612,
+    "sha256": "0f6f6bdbf4f54054871844a0622035d73067ef1f55506ed5bb6411620b2e16d1",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/vision_godot_sender.json",
+    "size": 454,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "processing_fps_last_window",
+      "opencv",
+      "numpy",
+      "exit_code"
+    ],
+    "sha256": "f8c52229085845d2124738f17a280650609df8f357e0fca5e4cbade626e5da3c",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/vision_godot_sender_final.json",
+    "size": 453,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "processing_fps_last_window",
+      "opencv",
+      "numpy",
+      "exit_code"
+    ],
+    "sha256": "6be0a5f0c78586d647929f56272e095617482a1d076d1f3131db6c12034f48af",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/vision_gui_results.json",
+    "size": 450,
+    "keys": [
+      "total",
+      "passed",
+      "checks"
+    ],
+    "sha256": "e9213bf7ffc443ae0612853a0005b72ae2d2749891ee46a6ac79e45bd76e6f8c",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/vision_headless.log",
+    "size": 318,
+    "sha256": "4f535fb1b03461eb1726a75c0109e0b608d8064aff0db7ea1fb401158dbc936f",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/vision_smoke.json",
+    "size": 349,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "opencv",
+      "numpy",
+      "exit_code"
+    ],
+    "sha256": "39b4b7d88b987d6defdb6679d17176e0d837507b56ffb9cf79cfb4b3e8c2290d",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/vision_synthetic.png",
+    "size": 3231
+  },
+  {
+    "path": "artifacts/vision_unit_results.json",
+    "size": 55,
+    "keys": [
+      "total",
+      "passed",
+      "failures"
+    ],
+    "sha256": "2d9f10edc8334af6376ed6da8a1b11aae0def9a6cd13bf470b51e1eb64bb32c0",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/webcam_msmf.json",
+    "size": 373,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "processing_fps_last_window",
+      "opencv",
+      "numpy",
+      "exit_code"
+    ],
+    "sha256": "55b0b52059815a02ab8b5647df5182f96f8edc914b4680c2bbb55ea1047d0acc",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/webcam_probe.json",
+    "size": 133,
+    "keys": [
+      "opened_and_read_frame",
+      "state",
+      "worker_closed",
+      "size"
+    ],
+    "sha256": "1a349b120ab334bf7a34fd4a2b632c936b3d5d4119da94b185bba75f8fde7d95",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/webcam_processing.json",
+    "size": 423,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "processing_fps_last_window",
+      "opencv",
+      "numpy",
+      "exit_code"
+    ],
+    "sha256": "546f0fcea969c77be0bc4615f99330dbeb78153a69d48110a4ebb553b6fd2812",
+    "relational_storage_references": []
+  },
+  {
+    "path": "artifacts/webcam_processing_final.json",
+    "size": 423,
+    "keys": [
+      "source",
+      "processed_frames",
+      "elapsed_seconds",
+      "processing_average_fps",
+      "ids_seen",
+      "packets_sent",
+      "send_errors",
+      "camera_closed",
+      "snapshot_saved",
+      "last_frame_size",
+      "processing_fps_last_window",
+      "opencv",
+      "numpy",
+      "exit_code"
+    ],
+    "sha256": "0bbe28b3f19ee38ab04b8ab6190dade308ceefaf0baa796c66820cd355d578e3",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/.editorconfig",
+    "size": 33
+  },
+  {
+    "path": "juegofrei/.gitattributes",
+    "size": 80
+  },
+  {
+    "path": "juegofrei/.gitignore",
+    "size": 46
+  },
+  {
+    "path": "juegofrei/EXTERNAL_INPUT.md",
+    "size": 7035,
+    "lines": 65,
+    "symbols": [],
+    "sha256": "d6a418dfc6562c11decf20d43fd749bb1ab37f0ec24c7b418f80bb24bfc534d4",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/godot-ai-LICENSE.txt",
+    "size": 1078,
+    "lines": 21,
+    "symbols": [],
+    "sha256": "f2afe4af4ec80c453ca34704bc61d5d24a9bd948d365ca22699cabb8b4a18308",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/icon.svg",
+    "size": 995,
+    "sha256": "6c80384360a5b269d1054bfb27241258154e2cc8167c522016fdc1820e84e0f8",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/icon.svg.import",
+    "size": 1013
+  },
+  {
+    "path": "juegofrei/project.godot",
+    "size": 8167,
+    "lines": 158,
+    "symbols": [],
+    "sha256": "573b4293a1fb35b52eec69f9baaa4b45496759d6ae577cd24edade73931ba5ad",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/QA_REPORT.md",
+    "size": 11152,
+    "lines": 133,
+    "symbols": [],
+    "sha256": "5a2e4dd1e27a41151197843e4e21d4174d366b4fe9c2c9103de697334a512353",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/README.md",
+    "size": 8975,
+    "lines": 78,
+    "symbols": [],
+    "sha256": "65cfbbe70cf96713bb0ccee47a5f8d424684c639a2e9852efb153ec7e5dac3da",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/UDP_QA_REPORT.md",
+    "size": 8150,
+    "lines": 87,
+    "symbols": [],
+    "sha256": "f7a17cb14ec69f65749e06e8621431d582a34b750db7eeed99fd624d8f40adbb",
+    "relational_storage_references": []
+  },
+  {
+    "path": "tests/camera_fakes.py",
+    "size": 957,
+    "lines": 37,
+    "symbols": [
+      "CameraFactory:",
+      "FakeCamera:"
+    ],
+    "sha256": "09f35ee3f266ddf8c5106d2dbed38bddbb509e786f3dba9a6d2cd660ca9cad64",
+    "relational_storage_references": []
+  },
+  {
+    "path": "tests/check_projected_trace.py",
+    "size": 2123,
+    "lines": 35,
+    "symbols": [
+      "main():"
+    ],
+    "sha256": "12b2a7f00a4562c2d57db461f08b60c9512b826dc09935722cbc72033f7d7041",
+    "relational_storage_references": []
+  },
+  {
+    "path": "tests/gui_smoke.py",
+    "size": 3193,
+    "lines": 60,
+    "symbols": [
+      "main():"
+    ],
+    "sha256": "dd6b6483c00d318452e3a98e7e898058c1b979542c5605974300c2dfeb284ed4",
+    "relational_storage_references": []
+  },
+  {
+    "path": "tests/projector_gui_smoke.py",
+    "size": 1948,
+    "lines": 38,
+    "symbols": [
+      "run():"
+    ],
+    "sha256": "698d1752f7e1c640b68ae5dc4eea93445f8d0d59acc892e00ca324055e6bf560",
+    "relational_storage_references": []
+  },
+  {
+    "path": "tests/run_stability_stream.py",
+    "size": 910,
+    "lines": 21,
+    "symbols": [
+      "main():"
+    ],
+    "sha256": "6cd1de38cda241553558a87d73a32527d27d830c8220e77d8e652898f868f58e",
+    "relational_storage_references": []
+  },
+  {
+    "path": "tests/send_color_isolation.py",
+    "size": 2032,
+    "lines": 48,
+    "symbols": [
+      "main():"
+    ],
+    "sha256": "e61156520c09e2d9765c89389c2c856b75abf4342c5946274a92edb810864338",
+    "relational_storage_references": []
+  },
+  {
+    "path": "tests/test_color_isolation.py",
+    "size": 7485,
+    "lines": 160,
+    "symbols": [
+      "IsolationTests(unittest.TestCase):"
+    ],
+    "sha256": "7a8fdf8b6686707fa643d2e8f73d64cb5364661ef660fb45af99c47c61e997a4",
+    "relational_storage_references": []
+  },
+  {
+    "path": "tests/test_projection.py",
+    "size": 8824,
+    "lines": 186,
+    "symbols": [
+      "fixture(matrix=None,capture_size=(1280,720),mirror=False):",
+      "ProjectionTests(unittest.TestCase):"
+    ],
+    "sha256": "82d4a3153efa0c22f82e710585cd57ac2954e075fbf66352be2c56a7a8bad910",
+    "relational_storage_references": []
+  },
+  {
+    "path": "tests/test_vision.py",
+    "size": 13006,
+    "lines": 281,
+    "symbols": [
+      "DetectionTests(unittest.TestCase):",
+      "TrackingTests(unittest.TestCase):",
+      "ConfigAndTransportTests(unittest.TestCase):",
+      "CameraTests(unittest.TestCase):"
+    ],
+    "sha256": "214b4916ae23f958e7cf3dabd75cafc51de95e80a3ff6079f8b9b56ab68249a3",
+    "relational_storage_references": []
+  },
+  {
+    "path": "tests/__init__.py",
+    "size": 76,
+    "lines": 1,
+    "symbols": [],
+    "sha256": "45bec096ca3a644a94a53d6e5e4f25e29d5ac11542dad73db0fd55960d0f844d",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/app.py",
+    "size": 12949,
+    "lines": 222,
+    "symbols": [
+      "main(argv: list[str] | None = None) -> int:"
+    ],
+    "sha256": "68e4b5114e8697db7b28bed8a6e58118c9402e00b067cb6bd46576a567ffb6ba",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/calibration.py",
+    "size": 1188,
+    "lines": 23,
+    "symbols": [
+      "sample_hsv(frame, start, end):"
+    ],
+    "sha256": "df889169cb16536bc30dbecd116ce1cc422269ac24e30404312eeac03f126fd0",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/CALIBRATION_PREPARATION.md",
+    "size": 2790,
+    "lines": 20,
+    "symbols": [],
+    "sha256": "a9d86138a29408731ebbc2eea92d9aed3d84530d157ce58c31cb84d653726185",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/camera.py",
+    "size": 5993,
+    "lines": 136,
+    "symbols": [
+      "Frame:",
+      "CameraSource:"
+    ],
+    "sha256": "c0b269149a76c1900ae569dd3dc9d8109f506fadfdc6c5a2f746bb3de5facff6",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/capture_worker.py",
+    "size": 2753,
+    "lines": 61,
+    "symbols": [
+      "capture_worker(config, stop, lock, pixels, header, status, factory=None):"
+    ],
+    "sha256": "88dcb501793b15687a6b490cf0227963a3b7c8875da7799ecdcd2691bbb8435e",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/COLOR_ISOLATION_REPORT.md",
+    "size": 10696,
+    "lines": 75,
+    "symbols": [],
+    "sha256": "697a03b6ce631fb72262d4121e336637d5e696f3086d7ea1ec44c8d089284236",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/config.json",
+    "size": 1562,
+    "keys": [
+      "camera",
+      "tracking",
+      "network",
+      "colors"
+    ],
+    "sha256": "a78a17003b01dc6caa3e87496663200c28f491a5c45c179498188538330a651f",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/config.py",
+    "size": 5665,
+    "lines": 138,
+    "symbols": [
+      "ColorConfig:",
+      "CameraConfig:",
+      "TrackingConfig:",
+      "NetworkConfig:",
+      "Config:",
+      "number(value: object, low: float, high: float, integer: bool = False) -> None:",
+      "validate(config: Config) -> Config:",
+      "load(path: Path) -> Config:",
+      "save(config: Config, path: Path) -> None:"
+    ],
+    "sha256": "b3c7b53ee798215e9d1e8e6d5e982172e026c5cc4e5de4f2e7f63525149699f4",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/detection.py",
+    "size": 6246,
+    "lines": 129,
+    "symbols": [
+      "Observation:",
+      "CandidateReview:",
+      "DetectionBatch:",
+      "Detector(Protocol):",
+      "ColorDetector:"
+    ],
+    "sha256": "339362112fabee8e7f50baa6fb999b6a660085c1515dd468a0bed6bf9484ed96",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/gui.py",
+    "size": 9061,
+    "lines": 160,
+    "symbols": [
+      "Diagnostics:"
+    ],
+    "sha256": "b5b1aa644eba083dcd8b367411f76357da3da2e807961d792a4e1a33f7b185f8",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/list_cameras.py",
+    "size": 3855,
+    "lines": 96,
+    "symbols": [
+      "list_cameras():"
+    ],
+    "sha256": "43651acea9ae34c8b58d0ac858ddbb0a7bf47daf9d1c9d39bfb113585b59f625",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/metrics.py",
+    "size": 675,
+    "lines": 17,
+    "symbols": [
+      "Timings:"
+    ],
+    "sha256": "8f0ae0f535a737b4c1e7c6f7bc6ab540a179b41bbae0f7a41c3a4f5541d8a235",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/projection.py",
+    "size": 11521,
+    "lines": 200,
+    "symbols": [
+      "points(value, size, minimum=4):",
+      "resolution(value):",
+      "transform(matrix, pts):",
+      "ProjectionCalibration:"
+    ],
+    "sha256": "4b00576e94be01933bbeebc18182ea61c8a5503d4e17b891af460b4eb529f82d",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/projection_pattern.py",
+    "size": 2454,
+    "lines": 48,
+    "symbols": [
+      "dictionary():",
+      "pattern():",
+      "detect_references(frame):"
+    ],
+    "sha256": "e90a50fd59e5f0313cd2ea7527efbf5b522f76b4fc962bc99f65825dcb112698",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/projector_calibration.py",
+    "size": 9446,
+    "lines": 198,
+    "symbols": [
+      "CalibrationSession:",
+      "main(argv=None):"
+    ],
+    "sha256": "4481cc139dec5fe79a42f3d38e7e8d01f01390ba9f92f56329060d67de4a195c",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/PROJECTOR_GUIDE.md",
+    "size": 9490,
+    "lines": 109,
+    "symbols": [],
+    "sha256": "32ff180ab52120787b64b18b9ecf936d5e1e87fb20bd2e0c30c48968776165f8",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/PROJECTOR_QA_REPORT.md",
+    "size": 8750,
+    "lines": 83,
+    "symbols": [],
+    "sha256": "3396299d1d97120333677b60280618bc20c8c09a223401d4949dddf70231da41",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/QA_REPORT.md",
+    "size": 9066,
+    "lines": 80,
+    "symbols": [],
+    "sha256": "ea26639f1ee4fd2ae00d95a6b736fe751aa465927a3cf3c10719ad5e4a86e3f8",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/README.md",
+    "size": 13088,
+    "lines": 109,
+    "symbols": [],
+    "sha256": "c1cfd82743d760604633bb33e2099351238e751a9da2cafdcf368d65ca092572",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/STABILITY_REPORT.md",
+    "size": 11566,
+    "lines": 97,
+    "symbols": [],
+    "sha256": "8744be6defdd196623efa54b358d018ae3268bd221ac842f58bc664ddd505960",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/synthetic.py",
+    "size": 1357,
+    "lines": 25,
+    "symbols": [
+      "draw_piece(frame: np.ndarray, center: tuple[float, float], size: tuple[float, float], angle: float, color: tuple[int, int, int], trapezoid: bool = False) -> None:",
+      "make_frame(elapsed: float, width: int = 640, height: int = 480, visible_ids=(1,2)) -> np.ndarray:"
+    ],
+    "sha256": "4a9caa9c3b4d6926a7d1c3ea6c69c6353a0d9cc999e1b284e36ff9d0449f45f3",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/tracking.py",
+    "size": 6165,
+    "lines": 99,
+    "symbols": [
+      "angle_delta(target: float, current: float, period: float = 180) -> float:",
+      "Track:",
+      "Tracker:"
+    ],
+    "sha256": "46753a36554e3daa934688c10c0163279ed883237b3acad055f80705f1a5970c",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/transport.py",
+    "size": 2907,
+    "lines": 63,
+    "symbols": [
+      "UdpSender:"
+    ],
+    "sha256": "dda3a259151df72d8e8b21d39fb0c0620c2fb0c907aff255f829de4fcd554413",
+    "relational_storage_references": []
+  },
+  {
+    "path": "vision/__init__.py",
+    "size": 70,
+    "lines": 1,
+    "symbols": [],
+    "sha256": "6c126be38f7e27cf1a1a44893ee2a75b320baa6ab3f7509101c2d007881328e5",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/calibration/projector_pattern.png",
+    "size": 50786
+  },
+  {
+    "path": "juegofrei/calibration/projector_pattern.png.import",
+    "size": 966
+  },
+  {
+    "path": "juegofrei/resources/PlayerMovement.tres",
+    "size": 543,
+    "lines": 20,
+    "symbols": [],
+    "sha256": "1e706e8436d19478de674c4dacc7beff60fae9a8bb8889afadf4a23ea8b98857",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scenes/Arena.tscn",
+    "size": 2520,
+    "lines": 68,
+    "symbols": [
+      "\"Arena\" type=\"Node2D\"]",
+      "\"Backdrop\" type=\"Node2D\" parent=\".\"]",
+      "\"Ground\" type=\"AnimatableBody2D\" parent=\".\"]",
+      "\"CollisionShape2D\" type=\"CollisionShape2D\" parent=\"Ground\"]",
+      "\"Visual\" type=\"Polygon2D\" parent=\"Ground\"]",
+      "\"TopEdge\" type=\"Polygon2D\" parent=\"Ground\"]",
+      "\"LeftPlatform\" parent=\".\" instance=ExtResource(\"2\")]",
+      "\"RightPlatform\" parent=\".\" instance=ExtResource(\"2\")]",
+      "\"CollisionShape2D\" parent=\"RightPlatform\" index=\"0\"]",
+      "\"Visual\" parent=\"RightPlatform\" index=\"1\"]",
+      "\"TopEdge\" parent=\"RightPlatform\" index=\"2\"]",
+      "\"TopPlatform\" parent=\".\" instance=ExtResource(\"2\")]",
+      "\"CollisionShape2D\" parent=\"TopPlatform\" index=\"0\"]",
+      "\"Visual\" parent=\"TopPlatform\" index=\"1\"]",
+      "\"TopEdge\" parent=\"TopPlatform\" index=\"2\"]",
+      "\"Spawn1\" type=\"Marker2D\" parent=\".\"]",
+      "\"Spawn2\" type=\"Marker2D\" parent=\".\"]"
+    ],
+    "sha256": "0e004040d683228b4d3bb4d37c5476feecc580fd8bec236ead2480d484fe673d",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scenes/DynamicPlatform.tscn",
+    "size": 1120,
+    "lines": 34,
+    "symbols": [
+      "\"DynamicPlatform\" type=\"AnimatableBody2D\" groups=[\"one_way_platforms\", \"dynamic_platforms\"]]",
+      "\"CollisionShape2D\" type=\"CollisionShape2D\" parent=\".\"]",
+      "\"Visual\" type=\"Polygon2D\" parent=\".\"]",
+      "\"TopEdge\" type=\"Polygon2D\" parent=\".\"]",
+      "\"Identifier\" type=\"Label\" parent=\".\"]"
+    ],
+    "sha256": "2802443db6fa3c81d29b60d86a0f77846c34e8f27c4402debbd66eea417e8cfa",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scenes/GameShell.tscn",
+    "size": 3308,
+    "lines": 107,
+    "symbols": [
+      "\"GameShell\" type=\"CanvasLayer\"]",
+      "\"Screen\" type=\"ColorRect\" parent=\".\"]",
+      "\"Title\" type=\"Label\" parent=\"Screen\"]",
+      "\"Subtitle\" type=\"Label\" parent=\"Screen\"]",
+      "\"ControlsText\" type=\"Label\" parent=\"Screen\"]",
+      "\"Hint\" type=\"Label\" parent=\".\"]",
+      "\"Play\" type=\"Button\" parent=\"Screen\"]",
+      "\"Controls\" type=\"Button\" parent=\"Screen\"]",
+      "\"Restart\" type=\"Button\" parent=\"Screen\"]",
+      "\"MainMenu\" type=\"Button\" parent=\"Screen\"]",
+      "\"Back\" type=\"Button\" parent=\"Screen\"]"
+    ],
+    "sha256": "884e3ad227e75f1cbfea06d27a0606e9c6badc52e196b322816a5aa42762d746",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scenes/Main.tscn",
+    "size": 7168,
+    "lines": 217,
+    "symbols": [
+      "\"Main\" type=\"Node2D\" unique_id=598519554]",
+      "\"Arena\" parent=\".\" unique_id=1987327409 instance=ExtResource(\"1\")]",
+      "\"Players\" type=\"Node2D\" parent=\".\" unique_id=912319363]",
+      "\"Player1\" parent=\"Players\" unique_id=1694730851 instance=ExtResource(\"2\")]",
+      "\"Player2\" parent=\"Players\" unique_id=2143532100 instance=ExtResource(\"2\")]",
+      "\"Camera2D\" type=\"Camera2D\" parent=\".\" unique_id=270477227]",
+      "\"UI\" type=\"CanvasLayer\" parent=\".\" unique_id=1003284608]",
+      "\"HUD\" type=\"Control\" parent=\"UI\" unique_id=2117332993]",
+      "\"Eyebrow\" type=\"Label\" parent=\"UI/HUD\" unique_id=473340271]",
+      "\"Title\" type=\"Label\" parent=\"UI/HUD\" unique_id=364871728]",
+      "\"Stage\" type=\"Label\" parent=\"UI/HUD\" unique_id=1628105240]",
+      "\"Mode\" type=\"Label\" parent=\"UI/HUD\" unique_id=885972717]",
+      "\"P1Controls\" type=\"Label\" parent=\"UI/HUD\" unique_id=1953750092]",
+      "\"P2Controls\" type=\"Label\" parent=\"UI/HUD\" unique_id=1954855828]",
+      "\"Help\" type=\"Label\" parent=\"UI/HUD\" unique_id=237529545]",
+      "\"Boundary\" type=\"Label\" parent=\"UI/HUD\" unique_id=10569137]",
+      "\"Returns\" type=\"Label\" parent=\"UI/HUD\" unique_id=1059623311]",
+      "\"PlatformEditor\" type=\"Label\" parent=\"UI/HUD\" unique_id=1080161958]",
+      "\"EditorStatus\" type=\"Label\" parent=\"UI/HUD\" unique_id=1939777668]",
+      "\"CombatP1\" type=\"Label\" parent=\"UI/HUD\" unique_id=1610939429]",
+      "\"CombatP2\" type=\"Label\" parent=\"UI/HUD\" unique_id=816868527]",
+      "\"Victory\" type=\"ColorRect\" parent=\"UI/HUD\" unique_id=1464253106]",
+      "\"Message\" type=\"Label\" parent=\"UI/HUD/Victory\" unique_id=1835472598]",
+      "\"PlatformManager\" type=\"Node\" parent=\".\" unique_id=1781481406]",
+      "\"MousePlatformController\" type=\"Node2D\" parent=\".\" unique_id=1555705777]",
+      "\"CombatEffects\" type=\"Node2D\" parent=\".\" unique_id=624247802]",
+      "\"GameShell\" parent=\".\" unique_id=923048369 instance=ExtResource(\"7_nxtc6\")]",
+      "\"ExternalPlatformReceiver\" type=\"Node\" parent=\".\"]",
+      "\"PlatformInputPanel\" parent=\"UI\" instance=ExtResource(\"9_input_panel\")]"
+    ],
+    "sha256": "1269e4f90ef4e3b4b7f8f21224c38297985c7db2a0b188110bdf3b80defd7df5",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scenes/PlatformInputPanel.tscn",
+    "size": 620,
+    "lines": 23,
+    "symbols": [
+      "\"PlatformInputPanel\" type=\"VBoxContainer\"]",
+      "\"ModeButton\" type=\"Button\" parent=\".\"]",
+      "\"Status\" type=\"Label\" parent=\".\"]"
+    ],
+    "sha256": "cefce30cabe9c0645ac5c1fec92167523a62a8291f59ca8d5b3efc9246debfe5",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scenes/Player.tscn",
+    "size": 2589,
+    "lines": 76,
+    "symbols": [
+      "\"Player\" type=\"CharacterBody2D\" groups=[\"players\"]]",
+      "\"CollisionShape2D\" type=\"CollisionShape2D\" parent=\".\"]",
+      "\"Visual\" type=\"Polygon2D\" parent=\".\"]",
+      "\"Highlight\" type=\"Polygon2D\" parent=\".\"]",
+      "\"Identifier\" type=\"Label\" parent=\".\"]",
+      "\"Damage\" type=\"Node\" parent=\".\"]",
+      "\"Hurtbox\" type=\"Area2D\" parent=\".\"]",
+      "\"CollisionShape2D\" type=\"CollisionShape2D\" parent=\"Hurtbox\"]",
+      "\"Combat\" type=\"Node2D\" parent=\".\"]",
+      "\"Hitbox\" type=\"Area2D\" parent=\"Combat\"]",
+      "\"CollisionShape2D\" type=\"CollisionShape2D\" parent=\"Combat/Hitbox\"]",
+      "\"UnstuckGuard\" type=\"Node\" parent=\".\"]"
+    ],
+    "sha256": "b967fb7ac244e68659a64e31b432bb9576b7d4fffcfc4078cde24519cb96ecf3",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scenes/ProjectionCalibration.tscn",
+    "size": 307,
+    "lines": 12,
+    "symbols": [
+      "\"ProjectionCalibration\" type=\"Control\"]"
+    ],
+    "sha256": "1fc6203eef0a080d28dbf3c6f35debcd87ba3d1219f1332fd37627c06c9b5f40",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/ArenaBackdrop.gd",
+    "size": 647,
+    "lines": 12,
+    "symbols": [
+      "_draw() -> void:"
+    ],
+    "sha256": "386e1d116abfc758f2e6fda4932315524f9d1615d20822aba0392885a0fcacae",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/ArenaBackdrop.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/scripts/AttackData.gd",
+    "size": 678,
+    "lines": 17,
+    "symbols": [],
+    "sha256": "f17ac97462181dcf491579cd9adc716eda21a2b4033096485fa914d998de59c6",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/AttackData.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/scripts/CombatController.gd",
+    "size": 7931,
+    "lines": 210,
+    "symbols": [
+      "impact(point: Vector2, color: Color)",
+      "attack_started(name: String)",
+      "_ready() -> void:",
+      "tick(delta: float) -> bool:",
+      "start_attack(heavy: bool) -> bool:",
+      "_step_attack() -> void:",
+      "confirm_hit(data: Attack, point: Vector2) -> void:",
+      "receive_hit(data: Attack, direction: Vector2) -> bool:",
+      "start_dodge() -> bool:",
+      "cancel_attack() -> void:",
+      "reset_after_respawn() -> void:",
+      "phase() -> String:",
+      "update_feedback() -> void:",
+      "_draw() -> void:"
+    ],
+    "sha256": "4f5b40d9eae94aceab38db21eb429d312a8f666b4d47930a4818275eadb8c928",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/CombatController.gd.uid",
+    "size": 19
+  },
+  {
+    "path": "juegofrei/scripts/CombatEffects.gd",
+    "size": 1052,
+    "lines": 34,
+    "symbols": [
+      "_ready() -> void:",
+      "burst(point: Vector2, color: Color) -> void:",
+      "_process(delta: float) -> void:",
+      "_draw() -> void:"
+    ],
+    "sha256": "e0e913b91e57444644892756cef1102833c424320874f26a8a744c42eab1d017",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/CombatEffects.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/scripts/CombatHitbox.gd",
+    "size": 1027,
+    "lines": 29,
+    "symbols": [
+      "_ready() -> void:",
+      "begin(radius: float, offset: Vector2) -> void:",
+      "candidates() -> Array[Area2D]:"
+    ],
+    "sha256": "b27f79660fb650fdd1ba5d490d0f1996b255b0b33cb7b8bbba6a2e09381657dd",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/CombatHitbox.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/scripts/DamageModel.gd",
+    "size": 1031,
+    "lines": 32,
+    "symbols": [
+      "damage_changed(percent: float)",
+      "stocks_changed(stocks: int)",
+      "launch_strength(data: Attack, accumulated_percent: float) -> float:",
+      "apply_hit(data: Attack, direction: Vector2) -> Vector2:",
+      "lose_stock() -> int:",
+      "reset_damage() -> void:",
+      "reset_match() -> void:"
+    ],
+    "sha256": "4bb1ee4bb345892848aeb91e39c15b49572abf2359042ebba61bcc7a8d655dff",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/DamageModel.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/scripts/DynamicPlatform.gd",
+    "size": 3915,
+    "lines": 84,
+    "symbols": [
+      "_ready() -> void:",
+      "_physics_process(delta: float) -> void:",
+      "set_pose_target(point: Vector2, angle: float) -> void:",
+      "freeze_motion() -> void:",
+      "set_highlight(value: bool, show_editor: bool) -> void:",
+      "contains_world_point(point: Vector2) -> bool:",
+      "_draw() -> void:"
+    ],
+    "sha256": "01f80e3e3e47d2344c47762cc98b0437154290b241929d3a142afe3c9e2d17cd",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/DynamicPlatform.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/scripts/ExternalPlatformReceiver.gd",
+    "size": 14014,
+    "lines": 325,
+    "symbols": [
+      "_ready() -> void:",
+      "_exit_tree() -> void:",
+      "_on_mode_changed(mode: int) -> void:",
+      "_physics_process(_delta: float) -> void:",
+      "_number(value: Variant) -> bool:",
+      "packet_is_fresh(packet: Dictionary) -> bool:",
+      "_integer(value: Variant, minimum: int, maximum: int) -> bool:",
+      "validate_packet(bytes: PackedByteArray) -> Dictionary:",
+      "_valid_utf8(bytes: PackedByteArray) -> bool:",
+      "_apply_packet(packet: Dictionary, now: int) -> void:",
+      "_expire_modules(now: int) -> void:",
+      "_lose_all() -> void:",
+      "diagnostics() -> Dictionary:"
+    ],
+    "sha256": "4a6165b0f1b325be2ae5a9879166c82a3109de2b9148227bc1735819dab1efac",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/ExternalPlatformReceiver.gd.uid",
+    "size": 19
+  },
+  {
+    "path": "juegofrei/scripts/GameManager.gd",
+    "size": 4305,
+    "lines": 113,
+    "symbols": [
+      "stock_lost(player_id: int, remaining: int)",
+      "match_ended(winner_id: int)",
+      "_ready() -> void:",
+      "_physics_process(_delta: float) -> void:",
+      "queue_combat_hit(source: Node, target: Node, data: Resource, direction: Vector2, point: Vector2) -> void:",
+      "_resolve_combat_hits() -> void:",
+      "_lose_stock(player: Player) -> void:",
+      "_finish_match(winner: int) -> void:",
+      "restart_match() -> void:",
+      "_on_respawned(player_id: int) -> void:",
+      "_update_hud() -> void:"
+    ],
+    "sha256": "153b432d8d147585cc4a2c99f865f5dda75d904efc8158b870ce6880b76ff27a",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/GameManager.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/scripts/GameShell.gd",
+    "size": 2769,
+    "lines": 98,
+    "symbols": [
+      "Page { MAIN, PLAYING, PAUSED, CONTROLS }",
+      "_ready() -> void:",
+      "_unhandled_input(event: InputEvent) -> void:",
+      "_stop_drag() -> void:",
+      "show_main_menu() -> void:",
+      "show_pause() -> void:",
+      "enter_game() -> void:",
+      "show_controls() -> void:",
+      "back() -> void:",
+      "_on_play() -> void:",
+      "_restart() -> void:",
+      "_render() -> void:"
+    ],
+    "sha256": "151cdf3da7251fb255e33c2c169716a10f5730832e6795d7d618de4ecede4a1e",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/GameShell.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/scripts/MousePlatformController.gd",
+    "size": 3888,
+    "lines": 95,
+    "symbols": [
+      "_ready() -> void:",
+      "_on_control_mode_changed(_mode: int) -> void:",
+      "_unhandled_input(event: InputEvent) -> void:",
+      "select_at(point: Vector2) -> void:",
+      "set_editing(value: bool) -> void:",
+      "_refresh_highlights() -> void:",
+      "_physics_process(delta: float) -> void:",
+      "_refresh_readout() -> void:",
+      "_notification(what: int) -> void:"
+    ],
+    "sha256": "f09279c00a60779b993973c37ee715f23d957c091dbc5ce20909d42a656a9988",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/MousePlatformController.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/scripts/PlatformInputPanel.gd",
+    "size": 2589,
+    "lines": 53,
+    "symbols": [
+      "_ready() -> void:",
+      "_unhandled_input(event: InputEvent) -> void:",
+      "toggle_mode() -> void:",
+      "_physics_process(delta: float) -> void:",
+      "_refresh() -> void:"
+    ],
+    "sha256": "8cf9db1b9d4fa6f2444172799f798512b266a172e2aecc9f893f389cc47cd2e0",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/PlatformInputPanel.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/scripts/PlatformManager.gd",
+    "size": 3544,
+    "lines": 88,
+    "symbols": [
+      "ControlMode { MOUSE, EXTERNAL }",
+      "control_mode_changed(mode: int)",
+      "platform_detection_changed(id: StringName, detected: bool)",
+      "_ready() -> void:",
+      "set_control_mode(mode: int) -> void:",
+      "get_platform(id: StringName) -> Platform:",
+      "update_platform_position(id: StringName, point: Vector2, source: int = ControlMode.MOUSE) -> bool:",
+      "update_platform_rotation(id: StringName, angle: float, source: int = ControlMode.MOUSE) -> bool:",
+      "update_platform_transform(id: StringName, pose: Transform2D, source: int = ControlMode.MOUSE) -> bool:",
+      "update_platform_detection(id: StringName, detected: bool, source: int = ControlMode.MOUSE) -> bool:",
+      "_set_detection(id: StringName, detected: bool) -> bool:",
+      "get_platform_state(id: StringName) -> Dictionary:"
+    ],
+    "sha256": "de5095e0f72b9bca6ccf7430d1fd0a03ea7052010482e4fbcf645d3a13681ca0",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/PlatformManager.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/scripts/PlayerController.gd",
+    "size": 5468,
+    "lines": 159,
+    "symbols": [
+      "State { IDLE, RUN, JUMP, FALL, ATTACK, DODGE, HITSTUN, RESPAWN, ELIMINATED }",
+      "respawned(player_id: int)",
+      "_ready() -> void:",
+      "_physics_process(delta: float) -> void:",
+      "_jump(impulse: float, count: int) -> void:",
+      "_on_one_way() -> bool:",
+      "respawn() -> void:",
+      "_forced_motion(delta: float) -> void:",
+      "_update_state() -> void:",
+      "eliminate() -> void:"
+    ],
+    "sha256": "6a998533e1bf6c1a535c8f5d0a2dbbc2bdc75e5c2347f096c85e296ecf9b98c2",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/PlayerController.gd.uid",
+    "size": 19
+  },
+  {
+    "path": "juegofrei/scripts/PlayerMovement.gd",
+    "size": 1576,
+    "lines": 35,
+    "symbols": [
+      "horizontal(current: float, direction: float, grounded: bool, delta: float) -> float:",
+      "vertical(current: float, down_strength: float, delta: float) -> float:"
+    ],
+    "sha256": "afdf1faaa1b1539a3a5d7756e5995c95b4ab0aa40248c2666471edbddc979d1e",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/PlayerMovement.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/scripts/ProjectionCalibration.gd",
+    "size": 4344,
+    "lines": 100,
+    "symbols": [
+      "_ready() -> void:",
+      "_button(parent: Node, text: String, callback: Callable) -> Button:",
+      "_select_screen(index: int) -> void:",
+      "show_preview() -> void:",
+      "show_fullscreen() -> void:",
+      "hide_output() -> void:"
+    ],
+    "sha256": "a1576682ebb9698eaa94f75c2dc10cd199acece886dccf1b21acce6ea2659446",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/ProjectionCalibration.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/scripts/UnstuckGuard.gd",
+    "size": 2955,
+    "lines": 67,
+    "symbols": [
+      "recovered(player_id: int)",
+      "_ready() -> void:",
+      "_physics_process(delta: float) -> void:",
+      "_occupied(point: Vector2) -> bool:",
+      "_recover() -> void:"
+    ],
+    "sha256": "7b89cefc621e8c0df974946475bdba99601919d01d38e618cc96042678c9891b",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/scripts/UnstuckGuard.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/tools/simulate_platforms.py",
+    "size": 2621,
+    "lines": 59,
+    "symbols": [
+      "packet(sequence: int, elapsed: float) -> dict:",
+      "main() -> None:"
+    ],
+    "sha256": "849200a8de62f61803a2d6f84b9b9f2fb478f323f63544d62b6219d1d9b4053e",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/tools/StartSimulation.cmd",
+    "size": 55,
+    "lines": 3,
+    "symbols": [],
+    "sha256": "9b00bcbfa0ac2f253ecf87e5a0960b88668a54032ee6b483ac3776b23b87466f",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/ColorIsolationValidation.gd",
+    "size": 3977,
+    "lines": 84,
+    "symbols": [
+      "_ready() -> void:",
+      "check(label: String, passed: bool, detail: Variant = \"\") -> void:",
+      "finish_stage(stage: int) -> void:",
+      "_physics_process(_delta: float) -> void:",
+      "finish() -> void:"
+    ],
+    "sha256": "402abc966c53a9d1afcc66eea891b25ed1569045aa7b9ab616734155786ee3ad",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/ColorIsolationValidation.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/validation/color_isolation_results.json",
+    "size": 34416,
+    "keys": [
+      "failures",
+      "modules",
+      "passed",
+      "rows",
+      "total",
+      "trace"
+    ],
+    "sha256": "d41154345b0eda7efd95a879cd71ec0503b43b23cce2729964beaa03c2021c91",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/CombatValidation.gd",
+    "size": 9948,
+    "lines": 219,
+    "symbols": [
+      "frames(count: int) -> void:",
+      "check(name: String, passed: bool, detail: Variant = \"\") -> void:",
+      "fresh() -> void:",
+      "capture(name: String) -> void:",
+      "complete() -> Array[Dictionary]:",
+      "run_core(scene_tree: SceneTree) -> Array[Dictionary]:",
+      "run_defense_and_direction(scene_tree: SceneTree) -> Array[Dictionary]:",
+      "run_stocks(scene_tree: SceneTree) -> Array[Dictionary]:",
+      "run_platform_combat(scene_tree: SceneTree) -> Array[Dictionary]:"
+    ],
+    "sha256": "b53f4d24a0ef12f19a31f0568cff6c93ab05a09152a88e203e16b98c0e046ccb",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/CombatValidation.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/validation/combat_results.json",
+    "size": 9660,
+    "keys": [
+      "engine",
+      "total",
+      "passed",
+      "failed",
+      "groups"
+    ],
+    "sha256": "7b4c2a075e229fc03f2c76510771d37ad2431a1cb1764eb042e0526bc9c0bfa8",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/ControlledFallValidation.gd",
+    "size": 2886,
+    "lines": 66,
+    "symbols": [
+      "frames(count: int) -> void:",
+      "check(name: String, passed: bool, detail: Variant=\"\") -> void:",
+      "run(scene_tree: SceneTree) -> void:"
+    ],
+    "sha256": "0ff72546776a95abda0dafe0d7fde85f410e05d6c7cd73021a586dfb7426cc0d",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/ControlledFallValidation.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/validation/controlled_fall_results.json",
+    "size": 3211,
+    "keys": [
+      "controlled_fall",
+      "gravity_regression",
+      "movement_regression"
+    ],
+    "sha256": "24685993e771ce9ae0f298b02387c2bd7778abff79f36379b5d046a7333467ad",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/DynamicValidation.gd",
+    "size": 7319,
+    "lines": 148,
+    "symbols": [
+      "frames(count: int) -> void:",
+      "check(name: String, passed: bool, detail: Variant = \"\") -> void:",
+      "place(player: Player, point: Vector2) -> void:",
+      "reset_platforms(manager: Manager) -> void:",
+      "run_carry(scene_tree: SceneTree) -> Array[Dictionary]:",
+      "run_limits(scene_tree: SceneTree) -> Array[Dictionary]:",
+      "run_gravity(scene_tree: SceneTree) -> Array[Dictionary]:"
+    ],
+    "sha256": "2c25fff0810aa68f36e3dbb74de50bd5311158ccc0c93a2b626bc7bb9da6a478",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/DynamicValidation.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/validation/dynamic_results.json",
+    "size": 4786,
+    "keys": [
+      "engine",
+      "carry",
+      "limits",
+      "gravity",
+      "regression",
+      "controls",
+      "configuration"
+    ],
+    "sha256": "585aa8a20b0a65a50caf30ee41e696e1622dec439d322a7696f0ba640b8d8bf2",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/ExternalInputValidation.gd",
+    "size": 12998,
+    "lines": 234,
+    "symbols": [
+      "frames(count: int) -> void:",
+      "check(name: String, passed: bool, detail: Variant = \"\") -> void:",
+      "module(id: int, point: Vector2, angle: float = 0, visible: bool = true) -> Dictionary:",
+      "send(modules: Array, seq: int = -1) -> void:",
+      "stream(modules: Array, ticks: int) -> void:",
+      "run(scene_tree: SceneTree, label: String = \"external\") -> void:"
+    ],
+    "sha256": "bc1c03b4848e2cd4b073542e030c7624917c11715ff59b1ccd805eda5a2de66b",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/ExternalInputValidation.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/validation/ExternalIntegrationRegression.gd",
+    "size": 1092,
+    "lines": 18,
+    "symbols": [
+      "run(tree: SceneTree) -> void:"
+    ],
+    "sha256": "a84ca4111e2a5b35c4862c63c8406026116e024f03339f81ea5437bad3e93db3",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/ExternalIntegrationRegression.gd.uid",
+    "size": 19
+  },
+  {
+    "path": "juegofrei/validation/ExternalStartupAudit.gd",
+    "size": 2005,
+    "lines": 40,
+    "symbols": [
+      "check(name: String, passed: bool) -> void:",
+      "_initialize() -> void:",
+      "run() -> void:"
+    ],
+    "sha256": "7ae35a694d9030557087057e855c69996c9b0781a0a167176c8c8d3d890ed561",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/ExternalStartupAudit.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/validation/external_integration_results.json",
+    "size": 180,
+    "keys": [
+      "engine",
+      "regression_failed",
+      "regression_passed",
+      "regression_total",
+      "udp_failed",
+      "udp_passed",
+      "udp_total"
+    ],
+    "sha256": "0fb674f8a30894c28afa03c2dede78e721b9224f7e9c80b9ca1c745cae381b8c",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/FullRegression.gd",
+    "size": 2159,
+    "lines": 43,
+    "symbols": [
+      "run_all(tree: SceneTree, label: String) -> void:"
+    ],
+    "sha256": "795a2139c01fef58e8a627f5626d525264e30164b968e2071f2fac1f7edd6354",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/FullRegression.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/validation/full_udp_final.json",
+    "size": 29217,
+    "keys": [
+      "failed",
+      "groups",
+      "label",
+      "passed",
+      "total"
+    ],
+    "sha256": "388ef36921177a6f387f0f12df4730fbb5200c964add88da914f41921a7d63e2",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/full_udp_regression.json",
+    "size": 29228,
+    "keys": [
+      "failed",
+      "groups",
+      "label",
+      "passed",
+      "total"
+    ],
+    "sha256": "01144cf9b7e96122e02e96617d06a6e02d9a8badfc24c19defa550cea0fbda2b",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/full_vision_regression.json",
+    "size": 29233,
+    "keys": [
+      "failed",
+      "groups",
+      "label",
+      "passed",
+      "total"
+    ],
+    "sha256": "117a3233ec122b07daf99f98706e89360e9419b83ef3adcbcc02558e3178e5eb",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/FunctionalAudit.gd",
+    "size": 12189,
+    "lines": 296,
+    "symbols": [
+      "frames(count: int) -> void:",
+      "check(name: String, passed: bool, detail: Variant = \"\") -> void:",
+      "key(code: Key, pressed: bool) -> void:",
+      "tap(code: Key) -> void:",
+      "mouse(point: Vector2, pressed: bool) -> void:",
+      "motion(point: Vector2, dragging: bool = false) -> void:",
+      "click(button: Button) -> void:",
+      "ui() -> void:",
+      "fresh() -> void:",
+      "duel(heavy: bool, reverse_order: bool) -> void:",
+      "edges() -> void:",
+      "operator() -> void:",
+      "run_all(scene_tree: SceneTree, run_label: String) -> void:"
+    ],
+    "sha256": "eb830286dd0a5466db946aa3b561de3e8dd8c0a7c18959ae636c65db95f41371",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/FunctionalAudit.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/validation/functional_initial.json",
+    "size": 6731,
+    "keys": [
+      "failed",
+      "failures",
+      "label",
+      "passed",
+      "results",
+      "total"
+    ],
+    "sha256": "e834a09fbdd65958cfaa7ad374f673ea4951a6763d667a55959bb9a37a460ed2",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/functional_udp_final.json",
+    "size": 6356,
+    "keys": [
+      "failed",
+      "failures",
+      "label",
+      "passed",
+      "results",
+      "total"
+    ],
+    "sha256": "94370fc1b53a7b301b68b9916e7c3c583f84790b1c4114a8b1ffbdc4a45d7678",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/functional_udp_regression.json",
+    "size": 6361,
+    "keys": [
+      "failed",
+      "failures",
+      "label",
+      "passed",
+      "results",
+      "total"
+    ],
+    "sha256": "d38e258451d912b28d203488022b3c7dd9df0ca89ea08d0ff82fed1f7f8216ca",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/functional_vision_regression.json",
+    "size": 6364,
+    "keys": [
+      "failed",
+      "failures",
+      "label",
+      "passed",
+      "results",
+      "total"
+    ],
+    "sha256": "0813393535d106ec8f12638fe9166439fa6babb7a442f9b6b8731c8ea668f5a5",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/HeadlessAudit.gd",
+    "size": 1657,
+    "lines": 39,
+    "symbols": [
+      "_initialize() -> void:",
+      "_scan(directory: String) -> void:",
+      "_audit() -> void:"
+    ],
+    "sha256": "d59ef83ed139a368361e8a82f971c133dfcaa51de1c773019d20153e00ba528e",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/HeadlessAudit.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/validation/headless_qa.json",
+    "size": 170,
+    "keys": [
+      "engine",
+      "failures",
+      "loaded_resources",
+      "mode",
+      "passed"
+    ],
+    "sha256": "6a393e873e16f755fe77e8a3f10b43763da3a3a626d53a08f136e737058321ee",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/latest_results.json",
+    "size": 1632,
+    "keys": [
+      "result",
+      "source"
+    ],
+    "sha256": "51d613a946998e142f2502d509710a93841d3bffe7faf5bfa469c1e113332a8a",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/MovementValidation.gd",
+    "size": 4997,
+    "lines": 130,
+    "symbols": [
+      "frames(count: int) -> void:",
+      "action(key: StringName, pressed: bool) -> void:",
+      "check(name: String, passed: bool, detail: String = \"\") -> void:",
+      "place(p: Controller, point: Vector2) -> void:",
+      "run(scene_tree: SceneTree, tested_player: int = 1) -> Array[Dictionary]:"
+    ],
+    "sha256": "e046ef6b24c7d25ea1c5fa947e0d0d62bd440cbb1396e1b4eb05d8e2b9018dc0",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/MovementValidation.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/validation/PerformanceSampler.gd",
+    "size": 4914,
+    "lines": 106,
+    "symbols": [
+      "_ready() -> void:",
+      "_physics_process(delta: float) -> void:",
+      "_process(_delta: float) -> void:",
+      "_finish(now: int) -> void:"
+    ],
+    "sha256": "a4c7d9b5996dd2dc304c6366b7ee99f4f626cb0f35b614fecdfadb9dd248c8e0",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/PerformanceSampler.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/validation/performance_qa.json",
+    "size": 759,
+    "keys": [
+      "draw_calls_max",
+      "duration_seconds",
+      "engine",
+      "frame_ms_max",
+      "frame_ms_p50",
+      "frame_ms_p95",
+      "frame_ms_p99",
+      "frames",
+      "frames_over_25_ms",
+      "frames_over_33_ms",
+      "frames_over_50_ms",
+      "measured_average_fps",
+      "nodes_end",
+      "nodes_max",
+      "nodes_start"
+    ],
+    "sha256": "ba9f97e813212d6b32e86d845bdea57e1e9d8fa06420d9a93dedcd062507e30e",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/physical_blue_isolation_results.json",
+    "size": 15421,
+    "keys": [
+      "expired",
+      "green_pose_unchanged",
+      "invalid",
+      "modules",
+      "received",
+      "trace"
+    ],
+    "sha256": "054835f6683edc0aeb73af8f9c5df8ed3cc7d10260a32a9de74538975b7616e2",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/physical_both_isolation_results.json",
+    "size": 29409,
+    "keys": [
+      "expired",
+      "invalid",
+      "modules",
+      "received",
+      "trace"
+    ],
+    "sha256": "a0955a4ce80ad92bf3e1f91d4e81e58f96275962a4f61e1323ddf1ad4b721416",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/physical_green_isolation_results.json",
+    "size": 20776,
+    "keys": [
+      "blue_pose_unchanged",
+      "expired",
+      "invalid",
+      "modules",
+      "received",
+      "trace"
+    ],
+    "sha256": "6b703434b902f87a6c5f792a711ebefa3a97badb8d988a13ba463e88c26f73a2",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/projected_vision_applications.json",
+    "size": 33023,
+    "keys": [
+      "coordinate_space",
+      "received",
+      "trace"
+    ],
+    "sha256": "72c232b111e766e131740e40ba91a5b63a9021d529338fdd78216e990417211d",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/ProjectionInputValidation.gd",
+    "size": 3445,
+    "lines": 64,
+    "symbols": [
+      "frames(tree: SceneTree,count: int) -> void:",
+      "check(label: String,passed: bool) -> void:",
+      "packet(sequence: int,point: Vector2) -> Dictionary:",
+      "send(data: Dictionary) -> void:",
+      "run(tree: SceneTree) -> void:"
+    ],
+    "sha256": "914c931a5ca302f2fd9f1b1aacaaff6efd1e0a016d3452a06711a0f4c4a63e91",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/ProjectionInputValidation.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/validation/ProjectionSceneValidation.gd",
+    "size": 1866,
+    "lines": 31,
+    "symbols": [
+      "run(tree: SceneTree) -> void:"
+    ],
+    "sha256": "405d1e99e401b507d305f3f4d38dbe86e6bf9f3014d32f47a88c9eef126adba3",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/ProjectionSceneValidation.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/validation/projection_input_results.json",
+    "size": 1087,
+    "keys": [
+      "passed",
+      "rows",
+      "total"
+    ],
+    "sha256": "a49257a1f6991cb563b9a17c298bdbb6179984033b0e1980a182ab9303a60134",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/projection_render.png",
+    "size": 17419
+  },
+  {
+    "path": "juegofrei/validation/projection_render.png.import",
+    "size": 966
+  },
+  {
+    "path": "juegofrei/validation/projection_scene_results.json",
+    "size": 411,
+    "keys": [
+      "checks",
+      "passed",
+      "total"
+    ],
+    "sha256": "33e15f72eef4d3c26ebc4cbfe2c0d89b594aa2a17404b69d53a2283455c16f23",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/python_stream_results.json",
+    "size": 917,
+    "keys": [
+      "after_stop",
+      "movement_pixels",
+      "sample"
+    ],
+    "sha256": "30afb5d81f8d07d31f2291e18c350753b2211c8a3b261025a38b0bc0cae4ab1a",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/QAAudit.gd",
+    "size": 10414,
+    "lines": 206,
+    "symbols": [
+      "frames(count: int) -> void:",
+      "check(name: String, passed: bool, detail: Variant = \"\") -> void:",
+      "action(name: String, pressed: bool) -> void:",
+      "capture(name: String) -> void:",
+      "geometry() -> Array:",
+      "run_ux() -> void:",
+      "run_api_and_guard() -> void:",
+      "run_crush() -> void:",
+      "run_all(scene_tree: SceneTree) -> void:"
+    ],
+    "sha256": "3aa545f64ac40c588ed13b770a7eac492d45f0d1f9962f2c75b991c09ce483ae",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/QAAudit.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/validation/qa_edge_results.json",
+    "size": 411,
+    "keys": [
+      "detection_carrier",
+      "real_crush"
+    ],
+    "sha256": "43189ac3590513e5f964a6e6fd3d2c80b6391e5d5bc365d7763076a2a12b21e4",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/qa_initial.json",
+    "size": 13105,
+    "keys": [
+      "failed",
+      "failures",
+      "groups",
+      "passed",
+      "total"
+    ],
+    "sha256": "652ff17e73526b1f4949669d8593b1b1dc68b7bde11e760ef012868f4d67d808",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/qa_results.json",
+    "size": 13108,
+    "keys": [
+      "failed",
+      "failures",
+      "groups",
+      "passed",
+      "total"
+    ],
+    "sha256": "b96c5adb31a119ad044c85ecf968b80d6cebf1a07bb44b4ca3b15dd00d43adc2",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/StabilityStreamValidation.gd",
+    "size": 5459,
+    "lines": 121,
+    "symbols": [
+      "_ready() -> void:",
+      "_physics_process(_delta: float) -> void:",
+      "_process(_delta: float) -> void:",
+      "check(case_name: String, passed: bool, detail: Variant=\"\") -> void:",
+      "finish() -> void:"
+    ],
+    "sha256": "dd2e36c771dc602a4f07d9d2af60aaae3cb6d73baf2489b7185b378ed3d6a4c7",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/StabilityStreamValidation.gd.uid",
+    "size": 19
+  },
+  {
+    "path": "juegofrei/validation/StabilitySuite.gd",
+    "size": 1126,
+    "lines": 21,
+    "symbols": [
+      "run(tree: SceneTree) -> void:"
+    ],
+    "sha256": "81a1815462674711591cf6167f9ad69d19e57228d54eb3b7d5566c76dfe2c9e1",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/StabilitySuite.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/validation/stability_stream_results.json",
+    "size": 2100,
+    "keys": [
+      "failures",
+      "passed",
+      "performance",
+      "results",
+      "total"
+    ],
+    "sha256": "696aba81fc493b86843e43c07d26b42fe74d12f38f0110addb503c717034d518",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/stability_suite_results.json",
+    "size": 5404,
+    "keys": [
+      "regression",
+      "stream",
+      "vision"
+    ],
+    "sha256": "e121267dca6a8ece611fff23937860d3c92ee0b83dfc451179bd22982ac6052e",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/udp_final.json",
+    "size": 5540,
+    "keys": [
+      "failed",
+      "failures",
+      "passed",
+      "results",
+      "total"
+    ],
+    "sha256": "ce699b9131063f1c11ac10fb11734e42d4b4d594f72b2a2f56bd80d8ca6e2c1e",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/udp_pass1.json",
+    "size": 4087,
+    "keys": [
+      "failed",
+      "failures",
+      "passed",
+      "results",
+      "total"
+    ],
+    "sha256": "bb4550dff9103d91033f7ee931772ee18997c6ecb34884f451fb6b4823fcdba2",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/udp_pass2.json",
+    "size": 4632,
+    "keys": [
+      "failed",
+      "failures",
+      "passed",
+      "results",
+      "total"
+    ],
+    "sha256": "cd06a4841e9c32ae201bf68a1ed4fb291d43da3a3c19bcbc561ade74a37098f3",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/udp_pass3.json",
+    "size": 4632,
+    "keys": [
+      "failed",
+      "failures",
+      "passed",
+      "results",
+      "total"
+    ],
+    "sha256": "ed66f1ca9b8c0cd825c5b329388d3743e54d0ec2bcd5fff63442466e52832da8",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/udp_pass4.json",
+    "size": 4368,
+    "keys": [
+      "failed",
+      "failures",
+      "passed",
+      "results",
+      "total"
+    ],
+    "sha256": "6806f14ec6deb96358cc92c3ecf6f9accfa32d17dd9d37afc2cbf352d45d3fdb",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/udp_stability1.json",
+    "size": 5150,
+    "keys": [
+      "failed",
+      "failures",
+      "passed",
+      "results",
+      "total"
+    ],
+    "sha256": "6399e279f9824aff816d7eec3009c676b86a17966f86f7c37f09c541b5529354",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/udp_startup.json",
+    "size": 645,
+    "keys": [
+      "failed",
+      "passed",
+      "results",
+      "total"
+    ],
+    "sha256": "4da40ccf53cfffd82922a10d75e0df57d10be2d4c52b7b2bf7e24972b6907b76",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/VisionIntegrationValidation.gd",
+    "size": 4871,
+    "lines": 107,
+    "symbols": [
+      "frames(count: int) -> void:",
+      "test_live_combat() -> void:",
+      "geometry() -> Array:",
+      "_ready() -> void:",
+      "check(case_name: String, passed: bool, detail: Variant=\"\") -> void:",
+      "_physics_process(_delta: float) -> void:",
+      "finish() -> void:"
+    ],
+    "sha256": "2f821e48194be00b04775c8ad7cc9837591ddb713a52e759e62410a00106952e",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/validation/VisionIntegrationValidation.gd.uid",
+    "size": 20
+  },
+  {
+    "path": "juegofrei/validation/vision_udp_results.json",
+    "size": 4315,
+    "keys": [
+      "failed",
+      "live_sample",
+      "passed",
+      "results",
+      "total"
+    ],
+    "sha256": "e0b712f841f4293ad2f05f4c159597d64e93ad6f7fd9bc3df77503a3b089f49a",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/resources/attacks/AirHeavy.tres",
+    "size": 340,
+    "lines": 14,
+    "symbols": [],
+    "sha256": "8c05a57c528f65dfe2e17b04daf097a53057793bc6fcfc54ce972f62c3642102",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/resources/attacks/AirLight.tres",
+    "size": 339,
+    "lines": 14,
+    "symbols": [],
+    "sha256": "f7d96f9b0da39900ee5e9b866b2b0adbffcdb2876694734fd1f02aae607b3aed",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/resources/attacks/Heavy.tres",
+    "size": 334,
+    "lines": 14,
+    "symbols": [],
+    "sha256": "6ce6df8aa6c73ec0eb98847a2271b0e02b3b7cbf677d9e90be7ae8ba3f44a0de",
+    "relational_storage_references": []
+  },
+  {
+    "path": "juegofrei/resources/attacks/Light.tres",
+    "size": 332,
+    "lines": 14,
+    "symbols": [],
+    "sha256": "a71676c8790a0b7a8682500b31697aff038c6b56ecd2dc110df6c085ff7d424f",
+    "relational_storage_references": []
+  }
+]

@@ -1,0 +1,74 @@
+{
+  "source": "webcam",
+  "processed_frames": 129,
+  "elapsed_seconds": 12.558767499867827,
+  "processing_average_fps": 10.271708589346657,
+  "ids_seen": [],
+  "packets_sent": 0,
+  "send_errors": 0,
+  "camera_closed": true,
+  "snapshot_saved": false,
+  "last_frame_size": [
+    640,
+    480
+  ],
+  "camera_last_state": "CAMERA connected",
+  "opencv_timing": {
+    "samples": 129,
+    "mean_ms": 28.095665108051527,
+    "p95_ms": 42.16070007532835,
+    "max_ms": 53.01889986731112
+  },
+  "capture_read_timing": {
+    "samples": 129,
+    "mean_ms": 49.769005422343234,
+    "p95_ms": 62.905500177294016,
+    "max_ms": 87.11810014210641
+  },
+  "source_age_timing": {
+    "samples": 129,
+    "mean_ms": 46.86762016382097,
+    "p95_ms": 69.8112000245601,
+    "max_ms": 79.96849995106459
+  },
+  "capture": {
+    "state": "CAMERA connected",
+    "opened": false,
+    "frames_copied": 129,
+    "captured_frames": 129,
+    "measured_capture_hz": 20.003248652887187,
+    "capture_read_ms": 48.0084998998791,
+    "open_ms": 1330.5245998781174,
+    "restarts": 0,
+    "forced_stops": 0,
+    "read_errors": 0,
+    "child_alive": false
+  },
+  "udp": null,
+  "modules": {
+    "1": {
+      "state": "ACQUIRING",
+      "age_ms": null,
+      "confirmations": 0,
+      "source_id": null,
+      "center": null,
+      "area": null,
+      "confidence": null,
+      "last_observation_monotonic": null
+    },
+    "2": {
+      "state": "ACQUIRING",
+      "age_ms": null,
+      "confirmations": 0,
+      "source_id": null,
+      "center": null,
+      "area": null,
+      "confidence": null,
+      "last_observation_monotonic": null
+    }
+  },
+  "processing_fps_last_window": 19.85186538035959,
+  "opencv": "5.0.0",
+  "numpy": "2.5.3",
+  "exit_code": 0
+}

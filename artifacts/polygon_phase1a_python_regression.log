@@ -1,0 +1,39 @@
+test_brightness_and_saturation (tests.test_color_isolation.IsolationTests.test_brightness_and_saturation) ... ok
+test_dimensions_and_max_area (tests.test_color_isolation.IsolationTests.test_dimensions_and_max_area) ... ok
+test_each_color_isolated_noise (tests.test_color_isolation.IsolationTests.test_each_color_isolated_noise) ... ok
+test_green_only_wire_has_no_blue_transforms (tests.test_color_isolation.IsolationTests.test_green_only_wire_has_no_blue_transforms) ... ok
+test_loss_and_recovery_no_cross_assignment (tests.test_color_isolation.IsolationTests.test_loss_and_recovery_no_cross_assignment) ... ok
+test_moving_green_keeps_static_blue_pose (tests.test_color_isolation.IsolationTests.test_moving_green_keeps_static_blue_pose) ... ok
+test_overlap_rejects_both_instead_of_duplicate (tests.test_color_isolation.IsolationTests.test_overlap_rejects_both_instead_of_duplicate) ... ok
+test_partial_occlusion (tests.test_color_isolation.IsolationTests.test_partial_occlusion) ... ok
+test_reflection_white_hole_not_cross_id (tests.test_color_isolation.IsolationTests.test_reflection_white_hole_not_cross_id) ... ok
+test_region_confidence_rejects_sparse_hollow_shape (tests.test_color_isolation.IsolationTests.test_region_confidence_rejects_sparse_hollow_shape) ... ok
+test_roi_suggests_but_does_not_mutate (tests.test_color_isolation.IsolationTests.test_roi_suggests_but_does_not_mutate) ... ok
+test_single_frame_false_blue_never_emitted (tests.test_color_isolation.IsolationTests.test_single_frame_false_blue_never_emitted) ... ok
+test_tracker_rejects_wrong_observation_id_and_unknown_id (tests.test_color_isolation.IsolationTests.test_tracker_rejects_wrong_observation_id_and_unknown_id) ... ok
+test_two_comparable_same_color_candidates_rejected (tests.test_color_isolation.IsolationTests.test_two_comparable_same_color_candidates_rejected) ... ok
+test_visibility_combinations (tests.test_color_isolation.IsolationTests.test_visibility_combinations) ... ok
+test_automatic_markers_and_manual_correspondences (tests.test_projection.ProjectionTests.test_automatic_markers_and_manual_correspondences) ... ok
+test_axis_rotation (tests.test_projection.ProjectionTests.test_axis_rotation) ... ok
+test_checks_not_used_to_fit (tests.test_projection.ProjectionTests.test_checks_not_used_to_fit) ... ok
+test_degenerate_and_collinear (tests.test_projection.ProjectionTests.test_degenerate_and_collinear) ... ok
+test_duplicate_markers_ambiguous (tests.test_projection.ProjectionTests.test_duplicate_markers_ambiguous) ... ok
+test_explicit_mirrored_capture_corrects_orientation (tests.test_projection.ProjectionTests.test_explicit_mirrored_capture_corrects_orientation) ... ok
+test_identity (tests.test_projection.ProjectionTests.test_identity) ... ok
+test_invalid_save_and_cancel_preserve_previous_file (tests.test_projection.ProjectionTests.test_invalid_save_and_cancel_preserve_previous_file) ... ok
+test_outside_calibrated_area_invisible_not_camera_fallback (tests.test_projection.ProjectionTests.test_outside_calibrated_area_invisible_not_camera_fallback) ... ok
+test_perspective_and_orientation (tests.test_projection.ProjectionTests.test_perspective_and_orientation) ... ok
+test_perspective_warp_marker_detection (tests.test_projection.ProjectionTests.test_perspective_warp_marker_detection) ... ok
+test_real_udp_v2_explicit_projection_units (tests.test_projection.ProjectionTests.test_real_udp_v2_explicit_projection_units) ... ok
+test_reflection_axes_rejected (tests.test_projection.ProjectionTests.test_reflection_axes_rejected) ... ok
+test_resolution_camera_or_mirror_change_rejected (tests.test_projection.ProjectionTests.test_resolution_camera_or_mirror_change_rejected) ... ok
+test_save_load_revalidates_matrix_and_errors (tests.test_projection.ProjectionTests.test_save_load_revalidates_matrix_and_errors) ... ok
+test_scale (tests.test_projection.ProjectionTests.test_scale) ... ok
+test_translation (tests.test_projection.ProjectionTests.test_translation) ... ok
+test_wrong_fit_correspondence_rejected_by_independent_checks (tests.test_projection.ProjectionTests.test_wrong_fit_correspondence_rejected_by_independent_checks) ... ok
+test_wrong_holdout_rejected (tests.test_projection.ProjectionTests.test_wrong_holdout_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 3.830s
+
+OK

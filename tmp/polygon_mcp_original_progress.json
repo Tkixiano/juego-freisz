@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var game: Node = get_tree().current_scene\nreturn {\"progress\":game.get_meta(\"integration_progress\",\"waiting\"),\"full\":game.get_meta(\"full_progress\",\"waiting\"),\"results\":game.get_meta(\"integration_results\",{})}"}}

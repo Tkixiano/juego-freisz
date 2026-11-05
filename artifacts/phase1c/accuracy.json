@@ -1,0 +1,29 @@
+[
+  {
+    "workload": "translation",
+    "frames": 90,
+    "confirmed_frames": 88,
+    "held_or_birth_frames": 2,
+    "max_accepted_vs_parts_error_pixels": 0,
+    "max_observed_vs_accepted_confirmed_pixels": 0,
+    "mean_observed_vs_accepted_confirmed_pixels": 0.0
+  },
+  {
+    "workload": "topology",
+    "frames": 90,
+    "confirmed_frames": 68,
+    "held_or_birth_frames": 22,
+    "max_accepted_vs_parts_error_pixels": 0,
+    "max_observed_vs_accepted_confirmed_pixels": 0,
+    "mean_observed_vs_accepted_confirmed_pixels": 0.0
+  },
+  {
+    "workload": "shape_changes",
+    "frames": 90,
+    "confirmed_frames": 88,
+    "held_or_birth_frames": 2,
+    "max_accepted_vs_parts_error_pixels": 0,
+    "max_observed_vs_accepted_confirmed_pixels": 0,
+    "mean_observed_vs_accepted_confirmed_pixels": 0.0
+  }
+]

@@ -1,0 +1,90 @@
+{
+  "source": "webcam",
+  "processed_frames": 106,
+  "elapsed_seconds": 10.55340399988927,
+  "processing_average_fps": 10.044152578742574,
+  "ids_seen": [
+    1
+  ],
+  "packets_sent": 294,
+  "send_errors": 0,
+  "camera_closed": true,
+  "snapshot_saved": false,
+  "last_frame_size": [
+    640,
+    480
+  ],
+  "camera_last_state": "CAMERA connected",
+  "opencv_timing": {
+    "samples": 106,
+    "mean_ms": 8.504191521151027,
+    "p95_ms": 11.948099825531244,
+    "max_ms": 14.385499991476536
+  },
+  "capture_read_timing": {
+    "samples": 106,
+    "mean_ms": 49.830763201000835,
+    "p95_ms": 63.48229991272092,
+    "max_ms": 86.26580005511642
+  },
+  "source_age_timing": {
+    "samples": 106,
+    "mean_ms": 26.92008396953274,
+    "p95_ms": 41.42590006813407,
+    "max_ms": 47.44070000015199
+  },
+  "capture": {
+    "state": "CAMERA connected",
+    "opened": false,
+    "frames_copied": 106,
+    "captured_frames": 106,
+    "measured_capture_hz": 20.00577995527586,
+    "capture_read_ms": 48.105600057169795,
+    "open_ms": 875.7688999176025,
+    "restarts": 0,
+    "forced_stops": 0,
+    "read_errors": 0,
+    "child_alive": false
+  },
+  "udp": {
+    "sent": 294,
+    "errors": 0,
+    "measured_send_hz": 28.117912822569554,
+    "last_bytes": 179,
+    "send_cost": {
+      "samples": 294,
+      "mean_ms": 0.17557687800833766,
+      "p95_ms": 0.31450018286705017,
+      "max_ms": 1.334700034931302
+    }
+  },
+  "modules": {
+    "1": {
+      "state": "LOST",
+      "age_ms": 604.8834999091923,
+      "confirmations": 0,
+      "source_id": 1,
+      "center": [
+        0.26400901588861914,
+        0.2723565142429565
+      ],
+      "area": 4897.5,
+      "confidence": 0.6031063172617905,
+      "last_observation_monotonic": 1248877.2883095
+    },
+    "2": {
+      "state": "ACQUIRING",
+      "age_ms": null,
+      "confirmations": 0,
+      "source_id": null,
+      "center": null,
+      "area": null,
+      "confidence": null,
+      "last_observation_monotonic": null
+    }
+  },
+  "processing_fps_last_window": 20.12705539199218,
+  "opencv": "5.0.0",
+  "numpy": "2.5.3",
+  "exit_code": 0
+}

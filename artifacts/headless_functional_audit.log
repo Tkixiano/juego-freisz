@@ -1,0 +1,4 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+HEADLESS_QA {"engine":"4.6.3-stable (official)","failures":[],"loaded_resources":33,"mode":"headless load, parse, instantiate and physics startup","passed":true}

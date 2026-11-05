@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var suite: RefCounted = load(\"res://validation/FullRegression.gd\").new()\nget_tree().current_scene.set_meta(\"phase2a_regression\",suite)\nsuite.run_all(get_tree(),\"phase2a\")\nreturn \"full_regression_started\""}}

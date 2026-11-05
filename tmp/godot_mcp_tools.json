@@ -1,0 +1,2164 @@
+{
+  "tools": [
+    {
+      "name": "session_activate",
+      "description": "Set the active Godot editor session for subsequent tool calls.\n\nAccepts either an exact session_id or a substring hint matched\nagainst the session's short name (project folder basename),\nproject_path, or session_id. An exact id match always wins; a\nsubstring must resolve to exactly one session or the tool returns\nan error listing the candidates.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "description": "An exact session id (``<project-slug>@<4hex>``, e.g.\n``my_game@a3f2``, from ``session_manage`` with op=\"list\")\nOR a substring hint like a project folder name\n(\"test_project\", \"my_game\")."
+          }
+        },
+        "required": [
+          "session_id"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "session_manage",
+      "description": "Session listing.\n\nResource form: ``godot://sessions`` \u2014 prefer for resource-aware clients.\n\nOps:\n  \u2022 list()\n        List every connected Godot editor with metadata: session_id, short\n        name, godot_version, project_path, plugin_version, server_version,\n        editor_pid, server_launch_mode, current_scene, play_state, readiness,\n        connected_at, last_seen, is_active. The response also carries the\n        server-global ``exclude_domains`` (tool domains not registered on\n        this server via --exclude-domains).\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "const": "list",
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "editor_state",
+      "description": "Get current Godot editor state: version, readiness, open scene, play state.\n\nResource form: ``godot://editor/state`` \u2014 prefer for active-session reads.\nAlso reachable as ``editor_manage(op=\"state\")`` (same handler) for clients\nthat prefer a single rolled-up tool.\n\nCode-mode MCP adapters keep the server and tool names separate:\n``call('godot-ai', 'editor_state', {})``. Never pass a server-prefixed\ntool name such as ``godot-ai/get_editor_state``; that is neither the\nadapter's call signature nor a registered tool. For dedicated current-\nscene data, use ``readResource('godot-ai', 'godot://scene/current')``.\n\nSide effect: refreshes the server's session readiness cache from the\nlive editor reply. Useful as a recovery step after a write call is\nrejected as ``EDITOR_NOT_READY (state=playing)`` when you already know\nthe game has stopped \u2014 calling ``editor_state`` once syncs the cache\nand the next write proceeds. Issue #262.\n\nResponse includes ``game_status`` for authoritative game liveness,\nplus ``helper_live`` (status == \"live\") and ``session_active``\n(status not in {\"not_live\", \"stopped\"}) mirrored from the same fields\ninside ``game_status``. ``is_playing`` remains raw editor play-state;\nuse ``game_status.status`` for liveness decisions.\n``game_status.status=\"break\"`` means the game process is parked in a\nremote-debugger break (boot-time parse errors do this before the game\nhelper registers); it will not resume on its own \u2014 call\n``project_manage(op=\"stop\")``.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "logs_read",
+      "description": "Read recent log lines from the Godot editor, plugin, or running game.\n\nResource form: ``godot://logs/recent`` \u2014 prefer for active-session reads.\n\nSources:\n- \"plugin\" (default): MCP plugin recv/send/event traffic. Buffer 500.\n- \"game\": stdout/stderr/push_error/push_warning from playing game\n  via ``_mcp_game_helper`` autoload (Godot 4.5+). Buffer 2000, with\n  lines retained across runs and tagged by run_id. Default reads return\n  current-run lines only; pass ``since_run_id`` from an earlier response\n  to read that prior run. Entries: {source, level, text, run_id};\n  response carries run_id, current_run_id, game_status, helper_live,\n  session_active, dropped_count, stale_run_id. helper_live and\n  session_active mirror the same fields inside game_status; is_running\n  is retained as a compatibility alias of session_active.\n  Boot-time parse/load errors fire before the game helper's logger\n  attaches, so they are NEVER in this buffer; when editor-side errors\n  were recorded during the current run the response adds\n  ``editor_errors_count`` and ``editor_errors_hint`` pointing at\n  source=\"editor\" \u2014 treat a clean game log carrying that hint as a\n  run that lost scripts, not a clean launch.\n- \"editor\": editor-process script errors and the Debugger dock's\n  visible Errors-tab rows \u2014 parse errors, GDScript reload warnings,\n  @tool/EditorPlugin runtime errors, push_error/push_warning.\n  Logger-backed entries require Godot 4.5+; Errors-tab rows are read\n  from the editor UI when available. Use when the editor Output or\n  Debugger Errors panel shows red/yellow rows but other sources turned\n  up nothing. Buffer 500 for logger-backed entries; Debugger rows are\n  live UI state. Entries: {source, level, text, path, line, function}.\n  Filtered to .gd/.cs in the user project for Logger-backed entries;\n  addons/godot_ai/ dropped. Logger entries fired before plugin enable\n  are not captured.\n- \"all\": plugin \u2192 editor \u2192 game lines (with source per entry).\n\nTail pattern: for game logs, poll the current run with offset=N and\nkeep the returned run_id. ``current_run_id`` identifies the active run;\n``run_id`` identifies the run being read. Passing\n``since_run_id=old_run_id`` reads retained lines for that prior run, and\n``stale_run_id: true`` means the requested run is not the current run.\nFor editor logs, read once to capture\n``next_cursor`` and pass it back as ``since_cursor`` on later calls.\n``since_cursor`` reads Logger-backed editor entries only; live Debugger\nErrors-tab rows are included in regular source=\"editor\" reads but do\nnot have stable cursors. When ``since_cursor`` is set, it supersedes\n``offset``. ``truncated: true`` means older entries fell out of the\nring before the poll; continue from the returned ``next_cursor`` and\ntreat ``oldest_cursor`` as the earliest retained sequence.\nSet ``include_details=True`` for Errors-tab style metadata on game/editor\nentries: original code/rationale, error type, resolved source, and\nstack frames. Default false preserves compact responses.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "count": {
+            "default": 50,
+            "type": "integer",
+            "description": "Max lines to return. Default 50."
+          },
+          "offset": {
+            "default": 0,
+            "type": "integer",
+            "description": "Lines to skip. Default 0."
+          },
+          "source": {
+            "default": "plugin",
+            "type": "string",
+            "description": "\"plugin\" | \"game\" | \"editor\" | \"all\". Default \"plugin\"."
+          },
+          "since_run_id": {
+            "default": "",
+            "type": "string",
+            "description": "Game-log run id from a previous response; reads that\nretained run instead of the current run."
+          },
+          "since_cursor": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "Editor-log cursor from a previous source=\"editor\" response."
+          },
+          "include_details": {
+            "default": false,
+            "type": "boolean",
+            "description": "Include rich error metadata for game/editor entries."
+          },
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "editor_screenshot",
+      "description": "Capture a screenshot of the Godot editor viewport or running game.\n\nPicking a source: the default ``\"viewport\"`` captures the editor's 3D\nviewport, which is empty if the edited scene has no Node3D anywhere in\nthe tree (or no scene is open). Those cases return ``EDITOR_NOT_READY``\nwith ``error.data = {editor_state: \"viewport_not_3d\", scene_root_type}``\nand an actionable ``error.message`` \u2014 switch to ``\"cinematic\"`` if the\nscene has a Camera3D, or open a scene with 3D content.\n\nSources:\n- \"viewport\" (default): editor 3D viewport. Requires Node3D content in\n    the edited scene (root or any descendant); see above for the\n    no-3D-content / no-scene error shape.\n- \"viewport_2d\": editor 2D viewport. Use for 2D scenes.\n    Not compatible with view_target/coverage/elevation/azimuth/fov.\n- \"cinematic\": render edited scene through its active Camera3D (no\n  editor gizmos). Prefers a Camera3D marked ``current``; falls back to\n  the first Camera3D found in a depth-first walk. NODE_NOT_FOUND only\n  when the scene contains no Camera3D at all.\n- \"game\": running game's framebuffer (only when project is running).\n  A backgrounded/minimized game window freezes its main loop; the\n  capture then returns the last rendered frame with\n  ``stale_frame: true`` and a ``note`` in the metadata \u2014 focus the\n  game window and retry for a current frame. ``GAME_HELPER_TIMEOUT``\n  means the game process never replied at all (nothing rendered yet,\n  main thread blocked, or helper dead) \u2014 focus the window and retry,\n  or use game_command to confirm liveness.\n\n``include_image=True`` (default) returns an MCP ImageContent block.\n``view_target`` (comma-separated Node3D paths) reframes editor camera;\nAABB metadata always returned. ``coverage=True`` with view_target\ncaptures perspective + orthographic top-down references.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "source": {
+            "default": "viewport",
+            "type": "string",
+            "description": "\"viewport\" | \"viewport_2d\" | \"cinematic\" | \"game\". Default \"viewport\"."
+          },
+          "max_resolution": {
+            "default": 640,
+            "type": "integer",
+            "description": "Longest-edge resolution. Default 640. 0 = full res."
+          },
+          "include_image": {
+            "default": true,
+            "type": "boolean",
+            "description": "Return image data. Default True."
+          },
+          "view_target": {
+            "default": "",
+            "type": "string",
+            "description": "Node3D scene path(s) to frame, comma-separated."
+          },
+          "coverage": {
+            "default": false,
+            "type": "boolean",
+            "description": "With view_target, capture two reference shots + AABB."
+          },
+          "elevation": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "Camera elevation in degrees (0=level, 90=overhead)."
+          },
+          "azimuth": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "Camera azimuth in degrees (0=front, 90=right)."
+          },
+          "fov": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "Camera FOV in degrees. Tight 20-30 = zoom; 60-75 = context."
+          },
+          "user_prompt": {
+            "default": "",
+            "type": "string",
+            "description": "Optional context from the agent that requested the\ncapture. With Vision Routing enabled it is sent alongside the\nimage so the vision model can describe what the agent is\nlooking for."
+          },
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "editor_reload_plugin",
+      "description": "Reload the Godot editor plugin.\n\nDisables and re-enables the plugin on the next frame. The response\nshape depends on whether this MCP server was spawned by the plugin\nor launched externally:\n\n- **Plugin-managed (default install)**: returns a pre-flight ack\n  ``{status: \"reload_initiated\", transport_will_drop: true,\n  old_session_id, guidance}`` immediately. The reload kills this\n  server, so the WebSocket transport drops; reconnect and call\n  ``session_manage(op=\"list\")`` to find the new session_id.\n\n- **Externally launched** (e.g. ``python -m godot_ai --transport\n  streamable-http --port 8000 --reload``): waits for the new\n  session to register and returns\n  ``{status: \"reloaded\", old_session_id, new_session_id}``.\n  If the old bridge disappears and no replacement registers\n  within 15 seconds, raises ``PLUGIN_DISCONNECTED`` with\n  ``data.reason == \"reload_timeout\"`` and recovery diagnostics.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "editor_manage",
+      "description": "Editor selection, performance monitors, quit, log clearing, game eval.\n\nResource forms (prefer for active-session reads):\n  godot://editor/state, godot://selection/current, godot://performance\n\nOps:\n  \u2022 state()\n        Editor version, project name, current scene, readiness, play state.\n  \u2022 selection_get()\n        Currently selected node paths in the editor.\n  \u2022 selection_set(paths)\n        Replace the selection with the given list of scene paths.\n  \u2022 monitors_get(monitors=None)\n        Performance singleton values (FPS, memory, draw calls, etc.). Pass\n        a list of monitor names to filter; None returns everything.\n  \u2022 quit()\n        Gracefully quit the Godot editor on next frame.\n  \u2022 logs_clear(clear_debugger_errors=False)\n        Clear the MCP log buffer. Returns cleared_count. Pass\n        clear_debugger_errors=True to also clear the Debugger dock's\n        visible Errors-tab rows (user-facing UI, so opt-in only); the\n        response then includes debugger_errors_cleared.\n  \u2022 game_eval(code)\n        Execute GDScript in the running game with return values. Uses\n        'await' so user code can await internally. Errors return fast and\n        actionable: EVAL_COMPILE_ERROR for a syntax/parse error,\n        EVAL_RUNTIME_ERROR (with the real message + line) for a runtime\n        error; EVAL_GAME_NOT_READY if the game can't service evals \u2014 still\n        launching (retry once it's up), the _mcp_game_helper autoload is\n        missing/disabled, its main loop is not advancing (focus the game),\n        or its debugger session closed; EVAL_HUNG for a live game's genuine\n        infinite loop / never-firing await; EVAL_RESULT_TOO_LARGE if the\n        returned value serializes past the debugger channel's capacity\n        (return a smaller slice).\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "game_eval",
+              "logs_clear",
+              "monitors_get",
+              "quit",
+              "selection_get",
+              "selection_set",
+              "state"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "scene_get_hierarchy",
+      "description": "Get the scene tree hierarchy from the open scene.\n\nReturns a paginated flat list of nodes with name, type, path, and\nchild count. Walks up to the specified depth.\n\nResource form: ``godot://scene/hierarchy`` \u2014 prefer for active-session\nreads.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "depth": {
+            "default": 10,
+            "type": "integer",
+            "description": "Maximum walk depth. Default 10."
+          },
+          "offset": {
+            "default": 0,
+            "type": "integer",
+            "description": "Number of nodes to skip. Default 0."
+          },
+          "limit": {
+            "default": 100,
+            "type": "integer",
+            "description": "Max number of nodes to return. Default 100."
+          },
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "scene_open",
+      "description": "Open an existing scene file (.tscn) in the editor.\n\nIf ``path`` is already the currently edited scene this is a no-op\n\u2014 the in-memory state (including any unsaved MCP mutations) is\npreserved. Pass ``force_reload=True`` when the file on disk is the\nauthority and the editor should discard the open in-memory copy and\nre-read the scene from disk.\n\nThe reply is sent only after the editor has actually switched to the\nrequested scene (``switched: true``), so follow-up writes are safe\nimmediately. ``switched: false`` with ``settle: \"timeout\"`` means the\nswitch had not landed within the wait window. In synchronous contexts\n(e.g. inside ``batch_execute``) the reply returns immediately with\n``switched: false`` and ``settle: \"not_waited\"``. In both of those\ncases, re-check ``editor_state`` before issuing follow-up writes.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "File path of the scene to open (e.g. \"res://main.tscn\")."
+          },
+          "force_reload": {
+            "default": false,
+            "type": "boolean",
+            "description": "Re-read the scene from disk even when it is already\nopen. This discards unsaved in-memory edits to that scene."
+          },
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "scene_save",
+      "description": "Save the currently edited scene to disk.\n\nNode and property mutation tools change the editor's in-memory scene;\ncall this explicitly to persist those mutations to the existing path.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "scene_manage",
+      "description": "Scene authoring (create, save_as, list open roots).\n\nResource form: ``godot://scene/current`` and ``godot://scene/hierarchy``\n\u2014 prefer for active-session reads.\n\nOps:\n  \u2022 create(path, root_type=\"Node3D\", root_name=\"\")\n        Create the initial .tscn with the given root and open it. root_name\n        defaults to filename basename when empty. This initial root is written\n        immediately, but later node_create/node_set_property mutations remain\n        in editor memory until scene_save or save_as is called.\n  \u2022 save_as(path)\n        Save the currently edited scene to a new file path.\n  \u2022 get_roots()\n        List scenes currently open in the editor; flag the edited one.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "create",
+              "get_roots",
+              "save_as"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "node_get_properties",
+      "description": "Get properties of a node.\n\nResource form: ``godot://node/{path}/properties`` \u2014 prefer for\nactive-session reads (returns the full property set).\n\nThe default returns every editor-visible property, which can be\n50-150 entries. Pass ``fields`` to return only the properties you\nneed \u2014 a large response-size cut on this hot read. The response\nalways carries ``total_count`` (all editor-visible properties)\nalongside ``count`` (returned): an unfiltered call returns the full\nset, so ``count == total_count``; only the ``fields`` filter can\nmake ``count`` smaller. Requested names that match no\neditor-visible property are listed in ``unknown_fields``, so a\nnonexistent name is distinguishable from a property that exists\nwith a null value.\n\nNull-valued properties are included: an unset object/resource slot\n(``script`` on an unscripted node, an empty ``mesh`` or\n``material``, \u2026) returns ``\"value\": null`` with its declared type.\nAn attached script serializes to its ``res://`` path; built-in\nscripts (no resource path) fall back to their string\nrepresentation.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Scene path relative to the edited scene root (e.g.\n\"/Main/Camera3D\"), NOT runtime \"/root/...\" paths. Derive\nfrom prior tool responses or scene_get_hierarchy."
+          },
+          "fields": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "When non-empty, return only these property names."
+          },
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "node_create",
+      "description": "Create (spawn) a new node in the scene tree.\n\nCreates a node of the given type and adds it to the parent, or\ninstantiates a PackedScene from ``scene_path``. type and scene_path\nare mutually exclusive \u2014 when scene_path is given, type is ignored.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "default": "",
+            "type": "string",
+            "description": "Godot node class (e.g. \"Node3D\", \"MeshInstance3D\")."
+          },
+          "name": {
+            "default": "",
+            "type": "string",
+            "description": "Optional name; Godot auto-names if empty."
+          },
+          "parent_path": {
+            "default": "",
+            "type": "string",
+            "description": "Parent path relative to the edited scene root (e.g.\n\"/Main\"), NOT runtime \"/root/...\". Empty = scene root."
+          },
+          "scene_path": {
+            "default": "",
+            "type": "string",
+            "description": "Optional res:// path of a PackedScene to instantiate."
+          },
+          "scene_file": {
+            "default": "",
+            "type": "string",
+            "description": "Optional editor-scene guard (EDITED_SCENE_MISMATCH)."
+          },
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "node_set_property",
+      "description": "Set a property on a node.\n\nVerify the property name first \u2014 call ``node_get_properties`` (or read\n``godot://node/{path}/properties``) to confirm the exact name and type\nbefore writing. Guessing common Godot names often fails with\nPROPERTY_NOT_ON_CLASS because Godot's actual properties differ from\nintuition (e.g. ``Camera3D`` uses ``fov``/``current``, not ``field_of_view``;\n``Sprite2D`` uses ``texture``, not ``image``; ``Node3D`` uses\n``position``/``rotation``/``scale``, not ``transform.origin``).\n\nCoerces ``value`` to the property's type:\n- Vector2/Vector3: dict with x/y/z keys.\n- Color: dict {r,g,b,a} or hex string (\"#ff0000\").\n- NodePath: string (\"../Other/Node\").\n- Resource: res:// path string (loads + assigns); null/\"\" clears.\n  ``{\"__class__\": \"BoxMesh\", ...}`` creates a built-in resource owned\n  by this property. After scene_save it is serialized in-place as a\n  ``[sub_resource]`` inside the .tscn; it is not a reusable .tres.\n  For sharing, first call ``resource_manage(op=\"create\",\n  params={\"type\": \"BoxMesh\", \"properties\": {...},\n  \"resource_path\": \"res://meshes/box.tres\"})``, then pass that res://\n  path here (or use resource_manage(op=\"assign\")).\n- StringName: plain string. Array/Dictionary: JSON list/object.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Scene path relative to the edited scene root (e.g.\n\"/Main/Camera3D\"), NOT runtime \"/root/...\" paths."
+          },
+          "property": {
+            "type": "string",
+            "description": "Property name (e.g. \"fov\", \"position\", \"mesh\"). Must match\nGodot's exact identifier \u2014 introspect with ``node_get_properties``\nif unsure rather than guessing."
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "items": {},
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "New value. Pass null (or \"\" for resources) to clear."
+          },
+          "scene_file": {
+            "default": "",
+            "type": "string",
+            "description": "Optional editor-scene guard."
+          },
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "required": [
+          "path",
+          "property",
+          "value"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "node_find",
+      "description": "Find nodes in the scene tree by name, type, or group.\n\nAt least one filter must be provided. Filters AND together. Paginated.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "default": "",
+            "type": "string",
+            "description": "Substring match on node name (case-insensitive)."
+          },
+          "type": {
+            "default": "",
+            "type": "string",
+            "description": "Exact Godot class name (e.g. \"MeshInstance3D\")."
+          },
+          "group": {
+            "default": "",
+            "type": "string",
+            "description": "Group name the node must belong to."
+          },
+          "offset": {
+            "default": 0,
+            "type": "integer",
+            "description": "Number of results to skip. Default 0."
+          },
+          "limit": {
+            "default": 100,
+            "type": "integer",
+            "description": "Max number of results. Default 100."
+          },
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "node_manage",
+      "description": "Node tree manipulation (delete, duplicate, rename, reorder, reparent,\ngroups, hierarchy reads).\n\nResource forms (prefer for active-session reads):\n  godot://node/{path}/properties, godot://node/{path}/children,\n  godot://node/{path}/groups\n\nOps:\n  \u2022 get_children(path)\n        Direct children of a node (name, type, path each).\n  \u2022 get_groups(path)\n        Group names the node belongs to.\n  \u2022 delete(path, scene_file=\"\")\n        Remove the node. Cannot delete scene root. Undoable.\n  \u2022 duplicate(path, name=\"\", scene_file=\"\")\n        Deep-copy a node + children as a sibling. Cannot duplicate scene root.\n  \u2022 rename(path, new_name, scene_file=\"\")\n        Rename a node. Sibling-name collision and \"/\" / \":\" / \"@\" rules apply.\n  \u2022 move(path, index, scene_file=\"\")\n        Reorder among siblings. Index 0 = first.\n  \u2022 reparent(path, new_parent, scene_file=\"\")\n        Move under a new parent. Children preserved. Cannot move into descendants.\n  \u2022 add_to_group(path, group, scene_file=\"\")\n        Add the node to a group.\n  \u2022 remove_from_group(path, group, scene_file=\"\")\n        Remove the node from a group.\n\nAll write ops accept the optional ``scene_file`` guard \u2014 if non-empty, the\nmutation fails with EDITED_SCENE_MISMATCH when the editor's current scene\ndoesn't match.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "add_to_group",
+              "delete",
+              "duplicate",
+              "get_children",
+              "get_groups",
+              "move",
+              "remove_from_group",
+              "rename",
+              "reparent"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "project_run",
+      "description": "Run (play) the Godot project from the editor.\n\nModes:\n- \"main\": Run the project's main scene (default).\n- \"current\": Run the currently open scene.\n- \"custom\": Run a specific scene (requires ``scene``).\n\nIdempotent: if the project is already running, returns success with\n``data.was_already_running=true`` (no scene switch). To switch scenes,\ncall ``project_manage(op=\"stop\")`` first, then ``project_run`` again.\n\nAfter starting playback, waits briefly for the Godot AI game helper to\ncheck in. The response includes ``game_status``, ``helper_live``\n(status == \"live\"), ``session_active`` (status not in {\"not_live\",\n\"stopped\"}), and any ``recent_errors`` observed during the run window.\nThe top-level booleans mirror the same fields inside ``game_status``.\n``game_status.status=\"not_live\"`` means playback launched but the game\ndid not become live before the helper-ready window elapsed;\n``\"no_helper\"`` means the project has no _mcp_game_helper autoload, as\nwith some headless/custom-main-loop setups (helper_live=false,\nsession_active=true); ``\"stopped\"`` means playback stopped or never\nbecame active before liveness could be confirmed (helper_live=false,\nsession_active=false); ``\"break\"`` means the game process is parked in\na remote-debugger break \u2014 during boot this is a GDScript parse/load\nerror that froze the game before the helper could register, and the\nresponse names the failing script when captured\n(``game_status.break`` = ``{reason, can_debug, pre_live}``). A game at\na break cannot continue on its own: call ``project_manage(op=\"stop\")``,\nfix the error, and relaunch. Poll ``editor_state`` to see late\ntransitions.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "mode": {
+            "default": "main",
+            "type": "string",
+            "description": "\"main\" | \"current\" | \"custom\". Default \"main\"."
+          },
+          "scene": {
+            "default": "",
+            "type": "string",
+            "description": "Scene path (e.g. \"res://levels/level1.tscn\"). Required for \"custom\"."
+          },
+          "autosave": {
+            "default": true,
+            "type": "boolean",
+            "description": "When True (default), Godot persists in-memory MCP scene\nmutations to disk before running. Pass False for smoke tests\nwhere MCP edits should stay in memory."
+          },
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "project_manage",
+      "description": "Project run/stop and project.godot settings.\n\nResource form: ``godot://project/info`` and ``godot://project/settings``\n\u2014 prefer for active-session reads.\n\nOps:\n  \u2022 stop()\n        Stop the running project (game). Takes no params \u2014 call as\n        ``project_manage(op=\"stop\")`` or with ``params={}``. Idempotent:\n        succeeds with ``was_running=false`` if the project isn't running.\n        Do NOT pass extra fields like ``force`` or ``reason`` inside\n        ``params`` \u2014 only the registered keys are accepted (here, none).\n        For multi-editor setups, pass ``session_id`` as a sibling of\n        ``op``/``params``, not inside ``params``.\n  \u2022 settings_get(key)\n        Read a ProjectSettings key (e.g. \"application/config/name\").\n  \u2022 settings_set(key, value)\n        Write a ProjectSettings key and persist to project.godot.\n        Refuses the startup-execution keys (``autoload/*``,\n        ``editor_plugins/*``, ``application/run/main_scene``,\n        ``editor/run/main_run_args``, ``editor/script/templates_search_path``);\n        use ``set_main_scene`` / ``autoload_manage(op=\"add\")`` for the two\n        that have a validated route.\n  \u2022 set_main_scene(path)\n        Set the project's main scene \u2014 the scene ``project_run(mode=\"main\")``\n        boots and the engine loads at startup. Writes\n        ``application/run/main_scene`` and persists to project.godot. ``path``\n        must be a ``res://`` scene inside the project that already exists and\n        loads as a PackedScene, so a scaffolded project can be made runnable\n        without opening the generic startup-execution surface.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "set_main_scene",
+              "settings_get",
+              "settings_set",
+              "stop"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "script_create",
+      "description": "Create a new GDScript source file (.gd) on disk.\n\nWrites content to a .gd file in the project. Overwrites if it exists.\nTriggers a filesystem scan. New files include ``data.cleanup.rm``\nlisting the .gd + .gd.uid sidecar; overwrite omits it.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "res:// path (e.g. \"res://scripts/player.gd\")."
+          },
+          "content": {
+            "default": "",
+            "type": "string",
+            "description": "GDScript source. Empty creates a blank file."
+          },
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "script_patch",
+      "description": "Anchor-based string-replace edit on a .gd file.\n\nFinds an exact ``old_text`` and replaces with ``new_text``. Fails\non multiple matches unless ``replace_all=True``; fails on zero matches.\nExact byte match (whitespace significant). Triggers filesystem scan and\nrefreshes an already-loaded GDScript in place so the next call runs the\nnew code (response reloaded=true; otherwise reload_reason says why).\nNot undoable via Ctrl+Z.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "res:// path ending in .gd."
+          },
+          "old_text": {
+            "type": "string",
+            "description": "Exact substring to find. Must be unique unless replace_all."
+          },
+          "new_text": {
+            "type": "string",
+            "description": "Replacement (empty deletes)."
+          },
+          "replace_all": {
+            "default": false,
+            "type": "boolean",
+            "description": "Replace every occurrence. Default False."
+          },
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "required": [
+          "path",
+          "old_text",
+          "new_text"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "script_attach",
+      "description": "Attach a script to a node in the scene tree.\n\nReplaces any existing script on the node. Undoable.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Scene path of the node (e.g. \"/Main/Player\")."
+          },
+          "script_path": {
+            "type": "string",
+            "description": "res:// path of the .gd (e.g. \"res://scripts/player.gd\")."
+          },
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "required": [
+          "path",
+          "script_path"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "script_manage",
+      "description": "Script (.gd) reading, detachment, and outline.\n\nResource form: ``godot://script/{path}`` \u2014 prefer for active-session reads.\n\nOps:\n  \u2022 read(path)\n        Read full source, line count, file size.\n  \u2022 detach(path)\n        Remove the currently attached script from a node. Undoable.\n  \u2022 find_symbols(path)\n        Outline a .gd \u2014 class_name, extends, functions, signals, @export vars.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "detach",
+              "find_symbols",
+              "read"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "resource_manage",
+      "description": "Resource (asset) search, inspection, assignment, and creation. Covers\ngeneric Resource subclasses plus specialized authoring (Curve, Environment,\nphysics shapes, gradient/noise textures).\n\nOps:\n  \u2022 search(type=\"\", path=\"\", offset=0, limit=100)\n        Search for resources by type or path. Type matching includes\n        subclasses. At least one filter required. Paginated.\n  \u2022 load(path)\n        Inspect a .tres / .res \u2014 returns type and editor-visible properties.\n  \u2022 assign(path, property, resource_path)\n        Load and assign a resource to a node property. Undoable.\n  \u2022 get_info(type)\n        Introspect a Resource class \u2014 properties, parent, abstract flag,\n        concrete_subclasses (for abstract bases). Read-only.\n  \u2022 create(type, properties=None, path=\"\", property=\"\", resource_path=\"\",\n            overwrite=False)\n        Instantiate a Resource subclass. Either path+property (assign to a\n        node, undoable) or resource_path (save to .tres). For specific\n        families (Curve, Environment, etc.) prefer the dedicated ops.\n  \u2022 curve_set_points(points, path=\"\", property=\"\", resource_path=\"\")\n        Replace all points on a Curve / Curve2D / Curve3D. Auto-creates\n        the curve resource if the slot is empty (curve_created flag).\n  \u2022 environment_create(path=\"\", preset=\"default\", properties=None,\n                        sky=None, resource_path=\"\", overwrite=False)\n        Build Environment + Sky chain. Presets: default | clear | sunset\n        | night | fog. sky may be bool or a procedural sky dict such as\n        {\"sky_material\": \"procedural\", \"sky_top_color\": \"#0f172a\"}.\n        Either assign to a WorldEnvironment node or save .tres.\n  \u2022 physics_shape_autofit(path, source_path=\"\", shape_type=\"\")\n        Size a CollisionShape2D/3D to a nearby visual's bounds. Searches\n        direct siblings then parent-siblings (handles nested\n        Body\u2192Collision layouts). Ambiguous matches return candidate paths\n        in error.data.candidates. Auto-creates the concrete Shape subclass\n        if needed. shape_type accepts either the short form (\"box\",\n        \"sphere\", \"capsule\", \"cylinder\" for 3D; \"rectangle\", \"circle\",\n        \"capsule\" for 2D) or the matching Godot class name (\"BoxShape3D\",\n        \"RectangleShape2D\", etc.).\n  \u2022 gradient_texture_create(stops, width=256, height=1, fill=\"linear\",\n                              path=\"\", property=\"\", resource_path=\"\",\n                              overwrite=False)\n        Build GradientTexture2D from color stops. fill: linear | radial | square.\n  \u2022 noise_texture_create(noise_type=\"simplex_smooth\", width=512, height=512,\n                          frequency=0.01, seed=0, fractal_octaves=0,\n                          path=\"\", property=\"\", resource_path=\"\",\n                          overwrite=False)\n        Build NoiseTexture2D wrapping FastNoiseLite. Noise types: simplex |\n        simplex_smooth | perlin | cellular | value | value_cubic.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "assign",
+              "create",
+              "curve_set_points",
+              "environment_create",
+              "get_info",
+              "gradient_texture_create",
+              "load",
+              "noise_texture_create",
+              "physics_shape_autofit",
+              "search"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "api_manage",
+      "description": "Inspect Godot API documentation-shaped metadata from the connected editor's\nClassDB: \"what properties does X have\", method signatures, signals, enums,\nconstants, defaults, and property hint strings.\n\nResource form (prefer for active-session reads):\n  godot://class/{class_name}\n\nOps:\n  - get_class(class_name, sections=None, include_inherited=False,\n              include_inheritors=False, offset=0, limit=100)\n        Return selected class-reference sections without creating a scene\n        instance. sections may be a comma-separated string or list containing\n        properties, methods, signals, enums, constants, inheritors.\n        Defaults to [\"properties\"] only \u2014 a bare get_class answers \"what\n        properties does X have\" without the multi-thousand-token full dump.\n        Pass the sections you want by name, or \"all\" for the full set\n        (properties, methods, signals, enums, constants). \"all\" does NOT\n        include the heavier \"inheritors\" section \u2014 request that by name.\n        For pagination, request one section at a time so offset/limit apply\n        only to the list you are paging.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "const": "get_class",
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "filesystem_manage",
+      "description": "Project filesystem access via the Godot editor's EditorFileSystem.\n\nOps:\n  \u2022 read_text(path)\n        Read a text file at a ``res://`` path. Returns content, size,\n        line_count.\n  \u2022 write_text(path, content=\"\")\n        Create or overwrite a text file. Updates the editor filesystem\n        entry for that one file (single-file update, not a full scan).\n        Newly-created files include ``data.cleanup.rm`` for transient\n        smoke tests; overwrite omits the field.\n  \u2022 reimport(paths)\n        Force-reimport the listed files via ``EditorFileSystem.update_file``.\n        ``paths`` is a list of res:// paths.\n        Intended for imported assets such as textures, models, and audio.\n        Paths that are not imported resources (``.gd`` scripts, ``.tscn``,\n        hand-written ``.tres``, or an asset the editor has not imported yet)\n        report under ``skipped_non_imported`` rather than ``reimported``: their\n        filesystem entry is refreshed, but no import runs, so a success there is\n        not evidence that a script parsed or that diagnostics were produced. Use\n        ``script_patch``/``script_create`` to save a script and receive fresh\n        diagnostics, or ``scan`` for an asset awaiting its first import.\n        Returns ``reimported``, ``skipped_non_imported``, ``not_found`` and their\n        counts.\n  \u2022 scan()\n        Force a full ``EditorFileSystem.scan()`` and wait for it to settle.\n        This is the headless equivalent of the editor regaining window focus:\n        ``write_text``/``script_create`` register single files but do NOT\n        rebuild the global ``class_name`` table, so a freshly-created\n        ``class_name MyThing extends Resource`` is invisible to\n        ``resource_manage``/type references until a scan runs. Call this once\n        after adding ``class_name`` scripts when the editor isn't focused.\n        Single-flight (awaits any in-progress scan rather than stacking another).\n        Returns ``scan_completed`` and ``global_classes_registered_delta``.\n  \u2022 search(name=\"\", type=\"\", path=\"\", offset=0, limit=100)\n        Find files by name, resource type, or path substring. At least one\n        filter must be set. Paginated.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "read_text",
+              "reimport",
+              "scan",
+              "search",
+              "write_text"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "client_manage",
+      "description": "Configure AI clients to use this Godot AI MCP server. Writes / removes\nclient config files (Claude Code, Codex, Antigravity, Cursor, Devin Desktop (Windsurf),\nZed, etc.).\n\nOps:\n  \u2022 status()\n        List every supported client with id, display_name, status\n        (configured | not_configured | configured_mismatch | error),\n        and installed flag.\n  \u2022 configure(client)\n        Write the MCP server entry into the named client's config file.\n        ``client`` is one of the ids returned by status().\n  \u2022 remove(client)\n        Remove this server's entry from the named client's config.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "configure",
+              "remove",
+              "status"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "signal_manage",
+      "description": "Signals (Godot's event/observer mechanism) \u2014 list, connect, disconnect.\n\nOps:\n  \u2022 list(path, include_editor=False)\n        List all signals on the node and their current connections (built-in\n        and custom). By default editor-internal connections (the\n        SceneTreeEditor dock and friends) are filtered out \u2014 pass\n        ``include_editor=True`` to surface them. The response carries\n        ``editor_connection_count`` so an agent can tell how many were hidden.\n  \u2022 connect(path, signal, target, method)\n        Connect a signal from ``path`` to a method on the target node.\n        Undoable.\n  \u2022 disconnect(path, signal, target, method)\n        Remove an existing connection. Undoable.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "connect",
+              "disconnect",
+              "list"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "autoload_manage",
+      "description": "Autoload (global singleton) management. Autoloads are scripts or scenes\nloaded automatically at project start, accessible globally by name when\n``singleton=True``. Persisted to ``project.godot``.\n\nOps:\n  \u2022 list()\n        List autoloads with name, path, and singleton flag.\n  \u2022 add(name, path, singleton=True)\n        Register an autoload (script or PackedScene) by ``res://`` path.\n  \u2022 remove(name)\n        Unregister an autoload by name. The underlying file is not deleted.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "add",
+              "list",
+              "remove"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "input_map_manage",
+      "description": "InputMap actions and bindings (keyboard, mouse, gamepad). Persisted to\n``project.godot``.\n\nResource form: ``godot://input_map`` \u2014 prefer for active-session reads.\n\nOps:\n  \u2022 list(include_builtin=False)\n        List input actions and their bound events. By default only\n        user-authored actions (those persisted in ``project.godot`` under\n        ``input/<name>``) are returned; pass ``include_builtin=True`` to\n        also surface Godot's ``ui_*`` and editor-runtime actions\n        (``spatial_editor/*``, etc.). The ``is_builtin`` field on each\n        entry is true for any action not authored by the user.\n  \u2022 add_action(action, deadzone=0.5)\n        Create a new empty input action. ``deadzone`` must be in\n        ``[0.0, 1.0]`` \u2014 Godot uses it as the analog-stick dead-zone\n        threshold; values outside this range are rejected with\n        ``VALUE_OUT_OF_RANGE``. Typical values are 0.2-0.5; leave the\n        default 0.5 unless you have a reason. Not a key-repeat delay.\n  \u2022 ensure_action(action, deadzone=0.5)\n        Idempotently create or persist an input action. If the action exists\n        in live InputMap or in project.godot, the existing state is preserved.\n  \u2022 remove_action(action)\n        Remove an action and all its event bindings. Also removes actions\n        persisted in project.godot but not loaded in the live InputMap\n        (``loaded_in_input_map: false`` in ``list``), e.g. actions created\n        by a previous editor session.\n  \u2022 bind_event(action, event_type, keycode=\"\", ctrl=False, alt=False,\n                shift=False, meta=False, button=None, axis=None,\n                axis_value=1.0)\n        Bind a key/mouse/gamepad event to an action. The action must\n        already exist (call ``add_action`` first). ``event_type`` is\n        ``\"key\"`` | ``\"mouse_button\"`` | ``\"joy_button\"`` |\n        ``\"joy_axis\"``.\n          - ``key``: ``keycode`` is a Godot keycode *name string* like\n            ``\"A\"``, ``\"Space\"``, ``\"Enter\"``, ``\"Escape\"``, ``\"F1\"``,\n            ``\"Left\"`` \u2014 not an integer and not ``KEY_*``. Modifier\n            booleans ``ctrl`` / ``alt`` / ``shift`` / ``meta`` optional.\n          - ``mouse_button``: ``button`` is an int \u2014 1=left, 2=right,\n            3=middle, 4=wheel up, 5=wheel down.\n          - ``joy_button``: ``button`` is the ``JoyButton`` index\n            (e.g. 0=A/Cross, 1=B/Circle).\n          - ``joy_axis``: ``axis`` is the ``JoyAxis`` index and\n            ``axis_value`` is the direction/value, usually -1.0 or 1.0.\n  \u2022 ensure_binding(action, event_type, ...)\n        Idempotently ensure the action exists and has the requested binding.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "add_action",
+              "bind_event",
+              "ensure_action",
+              "ensure_binding",
+              "list",
+              "remove_action"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "game_manage",
+      "description": "Runtime game inspection and input simulation.\n\nThese ops target the running game process through Godot's EngineDebugger\nbridge. Start the project first with project_run and poll editor_state until\ngame_capture_ready=true.\n\nOps:\n  - get_scene_tree(depth=10, root_path=\"\")\n        Inspect the running scene tree. root_path accepts an absolute runtime\n        path or a scene-relative path rooted at the current scene.\n  - get_node_info(path, include_properties=True)\n        Inspect one running node's metadata and optional property snapshot.\n  - get_ui_elements(root_path=\"\", include_hidden=False,\n                    include_disabled=True, max_depth=10)\n        Inspect visible runtime Control nodes for UI testing. Includes path,\n        type, text where present, disabled state, and rect metadata.\n  - input_key(key, pressed=True, echo=False)\n        Send a key press/release to the running game.\n  - input_mouse(event, position=None, button=\"left\", pressed=True)\n        Send a mouse motion or button event. event: \"motion\" | \"button\".\n        position is a {x, y} object or [x, y] array; omit it to use the\n        game's current cursor position. A present but malformed position is\n        rejected rather than silently falling back to the cursor.\n  - input_gamepad(device=0, control=\"button\", index=0, pressed=True, value=0.0)\n        Send a joypad button or axis event. control: \"button\" | \"axis\".\n  - input_action(action, pressed=True, strength=1.0)\n        Set a project action's pressed state directly in the running game.\n  - input_sequence(steps, settle_frames=0)\n        Apply a frame-timed action timeline in one call \u2014 the frame-accurate,\n        multi-step form of input_action. Each step is\n        {at_frame, action, pressed=True, strength=1.0}; the game applies each\n        step's action on its scheduled frame, awaits settle_frames more, then\n        replies once. Use this instead of separate input_action calls whenever\n        timing matters (jump arcs, combos, walk-into-trigger): per-call network\n        latency makes hitting a target frame impossible otherwise. Steps must\n        be ordered by non-decreasing at_frame; frames (not ms) are the timing\n        basis. Action-based input is focus-independent, so it works on a\n        backgrounded game window. Cannot run inside batch_execute.\n  - input_state(actions=None)\n        Read current action pressed states. Empty actions = all project actions.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "get_node_info",
+              "get_scene_tree",
+              "get_ui_elements",
+              "input_action",
+              "input_gamepad",
+              "input_key",
+              "input_mouse",
+              "input_sequence",
+              "input_state"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "test_run",
+      "description": "Run GDScript test suites inside the connected Godot editor.\n\nDiscovers test_*.gd in res://tests/, instantiates them, and runs\nall test_* methods. Returns a compact summary by default (counts,\nsuite names, duration) plus failures only. verbose=True includes\nevery individual test result (each with per-test ``duration_ms``).\n\nThe whole run has a 300s budget; the plugin aborts between tests\nshortly before it expires and returns TEST_RUN_TIMEOUT with the\npartial summary (full partials via test_manage(op=\"results_get\")).\nLong suites are safe \u2014 the editor services the MCP transport\nbetween tests \u2014 but one single test blocking the main thread for\n20s+ can still drop the session. Not allowed inside batch_execute.\n\nThe response includes ``edited_scene`` (the scene currently open in\nthe editor). Many suites assume the project's main scene is open; if\nit is not and there are failures, the response also carries a\n``scene_warning`` \u2014 open the main scene (``scene_open``) and re-run\nbefore treating those failures as real.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "suite": {
+            "default": "",
+            "type": "string",
+            "description": "Run only the named suite (e.g. \"scene\", \"node\", \"editor\").\nEmpty runs all suites."
+          },
+          "test_name": {
+            "default": "",
+            "type": "string",
+            "description": "Run only tests whose name contains this substring."
+          },
+          "exclude_test_name": {
+            "default": "",
+            "type": "string",
+            "description": "Skip tests whose name contains this substring."
+          },
+          "verbose": {
+            "default": false,
+            "type": "boolean",
+            "description": "Include every individual test result. Default False."
+          },
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "test_manage",
+      "description": "Test result inspection (re-fetches the most recent ``test_run`` payload).\n\nResource form: ``godot://test/results`` \u2014 prefer for active-session reads.\n\nOps:\n  \u2022 results_get(verbose=False)\n        Same shape as test_run \u2014 full results from the last run, no\n        re-execution. verbose=True includes every individual test result.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "const": "results_get",
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "batch_execute",
+      "description": "Execute a list of editor sub-commands in order, stopping on first error.\n\nEach item must be `{\"command\": \"<plugin_command>\", \"params\": {...}}`.\nUse the underlying plugin command names (e.g. `create_node`, `set_property`,\n`delete_node`, `attach_script`), not the MCP tool names. Commands run\nsequentially; execution stops at the first error. When `undo` is True\n(default), any successful sub-commands are rolled back via the scene's\nundo history if a later sub-command fails, producing atomic-on-failure\nsemantics.\n\nUse this to compose multi-step edits (create node + set property +\nattach script) into a single tool call. Rollback works for sub-commands\nthat modify the currently edited scene. `batch_execute` itself is not\nallowed as a sub-command.\n\nScene paths are relative to the edited scene root (e.g. \"/Main/Enemy\"),\nNOT runtime \"/root/...\" paths. The example below assumes the scene\nroot is named \"Main\" \u2014 substitute the actual root name.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "commands": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "description": "List of `{\"command\": str, \"params\": dict}` items."
+          },
+          "undo": {
+            "default": true,
+            "type": "boolean",
+            "description": "Roll back succeeded sub-commands on failure. Default True."
+          },
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "required": [
+          "commands"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "ui_manage",
+      "description": "UI / Control authoring (HUD, menus, layouts, vector decoration).\n\nOps:\n  \u2022 set_anchor_preset(path, preset, resize_mode=\"minsize\", margin=0)\n        Apply a Control layout preset. preset: top_left | top_right |\n        bottom_left | bottom_right | center_left | center_top | center_right |\n        center_bottom | center | left_wide | top_wide | right_wide |\n        bottom_wide | vcenter_wide | hcenter_wide | full_rect.\n        resize_mode: minsize | keep_width | keep_height | keep_size.\n        Target must be a Control. CanvasLayer is the canonical HUD parent\n        but is not a Control \u2014 put a Control child under the CanvasLayer and\n        apply the preset to that overlay.\n  \u2022 set_text(path, text)\n        Set text on a Label/Button/LineEdit/TextEdit/RichTextLabel.\n  \u2022 build_layout(tree, parent_path=\"\")\n        Atomically build a UI subtree from a nested spec\n        ({type, name?, properties?, anchor_preset?, anchor_margin?, theme?,\n        children?}). Validates everything before mutating.\n        `properties` is direct node properties only. Theme constants like\n        container spacing live under `theme_override_constants/<name>` \u2014\n        e.g. `{\"theme_override_constants/separation\": 8}` on a\n        VBoxContainer, not `{\"separation\": 8}` (which errors).\n        `theme` and `anchor_preset` require a Control / Window \u2014 for a HUD,\n        nest a Control under a CanvasLayer and apply them to the Control\n        child, not the layer itself.\n  \u2022 draw_recipe(path, ops, clear_existing=True)\n        Attach a declarative list of vector _draw() ops to a Control \u2014\n        radar sweeps, gauges, corner brackets, crosshairs, waveforms.\n        Op kinds: line | rect | arc | circle | polyline | polygon | string.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "build_layout",
+              "draw_recipe",
+              "set_anchor_preset",
+              "set_text"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "theme_manage",
+      "description": "Theme authoring (Godot's stylesheet-like resource for Controls). Cascades\ndown a Control subtree when assigned via theme_apply.\n\nOps (pass via op=\"...\" plus a params dict):\n  \u2022 create(path, overwrite=False)\n        Create a new empty Theme .tres at a res:// path.\n  \u2022 set_color(theme_path, class_name, name, value)\n        Set a color slot. value: \"#rrggbb\"/\"#rrggbbaa\", named, or\n        {\"r\",\"g\",\"b\",\"a\"}.\n  \u2022 set_constant(theme_path, class_name, name, value)\n        Set an integer constant (separation, margin, padding).\n  \u2022 set_font_size(theme_path, class_name, name, value)\n        Set a font_size slot in pixels.\n  \u2022 set_stylebox_flat(theme_path, class_name, name, bg_color?, border_color?,\n                       border?, corners?, margins?, shadow?, anti_aliasing?)\n        Compose a StyleBoxFlat (panels, button states, line edits).\n        border/corners/margins/shadow each accept \"all\" + per-side keys.\n  \u2022 apply(node_path, theme_path=\"\")\n        Assign the theme to a Control (cascades to descendants). Empty\n        theme_path clears.\n\nAll ops accept `session_id` on the wrapper to target a specific editor.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "apply",
+              "create",
+              "set_color",
+              "set_constant",
+              "set_font_size",
+              "set_stylebox_flat"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "animation_create",
+      "description": "Create a new Animation clip inside an AnimationPlayer's default library.\n\nAfter creating the clip, add tracks via ``animation_manage`` ops\n``add_property_track`` / ``add_method_track`` / ``create_simple``.\nTrack node paths are stored relative to the AnimationPlayer's\n``root_node`` (default: its parent), not to the scene root \u2014 see\n``animation_manage`` preset ops for a forgiving target_path that\naccepts either form.\nIf ``player_path`` doesn't resolve, an AnimationPlayer is auto-created\nat that path (parent must exist).",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "player_path": {
+            "type": "string",
+            "description": "Scene path to the AnimationPlayer node."
+          },
+          "name": {
+            "type": "string",
+            "description": "Animation clip name (e.g. \"idle\", \"pulse\")."
+          },
+          "length": {
+            "type": "number",
+            "description": "Duration in seconds."
+          },
+          "loop_mode": {
+            "default": "none",
+            "type": "string",
+            "description": "\"none\" (default) | \"linear\" | \"pingpong\"."
+          },
+          "overwrite": {
+            "default": false,
+            "type": "boolean",
+            "description": "Replace an existing animation with the same name."
+          },
+          "session_id": {
+            "default": "",
+            "type": "string",
+            "description": "Optional Godot session to target. Empty = active session."
+          }
+        },
+        "required": [
+          "player_path",
+          "name",
+          "length"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "animation_manage",
+      "description": "AnimationPlayer authoring (player, tracks, autoplay, presets, playback).\n\nOps:\n  \u2022 player_create(parent_path, name=\"AnimationPlayer\")\n        Create an AnimationPlayer with empty default library.\n  \u2022 delete(player_path, animation_name)\n        Delete an animation clip from the default library. Undoable.\n  \u2022 validate(player_path, animation_name)\n        Check all track paths resolve. Returns broken_count + per-track issues.\n  \u2022 add_property_track(player_path, animation_name, track_path, keyframes,\n                        interpolation=\"linear\")\n        Add a property track. track_path: \"NodeName:property\". keyframes:\n        [{time, value, transition?}, ...]. interpolation: linear|nearest|cubic.\n  \u2022 add_method_track(player_path, animation_name, target_node_path, keyframes)\n        Add a method track. keyframes: [{time, method, args?}, ...].\n  \u2022 set_autoplay(player_path, animation_name=\"\")\n        Set autoplay. Empty animation_name clears.\n  \u2022 play(player_path, animation_name=\"\")\n        Editor preview. Not saved with scene.\n  \u2022 stop(player_path)\n        Stop editor preview. Not saved with scene.\n  \u2022 list(player_path)\n        List animations with length, loop_mode, track_count.\n  \u2022 get(player_path, animation_name)\n        Inspect a clip's tracks and keyframes in detail.\n  \u2022 create_simple(player_path, name, tweens, length=None, loop_mode=\"none\",\n                   overwrite=False)\n        High-level: build a multi-track clip from tween specs in one call.\n        tweens: [{target, property, from, to, duration, delay?, transition?}].\n  \u2022 preset_fade(player_path, target_path, mode=\"in\", duration=0.5,\n                 animation_name=\"\", overwrite=False)\n        One-call fade-in/out (modulate.a).\n  \u2022 preset_slide(player_path, target_path, direction=\"left\", mode=\"in\",\n                  distance=None, duration=0.4, animation_name=\"\", overwrite=False)\n        One-call slide-in/out (position).\n  \u2022 preset_shake(player_path, target_path, intensity=None, duration=0.3,\n                  frequency=30.0, seed=0, animation_name=\"\", overwrite=False)\n        One-call shake (jittered position).\n  \u2022 preset_pulse(player_path, target_path, from_scale=1.0, to_scale=1.1,\n                  duration=0.4, animation_name=\"\", overwrite=False)\n        One-call pulse / hover-bounce (3-keyframe scale ping-pong).\n\nPreset target_path: accepts either a scene-absolute path (e.g. \"/Main/World/Cube\",\nmatching every other scene tool) or a path relative to the AnimationPlayer's\nroot_node (e.g. \"World/Cube\", matching how Animation tracks store node paths).\nScene-absolute targets outside the player's root_node subtree are converted to\na `..`-prefixed track path via root_node.get_path_to(target), the same shape\nthe relative form already accepts.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "add_method_track",
+              "add_property_track",
+              "create_simple",
+              "delete",
+              "get",
+              "list",
+              "play",
+              "player_create",
+              "preset_fade",
+              "preset_pulse",
+              "preset_shake",
+              "preset_slide",
+              "set_autoplay",
+              "stop",
+              "validate"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "material_manage",
+      "description": "Material authoring (StandardMaterial3D, ORMMaterial3D, ShaderMaterial,\nCanvasItemMaterial). Albedo, metallic/roughness, emission, transparency,\nshader uniforms.\n\nResource form: ``godot://materials`` \u2014 prefer for active-session reads.\n\nOps:\n  \u2022 create(path, type=\"standard\", shader_path=\"\", overwrite=False)\n        Create + save a material .tres at a res:// path. type:\n        \"standard\" | \"orm\" | \"canvas_item\" | \"shader\". For \"shader\",\n        shader_path points to the .gdshader.\n  \u2022 set_param(path, param, value)\n        Set a built-in property on a .tres material. Enum-valued params\n        accept names (\"alpha\" -> TRANSPARENCY_ALPHA). Color/Vector dicts.\n        Texture properties accept res:// paths.\n  \u2022 set_shader_param(path, param, value)\n        Set a shader uniform on a ShaderMaterial.\n  \u2022 get(path)\n        Inspect a material (type, params, uniforms, current values).\n  \u2022 list(root=\"res://\", type=\"\")\n        List materials under root, optional type filter.\n  \u2022 assign(node_path, resource_path=\"\", slot=\"override\", create_if_missing=False,\n            type=\"standard\")\n        Assign a material to a node slot. Slots: \"override\" |\n        \"surface_<N>\" | \"canvas\" | \"process\". When create_if_missing=True\n        and no resource_path, makes an inline material of `type`.\n  \u2022 apply_to_node(node_path, type=\"standard\", params=None, slot=\"override\",\n                   save_to=\"\", overwrite=False)\n        High-level: build + set params + assign in one undo.\n        save_to optionally persists to disk; errors if the file already\n        exists unless overwrite=True.\n  \u2022 apply_preset(preset, path=\"\", node_path=\"\", overrides=None)\n        Curated looks: metal, glass, emissive, unlit, matte, ceramic.\n        path saves to disk; node_path assigns to a node; overrides merge.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "apply_preset",
+              "apply_to_node",
+              "assign",
+              "create",
+              "get",
+              "list",
+              "set_param",
+              "set_shader_param"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "particle_manage",
+      "description": "Particle systems (GPUParticles2D/3D, CPUParticles2D/3D). All write ops\ncreate the node + sub-resources (ProcessMaterial, default QuadMesh draw\npass) in a single undo action.\n\nOps:\n  \u2022 create(parent_path, name=\"Particles\", type=\"gpu_3d\")\n        Create an emitter. type: \"gpu_3d\" | \"gpu_2d\" | \"cpu_3d\" | \"cpu_2d\".\n        For GPU emitters, auto-creates ProcessMaterial; for gpu_3d, also\n        a default QuadMesh draw pass.\n  \u2022 set_main(node_path, properties)\n        Node-level props: amount, lifetime, one_shot, explosiveness,\n        preprocess, speed_scale, randomness, fixed_fps, emitting,\n        local_coords, interp_to_end.\n  \u2022 set_process(node_path, properties)\n        Behavior props (auto-creates ProcessMaterial for GPU). Emission shape,\n        velocity, gravity, color_ramp, scale_curve, turbulence. See full\n        property list in the Godot reference. GPU gravity is a Vector3 \u2014\n        pass {x, y, z} or [x, y, z], including for gpu_2d (the shared\n        ProcessMaterial is 3D; z is ignored in 2D).\n  \u2022 set_draw_pass(node_path, pass_=1, mesh=\"\", texture=\"\", material=\"\")\n        What gets drawn per particle. GPU 3D: mesh in draw_pass_N + optional\n        material override. GPU 2D / CPU 2D: texture. CPU 3D: mesh.\n  \u2022 restart(node_path)\n        Restart emission. Runtime-only, not undoable.\n  \u2022 get(node_path)\n        Inspect main props, process material, draw passes.\n  \u2022 apply_preset(parent_path, name, preset, type=\"gpu_3d\", overrides=None)\n        Curated effects: fire, smoke, spark_burst, magic_swirl, rain,\n        explosion, lightning. One-shot presets re-trigger via restart.\n        overrides = {\"main\": {...}, \"process\": {...}, \"draw\": {...}}; bare\n        keys are auto-routed to main (amount, lifetime, one_shot, ...) or\n        process \u2014 draw keys must be nested under \"draw\". draw configures\n        the gpu_3d draw-pass StandardMaterial3D (blend_mode, albedo_color,\n        emission, ...); on gpu_2d only draw.texture (res:// path) applies;\n        cpu_* types reject draw overrides. Unknown or malformed override\n        keys return INVALID_PARAMS (never silently dropped); response\n        reports applied_main / applied_process / applied_draw. GPU gravity\n        requires {x, y, z} (or [x, y, z]) even for gpu_2d.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "apply_preset",
+              "create",
+              "get",
+              "restart",
+              "set_draw_pass",
+              "set_main",
+              "set_process"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "camera_manage",
+      "description": "Camera2D / Camera3D authoring (zoom, FOV, projection, smoothing, follow).\n\nOps:\n  \u2022 create(parent_path, name=\"Camera\", type=\"2d\", make_current=False)\n        Create a Camera2D (\"2d\") or Camera3D (\"3d\"). When make_current=True,\n        unmarks previously current cameras of the same class in one undo.\n  \u2022 configure(camera_path, properties)\n        Batch-set camera-specific properties (zoom, fov, projection, smoothing,\n        drag, limits \u2026). Class-aware. Enum-by-name (projection, keep_aspect,\n        anchor_mode, doppler_tracking, process_callback). Vector2 dict\n        coercion for zoom/offset. Transforms (position, rotation, scale,\n        transform, global_*) live on the Node \u2014 set those via\n        node_set_property, not here.\n  \u2022 set_limits_2d(camera_path, left?, right?, top?, bottom?, smoothed?)\n        Set Camera2D bounds. Pass only the edges to change.\n  \u2022 set_damping_2d(camera_path, position_speed?, rotation_speed?,\n                    drag_margins?, drag_horizontal_enabled?,\n                    drag_vertical_enabled?)\n        Smooth Camera2D motion (position/rotation smoothing speeds + drag\n        deadzone). drag_margins: {left,top,right,bottom} fractions [0,1].\n  \u2022 follow_2d(camera_path, target_path, smoothing_speed=5.0, zero_transform=True)\n        Reparent camera under target with smoothing \u2014 Godot-native follow.\n  \u2022 get(camera_path=\"\")\n        Inspect a camera (class, current flag, all properties). Empty path\n        resolves to the currently-active camera, falling back to the first.\n  \u2022 list()\n        List every Camera2D/Camera3D in the scene.\n  \u2022 apply_preset(parent_path, name, preset, type=None, make_current=True,\n                  overrides=None)\n        Spawn with opinionated defaults. Presets: topdown_2d, platformer_2d,\n        cinematic_3d, action_3d. overrides merge over preset values.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "apply_preset",
+              "configure",
+              "create",
+              "follow_2d",
+              "get",
+              "list",
+              "set_damping_2d",
+              "set_limits_2d"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "audio_manage",
+      "description": "Sound effects, music, ambience (AudioStreamPlayer / 2D / 3D).\n\nOps:\n  \u2022 player_create(parent_path, name=\"AudioStreamPlayer\", type=\"1d\")\n        Create an AudioStreamPlayer / 2D / 3D node. type: \"1d\" | \"2d\" | \"3d\".\n  \u2022 player_set_stream(player_path, stream_path)\n        Assign an AudioStream resource (.ogg/.wav/.mp3 or .tres). Returns\n        duration_seconds.\n  \u2022 player_set_playback(player_path, volume_db?, pitch_scale?, autoplay?, bus?)\n        Update common playback properties atomically. Pass only fields to\n        change; at least one of volume_db/pitch_scale/autoplay/bus required.\n  \u2022 play(player_path, from_position=0.0)\n        Start real editor preview playback. Not undoable.\n  \u2022 stop(player_path)\n        Stop editor preview playback. Not undoable.\n  \u2022 list(root=\"res://\", include_duration=True)\n        Scan project for AudioStream resources (every subclass + .tres/.res).\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "list",
+              "play",
+              "player_create",
+              "player_set_playback",
+              "player_set_stream",
+              "stop"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "tilemap_manage",
+      "description": "TileMap / TileMapLayer authoring (set tiles, fill rects, clear, read cells).\n\nAll operations target TileMapLayer nodes in the currently edited scene by\nscene-relative path (e.g. \"/LavaLake20x20/Ground\"). All write ops are\nundoable via EditorUndoRedoManager.\n\nsource_id is the TileSet source index. atlas_col/atlas_row are the\natlas coordinates of the tile within that source. For full-tile animated\nsources (lava, water, sewage) use atlas_col=0, atlas_row=0.\n\nIMPORTANT \u2014 Source-ID remapping in specialized .tres files:\nWhen a layer uses a specialized .tres (e.g. volcano_animated.tres),\nSource-IDs are re-numbered from 0. Example: volcano lava is Source 8 in\nthe main volcano.tres but Source 0 in volcano_animated.tres.\nAlways use the remapped ID when the TileMapLayer references a specialized\n.tres, not the original ID from the main .tres.\n\nOps:\n  \u2022 tilemap_set_cell(path, source_id, atlas_col, atlas_row, map_x, map_y)\n        Set a single tile at (map_x, map_y).\n        Returns: {map_x, map_y, source_id, atlas_col, atlas_row}\n\n  \u2022 tilemap_set_cells_rect(path, source_id, atlas_col, atlas_row,\n                            rect_x, rect_y, rect_w, rect_h)\n        Fill a rect_w \u00d7 rect_h region starting at (rect_x, rect_y) with\n        one tile type in a single undo action.\n        Returns: {cells_filled, rect: {x, y, w, h}}\n\n  \u2022 tilemap_clear(path)\n        Remove all tiles from the layer.\n        Returns: {cleared: true}\n\n  \u2022 tilemap_get_cells(path)\n        Return all used cell coordinates.\n        Returns: {cells: [{x, y}, ...], count: int}\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "tilemap_clear",
+              "tilemap_get_cells",
+              "tilemap_set_cell",
+              "tilemap_set_cells_rect"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "tileset_manage",
+      "description": "TileSet management \u2014 atlas inspection tools.\n\nOps:\n  \u2022 tileset_get_atlas_tiles(tileset_path, source_id)\n        Return all occupied atlas tile positions for one source in a TileSet.\n        Read-only \u2014 does not modify any resource or project file.\n\n        tileset_path: res:// path to the .tres TileSet resource (required)\n        source_id:    raw TileSet source id of the TileSetAtlasSource to query (required, \u2265 0)\n\n        Returns:\n          {\"tiles\": [{\"col\": int, \"row\": int}, ...], \"count\": int}\n\n        Error codes (passed through from GDScript handler):\n          MISSING_REQUIRED_PARAM  \u2014 tileset_path empty or source_id absent\n          RESOURCE_NOT_FOUND      \u2014 tileset_path does not exist on disk\n          WRONG_TYPE              \u2014 not a TileSet, or source is not a TileSetAtlasSource\n          VALUE_OUT_OF_RANGE      \u2014 source_id does not exist in this TileSet\n\n  \u2022 tileset_get_atlas_image(tileset_path, source_id, max_size=0)\n        Return the atlas sprite-sheet texture of a TileSetAtlasSource as a\n        Base64-encoded PNG image.  Read-only \u2014 reads the texture directly\n        from the resource without any UI interaction.\n\n        tileset_path: res:// path to the .tres TileSet resource (required)\n        source_id:    raw TileSet source id of the TileSetAtlasSource to query (required, \u2265 0)\n        max_size:     optional int; if > 0, scale the image so its longest\n                      edge is at most max_size pixels (default 0 = full res)\n\n        Returns:\n          {\"image_base64\": str, \"width\": int, \"height\": int,\n           \"original_width\": int, \"original_height\": int, \"format\": \"png\"}\n\n        Error codes (passed through from GDScript handler):\n          MISSING_REQUIRED_PARAM  \u2014 tileset_path empty or source_id absent\n          RESOURCE_NOT_FOUND      \u2014 tileset_path does not exist on disk\n          WRONG_TYPE              \u2014 not a TileSet, source not a TileSetAtlasSource,\n                                    or source has no texture assigned\n          VALUE_OUT_OF_RANGE      \u2014 source_id does not exist in this TileSet\n\n  \u2022 Atlas image workflow:\n        To visually inspect what tiles look like, use tileset_get_atlas_image\n        instead of editor screenshots. It reads the texture directly from the\n        resource \u2014 no UI interaction or editor state required.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "tileset_get_atlas_image",
+              "tileset_get_atlas_tiles"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "gridmap_manage",
+      "description": "GridMap authoring (set items, fill 3D regions, clear, read cells + library items).\n\nAll operations target GridMap nodes in the currently edited scene by\nscene-relative path (e.g. \"/Main/Terrain\"). All write ops are undoable via\nEditorUndoRedoManager.\n\nitem is the item id from the GridMap's MeshLibrary. Use\ngridmap_list_library_items to discover valid ids and names before placing\ncells (the 3D analogue of tileset atlas inspection). orientation is the\nGridMap baked rotation index (0..24).\n\nOps:\n  \u2022 gridmap_set_item(path, item, map_x, map_y, map_z, orientation=0)\n        Set a single cell item at (map_x, map_y, map_z). item=-1 erases.\n        Returns: {map_x, map_y, map_z, item, orientation}\n\n  \u2022 gridmap_fill(path, item, rect_x, rect_y, rect_z, rect_w, rect_h, rect_d,\n                  orientation=0)\n        Fill a rect_w \u00d7 rect_h \u00d7 rect_d region starting at (rect_x, rect_y,\n        rect_z) with one item in a single undo action.\n        Returns: {cells_filled, rect: {x, y, z, w, h, d}}\n\n  \u2022 gridmap_clear(path)\n        Remove all cells from the GridMap.\n        Returns: {cleared: true}\n\n  \u2022 gridmap_get_used_cells(path)\n        Return all used cell coordinates.\n        Returns: {cells: [{x, y, z}, ...], count: int}\n\n  \u2022 gridmap_list_library_items(path)\n        List the MeshLibrary items available to the GridMap.\n        Returns: {library, items: [{item, name, mesh}...], count: int}\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "gridmap_clear",
+              "gridmap_fill",
+              "gridmap_get_used_cells",
+              "gridmap_list_library_items",
+              "gridmap_set_item"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "csg_manage",
+      "description": "CSG authoring (create boolean shapes, set their operation).\n\nCreate CSG shapes (box, sphere, cylinder, torus, polygon) under a Node3D\nparent in the currently edited scene and set their boolean operation\n(union / intersection / subtraction) so geometry like holes, caves and\ntunnels can be carved directly in the editor. All write ops are undoable\nvia EditorUndoRedoManager. Sibling CSG shapes under the same parent combine\nautomatically; use a CSGCombiner3D parent for explicit grouping. Size,\nposition and material live on the created node \u2014 set them with\nnode_set_property / material_manage after creation.\n\nOps:\n  \u2022 csg_create(parent_path, name=\"\", shape=\"box\", operation=\"union\")\n        Create a CSG shape under a Node3D parent (empty parent_path = scene\n        root). shape: box | sphere | cylinder | torus | polygon.\n        operation: union | intersection | subtraction.\n        Returns: {path, name, shape, operation}\n\n  \u2022 csg_set_operation(path, operation)\n        Set the boolean operation of a CSG shape.\n        operation: union | intersection | subtraction.\n        Returns: {operation}\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "csg_create",
+              "csg_set_operation"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "name": "custom_manage",
+      "description": "List or invoke custom tools registered by third-party addons.\n\nActive session only. Use op=\"list\" to discover registered tools.\nop=\"invoke\" requires params: tool_name (string); optional: params (dict,\nforwarded to the addon handler unvalidated \u2014 shape per the tool's\nparams_schema from op=\"list\"). Inside batch_execute, address a custom tool\nas \"custom_tool:<name>\" (deferred tools cannot run in batches).\nSome custom tools are also registered first-class as \"custom_<name>\" with\ntheir own schema \u2014 prefer those when present.\n\nCanonical call shape: ``{\"op\": \"<verb>\", \"params\": {...}}``. Flat op parameters are accepted as a compatibility alias when the client transmits them; ``op`` and ``session_id`` remain top-level.",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "op": {
+            "enum": [
+              "invoke",
+              "list"
+            ],
+            "type": "string"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "session_id": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "op"
+        ],
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "_meta": {
+        "defer_loading": true,
+        "fastmcp": {
+          "tags": []
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "phase": "1B offline merge/split",
+  "new_tests": 32,
+  "complete_passes": 2,
+  "synthetic_scenarios_passed": 12,
+  "synthetic_scenarios_total": 12,
+  "scenario_frames": 253,
+  "merge_events": 18,
+  "split_events": 13,
+  "max_area_error_px2": 0.0,
+  "overlap_frames": 0,
+  "legacy_python_tests_passed": 34,
+  "existing_godot_lab_assertions_passed": 92,
+  "unchanged_preexisting_files": 63,
+  "benchmark": [
+    {
+      "resolution": [
+        640,
+        480
+      ],
+      "warmup_frames": 5,
+      "measured_frames": 35,
+      "pipeline_ms_p50": 57.043000124394894,
+      "pipeline_ms_p95": 66.54362995177507,
+      "pipeline_ms_max": 66.90629990771413,
+      "final_structures": 3,
+      "scope": "segmentation+tracking+snapshot; no capture/render/network/game"
+    },
+    {
+      "resolution": [
+        1280,
+        720
+      ],
+      "warmup_frames": 5,
+      "measured_frames": 35,
+      "pipeline_ms_p50": 132.8686000779271,
+      "pipeline_ms_p95": 147.14952004142106,
+      "pipeline_ms_max": 155.88969993405044,
+      "final_structures": 3,
+      "scope": "segmentation+tracking+snapshot; no capture/render/network/game"
+    }
+  ],
+  "physical_camera_used": false,
+  "projector_used": false,
+  "new_geometry_udp_connected": false,
+  "new_geometry_game_connected": false,
+  "gameplay_manual_full_regression_this_phase": false
+}

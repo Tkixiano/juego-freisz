@@ -1,0 +1,96 @@
+{
+  "source": "synthetic_images",
+  "processed_frames": 236,
+  "coordinate_space": "PROJECTOR",
+  "calibration_errors": {
+    "fit_rms_px": 3.285567675729703e-05,
+    "fit_max_px": 5.691068258541699e-05,
+    "check_rms_px": 1.8569627963940384e-05,
+    "check_max_px": 2.7094993937852865e-05,
+    "check_each_px": [
+      7.760271053871145e-06,
+      1.9767232454462785e-05,
+      2.7094993937852865e-05,
+      1.3936296087771161e-05
+    ],
+    "units": "logical_projection_pixels"
+  },
+  "elapsed_seconds": 8.019648999907076,
+  "processing_average_fps": 29.427721837044803,
+  "ids_seen": [
+    1,
+    2
+  ],
+  "packets_sent": 236,
+  "send_errors": 0,
+  "camera_closed": true,
+  "snapshot_saved": false,
+  "last_frame_size": [
+    640,
+    480
+  ],
+  "camera_last_state": "SYNTHETIC",
+  "opencv_timing": {
+    "samples": 236,
+    "mean_ms": 10.513919484564813,
+    "p95_ms": 15.07540000602603,
+    "max_ms": 42.66199981793761
+  },
+  "capture_read_timing": {
+    "samples": 0,
+    "mean_ms": 0,
+    "p95_ms": 0,
+    "max_ms": 0
+  },
+  "source_age_timing": {
+    "samples": 236,
+    "mean_ms": 11.86942627211496,
+    "p95_ms": 16.83830004185438,
+    "max_ms": 44.356000144034624
+  },
+  "capture": null,
+  "udp": {
+    "sent": 236,
+    "errors": 0,
+    "measured_send_hz": 29.467184403422287,
+    "last_bytes": 374,
+    "send_cost": {
+      "samples": 236,
+      "mean_ms": 0.18391398105265225,
+      "p95_ms": 0.33130007795989513,
+      "max_ms": 0.8817000780254602
+    }
+  },
+  "modules": {
+    "1": {
+      "state": "LIVE",
+      "age_ms": 35.376899875700474,
+      "confirmations": 0,
+      "source_id": 1,
+      "center": [
+        0.30712606504491746,
+        0.7011655911053887
+      ],
+      "area": 4315.5,
+      "confidence": 0.9541993586814509,
+      "last_observation_monotonic": 1250449.5235594
+    },
+    "2": {
+      "state": "LIVE",
+      "age_ms": 35.376899875700474,
+      "confirmations": 0,
+      "source_id": 2,
+      "center": [
+        0.7839067725883738,
+        0.5985451123272763
+      ],
+      "area": 5435.0,
+      "confidence": 0.8835995272573955,
+      "last_observation_monotonic": 1250449.5235594
+    }
+  },
+  "processing_fps_last_window": 29.258130839590727,
+  "opencv": "5.0.0",
+  "numpy": "2.5.3",
+  "exit_code": 0
+}

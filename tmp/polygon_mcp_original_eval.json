@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var runner: RefCounted = load(\"res://validation/ExternalIntegrationRegression.gd\").new()\nget_tree().current_scene.set_meta(\"phase1a_original_regression\",runner)\nrunner.run(get_tree())\nreturn \"original_game_regression_started\""}}

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/PlayerMovement.gd" id="1"]
+[resource]
+script = ExtResource("1")
+speed = 410.0
+acceleration = 3200.0
+deceleration = 3800.0
+air_control = 0.72
+ascent_gravity = 1250.0
+descent_gravity = 1450.0
+jump_speed = 650.0
+double_jump_speed = 620.0
+terminal_speed = 640.0
+fast_fall_speed = 800.0
+fast_fall_acceleration = 2100.0
+fast_fall_release_brake = 1800.0
+jump_cut_multiplier = 0.46
+coyote_time = 0.1
+jump_buffer = 0.12
+drop_time = 0.2

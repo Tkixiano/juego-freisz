@@ -1,0 +1,152 @@
+{
+  "regression": {
+    "engine": "4.6.3-stable (official)",
+    "regression_failed": 0,
+    "regression_passed": 225,
+    "regression_total": 225,
+    "udp_failed": 0,
+    "udp_passed": 37,
+    "udp_total": 37
+  },
+  "stream": {
+    "failures": [],
+    "passed": 7,
+    "performance": {
+      "configured_physics_hz": 60,
+      "draw_duration_seconds": 31.082916,
+      "drawn_frames": 1866,
+      "duration_seconds": 21.914713,
+      "frame_ms_max": 19.599,
+      "frame_ms_p95": 17.854,
+      "measured_draw_fps": 60.0329776009432,
+      "measured_game_loop_fps": 60.0053489178708,
+      "measured_physics_hz": 60.0053489178708,
+      "peak_receive_hz": 30.4944028015503,
+      "render_samples": 1315
+    },
+    "results": [
+      {
+        "detail": "2",
+        "passed": true,
+        "test": "detector_closed_and_restarted"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "green_loss_and_recovery"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "blue_loss_and_recovery"
+      },
+      {
+        "detail": "(0.278566, 0.383714)",
+        "passed": true,
+        "test": "both_rotations_received"
+      },
+      {
+        "detail": "(4.000015, 4.000014)",
+        "passed": true,
+        "test": "no_unbounded_pose_step_on_recovery"
+      },
+      {
+        "detail": "{ \"udp\": \"SIN COMUNICACIÓN\", \"address\": \"127.0.0.1\", \"port\": 5005, \"mode\": \"EXTERNAL\", \"packets_per_second\": 15.9984321536489, \"updates_per_second\": 15.9984321536489, \"last_sequence\": 1244326270, \"detected\": 0, \"known\": 3, \"age_seconds\": 1.217075, \"tracking\": \"SEGUIMIENTO PERDIDO\", \"lost\": [\"left\", \"right\", \"top\"], \"received\": 534, \"invalid\": 0, \"stale\": 0, \"applied\": 534, \"overloaded_ticks\": 0, \"expired\": 0, \"packet_age_ms\": 1.8408203125, \"source_age_ms\": -1.0, \"modules\": { \"left\": { \"detected\": false, \"age_seconds\": 1.217075, \"target_error_px\": 0.0 }, \"right\": { \"detected\": false, \"age_seconds\": 1.217075, \"target_error_px\": 0.0 }, \"top\": { \"detected\": false, \"age_seconds\": -1.0, \"target_error_px\": 0.0 } }, \"suppressed_targets\": 34 }",
+        "passed": true,
+        "test": "no_invalid_or_stale_source_packets"
+      },
+      {
+        "detail": "[0, 1]",
+        "passed": true,
+        "test": "crossing_platform_crush_has_bounded_recovery_and_no_permanent_embedding"
+      }
+    ],
+    "total": 7
+  },
+  "vision": {
+    "failed": 0,
+    "live_sample": {
+      "address": "127.0.0.1",
+      "age_seconds": 0.017318,
+      "applied": 266,
+      "detected": 2,
+      "expired": 0,
+      "invalid": 0,
+      "known": 3,
+      "last_sequence": 1244313491,
+      "left_movement": 158.089477539063,
+      "lost": [
+        "top"
+      ],
+      "mode": "EXTERNAL",
+      "modules": {
+        "left": {
+          "age_seconds": 0.017318,
+          "detected": true,
+          "target_error_px": 7.28276014328003
+        },
+        "right": {
+          "age_seconds": 0.017318,
+          "detected": true,
+          "target_error_px": 4.94056606292725
+        },
+        "top": {
+          "age_seconds": -1.0,
+          "detected": false,
+          "target_error_px": 0.0
+        }
+      },
+      "overloaded_ticks": 0,
+      "packet_age_ms": 7.01416015625,
+      "packets_per_second": 29.9993400145197,
+      "port": 5005,
+      "received": 266,
+      "right_movement": 123.84700012207,
+      "source_age_ms": 9.48449992574751,
+      "stale": 0,
+      "suppressed_targets": 18,
+      "tracking": "PARCIAL",
+      "udp": "RECIBIENDO",
+      "updates_per_second": 29.9993400145197
+    },
+    "passed": 7,
+    "results": [
+      {
+        "detail": "{ \"udp\": \"RECIBIENDO\", \"address\": \"127.0.0.1\", \"port\": 5005, \"mode\": \"EXTERNAL\", \"packets_per_second\": 29.9993400145197, \"updates_per_second\": 29.9993400145197, \"last_sequence\": 1244313491, \"detected\": 2, \"known\": 3, \"age_seconds\": 0.017318, \"tracking\": \"PARCIAL\", \"lost\": [\"top\"], \"received\": 266, \"invalid\": 0, \"stale\": 0, \"applied\": 266, \"overloaded_ticks\": 0, \"expired\": 0, \"packet_age_ms\": 7.01416015625, \"source_age_ms\": 9.48449992574751, \"modules\": { \"left\": { \"detected\": true, \"age_seconds\": 0.017318, \"target_error_px\": 7.28276014328003 }, \"right\": { \"detected\": true, \"age_seconds\": 0.017318, \"target_error_px\": 4.94056606292725 }, \"top\": { \"detected\": false, \"age_seconds\": -1.0, \"target_error_px\": 0.0 } }, \"suppressed_targets\": 18, \"left_movement\": 158.089477539063, \"right_movement\": 123.84700012207 }",
+        "passed": true,
+        "test": "independent_python_image_pipeline_received"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "two_color_ids_are_detected"
+      },
+      {
+        "detail": "[158.089477539063, 123.84700012207]",
+        "passed": true,
+        "test": "both_platforms_moved_from_vision"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "loss_or_shutdown_freezes_both"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "fixed_geometry_preserved"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "players_and_floor_remain"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "light_attack_hits_once_on_live_vision_platform"
+      }
+    ],
+    "total": 7
+  }
+}

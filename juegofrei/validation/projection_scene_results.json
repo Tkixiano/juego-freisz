@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "aspect_and_resolution_match_game": true,
+    "cancel_hides_output_without_changing_main_scene": true,
+    "fullscreen_on_selected_monitor": true,
+    "monitor_list_matches_display_server": true,
+    "no_combat_or_udp_nodes": true,
+    "pattern_texture_has_known_canvas": true,
+    "preview_button_opens_output": true,
+    "rendered_output_available": true
+  },
+  "passed": 8,
+  "total": 8
+}

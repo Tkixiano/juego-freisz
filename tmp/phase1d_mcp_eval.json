@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var runner: RefCounted = load(\"res://validation/OfflineReplayValidation.gd\").new()\nget_tree().current_scene.set_meta(\"offline_runner\",runner)\nrunner.run(get_tree(),\"mcp\")\nreturn \"offline_suite_started\""}}

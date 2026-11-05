@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": [
+    "real_window_with_synthetic_pattern",
+    "auto_detect_and_save",
+    "repeat_and_load",
+    "manual_mode_cancel_preserves_file"
+  ],
+  "check_max_px": 1.7053025658242404e-13
+}

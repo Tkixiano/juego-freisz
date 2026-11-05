@@ -1,0 +1,11 @@
+{
+  "files_checked": 79,
+  "modified": [
+    "juegofrei\\scripts\\AttackData.gd",
+    "juegofrei\\scripts\\CombatController.gd",
+    "juegofrei\\scripts\\GameManager.gd",
+    "juegofrei\\scripts\\PlayerController.gd",
+    "juegofrei\\scenes\\GameShell.tscn",
+    "juegofrei\\resources\\attacks\\AirHeavy.tres"
+  ]
+}

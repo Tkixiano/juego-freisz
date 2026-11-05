@@ -1,0 +1,520 @@
+{
+  "engine": "4.6.3-stable (official)",
+  "failures": [],
+  "hardware_used": false,
+  "label": "headless",
+  "measurements": {
+    "descending": {
+      "body_position": "(450.0, 410.0)",
+      "carry_error_px": "(0.0, 0.0)",
+      "floor_frames": 90,
+      "frames": 90,
+      "max_overlap_area_px2": 0.0,
+      "max_player_step_px": 1.5,
+      "player_position": "(450.0, 361.9937)",
+      "recovery_events": 0
+    },
+    "horizontal": {
+      "body_position": "(450.0, 410.0)",
+      "carry_error_px": "(0.0, 0.0)",
+      "floor_frames": 100,
+      "frames": 100,
+      "max_overlap_area_px2": 0.0,
+      "max_player_step_px": 1.5,
+      "player_position": "(450.0, 361.9937)",
+      "recovery_events": 0
+    },
+    "rising": {
+      "body_position": "(450.0, 360.0)",
+      "carry_error_px": "(0.0, 0.0)",
+      "floor_frames": 90,
+      "frames": 90,
+      "max_overlap_area_px2": 0.0,
+      "max_player_step_px": 1.5,
+      "player_position": "(450.0, 311.9937)",
+      "recovery_events": 0
+    },
+    "rotation": {
+      "body_position": "(450.0, 410.0)",
+      "carry_error_px": "(11.32681, -2.646515)",
+      "floor_frames": 100,
+      "frames": 100,
+      "max_overlap_area_px2": 0.0,
+      "max_player_step_px": 0.408105731010437,
+      "player_position": "(461.3268, 359.3471)",
+      "recovery_events": 0
+    },
+    "stress": {
+      "floor_frames": 360,
+      "frames": 360,
+      "max_overlap_area_px2": 0.00189093220978975,
+      "max_player_step_px": 0.680390000343323,
+      "max_surface_sweep_px": 1.54432277957494,
+      "recovery_events": 0
+    }
+  },
+  "passed": 92,
+  "rows": [
+    {
+      "detail": "",
+      "passed": true,
+      "test": "three_independent_example_ids"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "two_green_objects_share_color_not_identity"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "scene_reuses_original_player_controller"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "new_bodies_are_static_not_animatable"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "queue_create_convex"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "create_commits_only_on_physics_tick"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "queue_create_concave"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "duplicate_id_rejected"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "convex_creates_one_polygon_shape"
+    },
+    {
+      "detail": "3",
+      "passed": true,
+      "test": "concave_decomposed_into_multiple_convex_shapes"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "concave_notch_remains_empty"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "concave_lower_surface_is_solid"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "queue_position_and_rotation"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "pose_not_mutated_by_api_call"
+    },
+    {
+      "detail": "(250.0, 170.0)",
+      "passed": true,
+      "test": "position_target_reached"
+    },
+    {
+      "detail": "0.19999998807907",
+      "passed": true,
+      "test": "rotation_target_reached"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "pose_only_preserves_shape_instances"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "same_color_motion_does_not_modify_other_object"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "queue_valid_geometry_change"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "geometry_not_mutated_before_tick"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "invalid_after_valid_pending_does_not_cancel_valid_request"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "valid_geometry_swapped_once_without_replacing_body"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "reject_fewer_than_three"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "preserve_last_valid_after_fewer_than_three"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "reject_zero_edge"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "preserve_last_valid_after_zero_edge"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "reject_zero_area"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "preserve_last_valid_after_zero_area"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "reject_tiny_area"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "preserve_last_valid_after_tiny_area"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "reject_self_intersection"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "preserve_last_valid_after_self_intersection"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "reject_adjacent_overlap"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "preserve_last_valid_after_adjacent_overlap"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "reject_repeated_nonadjacent"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "preserve_last_valid_after_repeated_nonadjacent"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "reject_closing_duplicate"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "preserve_last_valid_after_closing_duplicate"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "reject_touching_nonadjacent_edge"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "preserve_last_valid_after_touching_nonadjacent_edge"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "reject_nan"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "preserve_last_valid_after_nan"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "reject_infinite"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "preserve_last_valid_after_infinite"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "reject_coordinate_limit"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "preserve_last_valid_after_coordinate_limit"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "reject_vertex_limit"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "preserve_last_valid_after_vertex_limit"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "invalid_geometry_never_rebuilt_shapes"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "invalid_pose_rejected"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "unknown_id_rejected_without_creation"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "identical_geometry_does_not_rebuild"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "both_windings_are_valid"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "collinear_forward_edge_valid"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "disabled_removes_physical_collision"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "reenable_reuses_shapes"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "deletion_removes_body_and_id"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "requests_inside_body_entered_callback_are_deferred"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "callback_changes_committed_without_flush_mutation"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "repeated_creation_deletion_does_not_leak_nodes"
+    },
+    {
+      "detail": "(780.0, 379.9842)",
+      "passed": true,
+      "test": "character_lands_inside_concave_notch_not_bounding_rectangle"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "concave_contact_has_no_deep_overlap"
+    },
+    {
+      "detail": "(-0.574946, -0.818192)",
+      "passed": true,
+      "test": "character_contacts_real_sloped_surface"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "sloped_contact_has_no_deep_overlap"
+    },
+    {
+      "detail": "(350.0, 361.9937)",
+      "passed": true,
+      "test": "character_lands_on_irregular_convex_top"
+    },
+    {
+      "detail": "{ \"max_player_step_px\": 1.5, \"max_overlap_area_px2\": 0.0, \"floor_frames\": 100, \"frames\": 100, \"carry_error_px\": (0.0, 0.0), \"recovery_events\": 0, \"player_position\": (450.0, 361.9937), \"body_position\": (450.0, 410.0) }",
+      "passed": true,
+      "test": "horizontal_no_rebuild_or_recovery"
+    },
+    {
+      "detail": "{ \"max_player_step_px\": 1.5, \"max_overlap_area_px2\": 0.0, \"floor_frames\": 100, \"frames\": 100, \"carry_error_px\": (0.0, 0.0), \"recovery_events\": 0, \"player_position\": (450.0, 361.9937), \"body_position\": (450.0, 410.0) }",
+      "passed": true,
+      "test": "horizontal_no_unexpected_jump_or_penetration"
+    },
+    {
+      "detail": "{ \"max_player_step_px\": 1.5, \"max_overlap_area_px2\": 0.0, \"floor_frames\": 100, \"frames\": 100, \"carry_error_px\": (0.0, 0.0), \"recovery_events\": 0, \"player_position\": (450.0, 361.9937), \"body_position\": (450.0, 410.0) }",
+      "passed": true,
+      "test": "horizontal_keeps_floor_contact"
+    },
+    {
+      "detail": "{ \"max_player_step_px\": 1.5, \"max_overlap_area_px2\": 0.0, \"floor_frames\": 100, \"frames\": 100, \"carry_error_px\": (0.0, 0.0), \"recovery_events\": 0, \"player_position\": (450.0, 361.9937), \"body_position\": (450.0, 410.0) }",
+      "passed": true,
+      "test": "horizontal_carries_character"
+    },
+    {
+      "detail": "{ \"max_player_step_px\": 1.5, \"max_overlap_area_px2\": 0.0, \"floor_frames\": 90, \"frames\": 90, \"carry_error_px\": (0.0, 0.0), \"recovery_events\": 0, \"player_position\": (450.0, 311.9937), \"body_position\": (450.0, 360.0) }",
+      "passed": true,
+      "test": "rising_no_rebuild_or_recovery"
+    },
+    {
+      "detail": "{ \"max_player_step_px\": 1.5, \"max_overlap_area_px2\": 0.0, \"floor_frames\": 90, \"frames\": 90, \"carry_error_px\": (0.0, 0.0), \"recovery_events\": 0, \"player_position\": (450.0, 311.9937), \"body_position\": (450.0, 360.0) }",
+      "passed": true,
+      "test": "rising_no_unexpected_jump_or_penetration"
+    },
+    {
+      "detail": "{ \"max_player_step_px\": 1.5, \"max_overlap_area_px2\": 0.0, \"floor_frames\": 90, \"frames\": 90, \"carry_error_px\": (0.0, 0.0), \"recovery_events\": 0, \"player_position\": (450.0, 311.9937), \"body_position\": (450.0, 360.0) }",
+      "passed": true,
+      "test": "rising_keeps_floor_contact"
+    },
+    {
+      "detail": "{ \"max_player_step_px\": 1.5, \"max_overlap_area_px2\": 0.0, \"floor_frames\": 90, \"frames\": 90, \"carry_error_px\": (0.0, 0.0), \"recovery_events\": 0, \"player_position\": (450.0, 311.9937), \"body_position\": (450.0, 360.0) }",
+      "passed": true,
+      "test": "rising_carries_character"
+    },
+    {
+      "detail": "{ \"max_player_step_px\": 1.5, \"max_overlap_area_px2\": 0.0, \"floor_frames\": 90, \"frames\": 90, \"carry_error_px\": (0.0, 0.0), \"recovery_events\": 0, \"player_position\": (450.0, 361.9937), \"body_position\": (450.0, 410.0) }",
+      "passed": true,
+      "test": "descending_no_rebuild_or_recovery"
+    },
+    {
+      "detail": "{ \"max_player_step_px\": 1.5, \"max_overlap_area_px2\": 0.0, \"floor_frames\": 90, \"frames\": 90, \"carry_error_px\": (0.0, 0.0), \"recovery_events\": 0, \"player_position\": (450.0, 361.9937), \"body_position\": (450.0, 410.0) }",
+      "passed": true,
+      "test": "descending_no_unexpected_jump_or_penetration"
+    },
+    {
+      "detail": "{ \"max_player_step_px\": 1.5, \"max_overlap_area_px2\": 0.0, \"floor_frames\": 90, \"frames\": 90, \"carry_error_px\": (0.0, 0.0), \"recovery_events\": 0, \"player_position\": (450.0, 361.9937), \"body_position\": (450.0, 410.0) }",
+      "passed": true,
+      "test": "descending_keeps_floor_contact"
+    },
+    {
+      "detail": "{ \"max_player_step_px\": 1.5, \"max_overlap_area_px2\": 0.0, \"floor_frames\": 90, \"frames\": 90, \"carry_error_px\": (0.0, 0.0), \"recovery_events\": 0, \"player_position\": (450.0, 361.9937), \"body_position\": (450.0, 410.0) }",
+      "passed": true,
+      "test": "descending_carries_character"
+    },
+    {
+      "detail": "{ \"max_player_step_px\": 0.40810573101044, \"max_overlap_area_px2\": 0.0, \"floor_frames\": 100, \"frames\": 100, \"carry_error_px\": (11.32681, -2.646515), \"recovery_events\": 0, \"player_position\": (461.3268, 359.3471), \"body_position\": (450.0, 410.0) }",
+      "passed": true,
+      "test": "rotation_no_rebuild_or_recovery"
+    },
+    {
+      "detail": "{ \"max_player_step_px\": 0.40810573101044, \"max_overlap_area_px2\": 0.0, \"floor_frames\": 100, \"frames\": 100, \"carry_error_px\": (11.32681, -2.646515), \"recovery_events\": 0, \"player_position\": (461.3268, 359.3471), \"body_position\": (450.0, 410.0) }",
+      "passed": true,
+      "test": "rotation_no_unexpected_jump_or_penetration"
+    },
+    {
+      "detail": "{ \"max_player_step_px\": 0.40810573101044, \"max_overlap_area_px2\": 0.0, \"floor_frames\": 100, \"frames\": 100, \"carry_error_px\": (11.32681, -2.646515), \"recovery_events\": 0, \"player_position\": (461.3268, 359.3471), \"body_position\": (450.0, 410.0) }",
+      "passed": true,
+      "test": "rotation_keeps_floor_contact"
+    },
+    {
+      "detail": "{ \"frames\": 360, \"floor_frames\": 360, \"max_overlap_area_px2\": 0.00189093220979, \"max_player_step_px\": 0.68039000034332, \"max_surface_sweep_px\": 1.54432277957494, \"recovery_events\": 0 }",
+      "passed": true,
+      "test": "repeated_updates_preserve_shapes_and_no_recovery"
+    },
+    {
+      "detail": "{ \"frames\": 360, \"floor_frames\": 360, \"max_overlap_area_px2\": 0.00189093220979, \"max_player_step_px\": 0.68039000034332, \"max_surface_sweep_px\": 1.54432277957494, \"recovery_events\": 0 }",
+      "passed": true,
+      "test": "repeated_updates_no_jump_or_penetration"
+    },
+    {
+      "detail": "{ \"frames\": 360, \"floor_frames\": 360, \"max_overlap_area_px2\": 0.00189093220979, \"max_player_step_px\": 0.68039000034332, \"max_surface_sweep_px\": 1.54432277957494, \"recovery_events\": 0 }",
+      "passed": true,
+      "test": "repeated_updates_respect_sweep_budget"
+    },
+    {
+      "detail": "{ \"frames\": 360, \"floor_frames\": 360, \"max_overlap_area_px2\": 0.00189093220979, \"max_player_step_px\": 0.68039000034332, \"max_surface_sweep_px\": 1.54432277957494, \"recovery_events\": 0 }",
+      "passed": true,
+      "test": "repeated_updates_keep_floor_contact"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "occupied_geometry_update_keeps_last_collision"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "pending_geometry_commits_when_character_clears"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "spawn_intersecting_character_is_pending_not_engulfing"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "pending_spawn_commits_after_character_clears"
+    },
+    {
+      "detail": "(350.0, 609.9938)",
+      "passed": true,
+      "test": "disable_support_character_falls_to_safety_floor"
+    },
+    {
+      "detail": "{ \"state\": { \"id\": \"carrier\", \"committed\": true, \"outlines\": [], \"committed_outlines\": [], \"contract_geometry_version\": 0, \"tracking\": {  }, \"confidence\": 1.0, \"blocked_by_character\": true, \"pending_removal\": false, \"pending_geometry\": false, \"target_position\": (350.0, 410.0), \"target_rotation\": 0.0, \"requested_enabled\": true, \"polygon\": [(-115.0, -8.0), (-65.0, -28.0), (65.0, -28.0), (115.0, -8.0), (100.0, 35.0), (-100.0, 35.0)], \"committed_polygon\": [(-115.0, -8.0), (-65.0, -28.0), (65.0, -28.0), (115.0, -8.0), (100.0, 35.0), (-100.0, 35.0)], \"area\": 12845.0, \"color\": (0.0, 1.0, 0.0, 1.0), \"position\": (350.0, 410.0), \"rotation\": 0.0, \"collision_enabled\": false, \"parts\": 1, \"geometry_revision\": 3, \"shape_builds\": 3 }, \"player_position\": (350.0, 412.4167), \"native_player\": [X: (1.0, 0.0), Y: (0.0, 1.0), O: (350.0, 412.4167)], \"player_layer\": 4 }",
+      "passed": true,
+      "test": "reactivation_does_not_engulf_character"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "reactivation_commits_after_character_clears"
+    },
+    {
+      "detail": "(350.0, 609.9938)",
+      "passed": true,
+      "test": "remove_support_character_falls_to_safety_floor"
+    }
+  ],
+  "total": 92
+}

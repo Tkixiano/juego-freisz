@@ -1,0 +1,324 @@
+{
+  "failed": 0,
+  "failures": [],
+  "label": "phase1c",
+  "passed": 63,
+  "results": [
+    {
+      "detail": "",
+      "passed": true,
+      "test": "boot_main_menu_pauses"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "visible_enabled_Controls"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "mouse_controls_from_main"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "visible_enabled_Back"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "mouse_back_to_main"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "visible_enabled_Play"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "mouse_play"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "escape_pause"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "paused_physics_frozen"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "visible_enabled_Controls"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "mouse_controls_from_pause"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "visible_enabled_Back"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "mouse_back_to_pause"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "visible_enabled_Play"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "mouse_continue"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "movement_after_continue"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "f1_opens_controls_live"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "visible_enabled_Back"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "back_resumes_live"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "visible_enabled_Restart"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "mouse_restart_resets_match"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "visible_enabled_MainMenu"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "mouse_main_menu"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "visible_enabled_Play"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "new_match_no_overlay"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "restart_no_node_or_signal_growth"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "two_fighters_three_platforms"
+    },
+    {
+      "detail": "[6.0, 6.0]",
+      "passed": true,
+      "test": "simultaneous_light_normal_order"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "trade_no_duplicate_lightfalse"
+    },
+    {
+      "detail": "[6.0, 6.0]",
+      "passed": true,
+      "test": "simultaneous_light_reversed_order"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "trade_no_duplicate_lighttrue"
+    },
+    {
+      "detail": "[14.0, 14.0]",
+      "passed": true,
+      "test": "simultaneous_heavy_normal_order"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "trade_no_duplicate_heavyfalse"
+    },
+    {
+      "detail": "[14.0, 14.0]",
+      "passed": true,
+      "test": "simultaneous_heavy_reversed_order"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "trade_no_duplicate_heavytrue"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "earlier_light_interrupts_heavy_startup"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "real_attack_evaded_with_dodge"
+    },
+    {
+      "detail": "8.0",
+      "passed": true,
+      "test": "actual_air_light_hit_p1"
+    },
+    {
+      "detail": "[12.0, (49.85308, -569.8234)]",
+      "passed": true,
+      "test": "actual_air_heavy_up_p1"
+    },
+    {
+      "detail": "[12.0, (99.32677, 563.3101)]",
+      "passed": true,
+      "test": "actual_air_heavy_down_p1"
+    },
+    {
+      "detail": "8.0",
+      "passed": true,
+      "test": "actual_air_light_hit_p2"
+    },
+    {
+      "detail": "[12.0, (-49.85308, -569.8234)]",
+      "passed": true,
+      "test": "actual_air_heavy_up_p2"
+    },
+    {
+      "detail": "[12.0, (-99.32677, 563.3101)]",
+      "passed": true,
+      "test": "actual_air_heavy_down_p2"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "death_in_hitstun_clears_attack_and_stun"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "edge_knockback_causes_one_stock_loss"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "double_ko_is_draw"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "r_replay_resets_both"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "single_winner_screen"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "visible_enabled_MainMenu"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "visible_enabled_Play"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "menu_after_victory_restarts_cleanly"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "mouse_select_left"
+    },
+    {
+      "detail": "(464.985, 434.9999)",
+      "passed": true,
+      "test": "mouse_drag_horizontal"
+    },
+    {
+      "detail": "(464.9999, 365.0096)",
+      "passed": true,
+      "test": "mouse_drag_vertical"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "mouse_release_stops_drag"
+    },
+    {
+      "detail": "0.32321697473526",
+      "passed": true,
+      "test": "e_rotates_selected"
+    },
+    {
+      "detail": "0.00178241555113",
+      "passed": true,
+      "test": "q_rotates_back"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "empty_click_deselects"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "select_other_platform"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "tab_hides_editor"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "hidden_editor_ignores_mouse"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "tab_restores_editor"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "mouse_rotation_preserves_all_geometry"
+    }
+  ],
+  "total": 63
+}

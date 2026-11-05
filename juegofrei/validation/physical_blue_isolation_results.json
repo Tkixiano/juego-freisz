@@ -1,0 +1,601 @@
+{
+  "expired": 0,
+  "green_pose_unchanged": true,
+  "invalid": 0,
+  "modules": {
+    "left": {
+      "age_seconds": -1.0,
+      "detected": false,
+      "last_update": {
+
+      },
+      "target_error_px": 0.0,
+      "transform_updates": 0
+    },
+    "right": {
+      "age_seconds": 24.696453,
+      "detected": false,
+      "last_update": {
+        "angle_degrees": -2.72488548035506,
+        "platform": "right",
+        "received_usec": 681964404,
+        "sequence": 1249126308,
+        "target_x": 539.330078125,
+        "target_y": 258.651763916016,
+        "wire_id": 2
+      },
+      "target_error_px": 0.0,
+      "transform_updates": 62
+    },
+    "top": {
+      "age_seconds": -1.0,
+      "detected": false,
+      "last_update": {
+
+      },
+      "target_error_px": 0.0,
+      "transform_updates": 0
+    }
+  },
+  "received": 291,
+  "trace": [
+    {
+      "angle_degrees": 0.0,
+      "platform": "right",
+      "received_usec": 676931195,
+      "sequence": 1249126162,
+      "target_x": 538.400024414063,
+      "target_y": 258.571411132813,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -3.87788670358228,
+      "platform": "right",
+      "received_usec": 677881218,
+      "sequence": 1249126190,
+      "target_x": 538.788940429688,
+      "target_y": 258.575958251953,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -2.27420202365187,
+      "platform": "right",
+      "received_usec": 677914523,
+      "sequence": 1249126191,
+      "target_x": 538.788940429688,
+      "target_y": 258.575958251953,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -1.32189445056144,
+      "platform": "right",
+      "received_usec": 677981171,
+      "sequence": 1249126193,
+      "target_x": 538.788940429688,
+      "target_y": 258.575958251953,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -0.655337299847815,
+      "platform": "right",
+      "received_usec": 678048081,
+      "sequence": 1249126195,
+      "target_x": 538.3955078125,
+      "target_y": 258.665893554688,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -0.384533602050624,
+      "platform": "right",
+      "received_usec": 678081283,
+      "sequence": 1249126196,
+      "target_x": 538.3955078125,
+      "target_y": 258.665893554688,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -0.226471213172744,
+      "platform": "right",
+      "received_usec": 678147874,
+      "sequence": 1249126198,
+      "target_x": 538.3955078125,
+      "target_y": 258.665893554688,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -0.0449827441943285,
+      "platform": "right",
+      "received_usec": 678281170,
+      "sequence": 1249126202,
+      "target_x": 538.3955078125,
+      "target_y": 258.665893554688,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -0.0449827454196313,
+      "platform": "right",
+      "received_usec": 679031106,
+      "sequence": 1249126224,
+      "target_x": 538.892578125,
+      "target_y": 258.604095458984,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -1.04411573589786,
+      "platform": "right",
+      "received_usec": 679164484,
+      "sequence": 1249126228,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -1.97206347746817,
+      "platform": "right",
+      "received_usec": 679231157,
+      "sequence": 1249126230,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -3.77882146261484,
+      "platform": "right",
+      "received_usec": 679297920,
+      "sequence": 1249126232,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -5.17288963559128,
+      "platform": "right",
+      "received_usec": 679331124,
+      "sequence": 1249126233,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -4.12684081245615,
+      "platform": "right",
+      "received_usec": 679397896,
+      "sequence": 1249126235,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -6.3547844012293,
+      "platform": "right",
+      "received_usec": 679431136,
+      "sequence": 1249126236,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -3.82407398444337,
+      "platform": "right",
+      "received_usec": 679514426,
+      "sequence": 1249126238,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -2.22994866140806,
+      "platform": "right",
+      "received_usec": 679581125,
+      "sequence": 1249126240,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -1.10726130696963,
+      "platform": "right",
+      "received_usec": 679647885,
+      "sequence": 1249126242,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -0.651219048768496,
+      "platform": "right",
+      "received_usec": 679681110,
+      "sequence": 1249126243,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -2.35672184125715,
+      "platform": "right",
+      "received_usec": 679764429,
+      "sequence": 1249126245,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -1.08450638392185,
+      "platform": "right",
+      "received_usec": 679781092,
+      "sequence": 1249126246,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -5.26703101103377,
+      "platform": "right",
+      "received_usec": 679881085,
+      "sequence": 1249126248,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -2.6026962802284,
+      "platform": "right",
+      "received_usec": 679964433,
+      "sequence": 1249126249,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -1.64027978256351,
+      "platform": "right",
+      "received_usec": 679981110,
+      "sequence": 1249126250,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -0.810016266513571,
+      "platform": "right",
+      "received_usec": 680064478,
+      "sequence": 1249126252,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -2.54618094567979,
+      "platform": "right",
+      "received_usec": 680097859,
+      "sequence": 1249126253,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -1.50948236805993,
+      "platform": "right",
+      "received_usec": 680164451,
+      "sequence": 1249126254,
+      "target_x": 539.275756835938,
+      "target_y": 258.479431152344,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -0.864529477176006,
+      "platform": "right",
+      "received_usec": 680181108,
+      "sequence": 1249126255,
+      "target_x": 538.9619140625,
+      "target_y": 258.716796875,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -2.80130661711851,
+      "platform": "right",
+      "received_usec": 680247837,
+      "sequence": 1249126257,
+      "target_x": 538.9619140625,
+      "target_y": 258.716796875,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -4.2567326867435,
+      "platform": "right",
+      "received_usec": 680281048,
+      "sequence": 1249126258,
+      "target_x": 538.9619140625,
+      "target_y": 258.716796875,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -5.12796386165019,
+      "platform": "right",
+      "received_usec": 680314386,
+      "sequence": 1249126259,
+      "target_x": 538.9619140625,
+      "target_y": 258.716796875,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -5.36941346202923,
+      "platform": "right",
+      "received_usec": 680381034,
+      "sequence": 1249126261,
+      "target_x": 538.9619140625,
+      "target_y": 258.716796875,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -3.90751510490824,
+      "platform": "right",
+      "received_usec": 680447751,
+      "sequence": 1249126263,
+      "target_x": 538.9619140625,
+      "target_y": 258.716796875,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -5.63352243757842,
+      "platform": "right",
+      "received_usec": 680481018,
+      "sequence": 1249126264,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -4.18688563713042,
+      "platform": "right",
+      "received_usec": 680547689,
+      "sequence": 1249126266,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -2.44824271454976,
+      "platform": "right",
+      "received_usec": 680581014,
+      "sequence": 1249126267,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -1.43294319340291,
+      "platform": "right",
+      "received_usec": 680614354,
+      "sequence": 1249126268,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -2.02940466547557,
+      "platform": "right",
+      "received_usec": 680681013,
+      "sequence": 1249126270,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -1.19430665876962,
+      "platform": "right",
+      "received_usec": 680714368,
+      "sequence": 1249126271,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -0.702032700244047,
+      "platform": "right",
+      "received_usec": 680781052,
+      "sequence": 1249126273,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -0.345376642117827,
+      "platform": "right",
+      "received_usec": 680847781,
+      "sequence": 1249126275,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -0.118731342800999,
+      "platform": "right",
+      "received_usec": 680914334,
+      "sequence": 1249126277,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -1.36015290442273,
+      "platform": "right",
+      "received_usec": 681014338,
+      "sequence": 1249126280,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -0.791984078689495,
+      "platform": "right",
+      "received_usec": 681081020,
+      "sequence": 1249126282,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -0.463435843295173,
+      "platform": "right",
+      "received_usec": 681114328,
+      "sequence": 1249126283,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -0.272234716691088,
+      "platform": "right",
+      "received_usec": 681181059,
+      "sequence": 1249126285,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -1.75062988222098,
+      "platform": "right",
+      "received_usec": 681214350,
+      "sequence": 1249126286,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -1.03835054024267,
+      "platform": "right",
+      "received_usec": 681281075,
+      "sequence": 1249126288,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -3.00749928971365,
+      "platform": "right",
+      "received_usec": 681314321,
+      "sequence": 1249126289,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -1.76937165644068,
+      "platform": "right",
+      "received_usec": 681381013,
+      "sequence": 1249126291,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -1.03394110880362,
+      "platform": "right",
+      "received_usec": 681414320,
+      "sequence": 1249126292,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -2.56641357545109,
+      "platform": "right",
+      "received_usec": 681480976,
+      "sequence": 1249126294,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -3.4847706002972,
+      "platform": "right",
+      "received_usec": 681514326,
+      "sequence": 1249126295,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -4.19160714341083,
+      "platform": "right",
+      "received_usec": 681564349,
+      "sequence": 1249126296,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -3.38570985742726,
+      "platform": "right",
+      "received_usec": 681630994,
+      "sequence": 1249126298,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -2.00887467323261,
+      "platform": "right",
+      "received_usec": 681697692,
+      "sequence": 1249126300,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -3.55125130359374,
+      "platform": "right",
+      "received_usec": 681730996,
+      "sequence": 1249126301,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -2.08448356361188,
+      "platform": "right",
+      "received_usec": 681797636,
+      "sequence": 1249126303,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -1.21956798694004,
+      "platform": "right",
+      "received_usec": 681830975,
+      "sequence": 1249126304,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -0.715470054607664,
+      "platform": "right",
+      "received_usec": 681864377,
+      "sequence": 1249126305,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -2.11008938208658,
+      "platform": "right",
+      "received_usec": 681931117,
+      "sequence": 1249126307,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    },
+    {
+      "angle_degrees": -2.72488548035506,
+      "platform": "right",
+      "received_usec": 681964404,
+      "sequence": 1249126308,
+      "target_x": 539.330078125,
+      "target_y": 258.651763916016,
+      "wire_id": 2
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="Script" path="res://scripts/GameShell.gd" id="1"]
+[sub_resource type="StyleBoxFlat" id="ButtonStyle"]
+bg_color = Color(0.13,0.23,0.34,1)
+border_width_bottom = 2
+border_color = Color(0.25,0.8,0.7,1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_left = 6
+corner_radius_bottom_right = 6
+
+[node name="GameShell" type="CanvasLayer"]
+process_mode = 3
+layer = 20
+script = ExtResource("1")
+
+[node name="Screen" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.035,0.06,0.1,0.95)
+mouse_filter = 0
+
+[node name="Title" type="Label" parent="Screen"]
+offset_left = 290.0
+offset_top = 155.0
+offset_right = 990.0
+offset_bottom = 215.0
+theme_override_font_sizes/font_size = 38
+text = "CUBOS / ARENA"
+horizontal_alignment = 1
+mouse_filter = 2
+
+[node name="Subtitle" type="Label" parent="Screen"]
+offset_left = 280.0
+offset_top = 100.0
+offset_right = 1000.0
+offset_bottom = 135.0
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.3,0.85,0.75,1)
+text = "COMBATE LOCAL  /  ESCENARIO DINÁMICO"
+horizontal_alignment = 1
+mouse_filter = 2
+
+[node name="ControlsText" type="Label" parent="Screen"]
+offset_left = 310.0
+offset_top = 230.0
+offset_right = 1000.0
+offset_bottom = 560.0
+theme_override_font_sizes/font_size = 18
+text = "P1   A / D mover · W salto · S descenso\n        F ligero · G fuerte · H dodge\n\nP2   Flechas mover / saltar / descender\n        K ligero · L fuerte · Shift derecho dodge\n\nPlataformas   Click y arrastrar · Q / E rotar · Tab interfaz\nCombate   Arriba + golpe: ascendente · Aire + abajo + golpe: descendente\nDefensa   Izquierda/derecha + cubrirse: dash horizontal\nDescendente   Suelo o cubrirse cancelan · Sin dirección horizontal: dodge habitual\nEsc pausa · F1 controles · R reinicia después de ganar"
+mouse_filter = 2
+
+[node name="Hint" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 91.0
+offset_right = 480.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.6,0.72,0.84,1)
+text = "ESC pausa   ·   F1 controles"
+mouse_filter = 2
+
+[node name="Play" type="Button" parent="Screen"]
+offset_left = 440.0
+offset_top = 240.0
+offset_right = 840.0
+offset_bottom = 286.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("ButtonStyle")
+text = "Jugar"
+
+[node name="Controls" type="Button" parent="Screen"]
+offset_left = 440.0
+offset_top = 300.0
+offset_right = 840.0
+offset_bottom = 346.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("ButtonStyle")
+text = "Controles"
+
+[node name="Restart" type="Button" parent="Screen"]
+offset_left = 440.0
+offset_top = 360.0
+offset_right = 840.0
+offset_bottom = 406.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("ButtonStyle")
+text = "Reiniciar partida"
+
+[node name="MainMenu" type="Button" parent="Screen"]
+offset_left = 440.0
+offset_top = 420.0
+offset_right = 840.0
+offset_bottom = 466.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("ButtonStyle")
+text = "Menú principal"
+
+[node name="Back" type="Button" parent="Screen"]
+offset_left = 440.0
+offset_top = 585.0
+offset_right = 840.0
+offset_bottom = 631.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("ButtonStyle")
+text = "Volver"

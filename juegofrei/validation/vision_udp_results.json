@@ -1,0 +1,114 @@
+{
+  "failed": 0,
+  "live_sample": {
+    "address": "127.0.0.1",
+    "age_seconds": 0.001174,
+    "applied": 235,
+    "coordinate_space": "PROJECTOR",
+    "detected": 2,
+    "expired": 0,
+    "invalid": 0,
+    "known": 3,
+    "last_sequence": 1250441773,
+    "left_movement": 152.762100219727,
+    "lost": [
+      "top"
+    ],
+    "mode": "EXTERNAL",
+    "modules": {
+      "left": {
+        "age_seconds": 0.001174,
+        "detected": true,
+        "last_update": {
+          "angle_degrees": -12.1268386543649,
+          "coordinate_space": "PROJECTOR",
+          "platform": "left",
+          "received_usec": 315151259,
+          "sequence": 1250441773,
+          "target_x": 410.083923339844,
+          "target_y": 493.036865234375,
+          "wire_id": 1
+        },
+        "target_error_px": 14.8016271591187,
+        "transform_updates": 234
+      },
+      "right": {
+        "age_seconds": 0.001174,
+        "detected": true,
+        "last_update": {
+          "angle_degrees": 14.472690106929,
+          "coordinate_space": "PROJECTOR",
+          "platform": "right",
+          "received_usec": 315151259,
+          "sequence": 1250441773,
+          "target_x": 992.932495117188,
+          "target_y": 420.182922363281,
+          "wire_id": 2
+        },
+        "target_error_px": 5.51449155807495,
+        "transform_updates": 234
+      },
+      "top": {
+        "age_seconds": -1.0,
+        "detected": false,
+        "last_update": {
+
+        },
+        "target_error_px": 0.0,
+        "transform_updates": 0
+      }
+    },
+    "outside_arena": 0,
+    "overloaded_ticks": 0,
+    "packet_age_ms": 7.50634765625,
+    "packets_per_second": 29.5158224485539,
+    "port": 5005,
+    "received": 235,
+    "right_movement": 108.905654907227,
+    "source_age_ms": 10.3204997722059,
+    "stale": 0,
+    "suppressed_targets": 0,
+    "tracking": "PARCIAL",
+    "udp": "RECIBIENDO",
+    "updates_per_second": 29.5158224485539
+  },
+  "passed": 7,
+  "results": [
+    {
+      "detail": "{ \"coordinate_space\": \"PROJECTOR\", \"outside_arena\": 0, \"udp\": \"RECIBIENDO\", \"address\": \"127.0.0.1\", \"port\": 5005, \"mode\": \"EXTERNAL\", \"packets_per_second\": 29.5158224485539, \"updates_per_second\": 29.5158224485539, \"last_sequence\": 1250441773, \"detected\": 2, \"known\": 3, \"age_seconds\": 0.001174, \"tracking\": \"PARCIAL\", \"lost\": [\"top\"], \"received\": 235, \"invalid\": 0, \"stale\": 0, \"applied\": 235, \"overloaded_ticks\": 0, \"expired\": 0, \"packet_age_ms\": 7.50634765625, \"source_age_ms\": 10.3204997722059, \"modules\": { \"left\": { \"detected\": true, \"age_seconds\": 0.001174, \"target_error_px\": 14.8016271591187, \"transform_updates\": 234, \"last_update\": { \"sequence\": 1250441773, \"wire_id\": 1, \"platform\": \"left\", \"target_x\": 410.083923339844, \"target_y\": 493.036865234375, \"angle_degrees\": -12.1268386543649, \"received_usec\": 315151259, \"coordinate_space\": \"PROJECTOR\" } }, \"right\": { \"detected\": true, \"age_seconds\": 0.001174, \"target_error_px\": 5.51449155807495, \"transform_updates\": 234, \"last_update\": { \"sequence\": 1250441773, \"wire_id\": 2, \"platform\": \"right\", \"target_x\": 992.932495117188, \"target_y\": 420.182922363281, \"angle_degrees\": 14.472690106929, \"received_usec\": 315151259, \"coordinate_space\": \"PROJECTOR\" } }, \"top\": { \"detected\": false, \"age_seconds\": -1.0, \"target_error_px\": 0.0, \"transform_updates\": 0, \"last_update\": {  } } }, \"suppressed_targets\": 0, \"left_movement\": 152.762100219727, \"right_movement\": 108.905654907227 }",
+      "passed": true,
+      "test": "independent_python_image_pipeline_received"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "two_color_ids_are_detected"
+    },
+    {
+      "detail": "[152.762100219727, 108.905654907227]",
+      "passed": true,
+      "test": "both_platforms_moved_from_vision"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "loss_or_shutdown_freezes_both"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "fixed_geometry_preserved"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "players_and_floor_remain"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "light_attack_hits_once_on_live_vision_platform"
+    }
+  ],
+  "total": 7
+}

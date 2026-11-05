@@ -1,0 +1,230 @@
+{
+  "engine": "4.6.3-stable",
+  "carry": [
+    {
+      "detail": "",
+      "passed": true,
+      "test": "both_players_standing"
+    },
+    {
+      "detail": "[(429.998, 405.9995), (499.998, 405.9995)]",
+      "passed": true,
+      "test": "both_carried_laterally"
+    },
+    {
+      "detail": "[(429.9999, 336.0008), (499.9999, 336.0008)]",
+      "passed": true,
+      "test": "rising_platform_pushes_both"
+    },
+    {
+      "detail": "[(429.9999, 405.9982), (499.9999, 405.9982)]",
+      "passed": true,
+      "test": "descending_platform_carries_both"
+    },
+    {
+      "detail": "[(448.253, 387.9026), (511.8412, 417.5516)]",
+      "passed": true,
+      "test": "rotation_and_inclined_floor"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "jump_from_rotating_platform"
+    },
+    {
+      "detail": "(446.7764, 405.9591)",
+      "passed": true,
+      "test": "land_on_moving_platform"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "colliders_still_enabled"
+    }
+  ],
+  "limits": [
+    {
+      "detail": "",
+      "passed": true,
+      "test": "known_ids_only"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "scale_rejected"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "nonfinite_rejected"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "target_bounds"
+    },
+    {
+      "detail": "[178.903141021729, 0.63636481761932, 4.00002479553223]",
+      "passed": true,
+      "test": "linear_angular_and_surface_limits"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "immutable_geometry"
+    },
+    {
+      "detail": "[(779.9987, 434.9999), (500.0013, 435.0)]",
+      "passed": true,
+      "test": "two_platforms_cross"
+    }
+  ],
+  "gravity": [
+    {
+      "detail": "0.53333333333333",
+      "passed": true,
+      "test": "slower_200px_fall"
+    },
+    {
+      "detail": "640.0",
+      "passed": true,
+      "test": "normal_terminal_speed"
+    },
+    {
+      "detail": "153.33332824707",
+      "passed": true,
+      "test": "fast_fall_accelerates_without_instant_snap"
+    },
+    {
+      "detail": "900.0",
+      "passed": true,
+      "test": "fast_fall_cap"
+    },
+    {
+      "detail": "{ \"apex_y\": 367.480773925781, \"apex_seconds\": 0.55 }",
+      "passed": true,
+      "test": "agile_reachable_jump"
+    }
+  ],
+  "regression": [
+    {
+      "detail": "(440.0, 541.9531)",
+      "passed": true,
+      "test": "floor_and_gravity"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "simultaneous_independent_movement"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "acceleration_speed_cap"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "deceleration"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "variable_jump"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "double_jump"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "third_jump_rejected"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "air_control"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "fast_fall"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "one_way_landing"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "drop_through"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "drop_mask_restored_and_solid_floor"
+    },
+    {
+      "detail": "apex=363.219024658203 landing=405.979431152344",
+      "passed": true,
+      "test": "pass_platform_from_below_and_land"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "coyote_time"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "jump_buffer_on_landing"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "player2_jump"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "elimination_respawn"
+    }
+  ],
+  "controls": {
+    "mouse": {
+      "selected": "left",
+      "requested_position": [
+        465,
+        405
+      ],
+      "observed_position": [
+        464.99988,
+        405.00012
+      ],
+      "rotation_degrees": 12.41408,
+      "players_moved_together": true
+    },
+    "tab_hidden": {
+      "editing": false,
+      "panel_visible": false,
+      "paused": false,
+      "selected_highlight": false
+    },
+    "tab_restored": true
+  },
+  "configuration": {
+    "movement_resource": "res://resources/PlayerMovement.tres",
+    "shared_by_both_players": true,
+    "ascent_gravity": 1250,
+    "descent_gravity": 1450,
+    "jump_speed": 650,
+    "terminal_speed": 640,
+    "fast_fall_speed": 900,
+    "max_platform_linear_speed": 180,
+    "max_platform_angular_speed": 0.7,
+    "max_swept_distance_per_tick": 4
+  }
+}

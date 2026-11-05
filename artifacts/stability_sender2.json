@@ -1,0 +1,66 @@
+{
+  "source": "synthetic_images",
+  "processed_frames": 267,
+  "elapsed_seconds": 9.022648300044239,
+  "processing_average_fps": 29.592198556458296,
+  "ids_seen": [
+    1,
+    2
+  ],
+  "packets_sent": 267,
+  "send_errors": 0,
+  "camera_closed": true,
+  "snapshot_saved": false,
+  "last_frame_size": [
+    640,
+    480
+  ],
+  "camera_last_state": "SYNTHETIC",
+  "opencv_timing": {
+    "samples": 267,
+    "mean_ms": 7.481393637135625,
+    "p95_ms": 10.056500090286136,
+    "max_ms": 18.04729993455112
+  },
+  "capture_read_timing": {
+    "samples": 0,
+    "mean_ms": 0,
+    "p95_ms": 0,
+    "max_ms": 0
+  },
+  "source_age_timing": {
+    "samples": 267,
+    "mean_ms": 8.754508614309886,
+    "p95_ms": 11.536400066688657,
+    "max_ms": 19.093699986115098
+  },
+  "capture": null,
+  "udp": {
+    "sent": 267,
+    "errors": 0,
+    "measured_send_hz": 29.61524574126502,
+    "last_bytes": 276,
+    "send_cost": {
+      "samples": 267,
+      "mean_ms": 0.17204156323346528,
+      "p95_ms": 0.291300006210804,
+      "max_ms": 0.7450999692082405
+    }
+  },
+  "modules": {
+    "1": {
+      "state": "LIVE",
+      "age_ms": 34.33439997024834,
+      "confirmations": 0
+    },
+    "2": {
+      "state": "LIVE",
+      "age_ms": 34.33439997024834,
+      "confirmations": 0
+    }
+  },
+  "processing_fps_last_window": 29.583216854509065,
+  "opencv": "5.0.0",
+  "numpy": "2.5.3",
+  "exit_code": 0
+}

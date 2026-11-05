@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "f5_starts_reproducible_sequence": true,
+    "f6_restores_fixture_without_duplicates": true,
+    "fixture_has_three_original_silhouettes": true,
+    "sequence_disables_collision": true,
+    "sequence_finishes": true,
+    "sequence_moves_and_rotates": true,
+    "sequence_removes_object": true,
+    "sequence_replaces_only_c_geometry": true
+  },
+  "passed": 8,
+  "total": 8
+}

@@ -1,0 +1,10 @@
+{
+  "files_checked": 67,
+  "modified": [
+    "vision\\structure_segmentation.py",
+    "vision\\structure_tracking.py",
+    "juegofrei\\scripts\\geometry\\DynamicGeometryManager.gd",
+    "juegofrei\\scripts\\geometry\\DynamicPolygonObject.gd"
+  ],
+  "original_gameplay_files_modified": []
+}

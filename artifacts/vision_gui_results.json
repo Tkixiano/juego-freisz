@@ -1,0 +1,16 @@
+{
+  "total": 10,
+  "passed": 10,
+  "checks": {
+    "camera_preview_and_mask_windows_visible": true,
+    "slider_changes_hsv": true,
+    "s_saves_json": true,
+    "l_loads_json_and_sliders": true,
+    "color_selection": true,
+    "roi_statistics_do_not_auto_apply": true,
+    "explicit_apply_roi_suggestion": true,
+    "independent_filter_settings_saved": true,
+    "details_can_be_hidden": true,
+    "q_requests_clean_exit": true
+  }
+}

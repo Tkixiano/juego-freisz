@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checked_applications": 120,
+  "max_position_error_px": 3.201091892249577e-05,
+  "max_angle_error_degrees": 0.1487620169763204,
+  "checks": [
+    "camera_center_to_homography_once",
+    "wire_to_fixed_platform_id",
+    "projected_angle_to_godot",
+    "bounded_deadband_only"
+  ]
+}

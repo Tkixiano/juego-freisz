@@ -1,0 +1,54 @@
+{
+  "passed": 12,
+  "rows": [
+    {
+      "passed": true,
+      "test": "v2_projects_into_full_game_canvas_without_second_mapping"
+    },
+    {
+      "passed": true,
+      "test": "projector_axis_angle_preserved_after_python_mapping"
+    },
+    {
+      "passed": true,
+      "test": "projector_target_is_not_teleport"
+    },
+    {
+      "passed": true,
+      "test": "v2_old_sequence_rejected"
+    },
+    {
+      "passed": true,
+      "test": "reject_missing_space"
+    },
+    {
+      "passed": true,
+      "test": "reject_bad_resolution"
+    },
+    {
+      "passed": true,
+      "test": "reject_missing_orientation"
+    },
+    {
+      "passed": true,
+      "test": "reject_v1_projection"
+    },
+    {
+      "passed": true,
+      "test": "reject_unknown_id"
+    },
+    {
+      "passed": true,
+      "test": "outside_arena_freezes_instead_of_clamping_incorrect_alignment"
+    },
+    {
+      "passed": true,
+      "test": "legacy_camera_v1_still_uses_arena_normalization"
+    },
+    {
+      "passed": true,
+      "test": "mouse_control_retained_after_projection"
+    }
+  ],
+  "total": 12
+}

@@ -1,0 +1,34 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+ERROR: OFFLINE_QA 07_split_expected_rejections: { "scenario": "07_split", "frames": 45.0, "cursor": 45, "received": 45, "applied": 33, "rejected": 12, "deferred": 0, "ticks": 45, "active_objects": 1, "merges": 1, "splits": 0 }
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://validation/OfflineReplayValidation.gd:19)
+       [1] run (res://validation/OfflineReplayValidation.gd:84)
+       [2] frames (res://validation/OfflineReplayValidation.gd:15)
+ERROR: OFFLINE_QA 07_split_full_state_recovery: { "scenario": "07_split", "frames": 45.0, "cursor": 45, "received": 45, "applied": 33, "rejected": 12, "deferred": 0, "ticks": 45, "active_objects": 1, "merges": 1, "splits": 0 }
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://validation/OfflineReplayValidation.gd:19)
+       [1] run (res://validation/OfflineReplayValidation.gd:85)
+       [2] frames (res://validation/OfflineReplayValidation.gd:15)
+ERROR: OFFLINE_QA 18_occupied_split_expected_rejections: { "scenario": "18_occupied_split", "frames": 75.0, "cursor": 75, "received": 75, "applied": 63, "rejected": 12, "deferred": 0, "ticks": 75, "active_objects": 1, "merges": 1, "splits": 0 }
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://validation/OfflineReplayValidation.gd:19)
+       [1] run (res://validation/OfflineReplayValidation.gd:84)
+       [2] frames (res://validation/OfflineReplayValidation.gd:15)
+ERROR: OFFLINE_QA 18_occupied_split_full_state_recovery: { "scenario": "18_occupied_split", "frames": 75.0, "cursor": 75, "received": 75, "applied": 63, "rejected": 12, "deferred": 0, "ticks": 75, "active_objects": 1, "merges": 1, "splits": 0 }
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://validation/OfflineReplayValidation.gd:19)
+       [1] run (res://validation/OfflineReplayValidation.gd:85)
+       [2] frames (res://validation/OfflineReplayValidation.gd:15)
+ERROR: OFFLINE_QA 20_long_expected_rejections: { "scenario": "20_long", "frames": 600.0, "cursor": 600, "received": 600, "applied": 364, "rejected": 236, "deferred": 0, "ticks": 600, "active_objects": 1, "merges": 1, "splits": 0 }
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://validation/OfflineReplayValidation.gd:19)
+       [1] run (res://validation/OfflineReplayValidation.gd:84)
+       [2] frames (res://validation/OfflineReplayValidation.gd:15)
+OFFLINE_QA {"failures":[{"details":{"active_objects":1,"applied":33,"cursor":45,"deferred":0,"frames":45.0,"merges":1,"received":45,"rejected":12,"scenario":"07_split","splits":0,"ticks":45},"name":"07_split_expected_rejections","passed":false},{"details":{"active_objects":1,"applied":33,"cursor":45,"deferred":0,"frames":45.0,"merges":1,"received":45,"rejected":12,"scenario":"07_split","splits":0,"ticks":45},"name":"07_split_full_state_recovery","passed":false},{"details":{"active_objects":1,"applied":63,"cursor":75,"deferred":0,"frames":75.0,"merges":1,"received":75,"rejected":12,"scenario":"18_occupied_split","splits":0,"ticks":75},"name":"18_occupied_split_expected_rejections","passed":false},{"details":{"active_objects":1,"applied":63,"cursor":75,"deferred":0,"frames":75.0,"merges":1,"received":75,"rejected":12,"scenario":"18_occupied_split","splits":0,"ticks":75},"name":"18_occupied_split_full_state_recovery","passed":false},{"details":{"active_objects":1,"applied":364,"cursor":600,"deferred":0,"frames":600.0,"merges":1,"received":600,"rejected":236,"scenario":"20_long","splits":0,"ticks":600},"name":"20_long_expected_rejections","passed":false}],"label":"headless","passed":108,"total":113}

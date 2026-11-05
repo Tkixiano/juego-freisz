@@ -1,0 +1,442 @@
+{
+  "engine": "4.6.3-stable",
+  "total": 76,
+  "passed": 76,
+  "failed": 0,
+  "groups": {
+    "core": [
+      {
+        "detail": "",
+        "passed": true,
+        "test": "dedicated_combat_layers"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "independent_hitbox_resources"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "startup_no_damage"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "attack_prevents_contradictory_dodge"
+      },
+      {
+        "detail": "6.0",
+        "passed": true,
+        "test": "light_hits_once"
+      },
+      {
+        "detail": "[(290.9144, -181.7835), 0.21145600128174]",
+        "passed": true,
+        "test": "launch_and_hitstun"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "brief_local_hitstop"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "impact_feedback"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "capture_combat_impact.png"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "hitstun_blocks_attack_and_dodge"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "no_duplicate_activation_damage"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "recovery_remains_committed"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "attack_returns_to_neutral"
+      },
+      {
+        "detail": "[560.0, 1232.0]",
+        "passed": true,
+        "test": "percent_increases_knockback"
+      },
+      {
+        "detail": "1326.07995605469",
+        "passed": true,
+        "test": "heavy_damage_accumulates"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "bounded_geometric_effects"
+      }
+    ],
+    "defense": [
+      {
+        "detail": "",
+        "passed": true,
+        "test": "dodge_starts"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "dodge_rejects_hit"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "dodge_has_cooldown"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "up_direction_attack"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "ground_down_attack"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "air_heavy_spike"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "air_light_profile"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "air_dodge_once"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "second_air_dodge_rejected"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "left_shift_not_bound"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "right_shift_bound"
+      }
+    ],
+    "stocks": [
+      {
+        "detail": "",
+        "passed": true,
+        "test": "stock_loss_respawns"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "respawn_state_and_invulnerability"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "three_stocks_then_eliminated"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "victory_condition_and_overlay"
+      },
+      {
+        "detail": "{ \"stocks\": 3, \"wins\": 1 }",
+        "passed": true,
+        "test": "stock_and_victory_signals"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "no_attack_after_victory"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "capture_combat_victory.png"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "restart_input"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "simultaneous_last_stock_draw"
+      }
+    ],
+    "moving_platform_combat": [
+      {
+        "detail": "ACTIVO",
+        "passed": true,
+        "test": "heavy_hits_on_moving_rotating_platform"
+      },
+      {
+        "detail": "(415.7834, 417.4095)",
+        "passed": true,
+        "test": "hitstop_does_not_pause_platform"
+      },
+      {
+        "detail": "[0.2617075741291, (429.4047, 353.4716)]",
+        "passed": true,
+        "test": "inclined_platform_collision_kept"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "combat_does_not_deform_platform"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "simultaneous_player_attacks"
+      }
+    ],
+    "movement_regression": [
+      {
+        "detail": "(440.0, 541.9531)",
+        "passed": true,
+        "test": "floor_and_gravity"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "simultaneous_independent_movement"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "acceleration_speed_cap"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "deceleration"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "variable_jump"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "double_jump"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "third_jump_rejected"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "air_control"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "fast_fall"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "one_way_landing"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "drop_through"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "drop_mask_restored_and_solid_floor"
+      },
+      {
+        "detail": "apex=363.219024658203 landing=405.979431152344",
+        "passed": true,
+        "test": "pass_platform_from_below_and_land"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "coyote_time"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "jump_buffer_on_landing"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "player2_jump"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "elimination_respawn"
+      }
+    ],
+    "carry_regression": [
+      {
+        "detail": "",
+        "passed": true,
+        "test": "both_players_standing"
+      },
+      {
+        "detail": "[(429.998, 405.9995), (499.998, 405.9995)]",
+        "passed": true,
+        "test": "both_carried_laterally"
+      },
+      {
+        "detail": "[(429.9999, 336.0008), (499.9999, 336.0008)]",
+        "passed": true,
+        "test": "rising_platform_pushes_both"
+      },
+      {
+        "detail": "[(429.9999, 405.9982), (499.9999, 405.9982)]",
+        "passed": true,
+        "test": "descending_platform_carries_both"
+      },
+      {
+        "detail": "[(448.253, 387.9026), (511.8412, 417.5516)]",
+        "passed": true,
+        "test": "rotation_and_inclined_floor"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "jump_from_rotating_platform"
+      },
+      {
+        "detail": "(446.7764, 405.9591)",
+        "passed": true,
+        "test": "land_on_moving_platform"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "colliders_still_enabled"
+      }
+    ],
+    "gravity_regression": [
+      {
+        "detail": "0.53333333333333",
+        "passed": true,
+        "test": "slower_200px_fall"
+      },
+      {
+        "detail": "640.0",
+        "passed": true,
+        "test": "normal_terminal_speed"
+      },
+      {
+        "detail": "153.33332824707",
+        "passed": true,
+        "test": "fast_fall_accelerates_without_instant_snap"
+      },
+      {
+        "detail": "900.0",
+        "passed": true,
+        "test": "fast_fall_cap"
+      },
+      {
+        "detail": "{ \"apex_y\": 367.480773925781, \"apex_seconds\": 0.55 }",
+        "passed": true,
+        "test": "agile_reachable_jump"
+      }
+    ],
+    "extra": [
+      {
+        "passed": true,
+        "test": "attack_cooldown_enforced"
+      },
+      {
+        "passed": true,
+        "test": "dodge_invulnerability_expires"
+      }
+    ],
+    "integration": [
+      {
+        "test": "aerial_light_real_hit",
+        "damage": 8,
+        "launch_velocity": {
+          "x": 343.900451660156,
+          "y": -214.892852783203
+        },
+        "passed": true,
+        "profile": "Aéreo ligero"
+      },
+      {
+        "test": "aerial_down_heavy_real_hit",
+        "aim": {
+          "x": 0,
+          "y": 1
+        },
+        "damage": 12,
+        "launch_velocity": {
+          "x": 99.3267669677734,
+          "y": 563.31005859375
+        },
+        "passed": true
+      },
+      {
+        "test": "mouse_platform_motion_with_both_air_attacks",
+        "attacks": [
+          1,
+          1
+        ],
+        "damage": [
+          0,
+          8
+        ],
+        "passed": true,
+        "platform_after": {
+          "x": 452.860076904297,
+          "y": 434.999877929688
+        },
+        "platform_before": {
+          "x": 385.000122070313,
+          "y": 434.999877929688
+        },
+        "platform_during_attack": {
+          "x": 403.000122070313,
+          "y": 434.999877929688
+        },
+        "rotation": 8.79882717132568,
+        "selected": "left",
+        "target": {
+          "x": 1030.00012207031,
+          "y": 434.999877929688
+        }
+      }
+    ]
+  }
+}

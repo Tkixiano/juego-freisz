@@ -1,0 +1,33 @@
+         948276 function calls (945047 primitive calls) in 12.357 seconds
+
+   Ordered by: cumulative time
+   List reduced from 455 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.487    0.487   12.359   12.359 C:\godot 4.6\juego frei\vision\structure_synthetic.py:102(benchmark)
+       80    1.579    0.020    9.604    0.120 C:\godot 4.6\juego frei\vision\structure_segmentation.py:138(segment)
+     2796    0.038    0.000    3.368    0.001 C:\Users\tkixi\AppData\Local\Programs\Python\Python314\Lib\site-packages\numpy\_core\fromnumeric.py:2342(sum)
+     3024    0.051    0.000    3.333    0.001 C:\Users\tkixi\AppData\Local\Programs\Python\Python314\Lib\site-packages\numpy\_core\fromnumeric.py:66(_wrapreduction)
+     3322    3.299    0.001    3.299    0.001 {method 'reduce' of 'numpy.ufunc' objects}
+      240    1.030    0.004    2.330    0.010 C:\godot 4.6\juego frei\vision\structure_segmentation.py:51(cell_rings)
+       80    0.148    0.002    2.232    0.028 C:\godot 4.6\juego frei\vision\structure_tracking.py:216(update)
+      222    0.164    0.001    1.354    0.006 C:\godot 4.6\juego frei\vision\structure_tracking.py:190(_continued)
+     1942    1.099    0.001    1.099    0.001 {method 'astype' of 'numpy.ndarray' objects}
+      320    0.819    0.003    0.819    0.003 {inRange}
+      560    0.667    0.001    0.667    0.001 {connectedComponentsWithStats}
+     1596    0.077    0.000    0.459    0.000 C:\godot 4.6\juego frei\vision\structure_segmentation.py:46(signed_area)
+      228    0.009    0.000    0.418    0.002 C:\godot 4.6\juego frei\vision\structure_tracking.py:35(as_dict)
+6864/3672    0.286    0.000    0.401    0.000 C:\Users\tkixi\AppData\Local\Programs\Python\Python314\Lib\site-packages\numpy\_core\numeric.py:1226(roll)
+   100515    0.255    0.000    0.384    0.000 {built-in method builtins.min}
+     1608    0.012    0.000    0.362    0.000 {built-in method builtins.sum}
+       80    0.285    0.004    0.285    0.004 {cvtColor}
+      222    0.263    0.001    0.263    0.001 {warpAffine}
+       80    0.185    0.002    0.255    0.003 C:\godot 4.6\juego frei\vision\structure_tracking.py:102(_groups)
+      444    0.004    0.000    0.183    0.000 C:\godot 4.6\juego frei\vision\structure_segmentation.py:109(exterior_count)
+      456    0.004    0.000    0.180    0.000 C:\godot 4.6\juego frei\vision\structure_tracking.py:46(<genexpr>)
+      888    0.003    0.000    0.176    0.000 C:\godot 4.6\juego frei\vision\structure_segmentation.py:111(<genexpr>)
+      232    0.012    0.000    0.176    0.001 C:\Users\tkixi\AppData\Local\Programs\Python\Python314\Lib\site-packages\numpy\lib\_arraysetops_impl.py:145(unique)
+   196320    0.167    0.000    0.167    0.000 {method 'remove' of 'set' objects}
+   197028    0.129    0.000    0.129    0.000 {method 'add' of 'set' objects}
+
+

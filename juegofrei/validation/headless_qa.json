@@ -1,0 +1,7 @@
+{
+  "engine": "4.6.3-stable (official)",
+  "failures": [],
+  "loaded_resources": 69,
+  "mode": "headless load, parse, instantiate and physics startup",
+  "passed": true
+}

@@ -1,0 +1,19 @@
+{
+  "detection_carrier": {
+    "drift_pixels": 0,
+    "passed": true,
+    "test": "carrier_stops_on_detection_loss"
+  },
+  "real_crush": [
+    {
+      "detail": "{ \"recoveries\": 1, \"position\": (496.0, 542.0) }",
+      "passed": true,
+      "test": "inverted_platform_floor_crush_escapes_once"
+    },
+    {
+      "detail": "",
+      "passed": true,
+      "test": "crush_keeps_stocks_and_geometry"
+    }
+  ]
+}

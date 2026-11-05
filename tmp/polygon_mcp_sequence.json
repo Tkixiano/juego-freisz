@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var runner: RefCounted = load(\"res://validation/PolygonLabSequenceValidation.gd\").new()\nget_tree().current_scene.set_meta(\"sequence_runner\",runner)\nrunner.run(get_tree())\nreturn \"keyboard_sequence_test_started\""}}

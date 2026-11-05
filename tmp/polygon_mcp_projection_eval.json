@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var runner: RefCounted = load(\"res://validation/ProjectionInputValidation.gd\").new()\nget_tree().current_scene.set_meta(\"phase1a_projection_regression\",runner)\nrunner.run(get_tree())\nreturn \"existing_projector_coordinate_protocol_test_started\""}}
