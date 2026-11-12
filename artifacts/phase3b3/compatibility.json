@@ -1,0 +1,7 @@
+{
+  "baseline_files": 98,
+  "modified_existing": [
+    "juegofrei\\scripts\\geometry\\OfflineReplayPlayer.gd",
+    "juegofrei\\scripts\\material_physics\\MaterialPhysicsAdapter.gd"
+  ]
+}

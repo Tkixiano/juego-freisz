@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var suite: RefCounted = load(\"res://validation/StructureUdpValidation.gd\").new()\nvar result: Dictionary = suite.run()\nreturn {\"passed\":result.passed,\"total\":result.total,\"failures\":result.failures}"}}

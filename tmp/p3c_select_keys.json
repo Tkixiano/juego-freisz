@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var shell: Node = get_tree().current_scene.get_node(\"GameShell\")\nshell.play_button.pressed.emit()\nshell.selection.choose(0,2)\nshell.selection.choose(1,3)\nreturn get_tree().current_scene.scene_file_path"}}

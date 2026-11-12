@@ -1,0 +1,227 @@
+{
+  "pass1": {
+    "passed": 142,
+    "total": 142,
+    "contacts": {
+      "bounces": 12,
+      "contacts": 933,
+      "drop_overstays": 0,
+      "drops": 2,
+      "duplicate_bounces_avoided": 56,
+      "restored": 2
+    },
+    "physical": {
+      "samples": 1827,
+      "solid_penetration_frames_over_1px": 0,
+      "support_losses_during_motion": 0
+    },
+    "carrier": [
+      {
+        "carry_error": 0.0,
+        "floor_ticks": 50,
+        "manager_conflicts": 18,
+        "max_step_px": 1.50003337860107,
+        "name": "carrier"
+      }
+    ],
+    "update": {
+      "n": 1897,
+      "mean_ms": 0.5547696362677913,
+      "p50_ms": 0.464,
+      "p95_ms": 1.106,
+      "p99_ms": 2.045,
+      "max_ms": 12.821
+    },
+    "logical_validation": {
+      "n": 122,
+      "mean_ms": 3.964254098360656,
+      "p50_ms": 2.781,
+      "p95_ms": 5.908,
+      "p99_ms": 27.035,
+      "max_ms": 42.985
+    },
+    "physical_validation": {
+      "n": 165,
+      "mean_ms": 0.22204242424242424,
+      "p50_ms": 0.196,
+      "p95_ms": 0.397,
+      "p99_ms": 0.525,
+      "max_ms": 1.113
+    },
+    "application": {
+      "n": 120,
+      "mean_ms": 0.9480416666666667,
+      "p50_ms": 0.614,
+      "p95_ms": 1.908,
+      "p99_ms": 4.303,
+      "max_ms": 11.482
+    },
+    "rebuilds": 124,
+    "conflicts": {
+      "carrier_blocked_by_external_solid": 27,
+      "character_penetration": 82
+    },
+    "adapter": {
+      "accepted": 120,
+      "applied": 120,
+      "cancelled": 0,
+      "deferred": 2,
+      "identity_changes": 41,
+      "merges": 0,
+      "player_penetration_deferrals": 2,
+      "received": 120,
+      "rejected": 2,
+      "splits": 0
+    }
+  },
+  "pass2": {
+    "passed": 142,
+    "total": 142,
+    "contacts": {
+      "bounces": 12,
+      "contacts": 933,
+      "drop_overstays": 0,
+      "drops": 2,
+      "duplicate_bounces_avoided": 56,
+      "restored": 2
+    },
+    "physical": {
+      "samples": 1827,
+      "solid_penetration_frames_over_1px": 0,
+      "support_losses_during_motion": 0
+    },
+    "carrier": [
+      {
+        "carry_error": 0.0,
+        "floor_ticks": 50,
+        "manager_conflicts": 18,
+        "max_step_px": 1.50003337860107,
+        "name": "carrier"
+      }
+    ],
+    "update": {
+      "n": 1897,
+      "mean_ms": 0.5125882973115445,
+      "p50_ms": 0.431,
+      "p95_ms": 1.037,
+      "p99_ms": 2.153,
+      "max_ms": 15.293
+    },
+    "logical_validation": {
+      "n": 122,
+      "mean_ms": 2.414770491803279,
+      "p50_ms": 1.951,
+      "p95_ms": 3.74,
+      "p99_ms": 5.331,
+      "max_ms": 24.838
+    },
+    "physical_validation": {
+      "n": 165,
+      "mean_ms": 0.19216363636363637,
+      "p50_ms": 0.164,
+      "p95_ms": 0.33,
+      "p99_ms": 0.761,
+      "max_ms": 1.073
+    },
+    "application": {
+      "n": 120,
+      "mean_ms": 0.9400416666666667,
+      "p50_ms": 0.575,
+      "p95_ms": 2.164,
+      "p99_ms": 4.986,
+      "max_ms": 14.015
+    },
+    "rebuilds": 124,
+    "conflicts": {
+      "carrier_blocked_by_external_solid": 27,
+      "character_penetration": 82
+    },
+    "adapter": {
+      "accepted": 120,
+      "applied": 120,
+      "cancelled": 0,
+      "deferred": 2,
+      "identity_changes": 41,
+      "merges": 0,
+      "player_penetration_deferrals": 2,
+      "received": 120,
+      "rejected": 2,
+      "splits": 0
+    }
+  },
+  "mcp": {
+    "passed": 142,
+    "total": 142,
+    "contacts": {
+      "bounces": 12,
+      "contacts": 1009,
+      "drop_overstays": 0,
+      "drops": 2,
+      "duplicate_bounces_avoided": 56,
+      "restored": 2
+    },
+    "physical": {
+      "samples": 1989,
+      "solid_penetration_frames_over_1px": 0,
+      "support_losses_during_motion": 0
+    },
+    "carrier": [
+      {
+        "carry_error": 0.0,
+        "floor_ticks": 50,
+        "manager_conflicts": 18,
+        "max_step_px": 1.50003337860107,
+        "name": "carrier"
+      }
+    ],
+    "update": {
+      "n": 1978,
+      "mean_ms": 0.4670222446916077,
+      "p50_ms": 0.359,
+      "p95_ms": 1.26,
+      "p99_ms": 1.982,
+      "max_ms": 8.652
+    },
+    "logical_validation": {
+      "n": 122,
+      "mean_ms": 2.1393688524590164,
+      "p50_ms": 1.956,
+      "p95_ms": 3.256,
+      "p99_ms": 5.389,
+      "max_ms": 12.556
+    },
+    "physical_validation": {
+      "n": 165,
+      "mean_ms": 0.14330303030303032,
+      "p50_ms": 0.131,
+      "p95_ms": 0.228,
+      "p99_ms": 0.261,
+      "max_ms": 0.586
+    },
+    "application": {
+      "n": 120,
+      "mean_ms": 0.6562416666666667,
+      "p50_ms": 0.448,
+      "p95_ms": 1.459,
+      "p99_ms": 2.558,
+      "max_ms": 7.935
+    },
+    "rebuilds": 124,
+    "conflicts": {
+      "carrier_blocked_by_external_solid": 27,
+      "character_penetration": 82
+    },
+    "adapter": {
+      "accepted": 120,
+      "applied": 120,
+      "cancelled": 0,
+      "deferred": 2,
+      "identity_changes": 41,
+      "merges": 0,
+      "player_penetration_deferrals": 2,
+      "received": 120,
+      "rejected": 2,
+      "splits": 0
+    }
+  }
+}

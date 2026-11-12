@@ -228,6 +228,10 @@ class CameraTests(unittest.TestCase):
         source = CameraSource(settings, CameraFactory(mode,released))
         source.start()
         self.addCleanup(source.close)
+        # Spawn + numpy/OpenCV imports are measured separately from driver I/O.
+        # Keep all five native-operation deadlines/assertions below unchanged.
+        self.wait_for(lambda:(source.get(),source.worker_phase>=2)[1],timeout=settings.bootstrap_timeout+.5)
+        self.assertEqual(source.restarts,0,"bootstrap must not consume the native open timeout")
         return source, released
 
     def wait_for(self, predicate, timeout=5):

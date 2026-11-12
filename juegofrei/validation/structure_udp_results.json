@@ -1,0 +1,807 @@
+{
+  "failures": [],
+  "passed": 160,
+  "rows": [
+    {
+      "detail": 1,
+      "name": "session_start:accepted",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "session_start:sequence",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "session_start:objects",
+      "passed": true
+    },
+    {
+      "detail": "SCENE_ACTIVE",
+      "name": "session_start:scene_state",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "session_start:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "new_session:accepted",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "new_session:sequence",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "new_session:sessions",
+      "passed": true
+    },
+    {
+      "detail": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "name": "new_session:session_id",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "new_session:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "obsolete_session:accepted",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "obsolete_session:sequence",
+      "passed": true
+    },
+    {
+      "detail": "obsolete_session",
+      "name": "obsolete_session:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "obsolete_session:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "valid_snapshot:accepted",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "valid_snapshot:sequence",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "valid_snapshot:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "duplicate:accepted",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "duplicate:sequence",
+      "passed": true
+    },
+    {
+      "detail": "duplicate_or_old_sequence",
+      "name": "duplicate:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "duplicate:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "out_of_order:accepted",
+      "passed": true
+    },
+    {
+      "detail": 3,
+      "name": "out_of_order:sequence",
+      "passed": true
+    },
+    {
+      "detail": "duplicate_or_old_sequence",
+      "name": "out_of_order:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "out_of_order:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "packet_loss_full_recovery:accepted",
+      "passed": true
+    },
+    {
+      "detail": 3,
+      "name": "packet_loss_full_recovery:sequence",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "packet_loss_full_recovery:gaps",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "packet_loss_full_recovery:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "fragmentation:accepted",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "fragmentation:sequence",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "fragmentation:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "reversed_fragments:accepted",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "reversed_fragments:pending",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "reversed_fragments:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "duplicate_fragment:accepted",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "duplicate_fragment:fragment_duplicates",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "duplicate_fragment:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "incomplete:accepted",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "incomplete:pending",
+      "passed": true
+    },
+    {
+      "detail": "SCENE_STALE",
+      "name": "incomplete:scene_state",
+      "passed": true
+    },
+    {
+      "detail": 1641,
+      "name": "incomplete:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "expiry:accepted",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "expiry:pending",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "expiry:expired",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "expiry:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "integrity:accepted",
+      "passed": true
+    },
+    {
+      "detail": "integrity",
+      "name": "integrity:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "integrity:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "oversize:accepted",
+      "passed": true
+    },
+    {
+      "detail": "fragment_limits",
+      "name": "oversize:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "oversize:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "malformed:accepted",
+      "passed": true
+    },
+    {
+      "detail": "fragment_json",
+      "name": "malformed:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "malformed:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "invalid_geometry_then_recovery:accepted",
+      "passed": true
+    },
+    {
+      "detail": 3,
+      "name": "invalid_geometry_then_recovery:sequence",
+      "passed": true
+    },
+    {
+      "detail": "geometry:invalid_convex_part",
+      "name": "invalid_geometry_then_recovery:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "invalid_geometry_then_recovery:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 43,
+      "name": "merge_split:accepted",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "merge_split:merges",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "merge_split:splits",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "merge_split:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "confirmed_empty:accepted",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "confirmed_empty:objects",
+      "passed": true
+    },
+    {
+      "detail": "SCENE_EMPTY",
+      "name": "confirmed_empty:scene_state",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "confirmed_empty:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "timeout_not_empty:accepted",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "timeout_not_empty:objects",
+      "passed": true
+    },
+    {
+      "detail": "SCENE_STALE",
+      "name": "timeout_not_empty:scene_state",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "timeout_not_empty:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "recovery_after_interrupt:accepted",
+      "passed": true
+    },
+    {
+      "detail": "SCENE_ACTIVE",
+      "name": "recovery_after_interrupt:scene_state",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "recovery_after_interrupt:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "restart_sender:accepted",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "restart_sender:sessions",
+      "passed": true
+    },
+    {
+      "detail": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "name": "restart_sender:session_id",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "restart_sender:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "unconfirmed_empty:accepted",
+      "passed": true
+    },
+    {
+      "detail": "SCENE_ACTIVE",
+      "name": "unconfirmed_empty:scene_state",
+      "passed": true
+    },
+    {
+      "detail": "unconfirmed_empty",
+      "name": "unconfirmed_empty:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "unconfirmed_empty:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "pending_birth_is_not_empty:accepted",
+      "passed": true
+    },
+    {
+      "detail": "SCENE_ACTIVE",
+      "name": "pending_birth_is_not_empty:scene_state",
+      "passed": true
+    },
+    {
+      "detail": "unconfirmed_empty",
+      "name": "pending_birth_is_not_empty:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "pending_birth_is_not_empty:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "geometry_version_invalid:accepted",
+      "passed": true
+    },
+    {
+      "detail": "geometry:geometry_version",
+      "name": "geometry_version_invalid:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "geometry_version_invalid:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "preserve_last_valid:accepted",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "preserve_last_valid:sequence",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "preserve_last_valid:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "independent_ids:accepted",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "independent_ids:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "hole:accepted",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "hole:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "corner:accepted",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "corner:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "rotation:accepted",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "rotation:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "mixed_material_metadata:accepted",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "mixed_material_metadata:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "unknown_material:accepted",
+      "passed": true
+    },
+    {
+      "detail": "material_id",
+      "name": "unknown_material:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "unknown_material:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "orange_metadata_only:accepted",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "orange_metadata_only:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "material_overlap:accepted",
+      "passed": true
+    },
+    {
+      "detail": "material_overlap",
+      "name": "material_overlap:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "material_overlap:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "invalid_future_session_cannot_poison:accepted",
+      "passed": true
+    },
+    {
+      "detail": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "name": "invalid_future_session_cannot_poison:session_id",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "invalid_future_session_cannot_poison:sequence",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "invalid_future_session_cannot_poison:sessions",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "invalid_future_session_cannot_poison:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "bad_base64:accepted",
+      "passed": true
+    },
+    {
+      "detail": "fragment_payload",
+      "name": "bad_base64:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "bad_base64:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "invalid_utf8:accepted",
+      "passed": true
+    },
+    {
+      "detail": "utf8",
+      "name": "invalid_utf8:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "invalid_utf8:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "oversize_datagram:accepted",
+      "passed": true
+    },
+    {
+      "detail": "datagram_size",
+      "name": "oversize_datagram:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "oversize_datagram:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "name": "epoch_recovery_and_rollback:accepted",
+      "passed": true
+    },
+    {
+      "detail": "identity_epoch_reuse",
+      "name": "epoch_recovery_and_rollback:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "epoch_recovery_and_rollback:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "cache_cannot_hide_invalid_materials:accepted",
+      "passed": true
+    },
+    {
+      "detail": "material_regions",
+      "name": "cache_cannot_hide_invalid_materials:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "cache_cannot_hide_invalid_materials:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "cache_still_validates_metadata:accepted",
+      "passed": true
+    },
+    {
+      "detail": "geometry:coordinate_space",
+      "name": "cache_still_validates_metadata:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "cache_still_validates_metadata:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "unannounced_session:accepted",
+      "passed": true
+    },
+    {
+      "detail": "obsolete_or_unannounced_session",
+      "name": "unannounced_session:reason",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "unannounced_session:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "pending_budget:accepted",
+      "passed": true
+    },
+    {
+      "detail": 8,
+      "name": "pending_budget:pending",
+      "passed": true
+    },
+    {
+      "detail": "reassembly_budget",
+      "name": "pending_budget:reason",
+      "passed": true
+    },
+    {
+      "detail": 13127,
+      "name": "pending_budget:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "expired_partial_then_full:accepted",
+      "passed": true
+    },
+    {
+      "detail": 1,
+      "name": "expired_partial_then_full:expired",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "expired_partial_then_full:pending",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "expired_partial_then_full:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": 3598,
+      "name": "prolonged:accepted",
+      "passed": true
+    },
+    {
+      "detail": 30,
+      "name": "prolonged:merges",
+      "passed": true
+    },
+    {
+      "detail": 29,
+      "name": "prolonged:splits",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "prolonged:pending",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "prolonged:memory_bounded",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "pose_only_uses_validated_geometry",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "published_snapshot_not_internal_storage",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "metadata_rejection_atomic",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "aged_sender_message_rejected",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "future_clock_skew_rejected",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "fresh_message_recovers",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "utf8_valid_multibyte",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "utf8_reject_overlong",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "utf8_reject_surrogate",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "utf8_reject_outside_unicode",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "utf8_reject_truncated",
+      "passed": true
+    }
+  ],
+  "total": 160
+}

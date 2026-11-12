@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var suite: RefCounted = load(\"res://validation/StructureUdpValidation.gd\").new()\nget_tree().current_scene.set_meta(\"protocol_suite\",suite)\nsuite.run()\nreturn \"core_started_async\""}}

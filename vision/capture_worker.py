@@ -1,25 +1,35 @@
 """Native camera calls run only in a disposable child process."""
 import time
-import cv2
-import numpy as np
 
 def capture_worker(config, stop, lock, pixels, header, status, factory=None):
-    cv2.setNumThreads(1)
-    capacity = len(pixels)
-    image_buffer = np.frombuffer(pixels, dtype=np.uint8)
-    backend = {"dshow": cv2.CAP_DSHOW, "msmf": cv2.CAP_MSMF, "auto": cv2.CAP_ANY}[config.backend]
-
-    def publish(message, opened=False):
+    def publish(message, opened=False,phase=None):
         with lock:
             encoded = message.encode("utf-8", errors="replace")[:510]
             status.value = encoded
             header[6] = int(opened)
             header[7] = time.monotonic()
+            if phase is not None:header[9] = phase
+            if phase==1:header[8] = header[7]
+
+    # Windows spawn/import is a separate bounded phase from native driver open.
+    # Publish entry BEFORE loading heavy libraries, without claiming the driver
+    # has opened. Slots 8/9 were unused in the existing shared header.
+    publish("CAMERA worker booting (Python imports)",phase=1)
+    try:
+        import cv2
+        import numpy as np
+    except ImportError as error:
+        publish(f"CAMERA worker import error: {error}")
+        return
+    cv2.setNumThreads(1)
+    capacity = len(pixels)
+    image_buffer = np.frombuffer(pixels, dtype=np.uint8)
+    backend = {"dshow": cv2.CAP_DSHOW, "msmf": cv2.CAP_MSMF, "auto": cv2.CAP_ANY}[config.backend]
 
     while not stop.is_set():
         camera = None
         try:
-            publish(f"CAMERA {config.index} opening")
+            publish(f"CAMERA {config.index} opening",phase=2)
             opened_at = time.monotonic()
             camera = (factory or cv2.VideoCapture)(config.index, backend)
             header[10] = (time.monotonic()-opened_at)*1000
@@ -29,7 +39,7 @@ def capture_worker(config, stop, lock, pixels, header, status, factory=None):
                 camera.set(cv2.CAP_PROP_FRAME_WIDTH, config.width)
                 camera.set(cv2.CAP_PROP_FRAME_HEIGHT, config.height)
                 camera.set(cv2.CAP_PROP_FPS, config.fps)
-                publish("CAMERA connected", True)
+                publish("CAMERA connected", True,phase=3)
                 while not stop.is_set():
                     started = time.monotonic()
                     header[7] = started

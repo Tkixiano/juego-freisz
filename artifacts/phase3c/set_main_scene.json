@@ -1,0 +1,1 @@
+["EDITOR_NOT_READY: Editor is in play mode — call project_manage(op=\"stop\") to stop the game, then retry [sub_code=EDITOR_PLAYING, editor_state=playing, retryable=False, hint=Editor is playing the scene. Call project_manage(op=\"stop\") (or wait for the user to stop the game) before retrying writes.]"]

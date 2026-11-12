@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "return {\"progress\":get_tree().current_scene.get_meta(\"udp_match_progress\",\"absent\"),\"done\":get_tree().current_scene.has_meta(\"udp_match_results\"),\"mode\":get_tree().current_scene.get_node(\"Sources\").mode}"}}

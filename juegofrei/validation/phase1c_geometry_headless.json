@@ -10,7 +10,7 @@
       "physics_shapes": 46,
       "reference_pixels": 1591,
       "tested_pixels": 12288,
-      "total_validation_ms": 216.718
+      "total_validation_ms": 207.297
     },
     {
       "area_error_px2": 0.000159144398821809,
@@ -20,7 +20,7 @@
       "physics_shapes": 2,
       "reference_pixels": 2200,
       "tested_pixels": 12288,
-      "total_validation_ms": 92.998
+      "total_validation_ms": 123.874
     },
     {
       "area_error_px2": 0.0,
@@ -30,7 +30,7 @@
       "physics_shapes": 2,
       "reference_pixels": 1250,
       "tested_pixels": 12288,
-      "total_validation_ms": 85.512
+      "total_validation_ms": 122.437
     },
     {
       "area_error_px2": 0.0000095367431640625,
@@ -40,7 +40,7 @@
       "physics_shapes": 3,
       "reference_pixels": 2100,
       "tested_pixels": 12288,
-      "total_validation_ms": 93.226
+      "total_validation_ms": 122.487
     },
     {
       "area_error_px2": 0.0,
@@ -50,7 +50,7 @@
       "physics_shapes": 3,
       "reference_pixels": 1200,
       "tested_pixels": 12288,
-      "total_validation_ms": 88.651
+      "total_validation_ms": 124.453
     },
     {
       "area_error_px2": 0.0,
@@ -60,7 +60,7 @@
       "physics_shapes": 4,
       "reference_pixels": 4950,
       "tested_pixels": 12288,
-      "total_validation_ms": 115.029
+      "total_validation_ms": 123.574
     },
     {
       "area_error_px2": 0.0,
@@ -70,7 +70,7 @@
       "physics_shapes": 7,
       "reference_pixels": 4800,
       "tested_pixels": 12288,
-      "total_validation_ms": 109.235
+      "total_validation_ms": 125.525
     },
     {
       "area_error_px2": 0.0000019073486328125,
@@ -80,7 +80,7 @@
       "physics_shapes": 2,
       "reference_pixels": 134,
       "tested_pixels": 12288,
-      "total_validation_ms": 76.614
+      "total_validation_ms": 122.703
     },
     {
       "area_error_px2": 0.0,
@@ -90,7 +90,7 @@
       "physics_shapes": 3,
       "reference_pixels": 4800,
       "tested_pixels": 12288,
-      "total_validation_ms": 103.328
+      "total_validation_ms": 123.519
     },
     {
       "area_error_px2": 0.0,
@@ -100,18 +100,20 @@
       "physics_shapes": 4,
       "reference_pixels": 4950,
       "tested_pixels": 12288,
-      "total_validation_ms": 107.018
+      "total_validation_ms": 124.285
     },
     {
       "carry_error_px": 0.000003814697265625,
       "floor_frames": 60,
       "frames": 60,
       "max_overlap_area_px2": 0.0,
+      "max_physics_ticks_per_sample": 1,
       "max_player_step_px": 1.5,
-      "name": "compound_carrier"
+      "name": "compound_carrier",
+      "normalized_step_px_per_tick": 1.5
     }
   ],
-  "passed": 109,
+  "passed": 110,
   "rows": [
     {
       "details": {
@@ -139,7 +141,7 @@
         "physics_shapes": 46,
         "reference_pixels": 1591,
         "tested_pixels": 12288,
-        "total_validation_ms": 216.718
+        "total_validation_ms": 207.297
       },
       "name": "convex_physical_mask_exact",
       "passed": true
@@ -180,7 +182,7 @@
         "physics_shapes": 2,
         "reference_pixels": 2200,
         "tested_pixels": 12288,
-        "total_validation_ms": 92.998
+        "total_validation_ms": 123.874
       },
       "name": "concave_physical_mask_exact",
       "passed": true
@@ -221,7 +223,7 @@
         "physics_shapes": 2,
         "reference_pixels": 1250,
         "tested_pixels": 12288,
-        "total_validation_ms": 85.512
+        "total_validation_ms": 122.437
       },
       "name": "point_contact_physical_mask_exact",
       "passed": true
@@ -262,7 +264,7 @@
         "physics_shapes": 3,
         "reference_pixels": 2100,
         "tested_pixels": 12288,
-        "total_validation_ms": 93.226
+        "total_validation_ms": 122.487
       },
       "name": "edge_contact_physical_mask_exact",
       "passed": true
@@ -303,7 +305,7 @@
         "physics_shapes": 3,
         "reference_pixels": 1200,
         "tested_pixels": 12288,
-        "total_validation_ms": 88.651
+        "total_validation_ms": 124.453
       },
       "name": "multiple_regions_physical_mask_exact",
       "passed": true
@@ -344,7 +346,7 @@
         "physics_shapes": 4,
         "reference_pixels": 4950,
         "tested_pixels": 12288,
-        "total_validation_ms": 115.029
+        "total_validation_ms": 123.574
       },
       "name": "hole_physical_mask_exact",
       "passed": true
@@ -385,7 +387,7 @@
         "physics_shapes": 7,
         "reference_pixels": 4800,
         "tested_pixels": 12288,
-        "total_validation_ms": 109.235
+        "total_validation_ms": 125.525
       },
       "name": "two_holes_physical_mask_exact",
       "passed": true
@@ -426,7 +428,7 @@
         "physics_shapes": 2,
         "reference_pixels": 134,
         "tested_pixels": 12288,
-        "total_validation_ms": 76.614
+        "total_validation_ms": 122.703
       },
       "name": "thin_physical_mask_exact",
       "passed": true
@@ -467,7 +469,7 @@
         "physics_shapes": 3,
         "reference_pixels": 4800,
         "tested_pixels": 12288,
-        "total_validation_ms": 103.328
+        "total_validation_ms": 123.519
       },
       "name": "notch_physical_mask_exact",
       "passed": true
@@ -508,7 +510,7 @@
         "physics_shapes": 4,
         "reference_pixels": 4950,
         "tested_pixels": 12288,
-        "total_validation_ms": 107.018
+        "total_validation_ms": 124.285
       },
       "name": "rotated_hole_physical_mask_exact",
       "passed": true
@@ -663,8 +665,10 @@
         "floor_frames": 60,
         "frames": 60,
         "max_overlap_area_px2": 0.0,
+        "max_physics_ticks_per_sample": 1,
         "max_player_step_px": 1.5,
-        "name": "compound_carrier"
+        "name": "compound_carrier",
+        "normalized_step_px_per_tick": 1.5
       },
       "name": "compound_carries_character_without_rebuild",
       "passed": true
@@ -675,10 +679,26 @@
         "floor_frames": 60,
         "frames": 60,
         "max_overlap_area_px2": 0.0,
+        "max_physics_ticks_per_sample": 1,
         "max_player_step_px": 1.5,
-        "name": "compound_carrier"
+        "name": "compound_carrier",
+        "normalized_step_px_per_tick": 1.5
       },
       "name": "compound_no_jump_or_deep_penetration",
+      "passed": true
+    },
+    {
+      "details": {
+        "carry_error_px": 0.000003814697265625,
+        "floor_frames": 60,
+        "frames": 60,
+        "max_overlap_area_px2": 0.0,
+        "max_physics_ticks_per_sample": 1,
+        "max_player_step_px": 1.5,
+        "name": "compound_carrier",
+        "normalized_step_px_per_tick": 1.5
+      },
+      "name": "carrier_sampled_each_physics_tick",
       "passed": true
     },
     {
@@ -856,5 +876,5 @@
     }
   ],
   "synthetic_only": true,
-  "total": 109
+  "total": 110
 }

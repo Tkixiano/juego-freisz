@@ -1,0 +1,72 @@
+{
+  "material_config_version": 1,
+  "colors": [
+    {
+      "id": 1,
+      "name": "verde",
+      "lower": [
+        35,
+        90,
+        55
+      ],
+      "upper": [
+        85,
+        255,
+        255
+      ],
+      "min_area": 12,
+      "max_area_fraction": 0.35,
+      "min_dimension": 8.0,
+      "max_aspect_ratio": 20.0,
+      "min_saturation": 80,
+      "min_confidence": 0.55,
+      "ambiguity_ratio": 0.8
+    },
+    {
+      "id": 2,
+      "name": "azul",
+      "lower": [
+        95,
+        100,
+        55
+      ],
+      "upper": [
+        135,
+        255,
+        255
+      ],
+      "min_area": 12,
+      "max_area_fraction": 0.35,
+      "min_dimension": 8.0,
+      "max_aspect_ratio": 20.0,
+      "min_saturation": 80,
+      "min_confidence": 0.55,
+      "ambiguity_ratio": 0.8
+    },
+    {
+      "id": 3,
+      "name": "naranja",
+      "lower": [
+        5,
+        120,
+        65
+      ],
+      "upper": [
+        25,
+        255,
+        255
+      ],
+      "min_area": 12,
+      "max_area_fraction": 0.35,
+      "min_dimension": 8.0,
+      "max_aspect_ratio": 20.0,
+      "min_saturation": 80,
+      "min_confidence": 0.55,
+      "ambiguity_ratio": 0.8
+    }
+  ],
+  "opening_kernel": 0,
+  "confirmation_frames": 3,
+  "max_regions": 128,
+  "max_parts": 512
+}

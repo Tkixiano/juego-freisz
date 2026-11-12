@@ -110,7 +110,10 @@ class StructureTracker:
         edges = set()
         for i,o in enumerate(old):
             for j,r in enumerate(regions):
-                overlap = int(np.count_nonzero(o.region.mask & r.mask))
+                ax,ay,aw,ah=o.region.bounds;bx,by,bw,bh=r.bounds
+                x,y=max(ax,bx),max(ay,by);right,bottom=min(ax+aw,bx+bw),min(ay+ah,by+bh)
+                if right<=x or bottom<=y:continue
+                overlap = int(np.count_nonzero(o.region.mask[y:bottom,x:right] & r.mask[y:bottom,x:right]))
                 if overlap / min(o.region.area, r.area) >= .20:
                     edges.add((i,j))
         # Motion fallback only between unmatched observations and unmatched tracks.
@@ -126,12 +129,14 @@ class StructureTracker:
         # matching above cannot discover that case. Add only UNIQUE nearby
         # attachments, then require aggregate area and color conservation.
         base_edges = edges.copy()
+        new_distances={};old_distances={}
         for i in range(len(old)):
             if any(a==i for a,b in edges):
                 continue
             possible = []
             for j,r in enumerate(regions):
-                d = cv2.distanceTransform((~r.mask).astype('uint8'),cv2.DIST_L2,cv2.DIST_MASK_PRECISE)
+                if j not in new_distances:new_distances[j]=cv2.distanceTransform((~r.mask).astype('uint8'),cv2.DIST_L2,cv2.DIST_MASK_PRECISE)
+                d = new_distances[j]
                 x,y = np.floor(old[i].region.center).astype(int)
                 if d[y,x] <= self.settings.max_motion_pixels and any(k in r.colors for k in old[i].region.colors):
                     possible.append(j)
@@ -142,7 +147,8 @@ class StructureTracker:
                 continue
             possible = []
             for i,o in enumerate(old):
-                d = cv2.distanceTransform((~o.region.mask).astype('uint8'),cv2.DIST_L2,cv2.DIST_MASK_PRECISE)
+                if i not in old_distances:old_distances[i]=cv2.distanceTransform((~o.region.mask).astype('uint8'),cv2.DIST_L2,cv2.DIST_MASK_PRECISE)
+                d = old_distances[i]
                 x,y = np.floor(r.center).astype(int)
                 if d[y,x] <= self.settings.max_motion_pixels and any(k in o.region.colors for k in r.colors):
                     possible.append(i)

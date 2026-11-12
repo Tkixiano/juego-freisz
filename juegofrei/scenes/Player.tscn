@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3]
+[gd_scene load_steps=14 format=3]
 
 [ext_resource type="Script" path="res://scripts/PlayerController.gd" id="1"]
 [ext_resource type="Resource" path="res://resources/PlayerMovement.tres" id="2"]
@@ -10,6 +10,7 @@
 [ext_resource type="Resource" path="res://resources/attacks/AirLight.tres" id="8"]
 [ext_resource type="Resource" path="res://resources/attacks/AirHeavy.tres" id="9"]
 [ext_resource type="Script" path="res://scripts/UnstuckGuard.gd" id="10"]
+[ext_resource type="Script" path="res://scripts/CharacterPresentation.gd" id="11"]
 [sub_resource type="CircleShape2D" id="HitShape"]
 resource_local_to_scene = true
 radius = 28.0
@@ -74,3 +75,6 @@ shape = SubResource("HitShape")
 
 [node name="UnstuckGuard" type="Node" parent="."]
 script = ExtResource("10")
+
+[node name="Presentation" type="Node2D" parent="."]
+script = ExtResource("11")

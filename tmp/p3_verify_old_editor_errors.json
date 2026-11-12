@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var result: Dictionary = {}\nfor path: String in [\"res://scripts/geometry/PolygonLab.gd\",\"res://validation/Phase2BValidation.gd\",\"res://validation/StructureUdpValidation.gd\"]:\n\tvar script: Script = load(path)\n\tresult[path] = script!=null and script.can_instantiate()\nreturn result"}}

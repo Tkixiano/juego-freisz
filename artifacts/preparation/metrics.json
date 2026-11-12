@@ -1,0 +1,94 @@
+{
+  "synthetic_only": true,
+  "transform_ms": {
+    "1": {
+      "p50": 2.97365,
+      "p95": 4.440849999999999,
+      "p99": 4.712040999999999,
+      "mean": 3.1509725,
+      "n": 80
+    },
+    "4": {
+      "p50": 12.8062,
+      "p95": 16.82318,
+      "p99": 17.751546999999995,
+      "mean": 12.6305275,
+      "n": 80
+    },
+    "8": {
+      "p50": 14.4495,
+      "p95": 24.752175,
+      "p99": 26.041440999999992,
+      "mean": 16.29827,
+      "n": 80
+    },
+    "16": {
+      "p50": 28.25195,
+      "p95": 40.592710000000004,
+      "p99": 47.953672999999974,
+      "mean": 30.14959,
+      "n": 80
+    },
+    "32": {
+      "p50": 57.416,
+      "p95": 80.85734000000001,
+      "p99": 86.414718,
+      "mean": 61.1140125,
+      "n": 80
+    },
+    "64": {
+      "p50": 57.942099999999996,
+      "p95": 65.13025999999999,
+      "p99": 70.90050099999999,
+      "mean": 58.70869125,
+      "n": 80
+    }
+  },
+  "fit_and_validation_ms": {
+    "p50": 7.4512,
+    "p95": 11.498195000000024,
+    "p99": 35.77099899999996,
+    "mean": 9.152435,
+    "n": 20
+  },
+  "calibration_validation_ms": {
+    "p50": 3.0417,
+    "p95": 3.548935,
+    "p99": 3.569227,
+    "mean": 2.9416899999999995,
+    "n": 20
+  },
+  "point_max_error_px": 0.0,
+  "analytic_fit_errors": {
+    "fit_rms_px": 0.0,
+    "fit_max_px": 0.0,
+    "check_rms_px": 2.842170943040401e-14,
+    "check_max_px": 5.684341886080802e-14,
+    "check_each_px": [
+      0.0,
+      0.0,
+      5.684341886080802e-14,
+      0.0
+    ],
+    "units": "logical_projection_pixels"
+  },
+  "aruco_warp_errors": {
+    "fit_rms_px": 3.6866145396381985e-13,
+    "fit_max_px": 4.687428401686771e-13,
+    "check_rms_px": 0.727076225922339,
+    "check_max_px": 0.9243060951130261,
+    "check_each_px": [
+      0.31265066130684577,
+      0.8159071632357431,
+      0.7048139192069014,
+      0.9243060951130261
+    ],
+    "units": "logical_projection_pixels"
+  },
+  "aruco_diagnostics": {
+    "duplicates": [],
+    "rejected_quads": 14
+  },
+  "convention": "pixel cell edges -> camera centres -.5 -> projector centres -> arena edges +.5",
+  "notes": "Overhead only; not complete vision/UDP/physics FPS. Camera/projector never opened."
+}

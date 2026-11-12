@@ -1,0 +1,10 @@
+test_epochs_reappearance_and_holes (tests.test_material_replay.MaterialReplayTests.test_epochs_reappearance_and_holes) ... ok
+test_full_snapshots_and_identity (tests.test_material_replay.MaterialReplayTests.test_full_snapshots_and_identity) ... ok
+test_input_validation (tests.test_material_replay.MaterialReplayTests.test_input_validation) ... ok
+test_partial_export_retains_manifest_and_validates_names (tests.test_material_replay.MaterialReplayTests.test_partial_export_retains_manifest_and_validates_names) ... ok
+test_snapshots_independent (tests.test_material_replay.MaterialReplayTests.test_snapshots_independent) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 22.299s
+
+OK

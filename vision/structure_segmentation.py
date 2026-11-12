@@ -8,6 +8,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from collections import OrderedDict
 import hashlib
+from copy import deepcopy
 from time import perf_counter
 import cv2
 import numpy as np
@@ -127,10 +128,13 @@ class Segmentation:
     proximity: list[dict]
     conflict_pixels: int
     rejected_pixels: int
+    material_masks: dict[int, np.ndarray] | None = None
+    conflict_mask: np.ndarray | None = None
 
 
 class StructureSegmenter:
-    def __init__(self, colors: list[ColorConfig], settings: StructureSettings | None = None):
+    def __init__(self, colors: list[ColorConfig], settings: StructureSettings | None = None,
+                 *, exclusive_colors: bool = False, material_opening: int = 0):
         self.settings = settings or StructureSettings()
         if not colors or len(colors)>64 or len({c.id for c in colors}) != len(colors):
             raise ValueError('unique configured color IDs required')
@@ -142,11 +146,28 @@ class StructureSegmenter:
                     or (lo[1:] > hi[1:]).any() or not 0 <= c.min_saturation <= 255):
                 raise ValueError('invalid HSV range')
         self.colors = colors
+        if material_opening not in (0,3,5): raise ValueError('material_opening')
+        self.exclusive_colors = exclusive_colors
+        self.material_opening = material_opening
         self._cache = OrderedDict()
         self.cache_hits = 0
         self.last_timings = {}
+        self._previous_image = None
+        self._previous_segmentation = None
 
     def segment(self, image: np.ndarray) -> Segmentation:
+        # Exact comparison only; own both the input and returned cache snapshots.
+        profile=repr((self.colors,self.settings,self.exclusive_colors,self.material_opening))
+        if isinstance(image,np.ndarray) and image.dtype==np.uint8 and getattr(self,"_previous_profile",None)==profile and self._previous_image is not None and np.array_equal(image,self._previous_image):
+            self.last_timings={k:0.0 for k in ("segmentation","morphology","components","contours","simplification")}
+            return deepcopy(self._previous_segmentation)
+        result=self._segment(image)
+        self._previous_profile=profile
+        self._previous_image=image.copy()
+        self._previous_segmentation=deepcopy(result)
+        return result
+
+    def _segment(self, image: np.ndarray) -> Segmentation:
         if image.dtype != np.uint8 or image.ndim != 3 or image.shape[2] != 3 or image.size == 0:
             raise ValueError('uint8 BGR image required')
         if image.shape[0] * image.shape[1] > self.settings.max_pixels:
@@ -169,7 +190,23 @@ class StructureSegmenter:
         coverage = np.zeros(image.shape[:2],dtype=np.uint8)
         for mask in masks.values():
             coverage += mask
-        combined = coverage > 0
+        raw_combined = coverage > 0
+        material_masks = None
+        if self.exclusive_colors:
+            # No priority by color/order: uncertain pixels belong to NO material.
+            material_masks = {}
+            for c in self.colors:
+                clean = (masks[c.id] & (coverage==1)).astype('uint8')
+                if self.material_opening:
+                    clean = cv2.morphologyEx(clean,cv2.MORPH_OPEN,np.ones((self.material_opening,)*2,np.uint8))
+                    clean &= masks[c.id] & (coverage==1)  # never invent foreground
+                n, color_labels, color_stats, _ = cv2.connectedComponentsWithStats(clean,connectivity=8)
+                keep = color_stats[:,cv2.CC_STAT_AREA]>=c.min_area
+                keep[0] = False
+                material_masks[c.id] = keep[color_labels]
+            combined = np.logical_or.reduce(list(material_masks.values()))
+        else:
+            combined = raw_combined
         timings['segmentation']=(perf_counter()-stage_start)*1000
         stage_start=perf_counter()
         count, labels, stats, centers = cv2.connectedComponentsWithStats(combined.astype('uint8'), connectivity=8)
@@ -230,4 +267,5 @@ class StructureSegmenter:
                     proximity.append({'regions': [i,j], 'gap_pixels': gap, 'state': 'AMBIGUOUS_PROXIMITY'})
         self.last_timings=timings
         return Segmentation(masks, accepted, regions, proximity, int(np.count_nonzero(coverage > 1)),
-                            int(np.count_nonzero(combined & ~accepted)))
+                            int(np.count_nonzero(raw_combined & ~accepted)),material_masks,
+                            coverage>1 if self.exclusive_colors else None)

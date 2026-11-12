@@ -60,6 +60,10 @@ func ui() -> void:
 	await click(s.back_button)
 	check("mouse_back_to_main",s.page==0 and tree.paused)
 	await click(s.play_button)
+	check("mouse_play_opens_selection",s.page==4 and tree.paused)
+	await click(s.selection.ready_buttons[0])
+	check("mouse_single_ready_waits",s.page==4 and tree.paused)
+	await click(s.selection.ready_buttons[1])
 	check("mouse_play",s.page==1 and not tree.paused and not s.screen.visible)
 	await frames(35)
 	await tap(KEY_ESCAPE)
@@ -96,6 +100,8 @@ func ui() -> void:
 	check("mouse_main_menu",s.page==0 and tree.paused)
 	await click(s.play_button)
 	await frames(30)
+	await click(s.selection.ready_buttons[0])
+	await click(s.selection.ready_buttons[1])
 	check("new_match_no_overlay",s.page==1 and not s.screen.visible and not r.get_node("UI/HUD/Victory").visible)
 	var nodes: int = r.find_children("*","",true,false).size()
 	var connections: int = s.play_button.get_signal_connection_list("pressed").size()
@@ -215,6 +221,8 @@ func edges() -> void:
 	await tap(KEY_ESCAPE)
 	await click(r.get_node("GameShell").menu_button)
 	await click(r.get_node("GameShell").play_button)
+	await click(r.get_node("GameShell").selection.ready_buttons[0])
+	await click(r.get_node("GameShell").selection.ready_buttons[1])
 	check("menu_after_victory_restarts_cleanly",not r.game_over and not tree.paused and not r.get_node("UI/HUD/Victory").visible)
 
 func operator() -> void:

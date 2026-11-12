@@ -1,0 +1,10 @@
+test_hung_open_has_bounded_close (tests.test_vision.CameraTests.test_hung_open_has_bounded_close) ... ok
+test_hung_read_restarts_and_closes (tests.test_vision.CameraTests.test_hung_read_restarts_and_closes) ... ok
+test_open_read_disconnect_and_release_with_fake_device (tests.test_vision.CameraTests.test_open_read_disconnect_and_release_with_fake_device) ... ok
+test_stale_frame_is_not_returned (tests.test_vision.CameraTests.test_stale_frame_is_not_returned) ... ok
+test_unopened_device_released (tests.test_vision.CameraTests.test_unopened_device_released) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 16.861s
+
+OK

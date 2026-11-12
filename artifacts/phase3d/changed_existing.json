@@ -1,0 +1,14 @@
+[
+  "vision\\structure_udp.py",
+  "vision\\structure_udp_sender.py",
+  "juegofrei\\scripts\\geometry\\MaterialGeometryValidator.gd",
+  "juegofrei\\scripts\\geometry\\OfflineGeometryAdapter.gd",
+  "juegofrei\\scripts\\geometry\\TransactionalGeometryManager.gd",
+  "juegofrei\\scripts\\integrated\\IntegratedGameManager.gd",
+  "juegofrei\\scripts\\integrated\\OfflineSceneGateway.gd",
+  "juegofrei\\scripts\\integrated\\SceneSourcePanel.gd",
+  "juegofrei\\scripts\\material_physics\\MaterialPhysicsAdapter.gd",
+  "juegofrei\\scripts\\structure_udp\\StructureProtocol.gd",
+  "juegofrei\\scripts\\structure_udp\\StructureUdpReceiver.gd",
+  "juegofrei\\scenes\\IntegratedMatch.tscn"
+]

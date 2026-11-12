@@ -1,0 +1,84 @@
+[
+  {
+    "run": 0,
+    "spawn_return_ms": 221.3035998865962,
+    "first_frame_ms": 5960.331900045276,
+    "transitions": [
+      {
+        "elapsed_ms": 221.63379983976483,
+        "state": "CAMERA opening",
+        "restarts": 0,
+        "serial": 0,
+        "heartbeat": 0.0
+      },
+      {
+        "elapsed_ms": 5944.959899876267,
+        "state": "CAMERA connected",
+        "restarts": 0,
+        "serial": 0,
+        "heartbeat": 1776998.0473689
+      },
+      {
+        "elapsed_ms": 5960.307399975136,
+        "state": "CAMERA connected",
+        "restarts": 0,
+        "serial": 1,
+        "heartbeat": 1776998.0545314
+      },
+      {
+        "elapsed_ms": 6451.489399885759,
+        "state": "CAMERA frame timeout; waiting for driver/watchdog",
+        "restarts": 0,
+        "serial": 1,
+        "heartbeat": 1776998.0895796
+      },
+      {
+        "elapsed_ms": 6561.3985999953,
+        "state": "CAMERA stalled/disconnected; worker restarted",
+        "restarts": 1,
+        "serial": 1,
+        "heartbeat": 0
+      }
+    ],
+    "diagnostics": {
+      "state": "CAMERA closed; blocked native worker terminated",
+      "opened": false,
+      "frames_copied": 1,
+      "captured_frames": 1,
+      "measured_capture_hz": 0,
+      "capture_read_ms": 7.16250017285347,
+      "open_ms": 0.03450014628469944,
+      "restarts": 1,
+      "forced_stops": 1,
+      "read_errors": 0,
+      "child_alive": false
+    }
+  },
+  {
+    "run": 1,
+    "spawn_return_ms": 145.5597998574376,
+    "first_frame_ms": null,
+    "transitions": [
+      {
+        "elapsed_ms": 145.7412000745535,
+        "state": "CAMERA opening",
+        "restarts": 0,
+        "serial": 0,
+        "heartbeat": 0.0
+      }
+    ],
+    "diagnostics": {
+      "state": "CAMERA opening",
+      "opened": false,
+      "frames_copied": 0,
+      "captured_frames": 0,
+      "measured_capture_hz": 0,
+      "capture_read_ms": 0.0,
+      "open_ms": 0.0,
+      "restarts": 0,
+      "forced_stops": 0,
+      "read_errors": 0,
+      "child_alive": false
+    }
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "baseline_files": 91,
+  "modified_existing": [
+    "juegofrei\\scripts\\PlayerController.gd",
+    "juegofrei\\scripts\\geometry\\TransactionalGeometryManager.gd"
+  ],
+  "missing": []
+}

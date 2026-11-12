@@ -1,0 +1,1 @@
+cases ['original', 'near_exterior', 'concave_hole', 'multiple_holes', 'mixed_materials', 'rotated', 'extreme', 'axis_rotation', 'unwelded_original'] parts 22

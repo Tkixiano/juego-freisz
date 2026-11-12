@@ -1,0 +1,52 @@
+{
+  "phase": "2A",
+  "godot": "4.6.3",
+  "new_tests": {
+    "mcp": 93,
+    "headless": 93,
+    "repeated": true
+  },
+  "original_regression": [
+    225,
+    225
+  ],
+  "legacy_udp": 37,
+  "phase1a": 92,
+  "phase1c": 109,
+  "phase1d": 127,
+  "python_regression": 110,
+  "loaded_resources": 69,
+  "measurements": {
+    "dash_-1_max_speed": 580.0,
+    "dash_1_max_speed": 580.0,
+    "down_heavy_peak": 620.0,
+    "down_light_peak": 500.0,
+    "dynamic_concave_max_fall": 486.666625976563,
+    "dynamic_inclined_max_fall": 486.666625976563,
+    "dynamic_moving_max_fall": 486.666625976563,
+    "predefined_one_way_max_fall": 558.333312988281,
+    "solid_floor_max_fall": 486.666625976563
+  },
+  "preexisting_files_checked": 79,
+  "modified_files": [
+    "juegofrei\\scripts\\AttackData.gd",
+    "juegofrei\\scripts\\CombatController.gd",
+    "juegofrei\\scripts\\GameManager.gd",
+    "juegofrei\\scripts\\PlayerController.gd",
+    "juegofrei\\scenes\\GameShell.tscn",
+    "juegofrei\\resources\\attacks\\AirHeavy.tres"
+  ],
+  "new_validation_files": [
+    "juegofrei/validation/Phase2AValidation.gd",
+    "juegofrei/validation/Phase2AHeadless.gd"
+  ],
+  "camera_used": false,
+  "projector_used": false,
+  "opencv_changed": false,
+  "udp_protocol_changed": false,
+  "geometry_architecture_changed": false,
+  "movement_resource_changed": false,
+  "input_map_changed": false,
+  "runtime_errors_or_warnings": [],
+  "phase2b_started": false
+}

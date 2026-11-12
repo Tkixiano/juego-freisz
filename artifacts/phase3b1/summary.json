@@ -1,0 +1,130 @@
+{
+  "phase": "3B.1",
+  "godot": "4.6.3",
+  "synthetic_only": true,
+  "cameras_used": false,
+  "projector_used": false,
+  "materials_udp_connected": false,
+  "materials_physics_implemented": false,
+  "next_phase_started": false,
+  "scenarios": 20,
+  "source_frames": 270,
+  "reference_pixels": 213120,
+  "pixel_errors": 0,
+  "overlap_pixels": 0,
+  "all_final_mask_iou": 1.0,
+  "python_regression_passes": [
+    145,
+    147
+  ],
+  "material_tests_after_cache": 14,
+  "geometry_godot_checks": 160,
+  "geometry_mcp_checks": 160,
+  "gui_controls_checks": 12,
+  "regression": {
+    "original": 235,
+    "characters_graphical": 111,
+    "legacy_udp_in_game": 37,
+    "characters_headless": 92,
+    "phase2a": 93,
+    "phase1a": 92,
+    "phase1c": 110,
+    "phase1d": 127,
+    "udp_protocol": 160
+  },
+  "timeouts": {
+    "cause": "Windows spawn and heavy imports exceeded the old shared 4s startup deadline",
+    "measured_import_ready_ms": 6048.009100137278,
+    "fix": "separate bounded bootstrap/open/read phases; native test deadlines unchanged",
+    "tests_new_and_old_passed": true
+  },
+  "existing_production_files_checked": 83,
+  "existing_production_files_changed": [
+    "vision\\camera.py",
+    "vision\\capture_worker.py",
+    "vision\\config.py",
+    "vision\\offline_replay.py",
+    "vision\\structure_segmentation.py"
+  ],
+  "original_godot_production_files_unchanged": true,
+  "runtime_errors_or_warnings": [],
+  "benchmark_ms": {
+    "benchmark_640": {
+      "resolution": [
+        640,
+        480
+      ],
+      "frames": 120,
+      "mean_ms": 476.61285166977905,
+      "p50_ms": 457.1766499429941,
+      "p95_ms": 683.4248350118287,
+      "p99_ms": 773.6304128868505
+    },
+    "benchmark_640_one_thread": {
+      "resolution": [
+        640,
+        480
+      ],
+      "frames": 120,
+      "opencv_threads": 1,
+      "mean_ms": 375.605251667245,
+      "p50_ms": 336.55364986043423,
+      "p95_ms": 539.7705451236106,
+      "p99_ms": 645.7072879350744
+    },
+    "benchmark_640_cached": {
+      "resolution": [
+        640,
+        480
+      ],
+      "frames": 120,
+      "opencv_threads": 1,
+      "mean_ms": 117.35654250175382,
+      "p50_ms": 107.48890007380396,
+      "p95_ms": 160.77077510999516,
+      "p99_ms": 187.1021540067159
+    },
+    "benchmark_640_cached_repeat": {
+      "resolution": [
+        640,
+        480
+      ],
+      "frames": 120,
+      "opencv_threads": 1,
+      "mean_ms": 145.84845751523972,
+      "p50_ms": 140.1717500993982,
+      "p95_ms": 197.20667510991916,
+      "p99_ms": 208.39008514070883
+    }
+  },
+  "performance_limitation": "Does not meet 33ms/frame in measured 640x480 workload; no sustained 30FPS claim",
+  "report": "PHASE_3B1_REPORT.md",
+  "contract": "MATERIAL_CONTRACT_V1.md",
+  "closure_editor_state": [
+    {
+      "current_scene": "res://scenes/MaterialRepresentationLab.tscn",
+      "game_capture_ready": true,
+      "game_status": {
+        "active": true,
+        "editor_log_cursor": 3,
+        "elapsed_msec": 6304561,
+        "helper_expected": true,
+        "helper_live": true,
+        "ready": true,
+        "ready_wait_msec": 20000,
+        "run_started_msec": 33416579,
+        "run_token": 35,
+        "session_active": true,
+        "status": "live"
+      },
+      "godot_version": "4.6.3-stable (official)",
+      "helper_live": true,
+      "is_playing": true,
+      "project_name": "Cubos / Arena",
+      "readiness": "playing",
+      "session_active": true
+    }
+  ],
+  "closure_runtime_errors_or_warnings": [],
+  "precision_scope": "20 final stable synthetic snapshots; 270 source frames processed; pending/held snapshots are not counted as fresh segmentation matches"
+}

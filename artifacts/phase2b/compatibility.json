@@ -1,0 +1,9 @@
+{
+  "files_checked": 79,
+  "modified": [
+    "juegofrei\\scripts\\GameManager.gd",
+    "juegofrei\\scripts\\GameShell.gd",
+    "juegofrei\\scenes\\GameShell.tscn",
+    "juegofrei\\scenes\\Player.tscn"
+  ]
+}

@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var suite: RefCounted = load(\"res://validation/MaterialLabControlValidation.gd\").new()\nget_tree().current_scene.set_meta(\"control_suite\",suite)\nsuite.run(get_tree())\nreturn \"lab_controls_started\""}}

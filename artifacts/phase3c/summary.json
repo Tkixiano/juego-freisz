@@ -1,0 +1,182 @@
+{
+  "headless": {
+    "passed": 59,
+    "total": 59,
+    "source": {
+      "applied": 1286,
+      "deferred": 3,
+      "held": 719,
+      "queued": 1287,
+      "received": 2004,
+      "rejected": 3,
+      "source_resets": 18
+    },
+    "floor": {
+      "activation_deferrals": 1,
+      "activations": 12,
+      "deferred_retirements": 3,
+      "retirements": 12
+    },
+    "spawn": {
+      "deferred": 1,
+      "respawns": 6
+    },
+    "penetrations": 0,
+    "samples": 1028,
+    "support_transitions": 10,
+    "unexpected_support_losses": 0,
+    "gateway_validation": {
+      "n": 2004,
+      "mean_ms": 3.9889136726546908,
+      "p50_ms": 4.529,
+      "p95_ms": 6.531,
+      "p99_ms": 7.849,
+      "max_ms": 24.64
+    },
+    "backend_validation": {
+      "n": 1287,
+      "mean_ms": 3.4562346542346543,
+      "p50_ms": 3.345,
+      "p95_ms": 4.628,
+      "p99_ms": 5.556,
+      "max_ms": 17.064
+    },
+    "application": {
+      "n": 1286,
+      "mean_ms": 0.34551166407465006,
+      "p50_ms": 0.223,
+      "p95_ms": 1.268,
+      "p99_ms": 2.073,
+      "max_ms": 36.804
+    },
+    "geometry_update": {
+      "n": 2813,
+      "mean_ms": 0.4063686455741201,
+      "p50_ms": 0.195,
+      "p95_ms": 0.937,
+      "p99_ms": 2.301,
+      "max_ms": 37.817
+    },
+    "match_update": {
+      "n": 2813,
+      "mean_ms": 0.08972733736224671,
+      "p50_ms": 0.068,
+      "p95_ms": 0.184,
+      "p99_ms": 0.385,
+      "max_ms": 2.716
+    },
+    "backend": {
+      "accepted": 1287,
+      "applied": 1286,
+      "cancelled": 1,
+      "deferred": 3,
+      "identity_changes": 27,
+      "merges": 0,
+      "player_penetration_deferrals": 0,
+      "received": 1287,
+      "rejected": 0,
+      "splits": 0
+    },
+    "events": {
+      "merges": 32,
+      "queued": 1287,
+      "received": 1287,
+      "rejected": 0,
+      "splits": 30
+    },
+    "bodies": 2,
+    "structures": 1,
+    "shapes": 2,
+    "rebuilds": 143
+  },
+  "mcp": {
+    "passed": 59,
+    "total": 59,
+    "source": {
+      "applied": 1286,
+      "deferred": 3,
+      "held": 719,
+      "queued": 1287,
+      "received": 2004,
+      "rejected": 3,
+      "source_resets": 18
+    },
+    "floor": {
+      "activation_deferrals": 1,
+      "activations": 12,
+      "deferred_retirements": 3,
+      "retirements": 12
+    },
+    "spawn": {
+      "deferred": 1,
+      "respawns": 6
+    },
+    "penetrations": 0,
+    "samples": 1026,
+    "support_transitions": 10,
+    "unexpected_support_losses": 0,
+    "gateway_validation": {
+      "n": 2004,
+      "mean_ms": 4.102155189620758,
+      "p50_ms": 4.581,
+      "p95_ms": 7.038,
+      "p99_ms": 8.645,
+      "max_ms": 17.643
+    },
+    "backend_validation": {
+      "n": 1287,
+      "mean_ms": 3.551114219114219,
+      "p50_ms": 3.366,
+      "p95_ms": 5.069,
+      "p99_ms": 6.071,
+      "max_ms": 13.658
+    },
+    "application": {
+      "n": 1286,
+      "mean_ms": 0.3330746500777605,
+      "p50_ms": 0.22,
+      "p95_ms": 1.275,
+      "p99_ms": 2.107,
+      "max_ms": 20.402
+    },
+    "geometry_update": {
+      "n": 2812,
+      "mean_ms": 0.420176386913229,
+      "p50_ms": 0.216,
+      "p95_ms": 0.963,
+      "p99_ms": 2.202,
+      "max_ms": 21.822
+    },
+    "match_update": {
+      "n": 2812,
+      "mean_ms": 0.09558392603129445,
+      "p50_ms": 0.069,
+      "p95_ms": 0.24,
+      "p99_ms": 0.357,
+      "max_ms": 0.847
+    },
+    "backend": {
+      "accepted": 1287,
+      "applied": 1286,
+      "cancelled": 1,
+      "deferred": 3,
+      "identity_changes": 27,
+      "merges": 0,
+      "player_penetration_deferrals": 0,
+      "received": 1287,
+      "rejected": 0,
+      "splits": 0
+    },
+    "events": {
+      "merges": 32,
+      "queued": 1287,
+      "received": 1287,
+      "rejected": 0,
+      "splits": 30
+    },
+    "bodies": 2,
+    "structures": 1,
+    "shapes": 2,
+    "rebuilds": 143
+  }
+}

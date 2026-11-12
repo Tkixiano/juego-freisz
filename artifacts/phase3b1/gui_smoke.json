@@ -1,0 +1,54 @@
+{
+  "passed": 12,
+  "total": 12,
+  "rows": [
+    {
+      "name": "select_orange",
+      "passed": true
+    },
+    {
+      "name": "orange_saved",
+      "passed": true
+    },
+    {
+      "name": "green_preserved",
+      "passed": true
+    },
+    {
+      "name": "blue_preserved",
+      "passed": true
+    },
+    {
+      "name": "green_saved_independently",
+      "passed": true
+    },
+    {
+      "name": "orange_preserved",
+      "passed": true
+    },
+    {
+      "name": "select_blue",
+      "passed": true
+    },
+    {
+      "name": "sample_not_auto_applied",
+      "passed": true
+    },
+    {
+      "name": "explicit_sample_applied",
+      "passed": true
+    },
+    {
+      "name": "load_saved_profile",
+      "passed": true
+    },
+    {
+      "name": "legacy_file_unchanged",
+      "passed": true
+    },
+    {
+      "name": "quit_action",
+      "passed": true
+    }
+  ]
+}

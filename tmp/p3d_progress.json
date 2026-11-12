@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "return {\"full\":get_tree().current_scene.get_meta(\"full_progress\",\"absent\"),\"phase2b\":get_tree().current_scene.get_meta(\"phase2b_progress\",\"absent\"),\"done\":get_tree().current_scene.has_meta(\"phase3d_original_regression\"),\"paused\":get_tree().paused}"}}

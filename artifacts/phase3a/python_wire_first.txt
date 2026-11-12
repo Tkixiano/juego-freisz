@@ -1,0 +1,24 @@
+test_bad_numeric (tests.test_structure_udp.StructureUdpTests.test_bad_numeric) ... ok
+test_changed_header (tests.test_structure_udp.StructureUdpTests.test_changed_header) ... ok
+test_count_bound (tests.test_structure_udp.StructureUdpTests.test_count_bound) ... ok
+test_datagram_bound (tests.test_structure_udp.StructureUdpTests.test_datagram_bound) ... ok
+test_duplicate_fragment (tests.test_structure_udp.StructureUdpTests.test_duplicate_fragment) ... ok
+test_expire (tests.test_structure_udp.StructureUdpTests.test_expire) ... ok
+test_fragment_roundtrip (tests.test_structure_udp.StructureUdpTests.test_fragment_roundtrip) ... ok
+test_incomplete (tests.test_structure_udp.StructureUdpTests.test_incomplete) ... ok
+test_integrity (tests.test_structure_udp.StructureUdpTests.test_integrity) ... ok
+test_invalid_base64 (tests.test_structure_udp.StructureUdpTests.test_invalid_base64) ... ok
+test_malformed (tests.test_structure_udp.StructureUdpTests.test_malformed) ... ok
+test_memory_bound (tests.test_structure_udp.StructureUdpTests.test_memory_bound) ... ok
+test_message_bound (tests.test_structure_udp.StructureUdpTests.test_message_bound) ... ok
+test_no_capture_import (tests.test_structure_udp.StructureUdpTests.test_no_capture_import) ... ok
+test_old_protocol_separate (tests.test_structure_udp.StructureUdpTests.test_old_protocol_separate) ... ok
+test_pending_bound (tests.test_structure_udp.StructureUdpTests.test_pending_bound) ... ok
+test_reverse (tests.test_structure_udp.StructureUdpTests.test_reverse) ... ok
+test_session_restart (tests.test_structure_udp.StructureUdpTests.test_session_restart) ... ok
+test_unconfirmed_empty (tests.test_structure_udp.StructureUdpTests.test_unconfirmed_empty) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.077s
+
+OK

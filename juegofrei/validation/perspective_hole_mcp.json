@@ -1,0 +1,679 @@
+{
+  "compound_validation_ms": {
+    "original": [
+      7.482,
+      6.324,
+      8.035,
+      6.424,
+      9.382,
+      7.928,
+      6.901,
+      6.254,
+      8.8,
+      7.893,
+      7.682,
+      8.534,
+      9.229,
+      7.507,
+      8.106,
+      6.94,
+      6.273,
+      7.698,
+      6.328,
+      9.82,
+      7.025,
+      6.63,
+      8.081,
+      6.868,
+      8.141,
+      6.594,
+      7.895,
+      6.834,
+      7.909,
+      8.29,
+      9.072,
+      6.469,
+      8.345,
+      7.11,
+      8.513,
+      7.217,
+      8.778,
+      7.753,
+      8.857,
+      7.732,
+      8.151,
+      7.437,
+      7.818,
+      7.711,
+      7.492,
+      7.995,
+      7.355,
+      9.6,
+      6.374,
+      6.714,
+      8.958,
+      9.52,
+      6.573,
+      7.876,
+      6.561,
+      6.532,
+      8.047,
+      6.686,
+      8.253,
+      6.996,
+      8.026,
+      6.724,
+      8.371,
+      6.699,
+      6.404,
+      8.229,
+      7.701,
+      8.845,
+      6.389,
+      7.148,
+      7.114,
+      8.327,
+      7.727,
+      8.451,
+      7.54,
+      8.647,
+      7.832,
+      9.053,
+      7.978,
+      9.178,
+      9.452,
+      7.898,
+      9.59,
+      8.12,
+      7.875,
+      7.736,
+      6.733,
+      7.216,
+      7.315,
+      6.366,
+      8.369,
+      6.315,
+      10.675,
+      9.498,
+      8.091,
+      6.443,
+      8.038,
+      7.824,
+      8.145,
+      6.397
+    ],
+    "unwelded_original": [
+      1.509,
+      1.583,
+      1.455,
+      1.421,
+      1.879,
+      1.597,
+      1.592,
+      2.604,
+      1.906,
+      1.514,
+      1.499,
+      2.526,
+      2.091,
+      1.561,
+      1.575,
+      1.47,
+      2.681,
+      1.813,
+      1.543,
+      1.579,
+      1.414,
+      1.481,
+      1.953,
+      1.558,
+      1.407,
+      1.648,
+      2.509,
+      1.61,
+      1.536,
+      1.439,
+      1.421,
+      1.355,
+      1.442,
+      1.568,
+      1.747,
+      1.865,
+      1.403,
+      1.55,
+      1.366,
+      1.429,
+      1.636,
+      1.415,
+      1.571,
+      1.68,
+      1.505,
+      1.356,
+      1.461,
+      2.597,
+      2.194,
+      1.448,
+      1.549,
+      1.67,
+      1.396,
+      1.438,
+      1.54,
+      1.854,
+      2.256,
+      1.387,
+      1.601,
+      1.498,
+      1.664,
+      1.713,
+      1.518,
+      1.48,
+      1.47,
+      1.366,
+      1.511,
+      2.608,
+      1.922,
+      1.477,
+      1.743,
+      1.577,
+      1.402,
+      1.444,
+      1.704,
+      1.347,
+      1.421,
+      2.588,
+      1.865,
+      1.498,
+      1.76,
+      2.457,
+      1.774,
+      1.53,
+      1.367,
+      1.375,
+      2.326,
+      2.292,
+      1.529,
+      1.404,
+      2.295,
+      1.491,
+      1.422,
+      1.459,
+      1.438,
+      2.452,
+      2.737,
+      2.002,
+      1.663,
+      1.394
+    ]
+  },
+  "failures": [],
+  "hole_hits": 0,
+  "hole_queries": 2398,
+  "label": "mcp",
+  "maximum_hole_overlap_px2": 0.0,
+  "passed": 70,
+  "rows": [
+    {
+      "detail": null,
+      "name": "old_geometry_still_rejected",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "original_contract",
+      "passed": true
+    },
+    {
+      "detail": {
+        "diff": {
+          "added": [],
+          "geometry_changed": [],
+          "merges": 0,
+          "pose_changed": [],
+          "removed": [],
+          "splits": 0
+        },
+        "status": "QUEUED"
+      },
+      "name": "original_atomic_apply",
+      "passed": true
+    },
+    {
+      "detail": 225,
+      "name": "original_hole_sampling",
+      "passed": true
+    },
+    {
+      "detail": 0.0,
+      "name": "original_zero_geometric_hole_overlap",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "original_no_hole_collisions",
+      "passed": true
+    },
+    {
+      "detail": 21,
+      "name": "original_actual_solid_collisions",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "near_exterior_contract",
+      "passed": true
+    },
+    {
+      "detail": {
+        "diff": {
+          "added": [],
+          "geometry_changed": [],
+          "merges": 0,
+          "pose_changed": [],
+          "removed": [],
+          "splits": 0
+        },
+        "status": "QUEUED"
+      },
+      "name": "near_exterior_atomic_apply",
+      "passed": true
+    },
+    {
+      "detail": 225,
+      "name": "near_exterior_hole_sampling",
+      "passed": true
+    },
+    {
+      "detail": 0.0,
+      "name": "near_exterior_zero_geometric_hole_overlap",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "near_exterior_no_hole_collisions",
+      "passed": true
+    },
+    {
+      "detail": 14,
+      "name": "near_exterior_actual_solid_collisions",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "concave_hole_contract",
+      "passed": true
+    },
+    {
+      "detail": {
+        "diff": {
+          "added": [],
+          "geometry_changed": [],
+          "merges": 0,
+          "pose_changed": [],
+          "removed": [],
+          "splits": 0
+        },
+        "status": "QUEUED"
+      },
+      "name": "concave_hole_atomic_apply",
+      "passed": true
+    },
+    {
+      "detail": 225,
+      "name": "concave_hole_hole_sampling",
+      "passed": true
+    },
+    {
+      "detail": 0.0,
+      "name": "concave_hole_zero_geometric_hole_overlap",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "concave_hole_no_hole_collisions",
+      "passed": true
+    },
+    {
+      "detail": 19,
+      "name": "concave_hole_actual_solid_collisions",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "multiple_holes_contract",
+      "passed": true
+    },
+    {
+      "detail": {
+        "diff": {
+          "added": [],
+          "geometry_changed": [],
+          "merges": 0,
+          "pose_changed": [],
+          "removed": [],
+          "splits": 0
+        },
+        "status": "QUEUED"
+      },
+      "name": "multiple_holes_atomic_apply",
+      "passed": true
+    },
+    {
+      "detail": 675,
+      "name": "multiple_holes_hole_sampling",
+      "passed": true
+    },
+    {
+      "detail": 0.0,
+      "name": "multiple_holes_zero_geometric_hole_overlap",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "multiple_holes_no_hole_collisions",
+      "passed": true
+    },
+    {
+      "detail": 47,
+      "name": "multiple_holes_actual_solid_collisions",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "mixed_materials_contract",
+      "passed": true
+    },
+    {
+      "detail": {
+        "diff": {
+          "added": [],
+          "geometry_changed": [],
+          "merges": 0,
+          "pose_changed": [],
+          "removed": [],
+          "splits": 0
+        },
+        "status": "QUEUED"
+      },
+      "name": "mixed_materials_atomic_apply",
+      "passed": true
+    },
+    {
+      "detail": 225,
+      "name": "mixed_materials_hole_sampling",
+      "passed": true
+    },
+    {
+      "detail": 0.0,
+      "name": "mixed_materials_zero_geometric_hole_overlap",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "mixed_materials_no_hole_collisions",
+      "passed": true
+    },
+    {
+      "detail": 26,
+      "name": "mixed_materials_actual_solid_collisions",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "rotated_contract",
+      "passed": true
+    },
+    {
+      "detail": {
+        "diff": {
+          "added": [],
+          "geometry_changed": [],
+          "merges": 0,
+          "pose_changed": [],
+          "removed": [],
+          "splits": 0
+        },
+        "status": "QUEUED"
+      },
+      "name": "rotated_atomic_apply",
+      "passed": true
+    },
+    {
+      "detail": 189,
+      "name": "rotated_hole_sampling",
+      "passed": true
+    },
+    {
+      "detail": 0.0,
+      "name": "rotated_zero_geometric_hole_overlap",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "rotated_no_hole_collisions",
+      "passed": true
+    },
+    {
+      "detail": 21,
+      "name": "rotated_actual_solid_collisions",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "extreme_contract",
+      "passed": true
+    },
+    {
+      "detail": {
+        "diff": {
+          "added": [],
+          "geometry_changed": [],
+          "merges": 0,
+          "pose_changed": [],
+          "removed": [],
+          "splits": 0
+        },
+        "status": "QUEUED"
+      },
+      "name": "extreme_atomic_apply",
+      "passed": true
+    },
+    {
+      "detail": 184,
+      "name": "extreme_hole_sampling",
+      "passed": true
+    },
+    {
+      "detail": 0.0,
+      "name": "extreme_zero_geometric_hole_overlap",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "extreme_no_hole_collisions",
+      "passed": true
+    },
+    {
+      "detail": 21,
+      "name": "extreme_actual_solid_collisions",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "axis_rotation_contract",
+      "passed": true
+    },
+    {
+      "detail": {
+        "diff": {
+          "added": [],
+          "geometry_changed": [],
+          "merges": 0,
+          "pose_changed": [],
+          "removed": [],
+          "splits": 0
+        },
+        "status": "QUEUED"
+      },
+      "name": "axis_rotation_atomic_apply",
+      "passed": true
+    },
+    {
+      "detail": 225,
+      "name": "axis_rotation_hole_sampling",
+      "passed": true
+    },
+    {
+      "detail": 0.0,
+      "name": "axis_rotation_zero_geometric_hole_overlap",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "axis_rotation_no_hole_collisions",
+      "passed": true
+    },
+    {
+      "detail": 4,
+      "name": "axis_rotation_actual_solid_collisions",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "blue_hole_contract",
+      "passed": true
+    },
+    {
+      "detail": {
+        "diff": {
+          "added": [],
+          "geometry_changed": [],
+          "merges": 0,
+          "pose_changed": [],
+          "removed": [],
+          "splits": 0
+        },
+        "status": "QUEUED"
+      },
+      "name": "blue_hole_atomic_apply",
+      "passed": true
+    },
+    {
+      "detail": 225,
+      "name": "blue_hole_hole_sampling",
+      "passed": true
+    },
+    {
+      "detail": 0.0,
+      "name": "blue_hole_zero_geometric_hole_overlap",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "blue_hole_no_hole_collisions",
+      "passed": true
+    },
+    {
+      "detail": 21,
+      "name": "blue_hole_actual_solid_collisions",
+      "passed": true
+    },
+    {
+      "detail": {
+        "reason": "material_contract",
+        "status": "REJECTED"
+      },
+      "name": "filled_hole_rejected",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "filled_hole_no_partial_apply",
+      "passed": true
+    },
+    {
+      "detail": {
+        "reason": "material_contract",
+        "status": "REJECTED"
+      },
+      "name": "touching_hole_rejected",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "touching_hole_no_partial_apply",
+      "passed": true
+    },
+    {
+      "detail": {
+        "reason": "material_contract",
+        "status": "REJECTED"
+      },
+      "name": "outside_hole_rejected",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "outside_hole_no_partial_apply",
+      "passed": true
+    },
+    {
+      "detail": {
+        "reason": "material_contract",
+        "status": "REJECTED"
+      },
+      "name": "duplicate_vertex_rejected",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "duplicate_vertex_no_partial_apply",
+      "passed": true
+    },
+    {
+      "detail": {
+        "reason": "material_contract",
+        "status": "REJECTED"
+      },
+      "name": "self_intersection_rejected",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "self_intersection_no_partial_apply",
+      "passed": true
+    },
+    {
+      "detail": {
+        "reason": "material_contract",
+        "status": "REJECTED"
+      },
+      "name": "degenerate_part_rejected",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "degenerate_part_no_partial_apply",
+      "passed": true
+    },
+    {
+      "detail": {
+        "reason": "calibrated_geometry_outside_arena",
+        "status": "REJECTED"
+      },
+      "name": "partial_crop_rejected",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "partial_crop_no_partial_apply",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "no_deep_penetrations",
+      "passed": true
+    }
+  ],
+  "synthetic_only": true,
+  "total": 70
+}

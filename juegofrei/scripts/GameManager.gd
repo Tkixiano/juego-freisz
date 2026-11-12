@@ -1,6 +1,8 @@
 extends Node2D
 const Player = preload("res://scripts/PlayerController.gd")
 const Effects = preload("res://scripts/CombatEffects.gd")
+const CharacterCatalog = preload("res://scripts/CharacterCatalog.gd")
+var selected_characters: Array[Resource] = [CharacterCatalog.ENTRIES[0],CharacterCatalog.ENTRIES[1]]
 signal stock_lost(player_id: int, remaining: int)
 signal match_ended(winner_id: int)
 @export var elimination_bounds: Rect2 = Rect2(-100, -180, 1480, 1060)
@@ -23,6 +25,16 @@ func _ready() -> void:
 		player.combat.impact.connect(effects.burst)
 		player.combat.damage_model.reset_match()
 	_update_hud()
+	_apply_character_selection()
+
+func set_character_selection(pair: Array[Resource]) -> bool:
+	if not CharacterCatalog.valid_pair(pair): return false
+	selected_characters.assign(pair)
+	return true
+
+func _apply_character_selection() -> void:
+	for index: int in range(players.size()):
+		players[index].get_node("Presentation").set_definition(selected_characters[index])
 
 func _physics_process(_delta: float) -> void:
 	if game_over:
@@ -77,11 +89,13 @@ func _finish_match(winner: int) -> void:
 
 func restart_match() -> void:
 	pending_hits.clear()
+	_apply_character_selection()
 	$GameShell.enter_game()
 	for action: StringName in InputMap.get_actions():
 		if String(action).begins_with("p1_") or String(action).begins_with("p2_"):
 			Input.action_release(action)
-	$MousePlatformController.dragging = false
+	var mouse_controller: Node = get_node_or_null("MousePlatformController")
+	if mouse_controller!=null: mouse_controller.set("dragging",false)
 	game_over = false
 	winner_id = -1
 	returns[0] = 0

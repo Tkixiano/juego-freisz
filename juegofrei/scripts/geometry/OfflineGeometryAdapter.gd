@@ -66,7 +66,8 @@ func _prepare(frame: Dictionary) -> Dictionary:
 		if ledger.has(id):
 			var prior: Dictionary = ledger[id]
 			if float(version)<prior.version or (float(version)==prior.version and key!=prior.fingerprint): return _reject(sequence,"geometry_version_regression_or_reused_version")
-			if (active.has(id) and int(epoch)!=prior.epoch) or (not active.has(id) and int(epoch)<=prior.epoch): return _reject(sequence,"identity_reuse_without_new_epoch")
+			var recovered: bool = frame.get("allow_identity_recovery",false)==true and int(epoch)>prior.epoch
+			if (active.has(id) and int(epoch)!=prior.epoch and not recovered) or (not active.has(id) and int(epoch)<=prior.epoch): return _reject(sequence,"identity_reuse_without_new_epoch")
 	# First observation may be a recovery snapshot after skipped births/merges.
 	# Its epoch need not be 1; once known, reuse rules are strict.
 		proposed[id] = {"version":int(version),"fingerprint":key,"epoch":int(epoch)}

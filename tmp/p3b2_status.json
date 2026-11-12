@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var scene: Node = get_tree().current_scene\nreturn {\"scene\":scene.name,\"progress\":scene.get_meta(\"full_progress\",\"none\"),\"done\":scene.has_meta(\"phase3b2_original_regression\"),\"physics_ticks\":Engine.get_physics_frames(),\"fps\":Engine.get_frames_per_second()}"}}

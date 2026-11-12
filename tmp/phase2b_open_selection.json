@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "get_tree().current_scene.get_node(\"GameShell\").show_selection()\nreturn \"selection_open\""}}

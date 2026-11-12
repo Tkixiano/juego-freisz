@@ -1,0 +1,1 @@
+{"frames": 32, "metrics": {"accepted": 19, "held": 13, "rejected": 0, "region_births": 2, "region_identity_ambiguities": 0, "merges": 1, "splits": 1, "geometry_builds": 5, "material_geometry_builds": 1, "material_geometry_cache_hits": 49}, "errors": []}

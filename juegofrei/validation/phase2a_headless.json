@@ -101,7 +101,7 @@
       "passed": true
     },
     {
-      "details": "(639.9967, 541.9966)",
+      "details": "(639.9252, 541.9252)",
       "name": "dash_wall_swept_collision_no_teleport",
       "passed": true
     },

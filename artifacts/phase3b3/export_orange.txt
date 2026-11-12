@@ -1,0 +1,1 @@
+{"scenarios": 27, "frames": 2601, "output": "juegofrei\\validation\\material_replays"}

@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var r = get_tree().current_scene.get_node(\"Receiver\")\nreturn {\"scene\":get_tree().current_scene.scene_file_path,\"listening\":r.listening,\"bind_error\":r.bind_error,\"port\":r.port,\"state\":r.protocol.scene_state,\"no_physical_manager\":get_tree().current_scene.get_node_or_null(\"DynamicGeometry\")==null}"}}

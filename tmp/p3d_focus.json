@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "return {\"mode\":get_tree().current_scene.get_node(\"Sources\").mode,\"popup\":get_tree().current_scene.get_node(\"UI/SourcePanel/Mode\").get_popup().visible,\"focus\":str(get_viewport().gui_get_focus_owner())}"}}

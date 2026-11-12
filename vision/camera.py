@@ -35,6 +35,9 @@ class CameraSource:
         self._started_at = self._retry_at = 0.0
         self._last_progress = 0.0
         self._raw_serial = -1
+        self.worker_phase = 0
+        self.worker_boot_ms = 0.0
+        self.last_timeout_phase = ""
 
     def _spawn(self):
         self.stop_event = self.context.Event()
@@ -47,6 +50,8 @@ class CameraSource:
         self._raw_serial = -1
         self.latest = None
         self.opened = False
+        self.worker_phase = 0
+        self.worker_boot_ms = 0.0
         self.process = self.context.Process(target=capture_worker,
             args=(self.config, self.stop_event, self.lock, self.pixels, self.header, self.status, self.factory),
             name="camera-capture", daemon=True)
@@ -92,6 +97,8 @@ class CameraSource:
                 if message:
                     self.state = message
                 self.opened = bool(data[6])
+                self.worker_phase = int(data[9])
+                self.worker_boot_ms = max(0,(data[8]-self._started_at)*1000) if data[8] else 0.0
                 self._last_progress = data[7] or self._started_at
                 self.last_open_ms, self.last_capture_ms, self.read_errors = data[10], data[5], int(data[11])
                 raw_serial = int(data[0])
@@ -107,8 +114,11 @@ class CameraSource:
                         self._raw_serial = raw_serial
             finally:
                 self.lock.release()
-        timeout = self.config.stall_timeout if self.latest is not None else self.config.startup_timeout
-        if not self.process.is_alive() or now-self._last_progress > timeout:
+        booting = self.worker_phase < 2
+        timeout = self.config.bootstrap_timeout if booting else (self.config.stall_timeout if self.latest is not None else self.config.startup_timeout)
+        progress = self._started_at if booting else self._last_progress
+        if not self.process.is_alive() or now-progress > timeout:
+            self.last_timeout_phase = "BOOTSTRAP" if booting else ("READ" if self.latest is not None else "OPEN")
             self._stop_child(graceful=False)
             self.restarts += 1
             self.state = "CAMERA stalled/disconnected; worker restarted"
@@ -126,6 +136,7 @@ class CameraSource:
                 "captured_frames":self.captured_frames,"measured_capture_hz":hz,
                 "capture_read_ms":self.last_capture_ms,"open_ms":self.last_open_ms,
                 "restarts":self.restarts,"forced_stops":self.forced_stops,"read_errors":self.read_errors,
+                "worker_phase":self.worker_phase,"worker_boot_ms":self.worker_boot_ms,"last_timeout_phase":self.last_timeout_phase,
                 "child_alive":self.process is not None and self.process.is_alive()}
 
     def close(self) -> bool:

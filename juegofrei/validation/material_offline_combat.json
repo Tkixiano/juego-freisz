@@ -1,0 +1,24 @@
+{
+  "damage": [
+    6.0,
+    6.0
+  ],
+  "failures": [],
+  "human_tested": false,
+  "passed": 3,
+  "rows": [
+    {
+      "name": "two_players_on_exported_solid",
+      "passed": true
+    },
+    {
+      "name": "simultaneous_combat_on_exported_geometry",
+      "passed": true
+    },
+    {
+      "name": "no_duplicate_damage",
+      "passed": true
+    }
+  ],
+  "total": 3
+}

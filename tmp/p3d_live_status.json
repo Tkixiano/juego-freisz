@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var game: Node = get_tree().current_scene\nreturn {\"done\":game.has_meta(\"udp_live_results\"),\"mode\":game.get_node(\"Sources\").mode,\"queue\":game.get_node(\"Sources\").get_status().queue_depth,\"materials\":game.get_node(\"DynamicGeometry\").object_ids().size()}"}}

@@ -1,0 +1,839 @@
+{
+  "backend": {
+    "active_objects": 3,
+    "applied_sequence": 45,
+    "errors": [],
+    "geometry_rebuilds": 17,
+    "high_sequence": 45,
+    "last_diff": {
+      "added": [],
+      "geometry_changed": [],
+      "merges": 0,
+      "pose_changed": [],
+      "removed": [],
+      "splits": 0
+    },
+    "logical_diff": {
+      "geometry_changed": [],
+      "material_changed": [],
+      "pose_changed": [],
+      "regions_created": [],
+      "regions_removed": [],
+      "reparented": [],
+      "structures_created": [],
+      "structures_removed": [],
+      "unchanged": [
+        "r00000001",
+        "r00000002",
+        "r00000003"
+      ]
+    },
+    "logical_metrics": {
+      "merges": 0,
+      "queued": 75,
+      "received": 75,
+      "rejected": 0,
+      "splits": 0,
+      "validation_us": [
+        1633,
+        661,
+        8073,
+        1332,
+        2859,
+        1444,
+        1075,
+        746,
+        547,
+        533,
+        8873,
+        1935,
+        672,
+        590,
+        660,
+        518,
+        685,
+        523,
+        2231,
+        1983,
+        1737,
+        2040,
+        1740,
+        2139,
+        2153,
+        1936,
+        1791,
+        2316,
+        1646,
+        2221,
+        1644,
+        1616,
+        939,
+        2354,
+        1609,
+        1847,
+        953,
+        1614,
+        1561,
+        1698,
+        1433,
+        1705,
+        1566,
+        1689,
+        979,
+        2076,
+        5759,
+        2290,
+        1057,
+        1653,
+        1476,
+        1547,
+        990,
+        1413,
+        1076,
+        1287,
+        917,
+        1498,
+        1463,
+        1162,
+        1072,
+        1248,
+        863,
+        1490,
+        849,
+        1642,
+        1112,
+        1088,
+        920,
+        1144,
+        1003,
+        1369,
+        900,
+        1527,
+        889
+      ]
+    },
+    "logical_structures": 1,
+    "material_regions": 3,
+    "metrics": {
+      "accepted": 75,
+      "application_us": [
+        4393,
+        587,
+        2260,
+        123,
+        1442,
+        161,
+        959,
+        94,
+        534,
+        69,
+        2347,
+        118,
+        678,
+        78,
+        643,
+        67,
+        659,
+        66,
+        2225,
+        245,
+        224,
+        398,
+        233,
+        270,
+        323,
+        195,
+        250,
+        326,
+        213,
+        271,
+        243,
+        250,
+        161,
+        134,
+        168,
+        204,
+        181,
+        297,
+        185,
+        214,
+        176,
+        194,
+        181,
+        299,
+        141,
+        235,
+        200,
+        189,
+        126,
+        158,
+        185,
+        208,
+        154,
+        194,
+        136,
+        184,
+        118,
+        165,
+        139,
+        151,
+        142,
+        141,
+        113,
+        192,
+        112,
+        158,
+        133,
+        145,
+        116,
+        163,
+        120,
+        164,
+        116,
+        184,
+        114
+      ],
+      "applied": 75,
+      "cancelled": 0,
+      "deferred": 0,
+      "identity_changes": 17,
+      "merges": 0,
+      "player_penetration_deferrals": 0,
+      "received": 75,
+      "rejected": 0,
+      "splits": 0,
+      "validation_us": [
+        876,
+        356,
+        7737,
+        955,
+        2264,
+        980,
+        860,
+        452,
+        399,
+        365,
+        8361,
+        1368,
+        479,
+        354,
+        469,
+        319,
+        459,
+        320,
+        1840,
+        1391,
+        1237,
+        1281,
+        1226,
+        1536,
+        1503,
+        1377,
+        1295,
+        1654,
+        1205,
+        1498,
+        1110,
+        1119,
+        672,
+        1828,
+        1103,
+        1259,
+        680,
+        1156,
+        1058,
+        1169,
+        971,
+        1167,
+        1116,
+        1244,
+        699,
+        1323,
+        4372,
+        1348,
+        756,
+        1104,
+        1081,
+        1110,
+        704,
+        968,
+        701,
+        868,
+        654,
+        999,
+        907,
+        814,
+        764,
+        881,
+        610,
+        1012,
+        601,
+        1196,
+        798,
+        780,
+        630,
+        796,
+        718,
+        937,
+        631,
+        1075,
+        628
+      ]
+    },
+    "motion_conflicts": 0,
+    "pending": false,
+    "physical_shapes": 4,
+    "physical_validation_us": [
+      616,
+      81,
+      122,
+      86,
+      104,
+      114,
+      82,
+      70,
+      55,
+      64,
+      493,
+      104,
+      68,
+      77,
+      68,
+      65,
+      86,
+      66,
+      152,
+      266,
+      163,
+      186,
+      174,
+      184,
+      203,
+      150,
+      235,
+      175,
+      164,
+      220,
+      158,
+      196,
+      106,
+      102,
+      116,
+      144,
+      128,
+      202,
+      145,
+      162,
+      130,
+      147,
+      141,
+      198,
+      105,
+      170,
+      175,
+      136,
+      89,
+      110,
+      128,
+      154,
+      98,
+      132,
+      89,
+      140,
+      85,
+      132,
+      107,
+      117,
+      105,
+      138,
+      82,
+      139,
+      82,
+      125,
+      96,
+      102,
+      83,
+      107,
+      87,
+      116,
+      84,
+      134,
+      83
+    ],
+    "prepared_geometry_builds": 17,
+    "session_id": "e5f62b8e58064230a760ea4b97ca4935"
+  },
+  "failures": [],
+  "gateway_metrics": {
+    "applied": 75,
+    "deferred": 0,
+    "held": 23,
+    "queued": 75,
+    "received": 101,
+    "rejected": 5,
+    "source_resets": 13,
+    "validation_us": [
+      896,
+      333,
+      1931,
+      1022,
+      1792,
+      361,
+      8458,
+      1653,
+      3961,
+      399,
+      3373,
+      1908,
+      1538,
+      310,
+      1338,
+      1003,
+      1129,
+      283,
+      770,
+      740,
+      14644,
+      398,
+      9341,
+      2332,
+      171,
+      178,
+      867,
+      800,
+      201,
+      236,
+      925,
+      768,
+      158,
+      141,
+      83,
+      90,
+      207,
+      234,
+      244,
+      952,
+      769,
+      385,
+      265,
+      334,
+      2449,
+      2320,
+      2696,
+      2159,
+      2655,
+      2712,
+      2478,
+      2289,
+      2981,
+      2006,
+      2863,
+      2036,
+      2049,
+      1147,
+      2890,
+      1983,
+      2400,
+      1155,
+      2112,
+      1913,
+      2323,
+      1868,
+      2237,
+      1882,
+      2199,
+      1228,
+      2764,
+      708,
+      260,
+      2963,
+      1282,
+      2200,
+      1696,
+      2587,
+      1233,
+      2130,
+      1341,
+      1746,
+      1113,
+      1933,
+      1829,
+      1547,
+      1309,
+      1650,
+      1048,
+      1929,
+      1043,
+      2044,
+      1345,
+      1451,
+      1151,
+      1432,
+      1212,
+      1774,
+      1101,
+      1947,
+      1078
+    ]
+  },
+  "label": "headless",
+  "maximum_vertex_error_px": 0.0000551856546946139,
+  "passed": 55,
+  "rows": [
+    {
+      "detail": {
+        "errors": [],
+        "result": {
+          "diff": {
+            "added": [],
+            "geometry_changed": [],
+            "merges": 0,
+            "pose_changed": [],
+            "removed": [],
+            "splits": 0
+          },
+          "status": "QUEUED"
+        }
+      },
+      "name": "solid_accepted",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "solid_no_fixture_offset",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "solid_material_r00000001",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "solid_region_count",
+      "passed": true
+    },
+    {
+      "detail": 0.00000610351560226263,
+      "name": "solid_projection_error",
+      "passed": true
+    },
+    {
+      "detail": {
+        "errors": [],
+        "result": {
+          "diff": {
+            "added": [],
+            "geometry_changed": [],
+            "merges": 0,
+            "pose_changed": [],
+            "removed": [],
+            "splits": 0
+          },
+          "status": "QUEUED"
+        }
+      },
+      "name": "three_accepted",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "three_no_fixture_offset",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "three_material_r00000001",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "three_material_r00000002",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "three_material_r00000003",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "three_region_count",
+      "passed": true
+    },
+    {
+      "detail": 0.00000610351560226263,
+      "name": "three_projection_error",
+      "passed": true
+    },
+    {
+      "detail": {
+        "errors": [],
+        "result": {
+          "diff": {
+            "added": [],
+            "geometry_changed": [],
+            "merges": 0,
+            "pose_changed": [],
+            "removed": [],
+            "splits": 0
+          },
+          "status": "QUEUED"
+        }
+      },
+      "name": "hole_accepted",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "hole_no_fixture_offset",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "hole_material_r00000001",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "hole_material_r00000002",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "hole_region_count",
+      "passed": true
+    },
+    {
+      "detail": 0.0000244140624658939,
+      "name": "hole_projection_error",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "holes_retained",
+      "passed": true
+    },
+    {
+      "detail": {
+        "errors": [],
+        "result": {
+          "diff": {
+            "added": [],
+            "geometry_changed": [],
+            "merges": 0,
+            "pose_changed": [],
+            "removed": [],
+            "splits": 0
+          },
+          "status": "QUEUED"
+        }
+      },
+      "name": "corner_accepted",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "corner_no_fixture_offset",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "corner_material_r00000001",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "corner_material_r00000002",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "corner_region_count",
+      "passed": true
+    },
+    {
+      "detail": 0.0000244140624658939,
+      "name": "corner_projection_error",
+      "passed": true
+    },
+    {
+      "detail": {
+        "errors": [],
+        "result": {
+          "diff": {
+            "added": [],
+            "geometry_changed": [],
+            "merges": 0,
+            "pose_changed": [],
+            "removed": [],
+            "splits": 0
+          },
+          "status": "QUEUED"
+        }
+      },
+      "name": "perspective_solid_accepted",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "perspective_solid_no_fixture_offset",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "perspective_solid_material_r00000001",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "perspective_solid_region_count",
+      "passed": true
+    },
+    {
+      "detail": 0.0000245553035968596,
+      "name": "perspective_solid_projection_error",
+      "passed": true
+    },
+    {
+      "detail": {
+        "errors": [],
+        "result": {
+          "diff": {
+            "added": [],
+            "geometry_changed": [],
+            "merges": 0,
+            "pose_changed": [],
+            "removed": [],
+            "splits": 0
+          },
+          "status": "QUEUED"
+        }
+      },
+      "name": "perspective_hole_accepted",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "perspective_hole_no_fixture_offset",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "perspective_hole_material_r00000001",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "perspective_hole_material_r00000002",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "perspective_hole_region_count",
+      "passed": true
+    },
+    {
+      "detail": 0.0000551856546946139,
+      "name": "perspective_hole_projection_error",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "legacy_offset_retained",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "missing_metadata_rejected",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "changed_calibration_requires_reset",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "wrong_arena_rejected",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "out_of_arena_geometry_rejected",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "rejections_preserve_physics",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "invalid_mapping_sets_error",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "calibration_switch_requires_reset",
+      "passed": true
+    },
+    {
+      "detail": "(419.5, 379.8874)",
+      "name": "player_lands_on_calibrated_surface",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "stale_keeps_colliders",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "error_keeps_colliders",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "no_deep_penetrations",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "concave_vertex_chord_not_contained",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "calibrated_python_udp_received",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "calibrated_udp_reaches_physics",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "calibrated_udp_error_and_stale",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "calibrated_udp_restart_session",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "calibrated_udp_materials",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "camera_fault_never_empty",
+      "passed": true
+    }
+  ],
+  "synthetic_only": true,
+  "total": 55
+}

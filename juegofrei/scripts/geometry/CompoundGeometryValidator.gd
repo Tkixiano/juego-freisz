@@ -22,10 +22,38 @@ static func points(value: Variant,max_vertices: int,max_coordinate: float) -> Pa
 	return result
 
 static func intersection_area(a: PackedVector2Array,b: PackedVector2Array) -> float:
+	# Containment has no newly constructed vertices. Use the original area's
+	# precision instead of Clipper's rounded output. No epsilon is enlarged.
+	if _contained(a,b):return absf(Simple.signed_area(a))
+	if _contained(b,a):return absf(Simple.signed_area(b))
 	var area: float = 0.0
 	for piece: PackedVector2Array in Geometry2D.intersect_polygons(a,b):
 		area += absf(Simple.signed_area(piece))
 	return area
+
+static func _cross64(a: Vector2,b: Vector2,c: Vector2) -> float:
+	return (float(b.x)-a.x)*(float(c.y)-a.y)-(float(b.y)-a.y)*(float(c.x)-a.x)
+
+static func _contained(inner: PackedVector2Array,outer: PackedVector2Array) -> bool:
+	for p: Vector2 in inner:
+		if not Geometry2D.is_point_in_polygon(p,outer):return false
+	# Vertices alone are insufficient for a concave container. Reject every
+	# proper crossing, then check edge midpoints to exclude an outside chord.
+	for i: int in range(inner.size()):
+		var a: Vector2 = inner[i];var b: Vector2 = inner[(i+1)%inner.size()]
+		var cuts: Array[float] = [0.0,1.0]
+		for j: int in range(outer.size()):
+			var c: Vector2 = outer[j];var d: Vector2 = outer[(j+1)%outer.size()]
+			if _cross64(a,b,c)*_cross64(a,b,d)<0 and _cross64(c,d,a)*_cross64(c,d,b)<0:return false
+			# A chord may leave a concavity THROUGH a vertex, without a proper
+			# crossing. Split there too, rather than testing only its midpoint.
+			if _cross64(a,b,c)==0:
+				var t: float = (float(c.x)-a.x)/(float(b.x)-a.x) if absf(b.x-a.x)>=absf(b.y-a.y) else (float(c.y)-a.y)/(float(b.y)-a.y)
+				if t>0 and t<1:cuts.append(t)
+		cuts.sort()
+		for k: int in range(cuts.size()-1):
+			if not Geometry2D.is_point_in_polygon(a+(b-a)*(cuts[k]+cuts[k+1])*0.5,outer):return false
+	return true
 
 static func validate_metadata(data: Dictionary) -> Dictionary:
 	if data.get("contract_version")!=1 or not data.get("id") is String or data.id.is_empty() or data.id.length()>64:
@@ -79,8 +107,11 @@ static func validate(data: Dictionary,max_parts: int=512,max_vertices: int=2048,
 			if not valid.ok or Simple.signed_area(hole)>=0:
 				return reject("invalid_hole")
 			var area: float = absf(Simple.signed_area(hole))
-			if absf(intersection_area(hole,exterior)-area)>0.001:
-				return reject("hole_outside_exterior")
+			# Simple hole + all vertices inside + no boundary intersection below
+			# is exact containment. Boolean clipping rounds returned coordinates;
+			# comparing its reconstructed area caused false rejects after scaling.
+			for point: Vector2 in hole:
+				if not Geometry2D.is_point_in_polygon(point,exterior):return reject("hole_outside_exterior")
 			# Reject touching hole boundaries; permit only strictly interior holes.
 			for j: int in range(hole.size()):
 				for k: int in range(exterior.size()):

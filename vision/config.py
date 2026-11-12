@@ -30,6 +30,7 @@ class CameraConfig:
     reconnect_delay: float = 1.0
     startup_timeout: float = 8.0
     stall_timeout: float = 2.5
+    bootstrap_timeout: float = 15.0
 
 @dataclass
 class TrackingConfig:
@@ -81,6 +82,7 @@ def validate(config: Config) -> Config:
     number(c.reconnect_delay, 0.2, 10)
     number(c.startup_timeout, 1, 30)
     number(c.stall_timeout, 0.5, 10)
+    number(c.bootstrap_timeout, 1, 60)
     number(t.confirmation_frames, 1, 20, True)
     number(t.loss_tolerance, 0, 0.4)
     for value in (t.position_tau, t.angle_tau):
@@ -99,24 +101,27 @@ def validate(config: Config) -> Config:
     if len(config.colors) != 2 or sorted(x.id for x in config.colors) != [1, 2]:
         raise ValueError("Colors must have stable IDs 1 and 2")
     for color in config.colors:
-        number(color.id, 1, 2, True)
-        if not isinstance(color.name, str) or not color.name or len(color.name) > 40:
-            raise ValueError("Invalid color name")
-        if not isinstance(color.lower, list) or not isinstance(color.upper, list) or len(color.lower) != 3 or len(color.upper) != 3:
-            raise ValueError("HSV bounds must have three components")
-        for bounds in (color.lower, color.upper):
-            for value, maximum in zip(bounds, (179, 255, 255)):
-                number(value, 0, maximum, True)
-        if color.lower[1] > color.upper[1] or color.lower[2] > color.upper[2]:
-            raise ValueError("S/V lower bounds exceed upper bounds")
-        number(color.min_area, 10, 1_000_000, True)
-        number(color.max_area_fraction, 0.001, 0.95)
-        number(color.min_dimension, 2, 1000)
-        number(color.max_aspect_ratio, 1, 100)
-        number(color.min_saturation, 0, 255, True)
-        number(color.min_confidence, 0, 1)
-        number(color.ambiguity_ratio, 0.1, 1)
+        validate_color(color,2)
     return config
+
+def validate_color(color: ColorConfig,max_id: int=64) -> None:
+    number(color.id, 1, max_id, True)
+    if not isinstance(color.name, str) or not color.name or len(color.name) > 40:
+        raise ValueError("Invalid color name")
+    if not isinstance(color.lower, list) or not isinstance(color.upper, list) or len(color.lower) != 3 or len(color.upper) != 3:
+        raise ValueError("HSV bounds must have three components")
+    for bounds in (color.lower, color.upper):
+        for value, maximum in zip(bounds, (179, 255, 255)):
+            number(value, 0, maximum, True)
+    if color.lower[1] > color.upper[1] or color.lower[2] > color.upper[2]:
+        raise ValueError("S/V lower bounds exceed upper bounds")
+    number(color.min_area, 10, 1_000_000, True)
+    number(color.max_area_fraction, 0.001, 0.95)
+    number(color.min_dimension, 2, 1000)
+    number(color.max_aspect_ratio, 1, 100)
+    number(color.min_saturation, 0, 255, True)
+    number(color.min_confidence, 0, 1)
+    number(color.ambiguity_ratio, 0.1, 1)
 
 def load(path: Path) -> Config:
     def reject_constant(value: str) -> None:

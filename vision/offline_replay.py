@@ -13,8 +13,23 @@ from .structure_geometry import ContractExporter
 
 
 def geometry_key(c):
-    return hashlib.sha256(json.dumps({k:c[k] for k in ('regions','convex_parts')},
+    keys=['regions','convex_parts']
+    if 'material_contract_version' in c: keys+=['material_contract_version','material_regions']
+    return hashlib.sha256(json.dumps({k:c[k] for k in keys},
                                     sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()
+
+
+def annotate_contracts(structures,ledger,epochs,active,max_ids=4096):
+    """Shared full-snapshot identity/version rules; commit returned state atomically."""
+    proposed=ledger.copy();new_epochs=epochs.copy()
+    for c in structures:
+        id=c['id'];key=geometry_key(c)
+        if id not in proposed and len(proposed)>=max_ids:raise ValueError('identity_limit')
+        previous=proposed.get(id)
+        version=1 if previous is None else previous[0]+int(previous[1]!=key)
+        c['geometry_version']=version;proposed[id]=(version,key)
+        if id not in active:new_epochs[id]=new_epochs.get(id,0)+1
+    return proposed,new_epochs,{c['id'] for c in structures}
 
 
 class ReplayExporter:
@@ -29,14 +44,7 @@ class ReplayExporter:
     def append_image(self,image):
         snapshot=self.tracker.update(self.segmenter.segment(image))
         structures=self.contracts.export(self.tracker.objects.values())
-        for c in structures:
-            id=c['id'];key=geometry_key(c)
-            if id not in self.ledger and len(self.ledger)>=self.max_ids:raise ValueError('identity_limit')
-            previous=self.ledger.get(id)
-            version=1 if previous is None else previous[0]+int(previous[1]!=key)
-            c['geometry_version']=version;self.ledger[id]=(version,key)
-            if id not in self.active:self.epochs[id]=self.epochs.get(id,0)+1
-        self.active={c['id'] for c in structures}
+        self.ledger,self.epochs,self.active=annotate_contracts(structures,self.ledger,self.epochs,self.active,self.max_ids)
         self.sequence+=1
         return {'sequence':self.sequence,'logical_time':(self.sequence-1)/self.hz,
                 'structures':structures,'identity_epochs':{id:self.epochs[id] for id in sorted(self.active)},

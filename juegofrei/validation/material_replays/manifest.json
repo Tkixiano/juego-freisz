@@ -1,0 +1,221 @@
+{
+  "replay_version": 2,
+  "scenarios": [
+    {
+      "scenario": "01_solid",
+      "file": "01_solid.json",
+      "frames": 12,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "02_bounce",
+      "file": "02_bounce.json",
+      "frames": 12,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "03_one_way",
+      "file": "03_one_way.json",
+      "frames": 12,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "04_green_orange",
+      "file": "04_green_orange.json",
+      "frames": 12,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "05_green_blue",
+      "file": "05_green_blue.json",
+      "frames": 12,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "06_blue_orange",
+      "file": "06_blue_orange.json",
+      "frames": 12,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "07_three",
+      "file": "07_three.json",
+      "frames": 12,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "08_merge",
+      "file": "08_merge.json",
+      "frames": 24,
+      "expected_rejections": 0,
+      "merges": 1,
+      "splits": 0
+    },
+    {
+      "scenario": "09_split",
+      "file": "09_split.json",
+      "frames": 36,
+      "expected_rejections": 0,
+      "merges": 1,
+      "splits": 1
+    },
+    {
+      "scenario": "10_cycles",
+      "file": "10_cycles.json",
+      "frames": 96,
+      "expected_rejections": 0,
+      "merges": 4,
+      "splits": 3
+    },
+    {
+      "scenario": "11_hole",
+      "file": "11_hole.json",
+      "frames": 12,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "12_corner",
+      "file": "12_corner.json",
+      "frames": 12,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "13_movement",
+      "file": "13_movement.json",
+      "frames": 42,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "14_rotation",
+      "file": "14_rotation.json",
+      "frames": 57,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "15_silhouette",
+      "file": "15_silhouette.json",
+      "frames": 24,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "16_material",
+      "file": "16_material.json",
+      "frames": 24,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "17_removal",
+      "file": "17_removal.json",
+      "frames": 24,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "18_reappearance",
+      "file": "18_reappearance.json",
+      "frames": 36,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "19_supported_merge",
+      "file": "19_supported_merge.json",
+      "frames": 65,
+      "expected_rejections": 0,
+      "merges": 1,
+      "splits": 0
+    },
+    {
+      "scenario": "20_supported_split",
+      "file": "20_supported_split.json",
+      "frames": 77,
+      "expected_rejections": 0,
+      "merges": 1,
+      "splits": 1
+    },
+    {
+      "scenario": "21_mobile_one_way",
+      "file": "21_mobile_one_way.json",
+      "frames": 57,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "22_mobile_bounce",
+      "file": "22_mobile_bounce.json",
+      "frames": 57,
+      "expected_rejections": 0,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "23_duplicate",
+      "file": "23_duplicate.json",
+      "frames": 13,
+      "expected_rejections": 1,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "24_old",
+      "file": "24_old.json",
+      "frames": 13,
+      "expected_rejections": 1,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "25_invalid",
+      "file": "25_invalid.json",
+      "frames": 12,
+      "expected_rejections": 1,
+      "merges": 0,
+      "splits": 0
+    },
+    {
+      "scenario": "26_long",
+      "file": "26_long.json",
+      "frames": 1800,
+      "expected_rejections": 0,
+      "merges": 30,
+      "splits": 29
+    },
+    {
+      "scenario": "27_orange_merge_split",
+      "file": "27_orange_merge_split.json",
+      "frames": 36,
+      "expected_rejections": 0,
+      "merges": 1,
+      "splits": 1
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "existing_files": 83,
+  "changed_existing_files": [
+    "vision\\camera.py",
+    "vision\\capture_worker.py",
+    "vision\\config.py",
+    "vision\\offline_replay.py",
+    "vision\\structure_segmentation.py"
+  ],
+  "unchanged_godot_production": true,
+  "unchanged_udp_production": true,
+  "unchanged_legacy_hsv": true
+}

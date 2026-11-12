@@ -1,0 +1,62 @@
+[
+  {
+    "suite": "phase2b",
+    "exit_code": 0,
+    "seconds": 11.490753099991707
+  },
+  {
+    "suite": "phase2a",
+    "exit_code": 0,
+    "seconds": 11.786106100000325
+  },
+  {
+    "suite": "phase1a",
+    "exit_code": 0,
+    "seconds": 33.114343000008375
+  },
+  {
+    "suite": "phase1c",
+    "exit_code": 0,
+    "seconds": 5.4753263000020524
+  },
+  {
+    "suite": "phase1d",
+    "exit_code": 0,
+    "seconds": 86.49345880000328
+  },
+  {
+    "suite": "phase3b1",
+    "exit_code": 0,
+    "seconds": 1.253691699996125
+  },
+  {
+    "suite": "phase3b2",
+    "exit_code": 0,
+    "seconds": 33.62609019999218
+  },
+  {
+    "suite": "phase3b3",
+    "exit_code": 0,
+    "seconds": 61.877868099996704
+  },
+  {
+    "suite": "phase3c",
+    "exit_code": 0,
+    "seconds": 50.47480779999751
+  },
+  {
+    "suite": "phase3a",
+    "exit_code": 0,
+    "seconds": 8.943773599996348
+  },
+  {
+    "suite": "phase3d",
+    "exit_code": "TIMEOUT",
+    "seconds": 180.03340390000085
+  },
+  {
+    "suite": "parse",
+    "exit_code": 0,
+    "seconds": 5.627110700006597
+  }
+]

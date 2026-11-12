@@ -1,0 +1,6 @@
+test_schema_rejects_bad_region_metadata (tests.test_material_structures.MaterialTests.test_schema_rejects_bad_region_metadata) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.719s
+
+OK

@@ -1,0 +1,1 @@
+{'01_solid': 8, '02_bounce': 8, '03_one_way': 8, '07_three': 8, '08_merge': 16, '09_split': 23, '11_hole': 8, '12_corner': 8, '13_movement': 38, '14_rotation': 53, '15_silhouette': 18, '16_material': 18, '17_removal': 14, '18_reappearance': 22, '26_long': 1531, '27_orange_merge_split': 23, 'epoch_recovery': 5, 'floor_conflict': 6, 'after_conflict': 6, 'error': 1, 'invalid': 1}

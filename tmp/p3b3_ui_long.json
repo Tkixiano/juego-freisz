@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var lab: Node = get_tree().current_scene\nlab.get_node(\"Replay\").set_speed(1.0)\nlab.get_node(\"UI/Panel/Speed\").select(2)\nlab.select_file(25)\nreturn \"long_selected\""}}

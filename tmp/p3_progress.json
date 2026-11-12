@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var r = get_tree().current_scene.get_node(\"Receiver\")\nreturn {\"sequence\":r.protocol.sequence,\"accepted\":r.protocol.metrics.accepted,\"rejected\":r.protocol.metrics.rejected,\"merges\":r.protocol.metrics.merges,\"splits\":r.protocol.metrics.splits,\"state\":r.protocol.scene_state}"}}

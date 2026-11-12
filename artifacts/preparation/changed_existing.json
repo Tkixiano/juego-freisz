@@ -1,0 +1,5 @@
+[
+  "vision\\material_replay.py",
+  "juegofrei\\scripts\\geometry\\CompoundGeometryValidator.gd",
+  "juegofrei\\scripts\\integrated\\OfflineSceneGateway.gd"
+]

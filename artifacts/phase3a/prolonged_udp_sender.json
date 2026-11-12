@@ -1,0 +1,9 @@
+{
+  "messages": 3598,
+  "datagrams": 8997,
+  "send_errors": 0,
+  "unconfirmed_frames_skipped": 2,
+  "seconds": 120.00052200001664,
+  "offered_hz": 29.983201857039216,
+  "delivery": "UDP unacknowledged"
+}

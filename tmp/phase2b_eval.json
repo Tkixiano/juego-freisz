@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var suite: RefCounted = load(\"res://validation/Phase2BValidation.gd\").new()\nget_tree().current_scene.set_meta(\"phase2b_suite\",suite)\nsuite.run(get_tree(),\"mcp\")\nreturn \"phase2b_started\""}}

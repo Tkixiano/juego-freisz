@@ -1,0 +1,11 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+ERROR: CALIBRATION_PREP perspective_hole_accepted { "result": { "status": "REJECTED", "reason": "material_contract" }, "errors": [] }
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://validation/CalibrationPreparationValidation.gd:11)
+       [1] run (res://validation/CalibrationPreparationValidation.gd:29)
+       [2] send (res://validation/CalibrationPreparationValidation.gd:22)
+       [3] frames (res://validation/CalibrationPreparationValidation.gd:13)
+CALIBRATION_PREP 36/37 [{ "name": "perspective_hole_accepted", "passed": false, "detail": { "result": { "status": "REJECTED", "reason": "material_contract" }, "errors": [] } }]

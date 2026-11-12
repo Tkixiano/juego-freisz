@@ -551,6 +551,16 @@
       {
         "detail": "",
         "passed": true,
+        "test": "play_opens_selection"
+      },
+      {
+        "detail": "",
+        "passed": true,
+        "test": "single_ready_does_not_start"
+      },
+      {
+        "detail": "",
+        "passed": true,
         "test": "start_button_starts_match"
       },
       {
@@ -595,6 +605,6 @@
       }
     ]
   },
-  "passed": 114,
-  "total": 114
+  "passed": 116,
+  "total": 116
 }

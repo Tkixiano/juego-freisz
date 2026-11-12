@@ -1,0 +1,1 @@
+["EVAL_HUNG: Game eval compiled and started running but never returned within 10s — the code is likely stuck in an infinite loop or awaiting a signal/timer that never fires (a backgrounded game window also freezes awaits). Check logs_read(source='game')."]

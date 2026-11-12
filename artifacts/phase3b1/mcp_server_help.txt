@@ -1,0 +1,52 @@
+usage: python.exe C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Scripts\godot-ai
+       [-h] [--version] [--transport {stdio,sse,streamable-http}]
+       [--port PORT] [--ws-port WS_PORT] [--reload] [--pid-file PID_FILE]
+       [--owner-pid OWNER_PID] [--allow-host CIDR]
+       [--exclude-domains EXCLUDE_DOMAINS]
+
+Godot AI server
+
+options:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
+  --transport {stdio,sse,streamable-http}
+                        MCP transport (default: stdio)
+  --port PORT           HTTP port for sse/streamable-http (default: 8000)
+  --ws-port WS_PORT     WebSocket port for Godot plugin (default: 9500)
+  --reload              Auto-restart on source changes (dev mode, HTTP
+                        transports only)
+  --pid-file PID_FILE   Write this process's PID to the given path on startup,
+                        unlink on clean exit. The Godot plugin uses this to
+                        kill the real server process when a launcher (uvx) PID
+                        would be unreliable.
+  --owner-pid OWNER_PID
+                        PID of the Godot editor that spawned this server. When
+                        set, the server self-terminates if that editor dies
+                        (crash / hard-kill with no clean stop_server) and no
+                        other editor has adopted it, so a detached server
+                        can't orphan onto the port. Omitted for externally
+                        managed servers (CI, manual --reload, attach-owned
+                        backends). Compatible external servers are adopted
+                        without managed process ownership and are not killed
+                        on normal editor exit.
+  --allow-host CIDR     Expose the server to a named LAN range for remote
+                        agents (issue #421). Takes a CIDR or bare IP
+                        (repeatable, or comma-separated), e.g. --allow-host
+                        192.168.1.0/24. When set, both transports bind off
+                        loopback and access is gated on the real socket peer
+                        address (unforgeable) falling inside these networks
+                        ONLY � the Host header is range-checked too but is not
+                        the authority, and browser Origin / Sec-Fetch-Site
+                        checks stay on. Omit for the default loopback-only
+                        behavior. Prefer an SSH tunnel / Tailscale on
+                        untrusted networks; only name ranges you trust.
+  --exclude-domains EXCLUDE_DOMAINS
+                        Comma-separated list of tool domains to drop from
+                        registration (e.g. 'audio,particle,theme'). Core tools
+                        (editor_state, scene_get_hierarchy,
+                        node_get_properties, session_activate) are always
+                        registered. Use this to fit under a client's hard
+                        tool-count cap (Antigravity limits to 100).
+
+Client-owned bridge: godot-ai attach [--port PORT] [--ws-port PORT]
+[--exclude-domains LIST]. Run 'godot-ai attach --help' for details.

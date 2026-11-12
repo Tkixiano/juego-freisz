@@ -11,6 +11,8 @@ var accumulator: float = 0.0
 var errors: Array[Dictionary] = []
 var loaded_path: String = ""
 var step_requested: bool = false
+var replay_version: int = 1
+var session_id: String = ""
 
 func _ready() -> void:
 	process_physics_priority = -60
@@ -33,8 +35,14 @@ func load_replay(path: String) -> bool:
 	var parser: JSON = JSON.new()
 	if parser.parse(file.get_as_text())!=OK: return _error("invalid_json")
 	var data: Variant = parser.data
-	if not data is Dictionary or data.get("replay_version")!=1 or data.get("geometry_contract_version")!=1 or data.get("synthetic_only")!=true or not data.get("frames") is Array: return _error("replay_header")
+	if not data is Dictionary or (data.get("replay_version")!=1 and data.get("replay_version")!=2) or data.get("geometry_contract_version")!=1 or data.get("synthetic_only")!=true or not data.get("frames") is Array: return _error("replay_header")
 	if not adapter.manager.CompoundValidator.number(data.get("tick_hz")) or float(data.tick_hz)<1 or float(data.tick_hz)>120 or data.frames.is_empty() or data.frames.size()>10000: return _error("frame_count_or_hz")
+	if data.replay_version==2:
+		if not adapter.has_method("accepts_material_replay") or data.get("material_contract_version")!=1 or not data.get("session_id") is String or data.session_id.is_empty() or data.session_id.length()>64: return _error("material_replay_header")
+		for frame: Variant in data.frames:
+			if not frame is Dictionary or frame.get("session_id")!=data.session_id or not frame.get("region_identity_epochs") is Dictionary: return _error("material_frame_session_or_epochs")
+	replay_version = int(data.replay_version)
+	session_id = String(data.get("session_id",""))
 	frames = data.frames
 	hz = float(data.tick_hz)
 	speed = minf(speed,Engine.physics_ticks_per_second/hz)
@@ -85,10 +93,12 @@ func _physics_process(delta: float) -> void:
 	if not frames[cursor] is Dictionary:
 		_error("frame_not_dictionary")
 	else:
-		adapter.submit(frames[cursor])
+		var frame: Dictionary = frames[cursor]
+		if replay_version==1 and adapter.has_method("migrate_legacy_frame"): frame = adapter.migrate_legacy_frame(frame)
+		adapter.submit(frame)
 	cursor += 1
 	# At most ONE transaction per physics tick; speed never skips topology states.
 	accumulator = minf(accumulator,1.0/hz)
 
 func get_status() -> Dictionary:
-	return {"path":loaded_path,"cursor":cursor,"frames":frames.size(),"playing":playing,"speed":speed,"logical_time":float(frames[cursor-1].get("logical_time",0)) if cursor>0 and frames[cursor-1] is Dictionary else 0.0,"errors":errors.duplicate(true)}
+	return {"path":loaded_path,"cursor":cursor,"frames":frames.size(),"playing":playing,"speed":speed,"replay_version":replay_version,"session_id":session_id,"logical_time":float(frames[cursor-1].get("logical_time",0)) if cursor>0 and frames[cursor-1] is Dictionary else 0.0,"errors":errors.duplicate(true)}

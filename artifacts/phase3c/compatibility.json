@@ -1,0 +1,10 @@
+{
+  "baseline_files": 101,
+  "modified_existing": [
+    "juegofrei\\scripts\\GameManager.gd",
+    "juegofrei\\scripts\\geometry\\TransactionalGeometryManager.gd",
+    "juegofrei\\scripts\\material_physics\\MaterialPhysicsAdapter.gd",
+    "juegofrei\\scripts\\material_physics\\MaterialPhysicsManager.gd",
+    "juegofrei\\project.godot"
+  ]
+}

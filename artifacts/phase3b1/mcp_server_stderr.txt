@@ -1,0 +1,1547 @@
+httpx | HTTP Request: GET https://pypi.org/pypi/fastmcp/json "HTTP/1.1 200 OK"
+
+
++-----------------------------------------------------------------------------+
+|                                                                             |
+|                                                                             |
+|                        \u2584\u2580\u2580 \u2584\u2580\u2588 \u2588\u2580\u2580 \u2580\u2588\u2580 \u2588\u2580\u2584\u2580\u2588 \u2588\u2580\u2580 \u2588\u2580\u2588                        |
+|                        \u2588\u2580  \u2588\u2580\u2588 \u2584\u2584\u2588  \u2588  \u2588 \u2580 \u2588 \u2588\u2584\u2584 \u2588\u2580\u2580                        |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                               FastMCP 3.4.11                                |
+|                            https://gofastmcp.com                            |
+|                                                                             |
+|                 \U0001f5a5  Server:      Godot AI, 3.4.11                            |
+|                 \U0001f680 Deploy free: https://horizon.prefect.io                  |
+|                                                                             |
++-----------------------------------------------------------------------------+
++-----------------------------------------------------------------------------+
+|                         \U0001f389 Update available: 4.1.6                          |
+|                     Run: pip install --upgrade fastmcp                      |
++-----------------------------------------------------------------------------+
+
+
+godot_ai.server | WebSocket server starting on port 9500
+godot_ai.server | Owner editor pid 8124 supplied but orphan reaper is disabled on this platform; relying on clean editor shutdown.
+godot_ai.server | Idle self-terminate backstop armed for plugin-spawned server
+[11/05/26 21:00:00] INFO     Starting MCP server 'Godot AI'    transport.py:361
+                             with transport 'streamable-http'                  
+                             on http://127.0.0.1:8000/mcp                      
+INFO:     Started server process [3780]
+INFO:     Waiting for application startup.
+godot_ai.transport.websocket | Starting WebSocket server on port 9500
+mcp.server.streamable_http_manager | StreamableHTTP session manager started
+INFO:     Application startup complete.
+websockets.server | server listening on 127.0.0.1:9500
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+godot-ai-telemetry | Telemetry disabled
+websockets.server | connection open
+godot_ai.transport.websocket | Session connected: juegofrei@0695 (pid=8124, Godot 4.6.3-stable (official), C:/godot 4.6/juego frei/juegofrei/)
+godot_ai.transport.websocket | Session juegofre: custom tools -> 0 registered (0 enabled)
+godot_ai.transport.websocket | Session juegofre: scene changed to res://scenes/Main.tscn
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 5c8f523ef1e84a50bc072c3057fde685
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: dc0e1b2c62a74ffb95dba48bace9e891
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 75466fe0505d4217af72bbadcd2f0db7
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: ff2fa3fcc4f14167918753811d2bb7cf
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: scene changed to res://scenes/MaterialRepresentationLab.tscn
+mcp.server.streamable_http_manager | Created new transport with session ID: 80e33bc203fa4da3ba0f0841740c89e9
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 0a854238c04b4112a9b46f8ef2780492
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: a79d72740d6647968d6d96043f65c0ba
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 3af993e80ccd4f5eb133a83e6ac70f9d
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 538f3bcefc80425083925dc1ef34fe7e
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 5c8f523ef1e84a50bc072c3057fde685 idle timeout
+mcp.server.streamable_http | Terminating session: 5c8f523ef1e84a50bc072c3057fde685
+mcp.server.streamable_http_manager | Session dc0e1b2c62a74ffb95dba48bace9e891 idle timeout
+mcp.server.streamable_http | Terminating session: dc0e1b2c62a74ffb95dba48bace9e891
+mcp.server.streamable_http_manager | Session 75466fe0505d4217af72bbadcd2f0db7 idle timeout
+mcp.server.streamable_http | Terminating session: 75466fe0505d4217af72bbadcd2f0db7
+mcp.server.streamable_http_manager | Session ff2fa3fcc4f14167918753811d2bb7cf idle timeout
+mcp.server.streamable_http | Terminating session: ff2fa3fcc4f14167918753811d2bb7cf
+mcp.server.streamable_http_manager | Session 80e33bc203fa4da3ba0f0841740c89e9 idle timeout
+mcp.server.streamable_http | Terminating session: 80e33bc203fa4da3ba0f0841740c89e9
+mcp.server.streamable_http_manager | Session 0a854238c04b4112a9b46f8ef2780492 idle timeout
+mcp.server.streamable_http | Terminating session: 0a854238c04b4112a9b46f8ef2780492
+mcp.server.streamable_http_manager | Session a79d72740d6647968d6d96043f65c0ba idle timeout
+mcp.server.streamable_http | Terminating session: a79d72740d6647968d6d96043f65c0ba
+mcp.server.streamable_http_manager | Session 3af993e80ccd4f5eb133a83e6ac70f9d idle timeout
+mcp.server.streamable_http | Terminating session: 3af993e80ccd4f5eb133a83e6ac70f9d
+mcp.server.streamable_http_manager | Session 538f3bcefc80425083925dc1ef34fe7e idle timeout
+mcp.server.streamable_http | Terminating session: 538f3bcefc80425083925dc1ef34fe7e
+mcp.server.streamable_http_manager | Created new transport with session ID: 16198ef898b04d139286ba70c8811d92
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: edfc4b0ee0fe44889d49bca16a6728cb
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 83bd4755d8884eeb81d3dda95617ae3c
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: f7c34670cd8e4bf6a7a017bf0163e3be
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 16198ef898b04d139286ba70c8811d92 idle timeout
+mcp.server.streamable_http | Terminating session: 16198ef898b04d139286ba70c8811d92
+mcp.server.streamable_http_manager | Session edfc4b0ee0fe44889d49bca16a6728cb idle timeout
+mcp.server.streamable_http | Terminating session: edfc4b0ee0fe44889d49bca16a6728cb
+mcp.server.streamable_http_manager | Created new transport with session ID: b0110752350d4889a7f0f316e8475b5c
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 1f7789d76d994369b990d4cc0b919d90
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: scene changed to res://scenes/MaterialPhysicsLab.tscn
+mcp.server.streamable_http_manager | Created new transport with session ID: b0025d56787b429289e5258e34da7f47
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 8f03ba9ad78e4cefaac8f2871beaa2d1
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 83bd4755d8884eeb81d3dda95617ae3c idle timeout
+mcp.server.streamable_http | Terminating session: 83bd4755d8884eeb81d3dda95617ae3c
+mcp.server.streamable_http_manager | Session f7c34670cd8e4bf6a7a017bf0163e3be idle timeout
+mcp.server.streamable_http | Terminating session: f7c34670cd8e4bf6a7a017bf0163e3be
+mcp.server.streamable_http_manager | Created new transport with session ID: 627e77fbae5e44ef87cf5922df3bcc13
+mcp.server.streamable_http_manager | Created new transport with session ID: 6bac39865aa4450ea46ea8e3105fc78d
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 5dce813ab7cb4e4b923e2f578b88be6b
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 697407fe5e14467899c5038a17e984f2
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 00c452e6ff2d42f78efef21516902dbe
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 5d49803a476c4fdda8f976d2414caa86
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 4dd61295349e49c593c0f20c0cddc664
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: scene changed to res://scenes/Main.tscn
+mcp.server.streamable_http_manager | Created new transport with session ID: c28d2eaa161a419fb2a049f3dded6086
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: a3c1cc6eb10a45af8a9771b55c8f5877
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: a3c1cc6eb10a45af8a9771b55c8f5877
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+mcp.server.streamable_http_manager | Created new transport with session ID: 79a261f3fa7a4a7e8c12766c724dd811
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: f1390b08eab44d158cd7dc442d638355
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: f1390b08eab44d158cd7dc442d638355
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+mcp.server.streamable_http_manager | Created new transport with session ID: 3e9eb88e5234443e99ca5c1a090a02dc
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: c2b4caa2df6a4d1493f168259a120931
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 8a1dcee680094301976cf381759f3bf9
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 4cd83bdf8a6e44b69670874e0ea9600f
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 2612ce56cd904618a8a74a3a9dd4e8fb
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 360502c6130e4aad92bd1ba1acacaa43
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 759305d17b144f489a0c07598ec8cfbe
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 9291eaa1670344c3b60e6196e4735ee0
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 28fa61e5f26c41a693efe1a5a1b88f53
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 5c56393adb2c41939eaa7951acc67808
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: c86d9f662eed46e29a5e6eff5f5f6548
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: a069553725474f91bc720df7346c4dce
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: scene changed to res://scenes/MaterialPhysicsLab.tscn
+mcp.server.streamable_http_manager | Created new transport with session ID: 58866dd11b104ebc919444d87a79e83c
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: c5b875fba4a749aaa3305db146de4efb
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 92ace329871f49b494e9627b2d09b5a0
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 6710e1392b6744f3aefe79a5ece7ba7a
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 023a2c90b1de4ee5a95dcbb40fb9d170
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 6f9ac50d81ae4dd9b9307c33e367fbea
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 269c88a0731b4905bf3aa28c1d43e5c7
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 326340b6d9344c5dbd485a9a475aa35f
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 52440d6990d248749e65ca4de50cd7d1
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 98d00b36a3a54262aa7daefd777511f1
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 7d2166a9837d43e3b62e4c37aa31e496
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: bdeebdfeda0f415ab6884617157bcc63
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 4bf66704e57c44acad8e0414a985dc94
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: d595eeedefdb469c8c80cd6eea896cc0
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: bbb04f6a30a140c4b58da7bf7cb2cf64
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 76bd51edd33145c08a0a0d77b3a68fe6
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 2d8efb4383a949268fe38923f2b79e81
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: ba0fc5cbfa734768a8c63164f45cd0df
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session b0110752350d4889a7f0f316e8475b5c idle timeout
+mcp.server.streamable_http | Terminating session: b0110752350d4889a7f0f316e8475b5c
+mcp.server.streamable_http_manager | Session 1f7789d76d994369b990d4cc0b919d90 idle timeout
+mcp.server.streamable_http | Terminating session: 1f7789d76d994369b990d4cc0b919d90
+mcp.server.streamable_http_manager | Session b0025d56787b429289e5258e34da7f47 idle timeout
+mcp.server.streamable_http | Terminating session: b0025d56787b429289e5258e34da7f47
+mcp.server.streamable_http_manager | Session 8f03ba9ad78e4cefaac8f2871beaa2d1 idle timeout
+mcp.server.streamable_http | Terminating session: 8f03ba9ad78e4cefaac8f2871beaa2d1
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 8780b737bc564974b33b245c5e026074
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: a28811e65bd74f54ac8f1cf82c16baf5
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 10aeb0bcf8784a4e817122b03b13f1d4
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 627e77fbae5e44ef87cf5922df3bcc13 idle timeout
+mcp.server.streamable_http | Terminating session: 627e77fbae5e44ef87cf5922df3bcc13
+mcp.server.streamable_http_manager | Session 6bac39865aa4450ea46ea8e3105fc78d idle timeout
+mcp.server.streamable_http | Terminating session: 6bac39865aa4450ea46ea8e3105fc78d
+mcp.server.streamable_http_manager | Session 5dce813ab7cb4e4b923e2f578b88be6b idle timeout
+mcp.server.streamable_http | Terminating session: 5dce813ab7cb4e4b923e2f578b88be6b
+mcp.server.streamable_http_manager | Session 697407fe5e14467899c5038a17e984f2 idle timeout
+mcp.server.streamable_http | Terminating session: 697407fe5e14467899c5038a17e984f2
+mcp.server.streamable_http_manager | Session 00c452e6ff2d42f78efef21516902dbe idle timeout
+mcp.server.streamable_http | Terminating session: 00c452e6ff2d42f78efef21516902dbe
+mcp.server.streamable_http_manager | Created new transport with session ID: bd3569ddc4ee47beb805e57806701fe2
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 7ad92e75ba7e4a1f99d4a83e25729c65
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 49bb91f7914a452ab7ba9e8e7edece80
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: scene changed to res://scenes/MaterialOfflineLab.tscn
+mcp.server.streamable_http_manager | Created new transport with session ID: b867359eeea24de886dc58dd9476ca26
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: b67220c184a542558848127b509bc572
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 5d49803a476c4fdda8f976d2414caa86 idle timeout
+mcp.server.streamable_http | Terminating session: 5d49803a476c4fdda8f976d2414caa86
+mcp.server.streamable_http_manager | Session 4dd61295349e49c593c0f20c0cddc664 idle timeout
+mcp.server.streamable_http | Terminating session: 4dd61295349e49c593c0f20c0cddc664
+mcp.server.streamable_http_manager | Session c28d2eaa161a419fb2a049f3dded6086 idle timeout
+mcp.server.streamable_http | Terminating session: c28d2eaa161a419fb2a049f3dded6086
+mcp.server.streamable_http_manager | Session 79a261f3fa7a4a7e8c12766c724dd811 idle timeout
+mcp.server.streamable_http | Terminating session: 79a261f3fa7a4a7e8c12766c724dd811
+mcp.server.streamable_http_manager | Session 3e9eb88e5234443e99ca5c1a090a02dc idle timeout
+mcp.server.streamable_http | Terminating session: 3e9eb88e5234443e99ca5c1a090a02dc
+mcp.server.streamable_http_manager | Session c2b4caa2df6a4d1493f168259a120931 idle timeout
+mcp.server.streamable_http | Terminating session: c2b4caa2df6a4d1493f168259a120931
+mcp.server.streamable_http_manager | Session 8a1dcee680094301976cf381759f3bf9 idle timeout
+mcp.server.streamable_http | Terminating session: 8a1dcee680094301976cf381759f3bf9
+mcp.server.streamable_http_manager | Session 4cd83bdf8a6e44b69670874e0ea9600f idle timeout
+mcp.server.streamable_http | Terminating session: 4cd83bdf8a6e44b69670874e0ea9600f
+mcp.server.streamable_http_manager | Session 2612ce56cd904618a8a74a3a9dd4e8fb idle timeout
+mcp.server.streamable_http | Terminating session: 2612ce56cd904618a8a74a3a9dd4e8fb
+mcp.server.streamable_http_manager | Created new transport with session ID: f8bdb3781f7147bcb6a741834602900f
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: efd7c8f0a1564ef4a9c98ff3e56f1d47
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 63e886b97c384aef9d7f9dc82e864ad6
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: scene changed to res://scenes/Main.tscn
+mcp.server.streamable_http_manager | Created new transport with session ID: 218e661b3b42423da404db3bf349ff77
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Session 360502c6130e4aad92bd1ba1acacaa43 idle timeout
+mcp.server.streamable_http | Terminating session: 360502c6130e4aad92bd1ba1acacaa43
+mcp.server.streamable_http_manager | Created new transport with session ID: 88117c93289748c4beb1ffa431af02ef
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 759305d17b144f489a0c07598ec8cfbe idle timeout
+mcp.server.streamable_http | Terminating session: 759305d17b144f489a0c07598ec8cfbe
+mcp.server.streamable_http_manager | Session 9291eaa1670344c3b60e6196e4735ee0 idle timeout
+mcp.server.streamable_http | Terminating session: 9291eaa1670344c3b60e6196e4735ee0
+mcp.server.streamable_http_manager | Session 28fa61e5f26c41a693efe1a5a1b88f53 idle timeout
+mcp.server.streamable_http | Terminating session: 28fa61e5f26c41a693efe1a5a1b88f53
+mcp.server.streamable_http_manager | Session 5c56393adb2c41939eaa7951acc67808 idle timeout
+mcp.server.streamable_http | Terminating session: 5c56393adb2c41939eaa7951acc67808
+mcp.server.streamable_http_manager | Session c86d9f662eed46e29a5e6eff5f5f6548 idle timeout
+mcp.server.streamable_http | Terminating session: c86d9f662eed46e29a5e6eff5f5f6548
+mcp.server.streamable_http_manager | Session a069553725474f91bc720df7346c4dce idle timeout
+mcp.server.streamable_http | Terminating session: a069553725474f91bc720df7346c4dce
+mcp.server.streamable_http_manager | Session 58866dd11b104ebc919444d87a79e83c idle timeout
+mcp.server.streamable_http | Terminating session: 58866dd11b104ebc919444d87a79e83c
+mcp.server.streamable_http_manager | Session c5b875fba4a749aaa3305db146de4efb idle timeout
+mcp.server.streamable_http | Terminating session: c5b875fba4a749aaa3305db146de4efb
+mcp.server.streamable_http_manager | Session 92ace329871f49b494e9627b2d09b5a0 idle timeout
+mcp.server.streamable_http | Terminating session: 92ace329871f49b494e9627b2d09b5a0
+mcp.server.streamable_http_manager | Created new transport with session ID: 61749450e50649d1a8d010ad11c5c013
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 6710e1392b6744f3aefe79a5ece7ba7a idle timeout
+mcp.server.streamable_http | Terminating session: 6710e1392b6744f3aefe79a5ece7ba7a
+mcp.server.streamable_http_manager | Created new transport with session ID: 6ffca90b63c84f8593b0c7217fa8a461
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 023a2c90b1de4ee5a95dcbb40fb9d170 idle timeout
+mcp.server.streamable_http | Terminating session: 023a2c90b1de4ee5a95dcbb40fb9d170
+mcp.server.streamable_http_manager | Session 6f9ac50d81ae4dd9b9307c33e367fbea idle timeout
+mcp.server.streamable_http | Terminating session: 6f9ac50d81ae4dd9b9307c33e367fbea
+mcp.server.streamable_http_manager | Session 269c88a0731b4905bf3aa28c1d43e5c7 idle timeout
+mcp.server.streamable_http | Terminating session: 269c88a0731b4905bf3aa28c1d43e5c7
+mcp.server.streamable_http_manager | Session 326340b6d9344c5dbd485a9a475aa35f idle timeout
+mcp.server.streamable_http | Terminating session: 326340b6d9344c5dbd485a9a475aa35f
+mcp.server.streamable_http_manager | Session 52440d6990d248749e65ca4de50cd7d1 idle timeout
+mcp.server.streamable_http | Terminating session: 52440d6990d248749e65ca4de50cd7d1
+mcp.server.streamable_http_manager | Created new transport with session ID: 2e47d227d42545a58054a8a36ba01545
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: b9da1ee2767040daae62e9691271a392
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: scene changed to res://scenes/MaterialOfflineLab.tscn
+mcp.server.streamable_http_manager | Created new transport with session ID: fb3dfe63779e49259d7845484ecb0f71
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: ed12c062442c456aac0ae7decb3717ee
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 98d00b36a3a54262aa7daefd777511f1 idle timeout
+mcp.server.streamable_http | Terminating session: 98d00b36a3a54262aa7daefd777511f1
+mcp.server.streamable_http_manager | Session 7d2166a9837d43e3b62e4c37aa31e496 idle timeout
+mcp.server.streamable_http | Terminating session: 7d2166a9837d43e3b62e4c37aa31e496
+mcp.server.streamable_http_manager | Session bdeebdfeda0f415ab6884617157bcc63 idle timeout
+mcp.server.streamable_http | Terminating session: bdeebdfeda0f415ab6884617157bcc63
+mcp.server.streamable_http_manager | Session 4bf66704e57c44acad8e0414a985dc94 idle timeout
+mcp.server.streamable_http | Terminating session: 4bf66704e57c44acad8e0414a985dc94
+mcp.server.streamable_http_manager | Session d595eeedefdb469c8c80cd6eea896cc0 idle timeout
+mcp.server.streamable_http | Terminating session: d595eeedefdb469c8c80cd6eea896cc0
+mcp.server.streamable_http_manager | Session bbb04f6a30a140c4b58da7bf7cb2cf64 idle timeout
+mcp.server.streamable_http | Terminating session: bbb04f6a30a140c4b58da7bf7cb2cf64
+mcp.server.streamable_http_manager | Session 76bd51edd33145c08a0a0d77b3a68fe6 idle timeout
+mcp.server.streamable_http | Terminating session: 76bd51edd33145c08a0a0d77b3a68fe6
+mcp.server.streamable_http_manager | Session 2d8efb4383a949268fe38923f2b79e81 idle timeout
+mcp.server.streamable_http | Terminating session: 2d8efb4383a949268fe38923f2b79e81
+mcp.server.streamable_http_manager | Session ba0fc5cbfa734768a8c63164f45cd0df idle timeout
+mcp.server.streamable_http | Terminating session: ba0fc5cbfa734768a8c63164f45cd0df
+mcp.server.streamable_http_manager | Created new transport with session ID: 1e62567e58ee443c9ddc603e798e2f4b
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: b760bfea712d4f7b8517c322d771debd
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 1f32a588d3414c0ea055381670ea0d5b
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 7494913ecc534f72a7d11d743d2b77e8
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: ff8e317aa10b4732836e719a3baae39f
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 670592579ae14a07b8c991a283ea7274
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: d1566058d5cf4c8c910c32c71eef0181
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: cd88718c95e74ff79c0d0de1543dae91
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 8780b737bc564974b33b245c5e026074 idle timeout
+mcp.server.streamable_http | Terminating session: 8780b737bc564974b33b245c5e026074
+mcp.server.streamable_http_manager | Created new transport with session ID: 787b0544ebdb4162b9bbc8698621e0d0
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: d3debce27d4f49fea67ccedcf5804c84
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 0d276216ebce48a6a9d050dc85d88b3c
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 142ca67e080047cdbb53dad9e3742096
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session a28811e65bd74f54ac8f1cf82c16baf5 idle timeout
+mcp.server.streamable_http | Terminating session: a28811e65bd74f54ac8f1cf82c16baf5
+mcp.server.streamable_http_manager | Session 10aeb0bcf8784a4e817122b03b13f1d4 idle timeout
+mcp.server.streamable_http | Terminating session: 10aeb0bcf8784a4e817122b03b13f1d4
+mcp.server.streamable_http_manager | Created new transport with session ID: 6288fb1c482f4ee9925afaa1090fd0f8
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: c4733c163be240ffa8a1d1f69fc1ccf7
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: c5579e1b796f4aa1bc345cae52dcde89
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 999678d21d814f17a3c9e156c7c9bd0c
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 30d34d4996b84c68b47eb725e5369d63
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 5654a5ac903b406191df886665c14e3a
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: b144f3f8e6144927a17b411d084b9185
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: d0bd1ae2f7e14347846b23b61f7b6ea2
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: dd0d0d2e0bcc45db8df89e532968d188
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 2ea1d02f8eaa48b78a8e0911fa6fa93e
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: cd3a4e7fb54949be8ea81908ed19ebdc
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: f66a25e87253420aab17b7d582952893
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 7cc5245e94564bf99938fbe434a9e11d
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 200b81a4c9a14038b9fbc0669d661558
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: d3572fc5811e4570894d46a9e2a604d6
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 12505d6eeda24425a8313175932237e8
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 0d1e1f83c5ff4a3393615ac2a4422228
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 764391bdc3b54f589579a01dc80d3479
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 880322c5e5024182b236c03904309de4
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 688f27e5fcaf422ea0857d789d384aca
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 9033d528652e44cd970896f206cfab29
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 6cb8cdf872c54ce4a4bb77e67a71c8e6
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: ab2fa5c807e54f1b817e9b1a21913dda
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 12eb9117822543f4a2cbc4cbe37ec9fb
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 12bd74227157436989cedf444527a93b
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: dd9555ed13184973b0c8887c80f74cda
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session bd3569ddc4ee47beb805e57806701fe2 idle timeout
+mcp.server.streamable_http | Terminating session: bd3569ddc4ee47beb805e57806701fe2
+mcp.server.streamable_http_manager | Session 7ad92e75ba7e4a1f99d4a83e25729c65 idle timeout
+mcp.server.streamable_http | Terminating session: 7ad92e75ba7e4a1f99d4a83e25729c65
+mcp.server.streamable_http_manager | Session 49bb91f7914a452ab7ba9e8e7edece80 idle timeout
+mcp.server.streamable_http | Terminating session: 49bb91f7914a452ab7ba9e8e7edece80
+mcp.server.streamable_http_manager | Session b867359eeea24de886dc58dd9476ca26 idle timeout
+mcp.server.streamable_http | Terminating session: b867359eeea24de886dc58dd9476ca26
+mcp.server.streamable_http_manager | Session b67220c184a542558848127b509bc572 idle timeout
+mcp.server.streamable_http | Terminating session: b67220c184a542558848127b509bc572
+mcp.server.streamable_http_manager | Session f8bdb3781f7147bcb6a741834602900f idle timeout
+mcp.server.streamable_http | Terminating session: f8bdb3781f7147bcb6a741834602900f
+mcp.server.streamable_http_manager | Session efd7c8f0a1564ef4a9c98ff3e56f1d47 idle timeout
+mcp.server.streamable_http | Terminating session: efd7c8f0a1564ef4a9c98ff3e56f1d47
+mcp.server.streamable_http_manager | Session 63e886b97c384aef9d7f9dc82e864ad6 idle timeout
+mcp.server.streamable_http | Terminating session: 63e886b97c384aef9d7f9dc82e864ad6
+mcp.server.streamable_http_manager | Session 218e661b3b42423da404db3bf349ff77 idle timeout
+mcp.server.streamable_http | Terminating session: 218e661b3b42423da404db3bf349ff77
+mcp.server.streamable_http_manager | Session 88117c93289748c4beb1ffa431af02ef idle timeout
+mcp.server.streamable_http | Terminating session: 88117c93289748c4beb1ffa431af02ef
+mcp.server.streamable_http_manager | Session 61749450e50649d1a8d010ad11c5c013 idle timeout
+mcp.server.streamable_http | Terminating session: 61749450e50649d1a8d010ad11c5c013
+mcp.server.streamable_http_manager | Session 6ffca90b63c84f8593b0c7217fa8a461 idle timeout
+mcp.server.streamable_http | Terminating session: 6ffca90b63c84f8593b0c7217fa8a461
+mcp.server.streamable_http_manager | Session 2e47d227d42545a58054a8a36ba01545 idle timeout
+mcp.server.streamable_http | Terminating session: 2e47d227d42545a58054a8a36ba01545
+mcp.server.streamable_http_manager | Session b9da1ee2767040daae62e9691271a392 idle timeout
+mcp.server.streamable_http | Terminating session: b9da1ee2767040daae62e9691271a392
+mcp.server.streamable_http_manager | Session fb3dfe63779e49259d7845484ecb0f71 idle timeout
+mcp.server.streamable_http | Terminating session: fb3dfe63779e49259d7845484ecb0f71
+mcp.server.streamable_http_manager | Session ed12c062442c456aac0ae7decb3717ee idle timeout
+mcp.server.streamable_http | Terminating session: ed12c062442c456aac0ae7decb3717ee
+mcp.server.streamable_http_manager | Session 1e62567e58ee443c9ddc603e798e2f4b idle timeout
+mcp.server.streamable_http | Terminating session: 1e62567e58ee443c9ddc603e798e2f4b
+mcp.server.streamable_http_manager | Created new transport with session ID: de06a21e0aa348a3b9afe82020aeb600
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 3cb56cf81de448d6a58636597c105981
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+mcp.server.streamable_http_manager | Session b760bfea712d4f7b8517c322d771debd idle timeout
+mcp.server.streamable_http | Terminating session: b760bfea712d4f7b8517c322d771debd
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: e13e514dd306446aa693ac157ecb7013
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: scene changed to res://scenes/IntegratedMatch.tscn
+mcp.server.streamable_http_manager | Created new transport with session ID: 94eee9aa8e3f4a7d8007af7d26f38a6d
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+mcp.server.streamable_http_manager | Session 1f32a588d3414c0ea055381670ea0d5b idle timeout
+mcp.server.streamable_http | Terminating session: 1f32a588d3414c0ea055381670ea0d5b
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 6b2e6fc2651f4a2db3c42ddffd2ed54c
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 7494913ecc534f72a7d11d743d2b77e8 idle timeout
+mcp.server.streamable_http | Terminating session: 7494913ecc534f72a7d11d743d2b77e8
+mcp.server.streamable_http_manager | Session ff8e317aa10b4732836e719a3baae39f idle timeout
+mcp.server.streamable_http | Terminating session: ff8e317aa10b4732836e719a3baae39f
+mcp.server.streamable_http_manager | Session 670592579ae14a07b8c991a283ea7274 idle timeout
+mcp.server.streamable_http | Terminating session: 670592579ae14a07b8c991a283ea7274
+mcp.server.streamable_http_manager | Session d1566058d5cf4c8c910c32c71eef0181 idle timeout
+mcp.server.streamable_http | Terminating session: d1566058d5cf4c8c910c32c71eef0181
+mcp.server.streamable_http_manager | Session cd88718c95e74ff79c0d0de1543dae91 idle timeout
+mcp.server.streamable_http | Terminating session: cd88718c95e74ff79c0d0de1543dae91
+mcp.server.streamable_http_manager | Session 787b0544ebdb4162b9bbc8698621e0d0 idle timeout
+mcp.server.streamable_http | Terminating session: 787b0544ebdb4162b9bbc8698621e0d0
+mcp.server.streamable_http_manager | Session d3debce27d4f49fea67ccedcf5804c84 idle timeout
+mcp.server.streamable_http | Terminating session: d3debce27d4f49fea67ccedcf5804c84
+mcp.server.streamable_http_manager | Session 0d276216ebce48a6a9d050dc85d88b3c idle timeout
+mcp.server.streamable_http | Terminating session: 0d276216ebce48a6a9d050dc85d88b3c
+mcp.server.streamable_http_manager | Session 142ca67e080047cdbb53dad9e3742096 idle timeout
+mcp.server.streamable_http | Terminating session: 142ca67e080047cdbb53dad9e3742096
+mcp.server.streamable_http_manager | Created new transport with session ID: 2824bdc8388a4ac4b167b3ee5ec3aded
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 99874c740b764c8daaf87e67e2e76fef
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 6b391f9b48724b3487913e07102a25a5
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: scene changed to res://scenes/Main.tscn
+mcp.server.streamable_http_manager | Created new transport with session ID: f186ae13d8c040b69a290a6631b605e5
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 2f70f02f35894c9fb70b2c1f29aa313a
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 6288fb1c482f4ee9925afaa1090fd0f8 idle timeout
+mcp.server.streamable_http | Terminating session: 6288fb1c482f4ee9925afaa1090fd0f8
+mcp.server.streamable_http_manager | Session c4733c163be240ffa8a1d1f69fc1ccf7 idle timeout
+mcp.server.streamable_http | Terminating session: c4733c163be240ffa8a1d1f69fc1ccf7
+mcp.server.streamable_http_manager | Session c5579e1b796f4aa1bc345cae52dcde89 idle timeout
+mcp.server.streamable_http | Terminating session: c5579e1b796f4aa1bc345cae52dcde89
+mcp.server.streamable_http_manager | Session 999678d21d814f17a3c9e156c7c9bd0c idle timeout
+mcp.server.streamable_http | Terminating session: 999678d21d814f17a3c9e156c7c9bd0c
+mcp.server.streamable_http_manager | Session 30d34d4996b84c68b47eb725e5369d63 idle timeout
+mcp.server.streamable_http | Terminating session: 30d34d4996b84c68b47eb725e5369d63
+mcp.server.streamable_http_manager | Session 5654a5ac903b406191df886665c14e3a idle timeout
+mcp.server.streamable_http | Terminating session: 5654a5ac903b406191df886665c14e3a
+mcp.server.streamable_http_manager | Session b144f3f8e6144927a17b411d084b9185 idle timeout
+mcp.server.streamable_http | Terminating session: b144f3f8e6144927a17b411d084b9185
+mcp.server.streamable_http_manager | Session d0bd1ae2f7e14347846b23b61f7b6ea2 idle timeout
+mcp.server.streamable_http | Terminating session: d0bd1ae2f7e14347846b23b61f7b6ea2
+mcp.server.streamable_http_manager | Session dd0d0d2e0bcc45db8df89e532968d188 idle timeout
+mcp.server.streamable_http | Terminating session: dd0d0d2e0bcc45db8df89e532968d188
+mcp.server.streamable_http_manager | Created new transport with session ID: 2c7130b049044385b3dad973bb78689e
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 2ea1d02f8eaa48b78a8e0911fa6fa93e idle timeout
+mcp.server.streamable_http | Terminating session: 2ea1d02f8eaa48b78a8e0911fa6fa93e
+mcp.server.streamable_http_manager | Created new transport with session ID: cf4378b4d5e1493184e1dc58637b0689
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: e9da1932f4d34c1185fc54e34d715d9b
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: aaafdc6e921f4a41974e71cb1a7229e8
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: scene changed to res://scenes/IntegratedMatch.tscn
+mcp.server.streamable_http_manager | Created new transport with session ID: 9998d3256cf34f818626542bf3ae8853
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 407232a5645b4179a4e05c95f55fc6b9
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session cd3a4e7fb54949be8ea81908ed19ebdc idle timeout
+mcp.server.streamable_http | Terminating session: cd3a4e7fb54949be8ea81908ed19ebdc
+mcp.server.streamable_http_manager | Session f66a25e87253420aab17b7d582952893 idle timeout
+mcp.server.streamable_http | Terminating session: f66a25e87253420aab17b7d582952893
+mcp.server.streamable_http_manager | Session 7cc5245e94564bf99938fbe434a9e11d idle timeout
+mcp.server.streamable_http | Terminating session: 7cc5245e94564bf99938fbe434a9e11d
+mcp.server.streamable_http_manager | Session 200b81a4c9a14038b9fbc0669d661558 idle timeout
+mcp.server.streamable_http | Terminating session: 200b81a4c9a14038b9fbc0669d661558
+mcp.server.streamable_http_manager | Session d3572fc5811e4570894d46a9e2a604d6 idle timeout
+mcp.server.streamable_http | Terminating session: d3572fc5811e4570894d46a9e2a604d6
+mcp.server.streamable_http_manager | Session 12505d6eeda24425a8313175932237e8 idle timeout
+mcp.server.streamable_http | Terminating session: 12505d6eeda24425a8313175932237e8
+mcp.server.streamable_http_manager | Session 0d1e1f83c5ff4a3393615ac2a4422228 idle timeout
+mcp.server.streamable_http | Terminating session: 0d1e1f83c5ff4a3393615ac2a4422228
+mcp.server.streamable_http_manager | Session 764391bdc3b54f589579a01dc80d3479 idle timeout
+mcp.server.streamable_http | Terminating session: 764391bdc3b54f589579a01dc80d3479
+mcp.server.streamable_http_manager | Session 880322c5e5024182b236c03904309de4 idle timeout
+mcp.server.streamable_http | Terminating session: 880322c5e5024182b236c03904309de4
+mcp.server.streamable_http_manager | Session 688f27e5fcaf422ea0857d789d384aca idle timeout
+mcp.server.streamable_http | Terminating session: 688f27e5fcaf422ea0857d789d384aca
+mcp.server.streamable_http_manager | Session 9033d528652e44cd970896f206cfab29 idle timeout
+mcp.server.streamable_http | Terminating session: 9033d528652e44cd970896f206cfab29
+mcp.server.streamable_http_manager | Session 6cb8cdf872c54ce4a4bb77e67a71c8e6 idle timeout
+mcp.server.streamable_http | Terminating session: 6cb8cdf872c54ce4a4bb77e67a71c8e6
+mcp.server.streamable_http_manager | Session ab2fa5c807e54f1b817e9b1a21913dda idle timeout
+mcp.server.streamable_http | Terminating session: ab2fa5c807e54f1b817e9b1a21913dda
+mcp.server.streamable_http_manager | Session 12eb9117822543f4a2cbc4cbe37ec9fb idle timeout
+mcp.server.streamable_http | Terminating session: 12eb9117822543f4a2cbc4cbe37ec9fb
+mcp.server.streamable_http_manager | Created new transport with session ID: 6de84f1122ab41d8bda8557afa169762
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 5c74464e515240f2b39fbe2f5cd88879
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 78e2822ac3044910b34b6e1071a5645a
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 57670ab75de04f95897ac5b7ce26178d
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: d17517de05db4cf7b15928ddc496bfe3
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 193140a68e76457eadea4862d8af1009
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 515f8e883df943d4afa35aeb73590dc6
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 12bd74227157436989cedf444527a93b idle timeout
+mcp.server.streamable_http | Terminating session: 12bd74227157436989cedf444527a93b
+mcp.server.streamable_http_manager | Session dd9555ed13184973b0c8887c80f74cda idle timeout
+mcp.server.streamable_http | Terminating session: dd9555ed13184973b0c8887c80f74cda
+mcp.server.streamable_http_manager | Created new transport with session ID: b9a45b862eea46e98ed1d7c560f679e0
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: d7ede20e6c77446b839a8d8d5d5c2fbc
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 6363cc006b014a308d82fd948b598fdd
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: f957ce0ec86040e0ba783e271f2145af
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: d45714154f204448a2645db5bd962e1e
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 43a27c91e37241b58b3bbf747b5183d7
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: ad8f8d37ecbe48ee80438cfcba92eb02
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: bafc8cb6c4284d8bbc7f80bcec66370b
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 67f8b20523d84f13a55c6fa438c59eef
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 15b957319d484ffeafde4524c8a31a83
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 4543d34ba6d64508995bd764fa923a71
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 3a3ce02464ba415c96b6c64cdfd01e84
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: baa218d043154fc180fac1c373dc5ed2
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: d0c1b0cf8ed74cc9990f8a37d009803d
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session de06a21e0aa348a3b9afe82020aeb600 idle timeout
+mcp.server.streamable_http | Terminating session: de06a21e0aa348a3b9afe82020aeb600
+mcp.server.streamable_http_manager | Session 3cb56cf81de448d6a58636597c105981 idle timeout
+mcp.server.streamable_http | Terminating session: 3cb56cf81de448d6a58636597c105981
+mcp.server.streamable_http_manager | Session e13e514dd306446aa693ac157ecb7013 idle timeout
+mcp.server.streamable_http | Terminating session: e13e514dd306446aa693ac157ecb7013
+mcp.server.streamable_http_manager | Session 94eee9aa8e3f4a7d8007af7d26f38a6d idle timeout
+mcp.server.streamable_http | Terminating session: 94eee9aa8e3f4a7d8007af7d26f38a6d
+mcp.server.streamable_http_manager | Session 6b2e6fc2651f4a2db3c42ddffd2ed54c idle timeout
+mcp.server.streamable_http | Terminating session: 6b2e6fc2651f4a2db3c42ddffd2ed54c
+mcp.server.streamable_http_manager | Created new transport with session ID: 101b81e5ab0d4b8ea1603ff308a75e9c
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+[11/06/26 01:29:43] Error calling tool 'project_manage'                        
+mcp.server.streamable_http_manager | Created new transport with session ID: 3a273affbf794122be3bda5c3b8ba4d7
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: df87f3111cb5450aae69ac8dda983122
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 16c4179c5ded4321bf155cde2ac63199
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 1e966c30f483460eae086d14a9953cb4
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 54fbb3f1456e4503b3a26a79feabe5aa
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: f41c0504a458493f8635fce427cffedd
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 93c53d4c37a14dd3a6ac3509489f1c74
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 61ba4cbb123545f3a71e15bd76cf9b95
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+[11/06/26 01:30:01] Error calling tool 'editor_manage'                         
+mcp.server.streamable_http_manager | Created new transport with session ID: ac6337211a794bfba385abace6e56fb2
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+[11/06/26 01:30:02] Error calling tool 'editor_manage'                         
+mcp.server.streamable_http_manager | Created new transport with session ID: 44c72ce4f74b4914805d6b239324fb50
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: a818e03566a143ac9b720a66ec6238bb
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: a56b87cb97c14559a48f8e20d649aeb8
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 8ffbd6769b8148b185d51e17dc355f34
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 5ca2cbf8798f47eba5019002e38e10f8
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 777b3dbce6214543a7a5b68a52514317
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 804d1e39a2e64ba286a08ad6215156f5
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: e801610305d04bc2906bac8618751139
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 4c03926c79ac40478ab5a9ccefe38892
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 7985880d84b74ebcaf6a1a66daeb063c
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 769b04a1e83640f8acbf9dc5ee09dad0
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 2824bdc8388a4ac4b167b3ee5ec3aded idle timeout
+mcp.server.streamable_http | Terminating session: 2824bdc8388a4ac4b167b3ee5ec3aded
+mcp.server.streamable_http_manager | Created new transport with session ID: beef751bc1474d8684d7f3d021ff4a38
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 99874c740b764c8daaf87e67e2e76fef idle timeout
+mcp.server.streamable_http | Terminating session: 99874c740b764c8daaf87e67e2e76fef
+mcp.server.streamable_http_manager | Session 6b391f9b48724b3487913e07102a25a5 idle timeout
+mcp.server.streamable_http | Terminating session: 6b391f9b48724b3487913e07102a25a5
+mcp.server.streamable_http_manager | Created new transport with session ID: 205bc33c8208444cbde7482e70faba5d
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 1e7eb64114ee4593b2dbd6fa70d51fee
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session f186ae13d8c040b69a290a6631b605e5 idle timeout
+mcp.server.streamable_http | Terminating session: f186ae13d8c040b69a290a6631b605e5
+mcp.server.streamable_http_manager | Session 2f70f02f35894c9fb70b2c1f29aa313a idle timeout
+mcp.server.streamable_http | Terminating session: 2f70f02f35894c9fb70b2c1f29aa313a
+mcp.server.streamable_http_manager | Session 2c7130b049044385b3dad973bb78689e idle timeout
+mcp.server.streamable_http | Terminating session: 2c7130b049044385b3dad973bb78689e
+mcp.server.streamable_http_manager | Session cf4378b4d5e1493184e1dc58637b0689 idle timeout
+mcp.server.streamable_http | Terminating session: cf4378b4d5e1493184e1dc58637b0689
+mcp.server.streamable_http_manager | Session e9da1932f4d34c1185fc54e34d715d9b idle timeout
+mcp.server.streamable_http | Terminating session: e9da1932f4d34c1185fc54e34d715d9b
+mcp.server.streamable_http_manager | Session aaafdc6e921f4a41974e71cb1a7229e8 idle timeout
+mcp.server.streamable_http | Terminating session: aaafdc6e921f4a41974e71cb1a7229e8
+mcp.server.streamable_http_manager | Session 9998d3256cf34f818626542bf3ae8853 idle timeout
+mcp.server.streamable_http | Terminating session: 9998d3256cf34f818626542bf3ae8853
+mcp.server.streamable_http_manager | Session 407232a5645b4179a4e05c95f55fc6b9 idle timeout
+mcp.server.streamable_http | Terminating session: 407232a5645b4179a4e05c95f55fc6b9
+mcp.server.streamable_http_manager | Session 6de84f1122ab41d8bda8557afa169762 idle timeout
+mcp.server.streamable_http | Terminating session: 6de84f1122ab41d8bda8557afa169762
+mcp.server.streamable_http_manager | Session 5c74464e515240f2b39fbe2f5cd88879 idle timeout
+mcp.server.streamable_http | Terminating session: 5c74464e515240f2b39fbe2f5cd88879
+mcp.server.streamable_http_manager | Session 78e2822ac3044910b34b6e1071a5645a idle timeout
+mcp.server.streamable_http | Terminating session: 78e2822ac3044910b34b6e1071a5645a
+mcp.server.streamable_http_manager | Session 57670ab75de04f95897ac5b7ce26178d idle timeout
+mcp.server.streamable_http | Terminating session: 57670ab75de04f95897ac5b7ce26178d
+mcp.server.streamable_http_manager | Session d17517de05db4cf7b15928ddc496bfe3 idle timeout
+mcp.server.streamable_http | Terminating session: d17517de05db4cf7b15928ddc496bfe3
+mcp.server.streamable_http_manager | Session 193140a68e76457eadea4862d8af1009 idle timeout
+mcp.server.streamable_http | Terminating session: 193140a68e76457eadea4862d8af1009
+mcp.server.streamable_http_manager | Session 515f8e883df943d4afa35aeb73590dc6 idle timeout
+mcp.server.streamable_http | Terminating session: 515f8e883df943d4afa35aeb73590dc6
+mcp.server.streamable_http_manager | Session b9a45b862eea46e98ed1d7c560f679e0 idle timeout
+mcp.server.streamable_http | Terminating session: b9a45b862eea46e98ed1d7c560f679e0
+mcp.server.streamable_http_manager | Session d7ede20e6c77446b839a8d8d5d5c2fbc idle timeout
+mcp.server.streamable_http | Terminating session: d7ede20e6c77446b839a8d8d5d5c2fbc
+mcp.server.streamable_http_manager | Session 6363cc006b014a308d82fd948b598fdd idle timeout
+mcp.server.streamable_http | Terminating session: 6363cc006b014a308d82fd948b598fdd
+mcp.server.streamable_http_manager | Session f957ce0ec86040e0ba783e271f2145af idle timeout
+mcp.server.streamable_http | Terminating session: f957ce0ec86040e0ba783e271f2145af
+mcp.server.streamable_http_manager | Session d45714154f204448a2645db5bd962e1e idle timeout
+mcp.server.streamable_http | Terminating session: d45714154f204448a2645db5bd962e1e
+mcp.server.streamable_http_manager | Session 43a27c91e37241b58b3bbf747b5183d7 idle timeout
+mcp.server.streamable_http | Terminating session: 43a27c91e37241b58b3bbf747b5183d7
+mcp.server.streamable_http_manager | Session ad8f8d37ecbe48ee80438cfcba92eb02 idle timeout
+mcp.server.streamable_http | Terminating session: ad8f8d37ecbe48ee80438cfcba92eb02
+mcp.server.streamable_http_manager | Session bafc8cb6c4284d8bbc7f80bcec66370b idle timeout
+mcp.server.streamable_http | Terminating session: bafc8cb6c4284d8bbc7f80bcec66370b
+mcp.server.streamable_http_manager | Session 67f8b20523d84f13a55c6fa438c59eef idle timeout
+mcp.server.streamable_http | Terminating session: 67f8b20523d84f13a55c6fa438c59eef
+mcp.server.streamable_http_manager | Session 15b957319d484ffeafde4524c8a31a83 idle timeout
+mcp.server.streamable_http | Terminating session: 15b957319d484ffeafde4524c8a31a83
+mcp.server.streamable_http_manager | Session 4543d34ba6d64508995bd764fa923a71 idle timeout
+mcp.server.streamable_http | Terminating session: 4543d34ba6d64508995bd764fa923a71
+mcp.server.streamable_http_manager | Session 3a3ce02464ba415c96b6c64cdfd01e84 idle timeout
+mcp.server.streamable_http | Terminating session: 3a3ce02464ba415c96b6c64cdfd01e84
+mcp.server.streamable_http_manager | Session baa218d043154fc180fac1c373dc5ed2 idle timeout
+mcp.server.streamable_http | Terminating session: baa218d043154fc180fac1c373dc5ed2
+mcp.server.streamable_http_manager | Session d0c1b0cf8ed74cc9990f8a37d009803d idle timeout
+mcp.server.streamable_http | Terminating session: d0c1b0cf8ed74cc9990f8a37d009803d
+mcp.server.streamable_http_manager | Session 101b81e5ab0d4b8ea1603ff308a75e9c idle timeout
+mcp.server.streamable_http | Terminating session: 101b81e5ab0d4b8ea1603ff308a75e9c
+mcp.server.streamable_http_manager | Session 3a273affbf794122be3bda5c3b8ba4d7 idle timeout
+mcp.server.streamable_http | Terminating session: 3a273affbf794122be3bda5c3b8ba4d7
+mcp.server.streamable_http_manager | Session df87f3111cb5450aae69ac8dda983122 idle timeout
+mcp.server.streamable_http | Terminating session: df87f3111cb5450aae69ac8dda983122
+mcp.server.streamable_http_manager | Session 16c4179c5ded4321bf155cde2ac63199 idle timeout
+mcp.server.streamable_http | Terminating session: 16c4179c5ded4321bf155cde2ac63199
+mcp.server.streamable_http_manager | Session 1e966c30f483460eae086d14a9953cb4 idle timeout
+mcp.server.streamable_http | Terminating session: 1e966c30f483460eae086d14a9953cb4
+mcp.server.streamable_http_manager | Session 54fbb3f1456e4503b3a26a79feabe5aa idle timeout
+mcp.server.streamable_http | Terminating session: 54fbb3f1456e4503b3a26a79feabe5aa
+mcp.server.streamable_http_manager | Session f41c0504a458493f8635fce427cffedd idle timeout
+mcp.server.streamable_http | Terminating session: f41c0504a458493f8635fce427cffedd
+mcp.server.streamable_http_manager | Session 93c53d4c37a14dd3a6ac3509489f1c74 idle timeout
+mcp.server.streamable_http | Terminating session: 93c53d4c37a14dd3a6ac3509489f1c74
+mcp.server.streamable_http_manager | Session 61ba4cbb123545f3a71e15bd76cf9b95 idle timeout
+mcp.server.streamable_http | Terminating session: 61ba4cbb123545f3a71e15bd76cf9b95
+mcp.server.streamable_http_manager | Session ac6337211a794bfba385abace6e56fb2 idle timeout
+mcp.server.streamable_http | Terminating session: ac6337211a794bfba385abace6e56fb2
+mcp.server.streamable_http_manager | Session 44c72ce4f74b4914805d6b239324fb50 idle timeout
+mcp.server.streamable_http | Terminating session: 44c72ce4f74b4914805d6b239324fb50
+mcp.server.streamable_http_manager | Session a818e03566a143ac9b720a66ec6238bb idle timeout
+mcp.server.streamable_http | Terminating session: a818e03566a143ac9b720a66ec6238bb
+mcp.server.streamable_http_manager | Session a56b87cb97c14559a48f8e20d649aeb8 idle timeout
+mcp.server.streamable_http | Terminating session: a56b87cb97c14559a48f8e20d649aeb8
+mcp.server.streamable_http_manager | Session 8ffbd6769b8148b185d51e17dc355f34 idle timeout
+mcp.server.streamable_http | Terminating session: 8ffbd6769b8148b185d51e17dc355f34
+mcp.server.streamable_http_manager | Session 5ca2cbf8798f47eba5019002e38e10f8 idle timeout
+mcp.server.streamable_http | Terminating session: 5ca2cbf8798f47eba5019002e38e10f8
+mcp.server.streamable_http_manager | Session 777b3dbce6214543a7a5b68a52514317 idle timeout
+mcp.server.streamable_http | Terminating session: 777b3dbce6214543a7a5b68a52514317
+mcp.server.streamable_http_manager | Session 804d1e39a2e64ba286a08ad6215156f5 idle timeout
+mcp.server.streamable_http | Terminating session: 804d1e39a2e64ba286a08ad6215156f5
+mcp.server.streamable_http_manager | Session e801610305d04bc2906bac8618751139 idle timeout
+mcp.server.streamable_http | Terminating session: e801610305d04bc2906bac8618751139
+mcp.server.streamable_http_manager | Session 4c03926c79ac40478ab5a9ccefe38892 idle timeout
+mcp.server.streamable_http | Terminating session: 4c03926c79ac40478ab5a9ccefe38892
+mcp.server.streamable_http_manager | Session 7985880d84b74ebcaf6a1a66daeb063c idle timeout
+mcp.server.streamable_http | Terminating session: 7985880d84b74ebcaf6a1a66daeb063c
+mcp.server.streamable_http_manager | Session 769b04a1e83640f8acbf9dc5ee09dad0 idle timeout
+mcp.server.streamable_http | Terminating session: 769b04a1e83640f8acbf9dc5ee09dad0
+mcp.server.streamable_http_manager | Session beef751bc1474d8684d7f3d021ff4a38 idle timeout
+mcp.server.streamable_http | Terminating session: beef751bc1474d8684d7f3d021ff4a38
+mcp.server.streamable_http_manager | Session 205bc33c8208444cbde7482e70faba5d idle timeout
+mcp.server.streamable_http | Terminating session: 205bc33c8208444cbde7482e70faba5d
+mcp.server.streamable_http_manager | Session 1e7eb64114ee4593b2dbd6fa70d51fee idle timeout
+mcp.server.streamable_http | Terminating session: 1e7eb64114ee4593b2dbd6fa70d51fee
+mcp.server.streamable_http_manager | Created new transport with session ID: 08d736fd3f024a12ba4521f7398db0ee
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: cac1fb82080442a78ca34dded9e7fee9
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: cac1fb82080442a78ca34dded9e7fee9
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+mcp.server.streamable_http_manager | Created new transport with session ID: 0fd81c5e31c9465ebb4e19fa77ddde3a
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: 0fd81c5e31c9465ebb4e19fa77ddde3a
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+mcp.server.streamable_http_manager | Created new transport with session ID: 870cf2f427bd4943ace3a58eea0bb25c
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: 870cf2f427bd4943ace3a58eea0bb25c
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+mcp.server.streamable_http_manager | Created new transport with session ID: c1d82183128a430391d2dd7913be7d9a
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: c1d82183128a430391d2dd7913be7d9a
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+mcp.server.streamable_http_manager | Session 08d736fd3f024a12ba4521f7398db0ee idle timeout
+mcp.server.streamable_http | Terminating session: 08d736fd3f024a12ba4521f7398db0ee
+mcp.server.streamable_http_manager | Created new transport with session ID: 5abefcf4cf80478fb7150e581e66897a
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 58a91103dd53489b9d30125649e86c5a
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 64312651b0684715a4258fba72dc06dd
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 329677b512314dd19420eb55494f35fe
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: d518f1ee46f3417db9d323654008537e
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+[11/06/26 11:24:10] Error calling tool 'editor_manage'                         
+mcp.server.streamable_http_manager | Created new transport with session ID: f662385794ab425497fb42a3ae0ba8c8
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: d310100ba2a4416e9ea0a8162b493537
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 3eb7d08d124b461cbd6abcaf9fb6f898
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 94a8026d19ab4baeb3456ffb5aa21823
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 9bfa6af1f24043a58bcb05bf295d49ef
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 887939847e524a13801bf677c78420bb
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: scene changed to res://scenes/Main.tscn
+mcp.server.streamable_http_manager | Session 5abefcf4cf80478fb7150e581e66897a idle timeout
+mcp.server.streamable_http | Terminating session: 5abefcf4cf80478fb7150e581e66897a
+mcp.server.streamable_http_manager | Session 58a91103dd53489b9d30125649e86c5a idle timeout
+mcp.server.streamable_http | Terminating session: 58a91103dd53489b9d30125649e86c5a
+mcp.server.streamable_http_manager | Session 64312651b0684715a4258fba72dc06dd idle timeout
+mcp.server.streamable_http | Terminating session: 64312651b0684715a4258fba72dc06dd
+mcp.server.streamable_http_manager | Session 329677b512314dd19420eb55494f35fe idle timeout
+mcp.server.streamable_http | Terminating session: 329677b512314dd19420eb55494f35fe
+mcp.server.streamable_http_manager | Session d518f1ee46f3417db9d323654008537e idle timeout
+mcp.server.streamable_http | Terminating session: d518f1ee46f3417db9d323654008537e
+mcp.server.streamable_http_manager | Created new transport with session ID: d766540278034e6a98eae5b10cefdaf0
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 16c6d70cfdb746fd81b5139602d2c46b
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 5d25ac35bc6c49dd80c5544eeb686efd
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 59d2f30dc37f4f9b85afe19104ad45f1
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: e869d1f5e5e440598a66f3c2efbae7c7
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: b0b474e8ef3d4bd58b62da20a47d134d
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 261202615b3249ba9ec597f184cfc0c4
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: a67361c22a0a47d3ba3bfcf037baa77f
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+[11/06/26 12:00:00] Error calling tool 'editor_manage'                         
+mcp.server.streamable_http_manager | Created new transport with session ID: d045654983ff4947ab7acd2f0f147ad5
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 903f3a2574e147ef9bb71df75ff7bcfa
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 25ed8ebea44643699fbdc455bacf0b63
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: e47966a821884f448cabce273d62719c
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: e13b0fa2cf5b4d959dbc23e6d14d4dfa
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 159967db851e479da37a32beeeb24f43
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session f662385794ab425497fb42a3ae0ba8c8 idle timeout
+mcp.server.streamable_http | Terminating session: f662385794ab425497fb42a3ae0ba8c8
+mcp.server.streamable_http_manager | Session d310100ba2a4416e9ea0a8162b493537 idle timeout
+mcp.server.streamable_http | Terminating session: d310100ba2a4416e9ea0a8162b493537
+mcp.server.streamable_http_manager | Session 3eb7d08d124b461cbd6abcaf9fb6f898 idle timeout
+mcp.server.streamable_http | Terminating session: 3eb7d08d124b461cbd6abcaf9fb6f898
+mcp.server.streamable_http_manager | Created new transport with session ID: 944226270e274e75ad69f21ae0cc12f4
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 231ed87a2a4c4ac4bd9aa8002f4a6fb3
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 8fca52b1c3fa455ca23471f3b43d28b2
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 271f859ec2af4d54900904037512cb4e
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 35d3f6d31194428d8de0cf5c5dd38986
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 1bdac02ffb9c418a98db81b6f73cfddd
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: d0844ed43d6d41d0acab7fc6ff148e3f
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: a5fb38adda9b4c589ead3d734ffd58b7
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: fc73a6f3eeb742c699cf9b4a9b7a82f6
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: scene changed to res://scenes/IntegratedMatch.tscn
+mcp.server.streamable_http_manager | Created new transport with session ID: a19de4e58b6a4537ae3e593fa781acbe
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 97314ad6089b485b83098c6660dcb845
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: c1cd2efde7a047c5b56ddde1e6a605a9
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: df4f68a26fc3497a9cd11c24a1237a8e
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 06042273fa104e6baf855032717baba2
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 3fd2fb420a3c43b9b7fb4f3ccb07b370
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: bb65e5958c8b411d9409e4a2be3aad00
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: 5cab963eea5b41afa99f6bae5cbd4d2b
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: b16dddb2a73b43dfbc7eaaf40558fc90
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 108dcd9b3c3b449bb9af18d328c7d345
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 3c3a68c84f46473ebdf5dc1b794919cf
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: f67e99ea62ea4cfebfc1203c82fc6e39
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 1c7c0f7af5d1404d811746698df9ab05
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: ae2d6970e91d4838a0edb7646f9dc789
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: c18a0014dc784c54bce8b8eb34b80317
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 6b8a7c1652264a349f13e4ba8e18def4
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 27b575cfd2944350b5b88d7a9701019a
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 01199cb4c65545e6a6d588229235caf8
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 558e10a491394e25a05b0ec0740351c5
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 70b8066c3b98401298326c2ce86a63f6
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: ce1eedadb86545c7a14319992dd1cbae
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: ce0c228afcd145018aca2dc465d73fee
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 3672901001de4eb9a8bf24a2f4e3e109
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session 94a8026d19ab4baeb3456ffb5aa21823 idle timeout
+mcp.server.streamable_http | Terminating session: 94a8026d19ab4baeb3456ffb5aa21823
+mcp.server.streamable_http_manager | Session 9bfa6af1f24043a58bcb05bf295d49ef idle timeout
+mcp.server.streamable_http | Terminating session: 9bfa6af1f24043a58bcb05bf295d49ef
+mcp.server.streamable_http_manager | Session 887939847e524a13801bf677c78420bb idle timeout
+mcp.server.streamable_http | Terminating session: 887939847e524a13801bf677c78420bb
+mcp.server.streamable_http_manager | Created new transport with session ID: 50d3c06872bb40da80b92688b15e1115
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 4df8ef647fa145e4ab37b7b493cd30c9
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: e7ec5ce207294e239c8aa5ff4bdada7b
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 36cf93ba2b6e463496f5d5f79404513b
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: b41feb1ffead45e0bc5068bbd9608f2e
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 8f77bae10bea4e81bc2e0564ad1f62d2
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: e1962a252b4542938c4d3c121bde89a6
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 41e773f9cd684b44ab35a8afd599dbc6
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 5ee610ff27be4abbae26831c1a998d7a
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 3831509d82aa45a19e6a4e71dd21a38b
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: bdec87d301d0488fba979e046454afce
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 220b95c12931417daa9171fa0997e985
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: ae943a387e8a4279a9ee55d43691d3d3
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 65a0f604b6cd431b86201d4c638f5741
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 1d3264d74f4445749b2dbb58acc24dc9
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 48f4652a21ef410389847416690b3dc6
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+[11/06/26 12:13:32] Error calling tool 'editor_manage'                         
+mcp.server.streamable_http_manager | Created new transport with session ID: c70d620b3426435daeee943a082d031c
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 55a984d92d1145f39449bb7a49342be3
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 0d7612fcde9743e0b8052fcad597a62c
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+mcp.server.streamable_http_manager | Created new transport with session ID: fa4caec6ccf44af2835f5d4944845321
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+godot_ai.transport.websocket | Session juegofre: play state -> playing
+godot_ai.transport.websocket | Session juegofre: readiness -> playing
+mcp.server.streamable_http_manager | Created new transport with session ID: 480b1e8c8f7b4650b8df1dcbd6925473
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 0e309429f3204f6886ee9da4157f163d
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 093f6aade46c4d569c5c4787f8fbd04f
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: 29640d67c3db42ac92cff31a9d47b797
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Created new transport with session ID: b347227b580245e58b2a87d69863f748
+mcp.server.lowlevel.server | Processing request of type CallToolRequest
+mcp.server.streamable_http_manager | Session d766540278034e6a98eae5b10cefdaf0 idle timeout
+mcp.server.streamable_http | Terminating session: d766540278034e6a98eae5b10cefdaf0
+mcp.server.streamable_http_manager | Session 16c6d70cfdb746fd81b5139602d2c46b idle timeout
+mcp.server.streamable_http | Terminating session: 16c6d70cfdb746fd81b5139602d2c46b
+mcp.server.streamable_http_manager | Session 5d25ac35bc6c49dd80c5544eeb686efd idle timeout
+mcp.server.streamable_http | Terminating session: 5d25ac35bc6c49dd80c5544eeb686efd
+mcp.server.streamable_http_manager | Session 59d2f30dc37f4f9b85afe19104ad45f1 idle timeout
+mcp.server.streamable_http | Terminating session: 59d2f30dc37f4f9b85afe19104ad45f1
+mcp.server.streamable_http_manager | Session e869d1f5e5e440598a66f3c2efbae7c7 idle timeout
+mcp.server.streamable_http | Terminating session: e869d1f5e5e440598a66f3c2efbae7c7
+mcp.server.streamable_http_manager | Session b0b474e8ef3d4bd58b62da20a47d134d idle timeout
+mcp.server.streamable_http | Terminating session: b0b474e8ef3d4bd58b62da20a47d134d
+mcp.server.streamable_http_manager | Session 261202615b3249ba9ec597f184cfc0c4 idle timeout
+mcp.server.streamable_http | Terminating session: 261202615b3249ba9ec597f184cfc0c4
+mcp.server.streamable_http_manager | Session a67361c22a0a47d3ba3bfcf037baa77f idle timeout
+mcp.server.streamable_http | Terminating session: a67361c22a0a47d3ba3bfcf037baa77f
+mcp.server.streamable_http_manager | Session d045654983ff4947ab7acd2f0f147ad5 idle timeout
+mcp.server.streamable_http | Terminating session: d045654983ff4947ab7acd2f0f147ad5
+mcp.server.streamable_http_manager | Session 903f3a2574e147ef9bb71df75ff7bcfa idle timeout
+mcp.server.streamable_http | Terminating session: 903f3a2574e147ef9bb71df75ff7bcfa
+mcp.server.streamable_http_manager | Session 25ed8ebea44643699fbdc455bacf0b63 idle timeout
+mcp.server.streamable_http | Terminating session: 25ed8ebea44643699fbdc455bacf0b63
+mcp.server.streamable_http_manager | Session e47966a821884f448cabce273d62719c idle timeout
+mcp.server.streamable_http | Terminating session: e47966a821884f448cabce273d62719c
+mcp.server.streamable_http_manager | Session e13b0fa2cf5b4d959dbc23e6d14d4dfa idle timeout
+mcp.server.streamable_http | Terminating session: e13b0fa2cf5b4d959dbc23e6d14d4dfa
+mcp.server.streamable_http_manager | Session 159967db851e479da37a32beeeb24f43 idle timeout
+mcp.server.streamable_http | Terminating session: 159967db851e479da37a32beeeb24f43
+mcp.server.streamable_http_manager | Session 944226270e274e75ad69f21ae0cc12f4 idle timeout
+mcp.server.streamable_http | Terminating session: 944226270e274e75ad69f21ae0cc12f4
+mcp.server.streamable_http_manager | Session 231ed87a2a4c4ac4bd9aa8002f4a6fb3 idle timeout
+mcp.server.streamable_http | Terminating session: 231ed87a2a4c4ac4bd9aa8002f4a6fb3
+mcp.server.streamable_http_manager | Session 8fca52b1c3fa455ca23471f3b43d28b2 idle timeout
+mcp.server.streamable_http | Terminating session: 8fca52b1c3fa455ca23471f3b43d28b2
+mcp.server.streamable_http_manager | Session 271f859ec2af4d54900904037512cb4e idle timeout
+mcp.server.streamable_http | Terminating session: 271f859ec2af4d54900904037512cb4e
+mcp.server.streamable_http_manager | Session 35d3f6d31194428d8de0cf5c5dd38986 idle timeout
+mcp.server.streamable_http | Terminating session: 35d3f6d31194428d8de0cf5c5dd38986
+mcp.server.streamable_http_manager | Session 1bdac02ffb9c418a98db81b6f73cfddd idle timeout
+mcp.server.streamable_http | Terminating session: 1bdac02ffb9c418a98db81b6f73cfddd
+mcp.server.streamable_http_manager | Session d0844ed43d6d41d0acab7fc6ff148e3f idle timeout
+mcp.server.streamable_http | Terminating session: d0844ed43d6d41d0acab7fc6ff148e3f
+mcp.server.streamable_http_manager | Session a5fb38adda9b4c589ead3d734ffd58b7 idle timeout
+mcp.server.streamable_http | Terminating session: a5fb38adda9b4c589ead3d734ffd58b7
+mcp.server.streamable_http_manager | Session fc73a6f3eeb742c699cf9b4a9b7a82f6 idle timeout
+mcp.server.streamable_http | Terminating session: fc73a6f3eeb742c699cf9b4a9b7a82f6
+mcp.server.streamable_http_manager | Session a19de4e58b6a4537ae3e593fa781acbe idle timeout
+mcp.server.streamable_http | Terminating session: a19de4e58b6a4537ae3e593fa781acbe
+mcp.server.streamable_http_manager | Session 97314ad6089b485b83098c6660dcb845 idle timeout
+mcp.server.streamable_http | Terminating session: 97314ad6089b485b83098c6660dcb845
+mcp.server.streamable_http_manager | Session c1cd2efde7a047c5b56ddde1e6a605a9 idle timeout
+mcp.server.streamable_http | Terminating session: c1cd2efde7a047c5b56ddde1e6a605a9
+mcp.server.streamable_http_manager | Session df4f68a26fc3497a9cd11c24a1237a8e idle timeout
+mcp.server.streamable_http | Terminating session: df4f68a26fc3497a9cd11c24a1237a8e
+mcp.server.streamable_http_manager | Session 06042273fa104e6baf855032717baba2 idle timeout
+mcp.server.streamable_http | Terminating session: 06042273fa104e6baf855032717baba2
+mcp.server.streamable_http_manager | Session 3fd2fb420a3c43b9b7fb4f3ccb07b370 idle timeout
+mcp.server.streamable_http | Terminating session: 3fd2fb420a3c43b9b7fb4f3ccb07b370
+mcp.server.streamable_http_manager | Session bb65e5958c8b411d9409e4a2be3aad00 idle timeout
+mcp.server.streamable_http | Terminating session: bb65e5958c8b411d9409e4a2be3aad00
+mcp.server.streamable_http_manager | Session 5cab963eea5b41afa99f6bae5cbd4d2b idle timeout
+mcp.server.streamable_http | Terminating session: 5cab963eea5b41afa99f6bae5cbd4d2b
+mcp.server.streamable_http_manager | Session b16dddb2a73b43dfbc7eaaf40558fc90 idle timeout
+mcp.server.streamable_http | Terminating session: b16dddb2a73b43dfbc7eaaf40558fc90
+mcp.server.streamable_http_manager | Session 108dcd9b3c3b449bb9af18d328c7d345 idle timeout
+mcp.server.streamable_http | Terminating session: 108dcd9b3c3b449bb9af18d328c7d345
+mcp.server.streamable_http_manager | Session 3c3a68c84f46473ebdf5dc1b794919cf idle timeout
+mcp.server.streamable_http | Terminating session: 3c3a68c84f46473ebdf5dc1b794919cf
+mcp.server.streamable_http_manager | Session f67e99ea62ea4cfebfc1203c82fc6e39 idle timeout
+mcp.server.streamable_http | Terminating session: f67e99ea62ea4cfebfc1203c82fc6e39
+mcp.server.streamable_http_manager | Session 1c7c0f7af5d1404d811746698df9ab05 idle timeout
+mcp.server.streamable_http | Terminating session: 1c7c0f7af5d1404d811746698df9ab05
+mcp.server.streamable_http_manager | Session ae2d6970e91d4838a0edb7646f9dc789 idle timeout
+mcp.server.streamable_http | Terminating session: ae2d6970e91d4838a0edb7646f9dc789
+mcp.server.streamable_http_manager | Session c18a0014dc784c54bce8b8eb34b80317 idle timeout
+mcp.server.streamable_http | Terminating session: c18a0014dc784c54bce8b8eb34b80317
+mcp.server.streamable_http_manager | Session 6b8a7c1652264a349f13e4ba8e18def4 idle timeout
+mcp.server.streamable_http | Terminating session: 6b8a7c1652264a349f13e4ba8e18def4
+mcp.server.streamable_http_manager | Session 27b575cfd2944350b5b88d7a9701019a idle timeout
+mcp.server.streamable_http | Terminating session: 27b575cfd2944350b5b88d7a9701019a
+mcp.server.streamable_http_manager | Session 01199cb4c65545e6a6d588229235caf8 idle timeout
+mcp.server.streamable_http | Terminating session: 01199cb4c65545e6a6d588229235caf8
+mcp.server.streamable_http_manager | Session 558e10a491394e25a05b0ec0740351c5 idle timeout
+mcp.server.streamable_http | Terminating session: 558e10a491394e25a05b0ec0740351c5
+mcp.server.streamable_http_manager | Session 70b8066c3b98401298326c2ce86a63f6 idle timeout
+mcp.server.streamable_http | Terminating session: 70b8066c3b98401298326c2ce86a63f6
+mcp.server.streamable_http_manager | Session ce1eedadb86545c7a14319992dd1cbae idle timeout
+mcp.server.streamable_http | Terminating session: ce1eedadb86545c7a14319992dd1cbae
+mcp.server.streamable_http_manager | Session ce0c228afcd145018aca2dc465d73fee idle timeout
+mcp.server.streamable_http | Terminating session: ce0c228afcd145018aca2dc465d73fee
+mcp.server.streamable_http_manager | Session 3672901001de4eb9a8bf24a2f4e3e109 idle timeout
+mcp.server.streamable_http | Terminating session: 3672901001de4eb9a8bf24a2f4e3e109
+mcp.server.streamable_http_manager | Session 50d3c06872bb40da80b92688b15e1115 idle timeout
+mcp.server.streamable_http | Terminating session: 50d3c06872bb40da80b92688b15e1115
+mcp.server.streamable_http_manager | Session 4df8ef647fa145e4ab37b7b493cd30c9 idle timeout
+mcp.server.streamable_http | Terminating session: 4df8ef647fa145e4ab37b7b493cd30c9
+mcp.server.streamable_http_manager | Session e7ec5ce207294e239c8aa5ff4bdada7b idle timeout
+mcp.server.streamable_http | Terminating session: e7ec5ce207294e239c8aa5ff4bdada7b
+mcp.server.streamable_http_manager | Session 36cf93ba2b6e463496f5d5f79404513b idle timeout
+mcp.server.streamable_http | Terminating session: 36cf93ba2b6e463496f5d5f79404513b
+mcp.server.streamable_http_manager | Session b41feb1ffead45e0bc5068bbd9608f2e idle timeout
+mcp.server.streamable_http | Terminating session: b41feb1ffead45e0bc5068bbd9608f2e
+mcp.server.streamable_http_manager | Session 8f77bae10bea4e81bc2e0564ad1f62d2 idle timeout
+mcp.server.streamable_http | Terminating session: 8f77bae10bea4e81bc2e0564ad1f62d2
+mcp.server.streamable_http_manager | Session e1962a252b4542938c4d3c121bde89a6 idle timeout
+mcp.server.streamable_http | Terminating session: e1962a252b4542938c4d3c121bde89a6
+mcp.server.streamable_http_manager | Session 41e773f9cd684b44ab35a8afd599dbc6 idle timeout
+mcp.server.streamable_http | Terminating session: 41e773f9cd684b44ab35a8afd599dbc6
+mcp.server.streamable_http_manager | Session 5ee610ff27be4abbae26831c1a998d7a idle timeout
+mcp.server.streamable_http | Terminating session: 5ee610ff27be4abbae26831c1a998d7a
+mcp.server.streamable_http_manager | Session 3831509d82aa45a19e6a4e71dd21a38b idle timeout
+mcp.server.streamable_http | Terminating session: 3831509d82aa45a19e6a4e71dd21a38b
+mcp.server.streamable_http_manager | Session bdec87d301d0488fba979e046454afce idle timeout
+mcp.server.streamable_http | Terminating session: bdec87d301d0488fba979e046454afce
+mcp.server.streamable_http_manager | Session 220b95c12931417daa9171fa0997e985 idle timeout
+mcp.server.streamable_http | Terminating session: 220b95c12931417daa9171fa0997e985
+mcp.server.streamable_http_manager | Session ae943a387e8a4279a9ee55d43691d3d3 idle timeout
+mcp.server.streamable_http | Terminating session: ae943a387e8a4279a9ee55d43691d3d3
+mcp.server.streamable_http_manager | Session 65a0f604b6cd431b86201d4c638f5741 idle timeout
+mcp.server.streamable_http | Terminating session: 65a0f604b6cd431b86201d4c638f5741
+mcp.server.streamable_http_manager | Session 1d3264d74f4445749b2dbb58acc24dc9 idle timeout
+mcp.server.streamable_http | Terminating session: 1d3264d74f4445749b2dbb58acc24dc9
+mcp.server.streamable_http_manager | Session 48f4652a21ef410389847416690b3dc6 idle timeout
+mcp.server.streamable_http | Terminating session: 48f4652a21ef410389847416690b3dc6
+mcp.server.streamable_http_manager | Session c70d620b3426435daeee943a082d031c idle timeout
+mcp.server.streamable_http | Terminating session: c70d620b3426435daeee943a082d031c
+mcp.server.streamable_http_manager | Session 55a984d92d1145f39449bb7a49342be3 idle timeout
+mcp.server.streamable_http | Terminating session: 55a984d92d1145f39449bb7a49342be3
+mcp.server.streamable_http_manager | Session 0d7612fcde9743e0b8052fcad597a62c idle timeout
+mcp.server.streamable_http | Terminating session: 0d7612fcde9743e0b8052fcad597a62c
+mcp.server.streamable_http_manager | Session fa4caec6ccf44af2835f5d4944845321 idle timeout
+mcp.server.streamable_http | Terminating session: fa4caec6ccf44af2835f5d4944845321
+mcp.server.streamable_http_manager | Session 480b1e8c8f7b4650b8df1dcbd6925473 idle timeout
+mcp.server.streamable_http | Terminating session: 480b1e8c8f7b4650b8df1dcbd6925473
+mcp.server.streamable_http_manager | Session 0e309429f3204f6886ee9da4157f163d idle timeout
+mcp.server.streamable_http | Terminating session: 0e309429f3204f6886ee9da4157f163d
+mcp.server.streamable_http_manager | Session 093f6aade46c4d569c5c4787f8fbd04f idle timeout
+mcp.server.streamable_http | Terminating session: 093f6aade46c4d569c5c4787f8fbd04f
+mcp.server.streamable_http_manager | Session 29640d67c3db42ac92cff31a9d47b797 idle timeout
+mcp.server.streamable_http | Terminating session: 29640d67c3db42ac92cff31a9d47b797
+mcp.server.streamable_http_manager | Session b347227b580245e58b2a87d69863f748 idle timeout
+mcp.server.streamable_http | Terminating session: b347227b580245e58b2a87d69863f748
+godot_ai.transport.websocket | Session juegofre: play state -> stopped
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+godot_ai.transport.websocket | Session juegofre: readiness -> importing
+godot_ai.transport.websocket | Session juegofre: readiness -> ready
+websockets.server | connection closed
+godot_ai.sessions.registry | Active session juegofre disconnected; no active session until next register/activate
+websockets.server | connection open
+godot_ai.transport.websocket | Session connected: juego-3d@0e51 (pid=13316, Godot 4.6.3-stable (official), C:/JUEGOs 3D/juego-3d/)
+godot_ai.transport.websocket | Session juego-3d: custom tools -> 0 registered (0 enabled)
+godot_ai.transport.websocket | Session juego-3d: readiness -> no_scene
+godot_ai.transport.websocket | Session juego-3d: scene changed to res://mapa.tscn
+godot_ai.transport.websocket | Session juego-3d: readiness -> ready
+websockets.server | connection closed
+godot_ai.sessions.registry | Active session juego-3d disconnected; no active session until next register/activate
+mcp.server.streamable_http_manager | Created new transport with session ID: dbae76d3859842bfbb5ec34d0bee9713
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: dbae76d3859842bfbb5ec34d0bee9713
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+mcp.server.streamable_http_manager | Created new transport with session ID: 224ccad6e7854d67a6ef650092bd168d
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: 224ccad6e7854d67a6ef650092bd168d
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+mcp.server.streamable_http_manager | Created new transport with session ID: ec47495d52034958ae7a6b1e650b3791
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: ec47495d52034958ae7a6b1e650b3791
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+mcp.server.streamable_http_manager | Created new transport with session ID: 08c8a4027016405389a1188b41a26cb0
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: 08c8a4027016405389a1188b41a26cb0
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+mcp.server.streamable_http_manager | Created new transport with session ID: 1c8848be99bb404eaa39e1faa3e84203
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: 1c8848be99bb404eaa39e1faa3e84203
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+mcp.server.streamable_http_manager | Created new transport with session ID: d45f29d8c5bb4845a38f67562e4680ec
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: d45f29d8c5bb4845a38f67562e4680ec
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+mcp.server.streamable_http_manager | Created new transport with session ID: 45aafaae7ab0468e9022310867a9d810
+mcp.server.streamable_http_manager | Created new transport with session ID: 0292b6953ed04c2497eb32f8611cb770
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: 0292b6953ed04c2497eb32f8611cb770
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: 45aafaae7ab0468e9022310867a9d810
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+websockets.server | connection open
+godot_ai.transport.websocket | Session connected: soul-game@93d3 (pid=13084, Godot 4.6.3-stable (official), C:/JUEGOs 3D/soul-game/)
+godot_ai.transport.websocket | Session soul-gam: custom tools -> 0 registered (0 enabled)
+mcp.server.streamable_http_manager | Created new transport with session ID: 72761e6fc4624707abe00835502ac83d
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: 72761e6fc4624707abe00835502ac83d
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+mcp.server.streamable_http_manager | Created new transport with session ID: 308ab5ab9a704007b718310dc96ace72
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: 308ab5ab9a704007b718310dc96ace72
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+mcp.server.streamable_http_manager | Created new transport with session ID: 1d053183a63f41c6810a2a13001f605d
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: 1d053183a63f41c6810a2a13001f605d
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+mcp.server.streamable_http_manager | Created new transport with session ID: c1e3c450acbb494884cbcfb7952657e6
+mcp.server.lowlevel.server | Processing request of type ListToolsRequest
+mcp.server.streamable_http | Terminating session: c1e3c450acbb494884cbcfb7952657e6
+mcp.server.streamable_http | Error in standalone SSE writer
+Traceback (most recent call last):
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\mcp\server\streamable_http.py", line 765, in standalone_sse_writer
+    async for event_message in standalone_stream_reader:
+    ...<7 lines>...
+        await sse_stream_writer.send(event_data)
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\abc\_streams.py", line 37, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tkixi\AppData\Local\uv\cache\archive-v0\r_4KqRcMQFhWb9gs\Lib\site-packages\anyio\streams\memory.py", line 141, in receive
+    raise ClosedResourceError from None
+anyio.ClosedResourceError
+websockets.server | connection closed
+godot_ai.sessions.registry | Active session soul-gam disconnected; no active session until next register/activate
+websockets.server | connection open
+godot_ai.transport.websocket | Session connected: soul-game@5a79 (pid=15064, Godot 4.6.3-stable (official), C:/JUEGOs 3D/soul-game/)
+godot_ai.transport.websocket | Session soul-gam: custom tools -> 0 registered (0 enabled)
+godot_ai.transport.websocket | Session soul-gam: readiness -> no_scene

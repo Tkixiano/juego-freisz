@@ -1,0 +1,1211 @@
+{
+  "headless": {
+    "passed": 196,
+    "total": 196,
+    "physics": {
+      "samples": 584,
+      "solid_penetration_frames_over_1px": 0,
+      "support_losses_during_motion": 0
+    },
+    "contacts": {
+      "bounces": 3,
+      "contacts": 307,
+      "drop_overstays": 0,
+      "drops": 2,
+      "duplicate_bounces_avoided": 0,
+      "restored": 2
+    },
+    "support": {
+      "19_supported_merge": {
+        "cursor": 65,
+        "floor_ticks": 52,
+        "landed": true,
+        "losses": 0,
+        "max_step_px": 5.23611450195313,
+        "max_supported_step_px": 0.0,
+        "pending": false,
+        "ticks": 65
+      },
+      "20_supported_split": {
+        "cursor": 77,
+        "floor_ticks": 63,
+        "landed": true,
+        "losses": 0,
+        "max_step_px": 5.23611450195313,
+        "max_supported_step_px": 0.0,
+        "pending": false,
+        "ticks": 77
+      },
+      "21_mobile_one_way": {
+        "cursor": 57,
+        "floor_ticks": 43,
+        "landed": true,
+        "losses": 0,
+        "max_step_px": 5.23611450195313,
+        "max_supported_step_px": 0.522022306919098,
+        "pending": false,
+        "ticks": 57
+      },
+      "27_orange_merge_split": {
+        "cursor": 36,
+        "floor_ticks": 22,
+        "landed": true,
+        "losses": 0,
+        "max_step_px": 5.23611450195313,
+        "max_supported_step_px": 0.0,
+        "pending": false,
+        "ticks": 36
+      }
+    },
+    "validation": {
+      "p50_ms": 5.235,
+      "p95_ms": 13.214,
+      "p99_ms": 22.956,
+      "mean_ms": 6.264280778262328,
+      "max_ms": 59.888,
+      "n": 2981
+    },
+    "application": {
+      "p50_ms": 0.295,
+      "p95_ms": 1.654,
+      "p99_ms": 4.633,
+      "mean_ms": 0.5050682811974436,
+      "max_ms": 19.246,
+      "n": 2973
+    },
+    "logical": {
+      "merges": 44,
+      "queued": 2973,
+      "received": 2981,
+      "rejected": 8,
+      "splits": 38
+    },
+    "deferred": 1,
+    "rebuilds": 228,
+    "wrong_identity_changes": 0,
+    "duplicate_volume_samples": 0,
+    "scenarios": [
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 1,
+        "rejected": 0,
+        "scenario": "01_solid",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 1,
+        "rejected": 0,
+        "scenario": "02_bounce",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 1,
+        "rejected": 0,
+        "scenario": "03_one_way",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 2,
+        "rejected": 0,
+        "scenario": "04_green_orange",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 2,
+        "rejected": 0,
+        "scenario": "05_green_blue",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 2,
+        "rejected": 0,
+        "scenario": "06_blue_orange",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 3,
+        "rejected": 0,
+        "scenario": "07_three",
+        "splits": 0
+      },
+      {
+        "applied": 24,
+        "frames": 24.0,
+        "merges": 1,
+        "observed": {
+          "cursor": 24,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 24
+        },
+        "rebuilds": 4,
+        "rejected": 0,
+        "scenario": "08_merge",
+        "splits": 0
+      },
+      {
+        "applied": 36,
+        "frames": 36.0,
+        "merges": 1,
+        "observed": {
+          "cursor": 36,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 36
+        },
+        "rebuilds": 6,
+        "rejected": 0,
+        "scenario": "09_split",
+        "splits": 1
+      },
+      {
+        "applied": 96,
+        "frames": 96.0,
+        "merges": 4,
+        "observed": {
+          "cursor": 96,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 96
+        },
+        "rebuilds": 16,
+        "rejected": 0,
+        "scenario": "10_cycles",
+        "splits": 3
+      },
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 2,
+        "rejected": 0,
+        "scenario": "11_hole",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 2,
+        "rejected": 0,
+        "scenario": "12_corner",
+        "splits": 0
+      },
+      {
+        "applied": 42,
+        "frames": 42.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 42,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 42
+        },
+        "rebuilds": 1,
+        "rejected": 0,
+        "scenario": "13_movement",
+        "splits": 0
+      },
+      {
+        "applied": 57,
+        "frames": 57.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 57,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 57
+        },
+        "rebuilds": 1,
+        "rejected": 0,
+        "scenario": "14_rotation",
+        "splits": 0
+      },
+      {
+        "applied": 24,
+        "frames": 24.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 24,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 24
+        },
+        "rebuilds": 2,
+        "rejected": 0,
+        "scenario": "15_silhouette",
+        "splits": 0
+      },
+      {
+        "applied": 24,
+        "frames": 24.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 24,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 24
+        },
+        "rebuilds": 2,
+        "rejected": 0,
+        "scenario": "16_material",
+        "splits": 0
+      },
+      {
+        "applied": 24,
+        "frames": 24.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 24,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 24
+        },
+        "rebuilds": 1,
+        "rejected": 0,
+        "scenario": "17_removal",
+        "splits": 0
+      },
+      {
+        "applied": 36,
+        "frames": 36.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 36,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 36
+        },
+        "rebuilds": 2,
+        "rejected": 0,
+        "scenario": "18_reappearance",
+        "splits": 0
+      },
+      {
+        "applied": 65,
+        "frames": 65.0,
+        "merges": 1,
+        "observed": {
+          "cursor": 65,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 65
+        },
+        "rebuilds": 4,
+        "rejected": 0,
+        "scenario": "19_supported_merge",
+        "splits": 0
+      },
+      {
+        "applied": 77,
+        "frames": 77.0,
+        "merges": 1,
+        "observed": {
+          "cursor": 77,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 77
+        },
+        "rebuilds": 6,
+        "rejected": 0,
+        "scenario": "20_supported_split",
+        "splits": 1
+      },
+      {
+        "applied": 57,
+        "frames": 57.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 57,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 57
+        },
+        "rebuilds": 1,
+        "rejected": 0,
+        "scenario": "21_mobile_one_way",
+        "splits": 0
+      },
+      {
+        "applied": 57,
+        "frames": 57.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 57,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 57
+        },
+        "rebuilds": 1,
+        "rejected": 0,
+        "scenario": "22_mobile_bounce",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 13.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 13,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 13
+        },
+        "rebuilds": 1,
+        "rejected": 1,
+        "scenario": "23_duplicate",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 13.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 13,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 13
+        },
+        "rebuilds": 1,
+        "rejected": 1,
+        "scenario": "24_old",
+        "splits": 0
+      },
+      {
+        "applied": 11,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 1,
+        "rejected": 1,
+        "scenario": "25_invalid",
+        "splits": 0
+      },
+      {
+        "applied": 1800,
+        "frames": 1800.0,
+        "merges": 30,
+        "observed": {
+          "cursor": 1800,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 1800
+        },
+        "rebuilds": 120,
+        "rejected": 0,
+        "scenario": "26_long",
+        "splits": 29
+      },
+      {
+        "applied": 36,
+        "frames": 36.0,
+        "merges": 1,
+        "observed": {
+          "cursor": 36,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 36
+        },
+        "rebuilds": 6,
+        "rejected": 0,
+        "scenario": "27_orange_merge_split",
+        "splits": 1
+      }
+    ]
+  },
+  "mcp": {
+    "passed": 196,
+    "total": 196,
+    "physics": {
+      "samples": 808,
+      "solid_penetration_frames_over_1px": 0,
+      "support_losses_during_motion": 0
+    },
+    "contacts": {
+      "bounces": 3,
+      "contacts": 410,
+      "drop_overstays": 0,
+      "drops": 2,
+      "duplicate_bounces_avoided": 0,
+      "restored": 2
+    },
+    "support": {
+      "19_supported_merge": {
+        "cursor": 65,
+        "floor_ticks": 51,
+        "landed": true,
+        "losses": 0,
+        "max_step_px": 5.23611450195313,
+        "max_supported_step_px": 0.0,
+        "pending": false,
+        "ticks": 65
+      },
+      "20_supported_split": {
+        "cursor": 77,
+        "floor_ticks": 63,
+        "landed": true,
+        "losses": 0,
+        "max_step_px": 5.23611450195313,
+        "max_supported_step_px": 0.0,
+        "pending": false,
+        "ticks": 77
+      },
+      "21_mobile_one_way": {
+        "cursor": 57,
+        "floor_ticks": 43,
+        "landed": true,
+        "losses": 0,
+        "max_step_px": 5.23611450195313,
+        "max_supported_step_px": 0.522022306919098,
+        "pending": false,
+        "ticks": 57
+      },
+      "27_orange_merge_split": {
+        "cursor": 36,
+        "floor_ticks": 22,
+        "landed": true,
+        "losses": 0,
+        "max_step_px": 5.23611450195313,
+        "max_supported_step_px": 0.0,
+        "pending": false,
+        "ticks": 36
+      }
+    },
+    "validation": {
+      "p50_ms": 3.943,
+      "p95_ms": 6.59,
+      "p99_ms": 7.973,
+      "mean_ms": 4.000990271720899,
+      "max_ms": 15.302,
+      "n": 2981
+    },
+    "application": {
+      "p50_ms": 0.237,
+      "p95_ms": 0.492,
+      "p99_ms": 2.541,
+      "mean_ms": 0.32597948200470905,
+      "max_ms": 15.663,
+      "n": 2973
+    },
+    "logical": {
+      "merges": 44,
+      "queued": 2973,
+      "received": 2981,
+      "rejected": 8,
+      "splits": 38
+    },
+    "deferred": 1,
+    "rebuilds": 228,
+    "wrong_identity_changes": 0,
+    "duplicate_volume_samples": 0,
+    "scenarios": [
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 1,
+        "rejected": 0,
+        "scenario": "01_solid",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 1,
+        "rejected": 0,
+        "scenario": "02_bounce",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 1,
+        "rejected": 0,
+        "scenario": "03_one_way",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 2,
+        "rejected": 0,
+        "scenario": "04_green_orange",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 2,
+        "rejected": 0,
+        "scenario": "05_green_blue",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 2,
+        "rejected": 0,
+        "scenario": "06_blue_orange",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 3,
+        "rejected": 0,
+        "scenario": "07_three",
+        "splits": 0
+      },
+      {
+        "applied": 24,
+        "frames": 24.0,
+        "merges": 1,
+        "observed": {
+          "cursor": 24,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 24
+        },
+        "rebuilds": 4,
+        "rejected": 0,
+        "scenario": "08_merge",
+        "splits": 0
+      },
+      {
+        "applied": 36,
+        "frames": 36.0,
+        "merges": 1,
+        "observed": {
+          "cursor": 36,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 36
+        },
+        "rebuilds": 6,
+        "rejected": 0,
+        "scenario": "09_split",
+        "splits": 1
+      },
+      {
+        "applied": 96,
+        "frames": 96.0,
+        "merges": 4,
+        "observed": {
+          "cursor": 96,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 96
+        },
+        "rebuilds": 16,
+        "rejected": 0,
+        "scenario": "10_cycles",
+        "splits": 3
+      },
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 2,
+        "rejected": 0,
+        "scenario": "11_hole",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 2,
+        "rejected": 0,
+        "scenario": "12_corner",
+        "splits": 0
+      },
+      {
+        "applied": 42,
+        "frames": 42.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 42,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 42
+        },
+        "rebuilds": 1,
+        "rejected": 0,
+        "scenario": "13_movement",
+        "splits": 0
+      },
+      {
+        "applied": 57,
+        "frames": 57.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 57,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 57
+        },
+        "rebuilds": 1,
+        "rejected": 0,
+        "scenario": "14_rotation",
+        "splits": 0
+      },
+      {
+        "applied": 24,
+        "frames": 24.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 24,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 24
+        },
+        "rebuilds": 2,
+        "rejected": 0,
+        "scenario": "15_silhouette",
+        "splits": 0
+      },
+      {
+        "applied": 24,
+        "frames": 24.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 24,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 24
+        },
+        "rebuilds": 2,
+        "rejected": 0,
+        "scenario": "16_material",
+        "splits": 0
+      },
+      {
+        "applied": 24,
+        "frames": 24.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 24,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 24
+        },
+        "rebuilds": 1,
+        "rejected": 0,
+        "scenario": "17_removal",
+        "splits": 0
+      },
+      {
+        "applied": 36,
+        "frames": 36.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 36,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 36
+        },
+        "rebuilds": 2,
+        "rejected": 0,
+        "scenario": "18_reappearance",
+        "splits": 0
+      },
+      {
+        "applied": 65,
+        "frames": 65.0,
+        "merges": 1,
+        "observed": {
+          "cursor": 65,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 65
+        },
+        "rebuilds": 4,
+        "rejected": 0,
+        "scenario": "19_supported_merge",
+        "splits": 0
+      },
+      {
+        "applied": 77,
+        "frames": 77.0,
+        "merges": 1,
+        "observed": {
+          "cursor": 77,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 77
+        },
+        "rebuilds": 6,
+        "rejected": 0,
+        "scenario": "20_supported_split",
+        "splits": 1
+      },
+      {
+        "applied": 57,
+        "frames": 57.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 57,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 57
+        },
+        "rebuilds": 1,
+        "rejected": 0,
+        "scenario": "21_mobile_one_way",
+        "splits": 0
+      },
+      {
+        "applied": 57,
+        "frames": 57.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 57,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 57
+        },
+        "rebuilds": 1,
+        "rejected": 0,
+        "scenario": "22_mobile_bounce",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 13.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 13,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 13
+        },
+        "rebuilds": 1,
+        "rejected": 1,
+        "scenario": "23_duplicate",
+        "splits": 0
+      },
+      {
+        "applied": 12,
+        "frames": 13.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 13,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 13
+        },
+        "rebuilds": 1,
+        "rejected": 1,
+        "scenario": "24_old",
+        "splits": 0
+      },
+      {
+        "applied": 11,
+        "frames": 12.0,
+        "merges": 0,
+        "observed": {
+          "cursor": 12,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 12
+        },
+        "rebuilds": 1,
+        "rejected": 1,
+        "scenario": "25_invalid",
+        "splits": 0
+      },
+      {
+        "applied": 1800,
+        "frames": 1800.0,
+        "merges": 30,
+        "observed": {
+          "cursor": 1800,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 1800
+        },
+        "rebuilds": 120,
+        "rejected": 0,
+        "scenario": "26_long",
+        "splits": 29
+      },
+      {
+        "applied": 36,
+        "frames": 36.0,
+        "merges": 1,
+        "observed": {
+          "cursor": 36,
+          "floor_ticks": 0,
+          "landed": false,
+          "losses": 0,
+          "max_step_px": 0.0,
+          "max_supported_step_px": 0.0,
+          "pending": false,
+          "ticks": 36
+        },
+        "rebuilds": 6,
+        "rejected": 0,
+        "scenario": "27_orange_merge_split",
+        "splits": 1
+      }
+    ]
+  },
+  "compatibility": {
+    "baseline_files": 98,
+    "changed": [
+      "juegofrei\\scripts\\geometry\\OfflineReplayPlayer.gd",
+      "juegofrei\\scripts\\material_physics\\MaterialPhysicsAdapter.gd"
+    ]
+  }
+}

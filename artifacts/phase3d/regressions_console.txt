@@ -1,0 +1,12 @@
+{"suite": "phase2b", "exit_code": 0, "seconds": 12.272007299819961}
+{"suite": "phase2a", "exit_code": 0, "seconds": 12.14551359997131}
+{"suite": "phase1a", "exit_code": 0, "seconds": 34.20599090005271}
+{"suite": "phase1c", "exit_code": 0, "seconds": 8.531150800175965}
+{"suite": "phase1d", "exit_code": 0, "seconds": 89.84906210005283}
+{"suite": "phase3b1", "exit_code": 0, "seconds": 1.255416499916464}
+{"suite": "phase3b2", "exit_code": 0, "seconds": 33.62085579987615}
+{"suite": "phase3b3", "exit_code": 0, "seconds": 61.56436929991469}
+{"suite": "phase3c", "exit_code": 0, "seconds": 49.23168379999697}
+{"suite": "phase3a", "exit_code": 0, "seconds": 7.785655900137499}
+{"suite": "phase3d", "exit_code": 0, "seconds": 49.935842300066724}
+{"suite": "parse", "exit_code": 0, "seconds": 7.024880700046197}

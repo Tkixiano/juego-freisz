@@ -1,0 +1,565 @@
+{
+  "failures": [],
+  "graphical_tests": true,
+  "hardware_used": false,
+  "label": "phase3b3",
+  "passed": 111,
+  "rows": [
+    {
+      "details": "",
+      "name": "play_opens_selection",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "four_unique_definitions",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "p1_navigate_0",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "p1_navigate_1",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "p1_navigate_2",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "p1_navigate_3",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "p2_independent_navigation",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "same_character_allowed",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "portrait_resource_displayed",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "p1_ready_does_not_start",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "ready_locks_choice",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "cancel_ready",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "change_after_cancel",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "p2_ready_does_not_start",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "left_shift_does_not_cancel_p2",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "right_shift_cancels_only_p2",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "both_ready_start_match",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "selected_visuals_instantiated",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "same_character_independent_instances",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "player_ids_controls_preserved",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "ready_input_does_not_attack_in_match",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "change_between_matches",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "selection_back_to_main",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "new_selection_resets_ready_preserves_committed_choices",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "controls_return_to_selection",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "indigo_placeholder_without_sheets",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "indigo_name_identifiable",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "indigo_identical_physics",
+      "passed": true
+    },
+    {
+      "details": "6.0",
+      "name": "indigo_light_damage",
+      "passed": true
+    },
+    {
+      "details": "14.0",
+      "name": "indigo_heavy_damage",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "indigo_dash",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "indigo_receive_damage",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "indigo_hurt_animation_state",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "indigo_respawn_keeps_selection",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "indigo_defeat_and_victory",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "indigo_restart_keeps_selection",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "amber_placeholder_without_sheets",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "amber_name_identifiable",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "amber_identical_physics",
+      "passed": true
+    },
+    {
+      "details": "6.0",
+      "name": "amber_light_damage",
+      "passed": true
+    },
+    {
+      "details": "14.0",
+      "name": "amber_heavy_damage",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "amber_dash",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "amber_receive_damage",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "amber_hurt_animation_state",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "amber_respawn_keeps_selection",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "amber_defeat_and_victory",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "amber_restart_keeps_selection",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "mint_placeholder_without_sheets",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "mint_name_identifiable",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "mint_identical_physics",
+      "passed": true
+    },
+    {
+      "details": "6.0",
+      "name": "mint_light_damage",
+      "passed": true
+    },
+    {
+      "details": "14.0",
+      "name": "mint_heavy_damage",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "mint_dash",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "mint_receive_damage",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "mint_hurt_animation_state",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "mint_respawn_keeps_selection",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "mint_defeat_and_victory",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "mint_restart_keeps_selection",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "violet_placeholder_without_sheets",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "violet_name_identifiable",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "violet_identical_physics",
+      "passed": true
+    },
+    {
+      "details": "6.0",
+      "name": "violet_light_damage",
+      "passed": true
+    },
+    {
+      "details": "14.0",
+      "name": "violet_heavy_damage",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "violet_dash",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "violet_receive_damage",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "violet_hurt_animation_state",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "violet_respawn_keeps_selection",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "violet_defeat_and_victory",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "violet_restart_keeps_selection",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "restart_does_not_duplicate_nodes",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "custom_names_frames_and_fps",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "arbitrary_frame_sizes",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "sprite_flash_parameter",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "player_flash_materials_are_independent",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "run_mapping_and_facing",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "missing_attack_falls_back_to_idle",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "one_shot_does_not_restart_every_tick",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "reconfigure_restarts_correct_idle",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "placeholder_fallback_idle",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "placeholder_fallback_run",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "placeholder_fallback_jump",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "placeholder_fallback_fall",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "placeholder_fallback_light",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "placeholder_fallback_heavy",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "placeholder_fallback_up",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "placeholder_fallback_down",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "placeholder_fallback_dash",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "placeholder_fallback_hurt",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "placeholder_fallback_defeat",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "visual_transform_does_not_scale_body_or_hitbox",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "physics_nodes_in_visual_rejected_safely",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "invalid_visual_definition_rejected",
+      "passed": true
+    },
+    {
+      "details": "[(0.6, 0.4, 0.2, 1.0), (0.6, 0.4, 0.2, 1.0)]",
+      "name": "sprite_texture_color_not_multiplied_twice",
+      "passed": true
+    },
+    {
+      "details": "(1.0, 1.0, 1.0, 1.0)",
+      "name": "sprite_impact_flash_renders_white",
+      "passed": true
+    },
+    {
+      "details": "[(0.3373, 0.2588, 0.1882, 1.0), (0.3392, 0.2588, 0.1902, 1.0)]",
+      "name": "sprite_alpha_respects_invulnerability_modulate",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "visible_Jugar",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "mouse_play_selection",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "visible_Ámbar",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "visible_Violeta",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "mouse_independent_choices",
+      "passed": true
+    },
+    {
+      "details": "[(1.0, 0.6196, 0.1608, 1.0), (1.0, 0.62, 0.16, 1.0)]",
+      "name": "preview_pixels_follow_selection_0",
+      "passed": true
+    },
+    {
+      "details": "[(0.7176, 0.3882, 0.949, 1.0), (0.72, 0.39, 0.95, 1.0)]",
+      "name": "preview_pixels_follow_selection_1",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "visible_LISTO J1",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "mouse_single_ready_waits",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "visible_Cancelar LISTO",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "mouse_cancel_ready",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "visible_LISTO J1",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "visible_LISTO J2",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "mouse_both_start",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "visible_Volver al menú principal",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "mouse_back_main",
+      "passed": true
+    }
+  ],
+  "total": 111
+}

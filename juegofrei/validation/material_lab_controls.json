@@ -1,0 +1,36 @@
+{
+  "failures": [],
+  "human_tested": false,
+  "passed": 7,
+  "rows": [
+    {
+      "name": "initial_fixture",
+      "passed": true
+    },
+    {
+      "name": "m_starts_motion",
+      "passed": true
+    },
+    {
+      "name": "m_moves_region",
+      "passed": true
+    },
+    {
+      "name": "m_does_not_rebuild",
+      "passed": true
+    },
+    {
+      "name": "m_stops_motion",
+      "passed": true
+    },
+    {
+      "name": "r_restores_fixture",
+      "passed": true
+    },
+    {
+      "name": "r_restores_players",
+      "passed": true
+    }
+  ],
+  "total": 7
+}

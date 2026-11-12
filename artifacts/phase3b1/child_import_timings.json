@@ -1,0 +1,17 @@
+{
+  "stages": [
+    {
+      "stage": "entered",
+      "elapsed_ms": 1929.1248000226915
+    },
+    {
+      "stage": "numpy",
+      "elapsed_ms": 4946.821500081569
+    },
+    {
+      "stage": "opencv",
+      "elapsed_ms": 6048.009100137278
+    }
+  ],
+  "exit_code": 0
+}

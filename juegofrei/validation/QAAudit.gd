@@ -48,6 +48,11 @@ func run_ux() -> void:
 	shell.back_button.pressed.emit()
 	check("controls_back_to_menu",shell.page==0)
 	shell.play_button.pressed.emit()
+	check("play_opens_selection",tree.paused and shell.page==4 and shell.selection.visible)
+	shell.selection.toggle_ready(0)
+	check("single_ready_does_not_start",tree.paused and shell.page==4)
+	shell.selection.toggle_ready(1)
+	await frames(2)
 	check("start_button_starts_match",not tree.paused and shell.page==1 and root.players[0].combat.damage_model.stocks==3)
 	await frames(30)
 	root.get_node("MousePlatformController").dragging=true

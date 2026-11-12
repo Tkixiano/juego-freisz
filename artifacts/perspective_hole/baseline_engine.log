@@ -1,0 +1,21 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+solid OK
+  GREEN_SOLID OK
+three OK
+  GREEN_SOLID OK
+  BLUE_BOUNCE OK
+  ORANGE_ONE_WAY OK
+hole OK
+HOLE_DELTA 0.0
+  GREEN_SOLID OK
+  ORANGE_ONE_WAY OK
+corner OK
+  GREEN_SOLID OK
+  ORANGE_ONE_WAY OK
+perspective_hole part_fills_hole
+HOLE_DELTA 0.0
+PART_HOLE_OVERLAP 0.00199833605438 [(-226.5004, 52.16758), (185.1247, 44.16613), (184.9933, 80.44254), (-226.0371, 89.20464)] [(-151.3011, -48.22731), (-150.3591, 50.6875), (111.5668, 45.596), (111.6391, -52.01428)]
+  GREEN_SOLID part_fills_hole
+  ORANGE_ONE_WAY OK
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)

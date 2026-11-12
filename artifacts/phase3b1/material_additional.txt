@@ -1,0 +1,7 @@
+test_repeated_merge_split_preserves_material_identity (tests.test_material_structures.MaterialTests.test_repeated_merge_split_preserves_material_identity) ... ok
+test_malformed_profile_is_rejected_safely (tests.test_material_structures.MaterialTests.test_malformed_profile_is_rejected_safely) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 14.244s
+
+OK

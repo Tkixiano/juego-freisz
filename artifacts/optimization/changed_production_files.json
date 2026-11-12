@@ -1,0 +1,11 @@
+[
+  "vision\\material_structures.py",
+  "vision\\structure_segmentation.py",
+  "vision\\structure_tracking.py",
+  "vision\\structure_udp.py",
+  "juegofrei\\scripts\\geometry\\MaterialGeometryValidator.gd",
+  "juegofrei\\scripts\\integrated\\RuntimeGeometrySources.gd",
+  "juegofrei\\scripts\\material_physics\\MaterialPhysicsAdapter.gd",
+  "juegofrei\\scripts\\structure_udp\\StructureProtocol.gd",
+  "juegofrei\\scripts\\structure_udp\\StructureUdpReceiver.gd"
+]

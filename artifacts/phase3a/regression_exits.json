@@ -1,0 +1,27 @@
+[
+  {
+    "suite": "phase2b",
+    "exit_code": 0,
+    "seconds": 13.805935900192708
+  },
+  {
+    "suite": "phase2a",
+    "exit_code": 0,
+    "seconds": 13.39757619984448
+  },
+  {
+    "suite": "phase1a",
+    "exit_code": 0,
+    "seconds": 33.62788360007107
+  },
+  {
+    "suite": "phase1c",
+    "exit_code": 0,
+    "seconds": 6.514506799867377
+  },
+  {
+    "suite": "phase1d",
+    "exit_code": 0,
+    "seconds": 87.94036699994467
+  }
+]

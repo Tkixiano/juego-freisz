@@ -124,11 +124,18 @@ func run(tree: SceneTree,label: String = "mcp") -> Dictionary:
 	var max_step: float = 0.0
 	var max_overlap: float = 0.0
 	var previous_position: Vector2 = player.position
+	var previous_tick: int = Engine.get_physics_frames()
+	var maximum_ticks_per_sample: int = 0
+	var normalized_step: float = 0
 	manager.update_transform(StringName(good.id),body.position+Vector2(60,0),0)
 	for step: int in range(60):
+		# Sample EVERY fixed tick; awaiting rendering can skip 2-3 physics ticks.
 		await tree.physics_frame
-		await tree.process_frame
 		if player.is_on_floor(): floor_frames += 1
+		var elapsed_ticks: int = Engine.get_physics_frames()-previous_tick
+		maximum_ticks_per_sample = maxi(maximum_ticks_per_sample,elapsed_ticks)
+		normalized_step = maxf(normalized_step,player.position.distance_to(previous_position)/maxi(1,elapsed_ticks))
+		previous_tick = Engine.get_physics_frames()
 		max_step = maxf(max_step,player.position.distance_to(previous_position))
 		previous_position = player.position
 		var rectangle: PackedVector2Array = player.global_transform*PackedVector2Array([Vector2(-20,-20),Vector2(20,-20),Vector2(20,20),Vector2(-20,20)])
@@ -137,9 +144,10 @@ func run(tree: SceneTree,label: String = "mcp") -> Dictionary:
 			overlap += Validator.intersection_area(rectangle,body.global_transform*part)
 		max_overlap = maxf(max_overlap,overlap)
 	var carry_error: float = ((player.position-start_player)-(body.position-start_body)).length()
-	measurements.append({"name":"compound_carrier","frames":60,"floor_frames":floor_frames,"carry_error_px":carry_error,"max_player_step_px":max_step,"max_overlap_area_px2":max_overlap})
+	measurements.append({"name":"compound_carrier","frames":60,"floor_frames":floor_frames,"carry_error_px":carry_error,"max_player_step_px":max_step,"max_overlap_area_px2":max_overlap,"max_physics_ticks_per_sample":maximum_ticks_per_sample,"normalized_step_px_per_tick":normalized_step})
 	check("compound_carries_character_without_rebuild",body.shape_builds==initial_builds and floor_frames>=54 and carry_error<2.5,measurements[-1])
 	check("compound_no_jump_or_deep_penetration",max_step<3 and max_overlap<2,measurements[-1])
+	check("carrier_sampled_each_physics_tick",maximum_ticks_per_sample==1,measurements[-1])
 	player.position = Vector2(1200,-500)
 	player.velocity = Vector2.ZERO
 	player.force_update_transform()

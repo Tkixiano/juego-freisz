@@ -1,0 +1,17 @@
+test_bad_frame_does_not_clear_previous (tests.test_material_structures.MaterialTests.test_bad_frame_does_not_clear_previous) ... ok
+test_conflicting_masks_have_no_double_assignment (tests.test_material_structures.MaterialTests.test_conflicting_masks_have_no_double_assignment) ... ok
+test_hsv_profile_independent_roundtrip (tests.test_material_structures.MaterialTests.test_hsv_profile_independent_roundtrip) ... ok
+test_ids_survive_different_material_merge_split (tests.test_material_structures.MaterialTests.test_ids_survive_different_material_merge_split) ... ok
+test_invalid_geometry_budget_preserves_last_partition (tests.test_material_structures.MaterialTests.test_invalid_geometry_budget_preserves_last_partition) ... ok
+test_material_change_requires_confirmation_and_version (tests.test_material_structures.MaterialTests.test_material_change_requires_confirmation_and_version) ... ok
+test_one_frame_recolor_does_not_change_ids_or_versions (tests.test_material_structures.MaterialTests.test_one_frame_recolor_does_not_change_ids_or_versions) ... ok
+test_pose_changes_do_not_change_material_geometry_version (tests.test_material_structures.MaterialTests.test_pose_changes_do_not_change_material_geometry_version) ... ok
+test_returned_snapshot_does_not_mutate_tracks (tests.test_material_structures.MaterialTests.test_returned_snapshot_does_not_mutate_tracks) ... ok
+test_same_color_ambiguous_split_gets_new_region_ids (tests.test_material_structures.MaterialTests.test_same_color_ambiguous_split_gets_new_region_ids) ... ok
+test_schema_rejects_bad_region_metadata (tests.test_material_structures.MaterialTests.test_schema_rejects_bad_region_metadata) ... ok
+test_twenty_scenarios (tests.test_material_structures.MaterialTests.test_twenty_scenarios) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 47.988s
+
+OK

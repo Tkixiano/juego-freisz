@@ -1,0 +1,125 @@
+[
+  {
+    "run": 0,
+    "spawn_return_ms": 237.38629999570549,
+    "first_frame_ms": null,
+    "transitions": [
+      {
+        "elapsed_ms": 238.49129979498684,
+        "state": "CAMERA opening",
+        "restarts": 0,
+        "serial": 0,
+        "heartbeat": 0.0
+      },
+      {
+        "elapsed_ms": 4204.122599912807,
+        "state": "CAMERA stalled/disconnected; worker restarted",
+        "restarts": 1,
+        "serial": 0,
+        "heartbeat": 0
+      },
+      {
+        "elapsed_ms": 5290.205599972978,
+        "state": "CAMERA opening",
+        "restarts": 1,
+        "serial": 0,
+        "heartbeat": 0.0
+      }
+    ],
+    "diagnostics": {
+      "state": "CAMERA closed; blocked native worker terminated",
+      "opened": false,
+      "frames_copied": 0,
+      "captured_frames": 0,
+      "measured_capture_hz": 0,
+      "capture_read_ms": 0.0,
+      "open_ms": 0.0,
+      "restarts": 1,
+      "forced_stops": 2,
+      "read_errors": 0,
+      "child_alive": false
+    }
+  },
+  {
+    "run": 1,
+    "spawn_return_ms": 130.53699978627264,
+    "first_frame_ms": null,
+    "transitions": [
+      {
+        "elapsed_ms": 130.67509979009628,
+        "state": "CAMERA opening",
+        "restarts": 0,
+        "serial": 0,
+        "heartbeat": 0.0
+      },
+      {
+        "elapsed_ms": 4106.95489984937,
+        "state": "CAMERA stalled/disconnected; worker restarted",
+        "restarts": 1,
+        "serial": 0,
+        "heartbeat": 0
+      },
+      {
+        "elapsed_ms": 5267.749999882653,
+        "state": "CAMERA opening",
+        "restarts": 1,
+        "serial": 0,
+        "heartbeat": 0.0
+      }
+    ],
+    "diagnostics": {
+      "state": "CAMERA closed; blocked native worker terminated",
+      "opened": false,
+      "frames_copied": 0,
+      "captured_frames": 0,
+      "measured_capture_hz": 0,
+      "capture_read_ms": 0.0,
+      "open_ms": 0.0,
+      "restarts": 1,
+      "forced_stops": 2,
+      "read_errors": 0,
+      "child_alive": false
+    }
+  },
+  {
+    "run": 2,
+    "spawn_return_ms": 173.83159999735653,
+    "first_frame_ms": null,
+    "transitions": [
+      {
+        "elapsed_ms": 174.91500009782612,
+        "state": "CAMERA opening",
+        "restarts": 0,
+        "serial": 0,
+        "heartbeat": 0.0
+      },
+      {
+        "elapsed_ms": 4125.583400018513,
+        "state": "CAMERA stalled/disconnected; worker restarted",
+        "restarts": 1,
+        "serial": 0,
+        "heartbeat": 0
+      },
+      {
+        "elapsed_ms": 5293.718199944124,
+        "state": "CAMERA opening",
+        "restarts": 1,
+        "serial": 0,
+        "heartbeat": 0.0
+      }
+    ],
+    "diagnostics": {
+      "state": "CAMERA closed; blocked native worker terminated",
+      "opened": false,
+      "frames_copied": 0,
+      "captured_frames": 0,
+      "measured_capture_hz": 0,
+      "capture_read_ms": 0.0,
+      "open_ms": 0.0,
+      "restarts": 1,
+      "forced_stops": 2,
+      "read_errors": 0,
+      "child_alive": false
+    }
+  }
+]

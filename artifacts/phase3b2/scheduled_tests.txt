@@ -1,0 +1,16 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+ERROR: MATERIAL_PHYSICS defense_has_priority_over_drop <null>
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://validation/MaterialPhysicsValidation.gd:30)
+       [1] run (res://validation/MaterialPhysicsValidation.gd:148)
+       [2] frames (res://validation/MaterialPhysicsValidation.gd:27)
+ERROR: MATERIAL_PHYSICS material_change_during_traversal_deferred (640.0, 379.9746)
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://validation/MaterialPhysicsValidation.gd:30)
+       [1] run (res://validation/MaterialPhysicsValidation.gd:222)
+       [2] frames (res://validation/MaterialPhysicsValidation.gd:27)
+MATERIAL_PHYSICS 136/138 [{ "name": "defense_has_priority_over_drop", "passed": false, "detail": <null> }, { "name": "material_change_during_traversal_deferred", "passed": false, "detail": (640.0, 379.9746) }]

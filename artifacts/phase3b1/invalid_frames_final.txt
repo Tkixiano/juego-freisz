@@ -1,0 +1,6 @@
+test_bad_frame_does_not_clear_previous (tests.test_material_structures.MaterialTests.test_bad_frame_does_not_clear_previous) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.700s
+
+OK

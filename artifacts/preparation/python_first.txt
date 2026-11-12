@@ -1,0 +1,23 @@
+............E......
+======================================================================
+ERROR: test_perspective_maps_convex_parts_without_hole_fill (tests.test_calibrated_geometry.CalibrationGeometryTests.test_perspective_maps_convex_parts_without_hole_fill)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\godot 4.6\juego frei\tests\test_calibrated_geometry.py", line 58, in test_perspective_maps_convex_parts_without_hole_fill
+    m=mapper([[2,.03,0],[.01,1.2,40],[.0001,.00005,1]])
+  File "C:\godot 4.6\juego frei\tests\test_calibrated_geometry.py", line 26, in mapper
+    def mapper(matrix=None,**kwargs):return CalibratedGeometryMapper(calibration(matrix),ImageLayout((640,480),(640,480)),**kwargs)
+                                                                     ~~~~~~~~~~~^^^^^^^^
+  File "C:\godot 4.6\juego frei\tests\test_calibrated_geometry.py", line 18, in calibration
+    c=ProjectionCalibration.fit(transform(np.linalg.inv(h),target),target,transform(np.linalg.inv(h),checks),checks,capture,mirror=mirror)
+  File "C:\godot 4.6\juego frei\vision\projection.py", line 69, in fit
+    source, target = points(camera,capture_size),points(projected,projection_size)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\godot 4.6\juego frei\vision\projection.py", line 29, in points
+    raise ValueError("Correspondence outside image")
+ValueError: Correspondence outside image
+
+----------------------------------------------------------------------
+Ran 19 tests in 3.900s
+
+FAILED (errors=1)

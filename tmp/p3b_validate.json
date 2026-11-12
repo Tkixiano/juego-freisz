@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "var suite: RefCounted = load(\"res://validation/MaterialGeometryValidation.gd\").new()\nreturn suite.run()"}}

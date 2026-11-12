@@ -1,0 +1,15 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+SCRIPT ERROR: Invalid assignment of property or key 'motion_paused' with value of type 'bool' on a base object of type 'Nil'.
+   at: _ready (res://scripts/geometry/OfflineReplayPlayer.gd:20)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://scripts/geometry/OfflineReplayPlayer.gd:20)
+       [1] run (res://validation/IntegratedMatchHeadless.gd:5)
+ERROR: INTEGRATED merge_split_in_match [0, 0]
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://validation/IntegratedMatchValidation.gd:17)
+       [1] run (res://validation/IntegratedMatchValidation.gd:140)
+       [2] frames (res://validation/IntegratedMatchValidation.gd:14)
+INTEGRATED 42/43 [{ "name": "merge_split_in_match", "passed": false, "detail": [0, 0] }]

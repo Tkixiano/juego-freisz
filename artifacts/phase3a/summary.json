@@ -1,0 +1,62 @@
+{
+  "phase": "3A",
+  "godot": "4.6.3",
+  "port": 5015,
+  "protocol": "DYNAMIC_STRUCTURES v1",
+  "geometry_contract_version": 1,
+  "core_checks": 160,
+  "core_headless_final_passes": 3,
+  "core_mcp_checks": 160,
+  "wire_python_tests": 21,
+  "original_regressions": {
+    "full": 235,
+    "characters_graphical": 111,
+    "characters_headless": 92,
+    "phase2a": 93,
+    "phase1a": 92,
+    "phase1c": 109,
+    "phase1d": 127,
+    "legacy_udp": 37
+  },
+  "python_full_final": {
+    "total": 131,
+    "passed": 128,
+    "failed": 3,
+    "isolated_fake_capture_class_passed": 5,
+    "known_issue": "Intermittent startup timeouts in unchanged fake capture process tests; not a clean final 131/131 run"
+  },
+  "prolonged": {
+    "source_frames": 3600,
+    "confirmed_snapshots": 3598,
+    "skipped_pending_frames": 2,
+    "seconds": 120.00052200001664,
+    "datagrams": 8997,
+    "merges": 30,
+    "splits": 29,
+    "checks": 1811,
+    "rejected": 0,
+    "gaps": 0
+  },
+  "fault_integration_checks": 49,
+  "existing_production_files_unchanged": 76,
+  "runtime_errors_or_warnings": [],
+  "physical_manager_connected": false,
+  "materials_physics_implemented": false,
+  "original_platforms_replaced": false,
+  "cameras_used": false,
+  "projector_used": false,
+  "next_phase_started": false,
+  "performance_file": "performance.json",
+  "report": "PHASE_3A_REPORT.md",
+  "protocol_spec": "PHASE_3A_PROTOCOL.md",
+  "editor_historical_errors_verified_loadable": true,
+  "new_test_warning_corrected": true,
+  "laboratory_left_open": {
+    "bind_error": 0.0,
+    "listening": true,
+    "no_physical_manager": true,
+    "port": 5015.0,
+    "scene": "res://scenes/StructureUdpLab.tscn",
+    "state": "SCENE_STALE"
+  }
+}

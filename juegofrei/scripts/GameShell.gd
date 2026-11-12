@@ -1,5 +1,5 @@
 extends CanvasLayer
-enum Page { MAIN, PLAYING, PAUSED, CONTROLS }
+enum Page { MAIN, PLAYING, PAUSED, CONTROLS, SELECTION }
 var page: Page = Page.MAIN
 var return_page: Page = Page.MAIN
 @onready var screen: ColorRect = $Screen
@@ -10,6 +10,7 @@ var return_page: Page = Page.MAIN
 @onready var restart_button: Button = $Screen/Restart
 @onready var menu_button: Button = $Screen/MainMenu
 @onready var back_button: Button = $Screen/Back
+@onready var selection: Control = $Screen/CharacterSelect
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -18,6 +19,8 @@ func _ready() -> void:
 	restart_button.pressed.connect(_restart)
 	menu_button.pressed.connect(show_main_menu)
 	back_button.pressed.connect(back)
+	selection.completed.connect(_selection_complete)
+	selection.back_requested.connect(show_main_menu)
 	show_main_menu()
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -47,6 +50,17 @@ func show_main_menu() -> void:
 	get_tree().paused = true
 	_render()
 
+func show_selection() -> void:
+	_stop_drag()
+	page = Page.SELECTION
+	get_tree().paused = true
+	selection.open(get_parent().selected_characters)
+	_render()
+
+func _selection_complete(pair: Array[Resource]) -> void:
+	if page!=Page.SELECTION or not selection.ready_flags[0] or not selection.ready_flags[1]: return
+	if get_parent().set_character_selection(pair): _restart()
+
 func show_pause() -> void:
 	_stop_drag()
 	page = Page.PAUSED
@@ -69,11 +83,12 @@ func back() -> void:
 	page = return_page
 	get_tree().paused = page != Page.PLAYING
 	_render()
+	if page==Page.SELECTION: selection.call_deferred("start_if_ready")
 
 func _on_play() -> void:
 	if page == Page.MAIN:
-		_restart()
-	else:
+		show_selection()
+	elif page == Page.PAUSED:
 		enter_game()
 
 func _restart() -> void:
@@ -81,6 +96,9 @@ func _restart() -> void:
 
 func _render() -> void:
 	screen.visible = page != Page.PLAYING
+	selection.visible = page == Page.SELECTION
+	title.visible = page!=Page.SELECTION
+	$Screen/Subtitle.visible = page!=Page.SELECTION
 	$Hint.visible = page == Page.PLAYING
 	title.text = "CUBOS / ARENA" if page == Page.MAIN else ("CONTROLES" if page == Page.CONTROLS else "PAUSA")
 	controls.visible = page == Page.CONTROLS
@@ -92,7 +110,7 @@ func _render() -> void:
 	back_button.visible = page == Page.CONTROLS
 	if page == Page.CONTROLS:
 		back_button.grab_focus()
-	elif page != Page.PLAYING:
+	elif page == Page.MAIN or page == Page.PAUSED:
 		play_button.grab_focus()
 	else:
 		get_viewport().gui_release_focus()

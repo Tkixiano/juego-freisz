@@ -1,0 +1,1 @@
+{"op": "game_eval", "params": {"code": "return {\"progress\":get_tree().current_scene.get_meta(\"full_progress\",\"waiting\"),\"results\":get_tree().current_scene.get_meta(\"full_results\",{})}"}}

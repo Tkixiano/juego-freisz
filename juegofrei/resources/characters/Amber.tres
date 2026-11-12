@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=3]
+[ext_resource type="Script" path="res://scripts/CharacterDefinition.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/CharacterAppearance.tscn" id="2"]
+[resource]
+script = ExtResource("1")
+character_id = &"amber"
+display_name = "Ámbar"
+visual_scene = ExtResource("2")
+accent = Color(1, 0.62, 0.16, 1)
+placeholder_style = 1

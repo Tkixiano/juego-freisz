@@ -1,0 +1,68 @@
+{
+  "phase": "2B",
+  "godot": "4.6.3",
+  "graphical_tests": 111,
+  "headless_tests": 92,
+  "headless_final_passes": 2,
+  "full_regression_passes": [
+    235,
+    235
+  ],
+  "phase2a": 93,
+  "phase1a": 92,
+  "phase1c": 109,
+  "phase1d": 127,
+  "legacy_udp": 37,
+  "python_synthetic_tests": 110,
+  "resources_loaded": 82,
+  "modified_production_files": [
+    "juegofrei\\scripts\\GameManager.gd",
+    "juegofrei\\scripts\\GameShell.gd",
+    "juegofrei\\scenes\\GameShell.tscn",
+    "juegofrei\\scenes\\Player.tscn"
+  ],
+  "existing_validation_updated": [
+    "juegofrei/validation/QAAudit.gd",
+    "juegofrei/validation/FunctionalAudit.gd"
+  ],
+  "camera_used": false,
+  "projector_used": false,
+  "final_spritesheets_imported": false,
+  "runtime_errors_or_warnings": [],
+  "final_inspection": {
+    "card_counts": [
+      4.0,
+      4.0
+    ],
+    "choices": [
+      1.0,
+      3.0
+    ],
+    "page": 4.0,
+    "paused": true,
+    "players": [
+      {
+        "body_scale": "(1.0, 1.0)",
+        "body_shape": "(40.0, 40.0)",
+        "character_id": "amber",
+        "left_action": "p1_left",
+        "player_id": 1.0
+      },
+      {
+        "body_scale": "(1.0, 1.0)",
+        "body_shape": "(40.0, 40.0)",
+        "character_id": "violet",
+        "left_action": "p2_left",
+        "player_id": 2.0
+      }
+    ],
+    "ready": [
+      false,
+      false
+    ],
+    "selection_visible": true
+  },
+  "report": "PHASE_2B_REPORT.md",
+  "selection_left_open": true,
+  "next_phase_started": false
+}

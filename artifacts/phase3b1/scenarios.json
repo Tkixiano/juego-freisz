@@ -1,0 +1,1690 @@
+[
+  {
+    "name": "01_green",
+    "source_frames": 10,
+    "structures": 1,
+    "regions": 1,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 5400,
+    "material_area": {
+      "GREEN_SOLID": 5400,
+      "BLUE_BOUNCE": 0,
+      "ORANGE_ONE_WAY": 0
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 0.7812000112608075,
+        "tracking_ms": 0.92299998505041,
+        "geometry_material_ms": 3.902399999788031,
+        "total_ms": 5.606999999145046
+      },
+      {
+        "segmentation_ms": 0.9423000155948102,
+        "tracking_ms": 1.6516000032424927,
+        "geometry_material_ms": 4.000399989308789,
+        "total_ms": 6.594900012714788
+      },
+      {
+        "segmentation_ms": 1.358500012429431,
+        "tracking_ms": 1.2878999987151474,
+        "geometry_material_ms": 2.393599977949634,
+        "total_ms": 5.041299998993054
+      },
+      {
+        "segmentation_ms": 1.9112000009045005,
+        "tracking_ms": 1.7395999748259783,
+        "geometry_material_ms": 3.704200003994629,
+        "total_ms": 7.355899986578152
+      },
+      {
+        "segmentation_ms": 1.1065999860875309,
+        "tracking_ms": 1.0405000066384673,
+        "geometry_material_ms": 3.2112000044435263,
+        "total_ms": 5.358800000976771
+      },
+      {
+        "segmentation_ms": 1.6034000145737082,
+        "tracking_ms": 1.908399979583919,
+        "geometry_material_ms": 2.597600017907098,
+        "total_ms": 6.110300018917769
+      }
+    ],
+    "frame_timings_ms": [
+      24.23589999671094,
+      1.9690000044647604,
+      11.200200009625405,
+      4.57520000054501,
+      5.717299995012581,
+      6.690400012303144,
+      5.538500001421198,
+      7.531299983384088,
+      5.5129999818746,
+      6.265000003622845
+    ]
+  },
+  {
+    "name": "02_blue",
+    "source_frames": 10,
+    "structures": 1,
+    "regions": 1,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 5400,
+    "material_area": {
+      "GREEN_SOLID": 0,
+      "BLUE_BOUNCE": 5400,
+      "ORANGE_ONE_WAY": 0
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 0.9462999878451228,
+        "tracking_ms": 1.7817000043578446,
+        "geometry_material_ms": 5.786800000350922,
+        "total_ms": 8.515199995599687
+      },
+      {
+        "segmentation_ms": 0.609499984420836,
+        "tracking_ms": 0.8432000176981091,
+        "geometry_material_ms": 1.870499982032925,
+        "total_ms": 3.3236999879591167
+      },
+      {
+        "segmentation_ms": 0.9756000072229654,
+        "tracking_ms": 1.113600010285154,
+        "geometry_material_ms": 2.5554999883752316,
+        "total_ms": 4.645400011213496
+      },
+      {
+        "segmentation_ms": 0.8245999924838543,
+        "tracking_ms": 1.1597000120673329,
+        "geometry_material_ms": 2.4670000129844993,
+        "total_ms": 4.451700020581484
+      },
+      {
+        "segmentation_ms": 1.0246999736409634,
+        "tracking_ms": 1.0810000239871442,
+        "geometry_material_ms": 1.8395999795757234,
+        "total_ms": 3.9456999802496284
+      },
+      {
+        "segmentation_ms": 0.7597999938298017,
+        "tracking_ms": 1.1476000072434545,
+        "geometry_material_ms": 1.3435000146273524,
+        "total_ms": 3.2512000179849565
+      }
+    ],
+    "frame_timings_ms": [
+      19.37620001262985,
+      2.2197000216692686,
+      7.943800010252744,
+      3.5887999983970076,
+      8.665100001962855,
+      3.4641999809537083,
+      4.788899997947738,
+      4.546400014078245,
+      4.047599999466911,
+      3.343499993206933
+    ]
+  },
+  {
+    "name": "03_orange",
+    "source_frames": 10,
+    "structures": 1,
+    "regions": 1,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 5400,
+    "material_area": {
+      "GREEN_SOLID": 0,
+      "BLUE_BOUNCE": 0,
+      "ORANGE_ONE_WAY": 5400
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 0.6943000189494342,
+        "tracking_ms": 0.904499989701435,
+        "geometry_material_ms": 3.6167000071145594,
+        "total_ms": 5.215900018811226
+      },
+      {
+        "segmentation_ms": 0.5842999962624162,
+        "tracking_ms": 0.7780999876558781,
+        "geometry_material_ms": 2.3323000059463084,
+        "total_ms": 3.6952999944332987
+      },
+      {
+        "segmentation_ms": 1.0134000040125102,
+        "tracking_ms": 1.2303999974392354,
+        "geometry_material_ms": 2.1149000094737858,
+        "total_ms": 4.359200014732778
+      },
+      {
+        "segmentation_ms": 0.8049000171013176,
+        "tracking_ms": 1.0028999822679907,
+        "geometry_material_ms": 1.7823000089265406,
+        "total_ms": 3.590700012864545
+      },
+      {
+        "segmentation_ms": 0.6798000249546021,
+        "tracking_ms": 0.7441999914590269,
+        "geometry_material_ms": 1.9202999828848988,
+        "total_ms": 3.344700002344325
+      },
+      {
+        "segmentation_ms": 0.5092000064905733,
+        "tracking_ms": 0.8544999873265624,
+        "geometry_material_ms": 2.1026000031270087,
+        "total_ms": 3.466800000751391
+      }
+    ],
+    "frame_timings_ms": [
+      10.707800014642999,
+      1.0184999846387655,
+      7.415300002321601,
+      2.828199998475611,
+      5.3456000168807805,
+      3.8277999847196043,
+      4.500999988522381,
+      3.7338999973144382,
+      3.4494000137783587,
+      3.624600009061396
+    ]
+  },
+  {
+    "name": "04_separate",
+    "source_frames": 10,
+    "structures": 2,
+    "regions": 2,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 10800,
+    "material_area": {
+      "GREEN_SOLID": 5400,
+      "BLUE_BOUNCE": 5400,
+      "ORANGE_ONE_WAY": 0
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 0.7526000263169408,
+        "tracking_ms": 2.247999975224957,
+        "geometry_material_ms": 9.556100005283952,
+        "total_ms": 12.556900008348748
+      },
+      {
+        "segmentation_ms": 0.5003000260330737,
+        "tracking_ms": 0.9444999741390347,
+        "geometry_material_ms": 2.3901000095065683,
+        "total_ms": 3.8352000119630247
+      },
+      {
+        "segmentation_ms": 0.7949999999254942,
+        "tracking_ms": 0.978299998678267,
+        "geometry_material_ms": 4.612999997334555,
+        "total_ms": 6.386599998222664
+      },
+      {
+        "segmentation_ms": 0.48900002730078995,
+        "tracking_ms": 0.9865999745670706,
+        "geometry_material_ms": 2.9310000245459378,
+        "total_ms": 4.407400003401563
+      },
+      {
+        "segmentation_ms": 0.8156000112649053,
+        "tracking_ms": 1.4543999859597534,
+        "geometry_material_ms": 3.122100024484098,
+        "total_ms": 5.392799997935072
+      },
+      {
+        "segmentation_ms": 0.7916000031400472,
+        "tracking_ms": 1.3892999850213528,
+        "geometry_material_ms": 4.6864000032655895,
+        "total_ms": 6.8678999959956855
+      }
+    ],
+    "frame_timings_ms": [
+      15.8829000138212,
+      1.9876999722328037,
+      7.7797999838367105,
+      3.78850000561215,
+      12.699400016572326,
+      3.9616000140085816,
+      6.547400000272319,
+      4.573900019749999,
+      5.543800012674183,
+      7.052600005408749
+    ]
+  },
+  {
+    "name": "05_green_orange",
+    "source_frames": 10,
+    "structures": 1,
+    "regions": 2,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 10800,
+    "material_area": {
+      "GREEN_SOLID": 5400,
+      "BLUE_BOUNCE": 0,
+      "ORANGE_ONE_WAY": 5400
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 1.381699985358864,
+        "tracking_ms": 1.105000003008172,
+        "geometry_material_ms": 4.198999988147989,
+        "total_ms": 6.685899978037924
+      },
+      {
+        "segmentation_ms": 0.5693999992217869,
+        "tracking_ms": 0.674999988405034,
+        "geometry_material_ms": 1.822199992602691,
+        "total_ms": 3.06689998251386
+      },
+      {
+        "segmentation_ms": 1.236199983395636,
+        "tracking_ms": 0.747899990528822,
+        "geometry_material_ms": 1.9800000009126961,
+        "total_ms": 3.9644999778829515
+      },
+      {
+        "segmentation_ms": 0.7780000159982592,
+        "tracking_ms": 0.7862999918870628,
+        "geometry_material_ms": 4.182800010312349,
+        "total_ms": 5.747700022766367
+      },
+      {
+        "segmentation_ms": 1.373999984934926,
+        "tracking_ms": 1.7410000145900995,
+        "geometry_material_ms": 3.763099986827001,
+        "total_ms": 6.8786999909207225
+      },
+      {
+        "segmentation_ms": 0.7151000027079135,
+        "tracking_ms": 1.0207000013906509,
+        "geometry_material_ms": 3.124799986835569,
+        "total_ms": 4.861399997025728
+      }
+    ],
+    "frame_timings_ms": [
+      14.196200005244464,
+      3.4886000212281942,
+      9.87650000024587,
+      4.405099985888228,
+      6.794399989303201,
+      3.161600005114451,
+      4.066099994815886,
+      5.845600011525676,
+      7.082900003297254,
+      5.005699989851564
+    ]
+  },
+  {
+    "name": "06_blue_orange",
+    "source_frames": 10,
+    "structures": 1,
+    "regions": 2,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 10800,
+    "material_area": {
+      "GREEN_SOLID": 0,
+      "BLUE_BOUNCE": 5400,
+      "ORANGE_ONE_WAY": 5400
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 0.8552999934181571,
+        "tracking_ms": 0.7340000011026859,
+        "geometry_material_ms": 4.085299995495006,
+        "total_ms": 5.674799991538748
+      },
+      {
+        "segmentation_ms": 0.6433000089600682,
+        "tracking_ms": 0.6583999784197658,
+        "geometry_material_ms": 3.0100000149104744,
+        "total_ms": 4.3126000091433525
+      },
+      {
+        "segmentation_ms": 0.8319000189658254,
+        "tracking_ms": 0.9378999820910394,
+        "geometry_material_ms": 4.480000003241003,
+        "total_ms": 6.250400008866563
+      },
+      {
+        "segmentation_ms": 0.8376000041607767,
+        "tracking_ms": 0.7948999991640449,
+        "geometry_material_ms": 2.7200999902561307,
+        "total_ms": 4.3528999958653
+      },
+      {
+        "segmentation_ms": 0.8099999977275729,
+        "tracking_ms": 1.2466000043787062,
+        "geometry_material_ms": 2.9408999835141003,
+        "total_ms": 4.997699987143278
+      },
+      {
+        "segmentation_ms": 0.6365000153891742,
+        "tracking_ms": 0.7810999813955277,
+        "geometry_material_ms": 2.3728000232949853,
+        "total_ms": 3.791600000113249
+      }
+    ],
+    "frame_timings_ms": [
+      11.041700025089085,
+      1.1889999732375145,
+      7.864700019126758,
+      3.118599997833371,
+      5.799500009743497,
+      4.462199984118342,
+      6.401799997547641,
+      4.485100012971088,
+      5.0832999986596406,
+      3.9192000112961978
+    ]
+  },
+  {
+    "name": "07_three_materials",
+    "source_frames": 10,
+    "structures": 1,
+    "regions": 3,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 12600,
+    "material_area": {
+      "GREEN_SOLID": 4200,
+      "BLUE_BOUNCE": 4200,
+      "ORANGE_ONE_WAY": 4200
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 1.7931000038515776,
+        "tracking_ms": 1.3175999920349568,
+        "geometry_material_ms": 4.460700001800433,
+        "total_ms": 7.571800000732765
+      },
+      {
+        "segmentation_ms": 0.7052999862935394,
+        "tracking_ms": 0.9064000041689724,
+        "geometry_material_ms": 2.5978999910876155,
+        "total_ms": 4.210099985357374
+      },
+      {
+        "segmentation_ms": 0.5183999892324209,
+        "tracking_ms": 0.534699996933341,
+        "geometry_material_ms": 3.709400014486164,
+        "total_ms": 4.762900003697723
+      },
+      {
+        "segmentation_ms": 1.4381000073626637,
+        "tracking_ms": 0.9828999754972756,
+        "geometry_material_ms": 3.213200019672513,
+        "total_ms": 5.6345000048168
+      },
+      {
+        "segmentation_ms": 0.7391999824903905,
+        "tracking_ms": 0.5065000150352716,
+        "geometry_material_ms": 1.7899000085890293,
+        "total_ms": 3.0359000083990395
+      },
+      {
+        "segmentation_ms": 0.49649999709799886,
+        "tracking_ms": 0.6735000060871243,
+        "geometry_material_ms": 2.049800008535385,
+        "total_ms": 3.220000013243407
+      }
+    ],
+    "frame_timings_ms": [
+      12.273200001800433,
+      0.8181000011973083,
+      10.343800007831305,
+      5.329900013748556,
+      7.739699998637661,
+      4.334499972173944,
+      5.049400002462789,
+      5.78859998495318,
+      3.146200004266575,
+      3.333900007419288
+    ]
+  },
+  {
+    "name": "08_two_green_joined",
+    "source_frames": 10,
+    "structures": 1,
+    "regions": 1,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 10800,
+    "material_area": {
+      "GREEN_SOLID": 10800,
+      "BLUE_BOUNCE": 0,
+      "ORANGE_ONE_WAY": 0
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 0.540299981366843,
+        "tracking_ms": 0.8174000249709934,
+        "geometry_material_ms": 4.958799981977791,
+        "total_ms": 6.317199993645772
+      },
+      {
+        "segmentation_ms": 0.8470999891869724,
+        "tracking_ms": 1.1675999849103391,
+        "geometry_material_ms": 2.3182000149972737,
+        "total_ms": 4.333499993663281
+      },
+      {
+        "segmentation_ms": 0.7143999973777682,
+        "tracking_ms": 0.8509000181220472,
+        "geometry_material_ms": 1.938400004291907,
+        "total_ms": 3.504299995256588
+      },
+      {
+        "segmentation_ms": 0.7799000013619661,
+        "tracking_ms": 0.6747000152245164,
+        "geometry_material_ms": 1.9988999993074685,
+        "total_ms": 3.454100020462647
+      },
+      {
+        "segmentation_ms": 0.6305999995674938,
+        "tracking_ms": 0.9264000109396875,
+        "geometry_material_ms": 2.5311000063084066,
+        "total_ms": 4.088600020622835
+      },
+      {
+        "segmentation_ms": 0.8765000093262643,
+        "tracking_ms": 0.9272999886889011,
+        "geometry_material_ms": 2.4667000107001513,
+        "total_ms": 4.271000012522563
+      }
+    ],
+    "frame_timings_ms": [
+      10.475199989741668,
+      1.4804000093135983,
+      6.914500001585111,
+      2.591800002846867,
+      6.466799997724593,
+      4.498800000874326,
+      3.6549000069499016,
+      3.5872000153176486,
+      4.223099997034296,
+      4.404500010423362
+    ]
+  },
+  {
+    "name": "09_three_green_regions",
+    "source_frames": 10,
+    "structures": 1,
+    "regions": 4,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 15000,
+    "material_area": {
+      "GREEN_SOLID": 7200,
+      "BLUE_BOUNCE": 7800,
+      "ORANGE_ONE_WAY": 0
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 0.8712999988347292,
+        "tracking_ms": 2.2049000253900886,
+        "geometry_material_ms": 9.284699975978583,
+        "total_ms": 12.361200002487749
+      },
+      {
+        "segmentation_ms": 0.6274000043049455,
+        "tracking_ms": 0.6817000103183091,
+        "geometry_material_ms": 4.552799975499511,
+        "total_ms": 5.862199992407113
+      },
+      {
+        "segmentation_ms": 0.7319000142160803,
+        "tracking_ms": 1.1334999871905893,
+        "geometry_material_ms": 4.001900000730529,
+        "total_ms": 5.867700005182996
+      },
+      {
+        "segmentation_ms": 0.5190000229049474,
+        "tracking_ms": 0.7349999796133488,
+        "geometry_material_ms": 5.481700005475432,
+        "total_ms": 6.736500014085323
+      },
+      {
+        "segmentation_ms": 0.6836999964434654,
+        "tracking_ms": 1.0473000002093613,
+        "geometry_material_ms": 5.065200006356463,
+        "total_ms": 6.797000009100884
+      },
+      {
+        "segmentation_ms": 0.753400003304705,
+        "tracking_ms": 1.3922999787610024,
+        "geometry_material_ms": 5.540300015127286,
+        "total_ms": 7.686299999477342
+      }
+    ],
+    "frame_timings_ms": [
+      13.442199997371063,
+      1.0978999780490994,
+      7.393599982606247,
+      4.018299980089068,
+      12.656100007006899,
+      6.102300016209483,
+      6.173200003104284,
+      6.966700020711869,
+      7.11910001700744,
+      7.860799989430234
+    ]
+  },
+  {
+    "name": "10_merge",
+    "source_frames": 20,
+    "structures": 1,
+    "regions": 2,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 10800,
+    "material_area": {
+      "GREEN_SOLID": 5400,
+      "BLUE_BOUNCE": 5400,
+      "ORANGE_ONE_WAY": 0
+    },
+    "merges": 1,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 0.8747999963816255,
+        "tracking_ms": 1.4643000031355768,
+        "geometry_material_ms": 6.087699992349371,
+        "total_ms": 8.428599976468831
+      },
+      {
+        "segmentation_ms": 1.2153999996371567,
+        "tracking_ms": 1.7127000028267503,
+        "geometry_material_ms": 3.4690999891608953,
+        "total_ms": 6.3975999946706
+      },
+      {
+        "segmentation_ms": 1.1264999920967966,
+        "tracking_ms": 1.6848999948706478,
+        "geometry_material_ms": 4.883499990683049,
+        "total_ms": 7.696099986787885
+      },
+      {
+        "segmentation_ms": 0.8365999965462834,
+        "tracking_ms": 1.425599999492988,
+        "geometry_material_ms": 3.447099996265024,
+        "total_ms": 5.710400000680238
+      },
+      {
+        "segmentation_ms": 1.0145000123884529,
+        "tracking_ms": 1.728900009766221,
+        "geometry_material_ms": 3.40469999355264,
+        "total_ms": 6.14870002027601
+      },
+      {
+        "segmentation_ms": 1.029300008667633,
+        "tracking_ms": 2.1689999848604202,
+        "geometry_material_ms": 8.110900002066046,
+        "total_ms": 11.309699999401346
+      },
+      {
+        "segmentation_ms": 1.6128999995999038,
+        "tracking_ms": 1.209399983054027,
+        "geometry_material_ms": 4.110500012757257,
+        "total_ms": 6.933299999218434
+      },
+      {
+        "segmentation_ms": 0.8188000065274537,
+        "tracking_ms": 0.7920000061858445,
+        "geometry_material_ms": 3.7115000013727695,
+        "total_ms": 5.323000019416213
+      },
+      {
+        "segmentation_ms": 1.3676999951712787,
+        "tracking_ms": 0.9166000236291438,
+        "geometry_material_ms": 2.507399971364066,
+        "total_ms": 4.792399995494634
+      },
+      {
+        "segmentation_ms": 0.916799996048212,
+        "tracking_ms": 0.9024000028148293,
+        "geometry_material_ms": 2.925900014815852,
+        "total_ms": 4.7454000159632415
+      },
+      {
+        "segmentation_ms": 1.0167000000365078,
+        "tracking_ms": 0.6906000198796391,
+        "geometry_material_ms": 2.618499973323196,
+        "total_ms": 4.3268000008538365
+      },
+      {
+        "segmentation_ms": 0.8363999950233847,
+        "tracking_ms": 0.8651000098325312,
+        "geometry_material_ms": 4.427200008649379,
+        "total_ms": 6.129700021119788
+      }
+    ],
+    "frame_timings_ms": [
+      10.959100007312372,
+      1.7174999811686575,
+      10.023600014392287,
+      4.20039999880828,
+      8.71929997811094,
+      6.58129999646917,
+      7.892699999501929,
+      5.892399989534169,
+      6.337900005746633,
+      11.598799988860264,
+      14.864600001601502,
+      1.6094000020530075,
+      5.6229999754577875,
+      5.1472999912220985,
+      7.017600000835955,
+      5.458500003442168,
+      5.113499995786697,
+      4.87600002088584,
+      4.4507000129669905,
+      6.304600014118478
+    ]
+  },
+  {
+    "name": "11_split",
+    "source_frames": 32,
+    "structures": 2,
+    "regions": 2,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 10800,
+    "material_area": {
+      "GREEN_SOLID": 5400,
+      "BLUE_BOUNCE": 5400,
+      "ORANGE_ONE_WAY": 0
+    },
+    "merges": 1,
+    "splits": 1,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 0.6114999996498227,
+        "tracking_ms": 0.8518999966327101,
+        "geometry_material_ms": 3.3184000058099627,
+        "total_ms": 4.782000003615394
+      },
+      {
+        "segmentation_ms": 0.4735999973490834,
+        "tracking_ms": 0.9414000087417662,
+        "geometry_material_ms": 2.7095999976154417,
+        "total_ms": 4.125200008274987
+      },
+      {
+        "segmentation_ms": 1.353900006506592,
+        "tracking_ms": 1.1135000095237046,
+        "geometry_material_ms": 2.230199985206127,
+        "total_ms": 4.698000004282221
+      },
+      {
+        "segmentation_ms": 0.5066999874543399,
+        "tracking_ms": 0.895500008482486,
+        "geometry_material_ms": 3.733499994268641,
+        "total_ms": 5.136899999342859
+      },
+      {
+        "segmentation_ms": 0.9895999974105507,
+        "tracking_ms": 1.816600008169189,
+        "geometry_material_ms": 4.15890000294894,
+        "total_ms": 6.965400010813028
+      },
+      {
+        "segmentation_ms": 1.1428999714553356,
+        "tracking_ms": 1.2348000018391758,
+        "geometry_material_ms": 2.2225000138860196,
+        "total_ms": 4.60039998870343
+      },
+      {
+        "segmentation_ms": 0.8674999990034848,
+        "tracking_ms": 0.531300000147894,
+        "geometry_material_ms": 4.366099979961291,
+        "total_ms": 5.7656999852042645
+      },
+      {
+        "segmentation_ms": 0.7830999966245145,
+        "tracking_ms": 0.4901000065729022,
+        "geometry_material_ms": 2.6599999982863665,
+        "total_ms": 3.9336000045295805
+      },
+      {
+        "segmentation_ms": 0.8387000125367194,
+        "tracking_ms": 0.7523999956902117,
+        "geometry_material_ms": 2.2393999970518053,
+        "total_ms": 3.8309000083245337
+      },
+      {
+        "segmentation_ms": 0.6351000047288835,
+        "tracking_ms": 0.6138000171631575,
+        "geometry_material_ms": 2.432299981592223,
+        "total_ms": 3.6816000065300614
+      },
+      {
+        "segmentation_ms": 0.5320000054780394,
+        "tracking_ms": 0.5556999822147191,
+        "geometry_material_ms": 2.8347000188659877,
+        "total_ms": 3.9226000080816448
+      },
+      {
+        "segmentation_ms": 0.8174999966286123,
+        "tracking_ms": 0.7387000077869743,
+        "geometry_material_ms": 3.257500007748604,
+        "total_ms": 4.814000014448538
+      },
+      {
+        "segmentation_ms": 0.5984000163152814,
+        "tracking_ms": 1.0865999793168157,
+        "geometry_material_ms": 3.471100004389882,
+        "total_ms": 5.156400002306327
+      },
+      {
+        "segmentation_ms": 0.7597999938298017,
+        "tracking_ms": 2.0287999941501766,
+        "geometry_material_ms": 3.517800010740757,
+        "total_ms": 6.306700001005083
+      },
+      {
+        "segmentation_ms": 0.6434999813791364,
+        "tracking_ms": 1.20160001097247,
+        "geometry_material_ms": 2.279200009070337,
+        "total_ms": 4.1244999738410115
+      },
+      {
+        "segmentation_ms": 0.6182000215630978,
+        "tracking_ms": 1.1644999904092401,
+        "geometry_material_ms": 2.212599996710196,
+        "total_ms": 3.9955000102054328
+      },
+      {
+        "segmentation_ms": 0.5494999932125211,
+        "tracking_ms": 0.8730000117793679,
+        "geometry_material_ms": 3.4346999891567975,
+        "total_ms": 4.857399995671585
+      },
+      {
+        "segmentation_ms": 0.9713000035844743,
+        "tracking_ms": 1.7653999966569245,
+        "geometry_material_ms": 3.8398999895434827,
+        "total_ms": 6.577099993592128
+      },
+      {
+        "segmentation_ms": 1.045300014084205,
+        "tracking_ms": 1.42529999720864,
+        "geometry_material_ms": 4.3077000009361655,
+        "total_ms": 6.7789000167977065
+      }
+    ],
+    "frame_timings_ms": [
+      14.616200001910329,
+      2.0102999988012016,
+      6.736999988788739,
+      2.8811999945901334,
+      4.906899994239211,
+      4.292500001611188,
+      4.882400011410937,
+      5.910799984121695,
+      7.184999994933605,
+      4.712799971457571,
+      11.095999972894788,
+      2.057200006674975,
+      4.933599993819371,
+      3.553400019882247,
+      5.964799987850711,
+      4.1077999921981245,
+      3.959900001063943,
+      3.817400021944195,
+      4.041599982883781,
+      4.932600015308708,
+      8.517099980963394,
+      1.080799993360415,
+      2.1637000027112663,
+      5.596299975877628,
+      3.1381000007968396,
+      5.269399989629164,
+      6.481699994765222,
+      4.2483999859541655,
+      4.149400017922744,
+      4.986399988410994,
+      6.755899987183511,
+      7.044099998893216
+    ]
+  },
+  {
+    "name": "12_holes",
+    "source_frames": 10,
+    "structures": 1,
+    "regions": 3,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 23300,
+    "material_area": {
+      "GREEN_SOLID": 20300,
+      "BLUE_BOUNCE": 2000,
+      "ORANGE_ONE_WAY": 1000
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 1.3565999979618937,
+        "tracking_ms": 2.594999998109415,
+        "geometry_material_ms": 8.788400009507313,
+        "total_ms": 12.740200007101521
+      },
+      {
+        "segmentation_ms": 0.7372999971266836,
+        "tracking_ms": 0.9437999979127198,
+        "geometry_material_ms": 5.811699986224994,
+        "total_ms": 7.493199984310195
+      },
+      {
+        "segmentation_ms": 1.587199978530407,
+        "tracking_ms": 3.445800015470013,
+        "geometry_material_ms": 6.328399991616607,
+        "total_ms": 11.361699987901375
+      },
+      {
+        "segmentation_ms": 0.6210000137798488,
+        "tracking_ms": 1.2892999802716076,
+        "geometry_material_ms": 10.00090001616627,
+        "total_ms": 11.912599991774186
+      },
+      {
+        "segmentation_ms": 1.258500007679686,
+        "tracking_ms": 1.7279000021517277,
+        "geometry_material_ms": 7.238999998662621,
+        "total_ms": 10.225800011539832
+      },
+      {
+        "segmentation_ms": 1.5084000187925994,
+        "tracking_ms": 3.141900000628084,
+        "geometry_material_ms": 6.056499987607822,
+        "total_ms": 10.707200010074303
+      }
+    ],
+    "frame_timings_ms": [
+      18.31690000835806,
+      1.545200007967651,
+      22.71159997326322,
+      7.733799982815981,
+      12.94479999342002,
+      7.979599991813302,
+      11.63199997972697,
+      12.322099995799363,
+      10.626300005242229,
+      10.99199999589473
+    ]
+  },
+  {
+    "name": "13_concave",
+    "source_frames": 10,
+    "structures": 1,
+    "regions": 2,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 11600,
+    "material_area": {
+      "GREEN_SOLID": 5600,
+      "BLUE_BOUNCE": 0,
+      "ORANGE_ONE_WAY": 6000
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 0.7373999978881329,
+        "tracking_ms": 0.9368000028189272,
+        "geometry_material_ms": 6.9967000163160264,
+        "total_ms": 8.671300020068884
+      },
+      {
+        "segmentation_ms": 0.6541000038851053,
+        "tracking_ms": 0.8929999894462526,
+        "geometry_material_ms": 3.558399999747053,
+        "total_ms": 5.105899996124208
+      },
+      {
+        "segmentation_ms": 0.7267000037245452,
+        "tracking_ms": 1.1149999918416142,
+        "geometry_material_ms": 3.791099996306002,
+        "total_ms": 5.633199994917959
+      },
+      {
+        "segmentation_ms": 0.8548999903723598,
+        "tracking_ms": 1.2150000256951898,
+        "geometry_material_ms": 3.2417999755125493,
+        "total_ms": 5.312099994625896
+      },
+      {
+        "segmentation_ms": 0.6130000110715628,
+        "tracking_ms": 1.0204999998677522,
+        "geometry_material_ms": 2.9731999966315925,
+        "total_ms": 4.607100010616705
+      },
+      {
+        "segmentation_ms": 0.48619997687637806,
+        "tracking_ms": 0.7403000199701637,
+        "geometry_material_ms": 3.0141999886836857,
+        "total_ms": 4.241199989337474
+      }
+    ],
+    "frame_timings_ms": [
+      14.986800000770018,
+      1.894799992442131,
+      11.474900005850941,
+      3.5294000117573887,
+      8.842800016282126,
+      5.328600003849715,
+      5.783899978268892,
+      5.460500018671155,
+      4.753499990329146,
+      4.485199984628707
+    ]
+  },
+  {
+    "name": "14_corner",
+    "source_frames": 12,
+    "structures": 1,
+    "regions": 2,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 4800,
+    "material_area": {
+      "GREEN_SOLID": 2400,
+      "BLUE_BOUNCE": 0,
+      "ORANGE_ONE_WAY": 2400
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 0.8246999932453036,
+        "tracking_ms": 0.9962000185623765,
+        "geometry_material_ms": 5.399799993028864,
+        "total_ms": 7.221100007882342
+      },
+      {
+        "segmentation_ms": 0.6297000218182802,
+        "tracking_ms": 1.213699986692518,
+        "geometry_material_ms": 2.424700011033565,
+        "total_ms": 4.268400021828711
+      },
+      {
+        "segmentation_ms": 0.5584000027738512,
+        "tracking_ms": 1.2292999890632927,
+        "geometry_material_ms": 2.6532000047154725,
+        "total_ms": 4.441600001882762
+      },
+      {
+        "segmentation_ms": 0.8916000078897923,
+        "tracking_ms": 1.351799990516156,
+        "geometry_material_ms": 2.698900003451854,
+        "total_ms": 4.9427000049036
+      },
+      {
+        "segmentation_ms": 0.516500003868714,
+        "tracking_ms": 0.9419999842066318,
+        "geometry_material_ms": 2.0938000234309584,
+        "total_ms": 3.5525999846868217
+      },
+      {
+        "segmentation_ms": 0.7770999800413847,
+        "tracking_ms": 0.7792000251356512,
+        "geometry_material_ms": 1.871399988885969,
+        "total_ms": 3.428099997108802
+      }
+    ],
+    "frame_timings_ms": [
+      11.403400014387444,
+      0.5406000127550215,
+      0.603899999987334,
+      0.4845999937970191,
+      4.648200003430247,
+      3.7400000146590173,
+      7.388199999695644,
+      4.440300021087751,
+      4.60029998794198,
+      5.098699999507517,
+      3.657799999928102,
+      3.57509998138994
+    ]
+  },
+  {
+    "name": "15_thin",
+    "source_frames": 12,
+    "structures": 1,
+    "regions": 2,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 1820,
+    "material_area": {
+      "GREEN_SOLID": 1600,
+      "BLUE_BOUNCE": 0,
+      "ORANGE_ONE_WAY": 220
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 0.5637999856844544,
+        "tracking_ms": 0.6807000027038157,
+        "geometry_material_ms": 4.248300014296547,
+        "total_ms": 5.493599979672581
+      },
+      {
+        "segmentation_ms": 0.6836999964434654,
+        "tracking_ms": 1.066600001649931,
+        "geometry_material_ms": 2.9155999945942312,
+        "total_ms": 4.666399996494874
+      },
+      {
+        "segmentation_ms": 0.6147999956738204,
+        "tracking_ms": 0.9380000119563192,
+        "geometry_material_ms": 2.3492999898735434,
+        "total_ms": 3.9040000119712204
+      },
+      {
+        "segmentation_ms": 0.524500006577,
+        "tracking_ms": 0.7249999907799065,
+        "geometry_material_ms": 2.4113999970722944,
+        "total_ms": 3.6613999982364476
+      },
+      {
+        "segmentation_ms": 0.7705000170972198,
+        "tracking_ms": 1.055800006724894,
+        "geometry_material_ms": 2.661199978319928,
+        "total_ms": 4.48780000442639
+      },
+      {
+        "segmentation_ms": 0.7631999906152487,
+        "tracking_ms": 1.1397000052966177,
+        "geometry_material_ms": 3.4588999988045543,
+        "total_ms": 5.362399999285117
+      },
+      {
+        "segmentation_ms": 0.7701000140514225,
+        "tracking_ms": 0.9680000075604767,
+        "geometry_material_ms": 1.7899999802466482,
+        "total_ms": 3.5285000049043447
+      },
+      {
+        "segmentation_ms": 0.6331000186037272,
+        "tracking_ms": 0.8835999760776758,
+        "geometry_material_ms": 2.4762999964877963,
+        "total_ms": 3.993799997260794
+      }
+    ],
+    "frame_timings_ms": [
+      11.895300005562603,
+      0.9254000033251941,
+      5.389600002672523,
+      1.8074999970849603,
+      5.6671999918762594,
+      4.862400004640222,
+      4.08179999794811,
+      3.8111000030767173,
+      4.637100006220862,
+      5.504799977643415,
+      3.654400003142655,
+      4.0979000041261315
+    ]
+  },
+  {
+    "name": "16_chromatic_noise",
+    "source_frames": 10,
+    "structures": 1,
+    "regions": 3,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 12600,
+    "material_area": {
+      "GREEN_SOLID": 4200,
+      "BLUE_BOUNCE": 4200,
+      "ORANGE_ONE_WAY": 4200
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 0.901099992915988,
+        "tracking_ms": 0.988499989034608,
+        "geometry_material_ms": 4.190200008451939,
+        "total_ms": 6.080099992686883
+      },
+      {
+        "segmentation_ms": 0.5718999891541898,
+        "tracking_ms": 0.8976000244729221,
+        "geometry_material_ms": 3.981499990914017,
+        "total_ms": 5.451600009109825
+      },
+      {
+        "segmentation_ms": 1.3111000007484108,
+        "tracking_ms": 1.6823000041767955,
+        "geometry_material_ms": 3.3856000227387995,
+        "total_ms": 6.379500002367422
+      },
+      {
+        "segmentation_ms": 0.8971999923232943,
+        "tracking_ms": 0.9505999914836138,
+        "geometry_material_ms": 2.159600000595674,
+        "total_ms": 4.007899988209829
+      },
+      {
+        "segmentation_ms": 0.748499995097518,
+        "tracking_ms": 1.30229999194853,
+        "geometry_material_ms": 3.658700006781146,
+        "total_ms": 5.709899996872991
+      },
+      {
+        "segmentation_ms": 0.8775000169407576,
+        "tracking_ms": 1.2015999818686396,
+        "geometry_material_ms": 3.934100008336827,
+        "total_ms": 6.014300015522167
+      }
+    ],
+    "frame_timings_ms": [
+      16.42969998647459,
+      1.7096000083256513,
+      7.804199995007366,
+      3.185000008670613,
+      6.205999990925193,
+      5.688900011591613,
+      6.553600018378347,
+      4.127499996684492,
+      5.863999977009371,
+      6.168699997942895
+    ]
+  },
+  {
+    "name": "17_near_hues",
+    "source_frames": 10,
+    "structures": 1,
+    "regions": 3,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 12600,
+    "material_area": {
+      "GREEN_SOLID": 4200,
+      "BLUE_BOUNCE": 4200,
+      "ORANGE_ONE_WAY": 4200
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 1.0683999862521887,
+        "tracking_ms": 1.0933000012300909,
+        "geometry_material_ms": 5.519400001503527,
+        "total_ms": 7.681499992031604
+      },
+      {
+        "segmentation_ms": 0.7652000058442354,
+        "tracking_ms": 1.0079999919980764,
+        "geometry_material_ms": 5.375600012484938,
+        "total_ms": 7.149200013373047
+      },
+      {
+        "segmentation_ms": 1.6237999952863902,
+        "tracking_ms": 1.4147000038065016,
+        "geometry_material_ms": 4.411899979459122,
+        "total_ms": 7.450799981597811
+      },
+      {
+        "segmentation_ms": 0.8427000138908625,
+        "tracking_ms": 1.0061999782919884,
+        "geometry_material_ms": 5.094000021927059,
+        "total_ms": 6.944099994143471
+      },
+      {
+        "segmentation_ms": 1.0588000004645437,
+        "tracking_ms": 1.3307000044733286,
+        "geometry_material_ms": 3.565299994079396,
+        "total_ms": 5.955000000540167
+      },
+      {
+        "segmentation_ms": 0.4744000034406781,
+        "tracking_ms": 0.5570999928750098,
+        "geometry_material_ms": 2.4683999945409596,
+        "total_ms": 3.500299993902445
+      }
+    ],
+    "frame_timings_ms": [
+      14.634399994974956,
+      1.1894000053871423,
+      8.104899985482916,
+      7.434600003762171,
+      7.971599989105016,
+      7.346099999267608,
+      7.605299993883818,
+      7.230599992908537,
+      6.068499991670251,
+      3.6108999920543283
+    ]
+  },
+  {
+    "name": "18_lighting",
+    "source_frames": 10,
+    "structures": 1,
+    "regions": 3,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 12600,
+    "material_area": {
+      "GREEN_SOLID": 4200,
+      "BLUE_BOUNCE": 4200,
+      "ORANGE_ONE_WAY": 4200
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 0.7764000038150698,
+        "tracking_ms": 1.1118999973405153,
+        "geometry_material_ms": 6.1849000048823655,
+        "total_ms": 8.073700009845197
+      },
+      {
+        "segmentation_ms": 0.7119999791029841,
+        "tracking_ms": 1.102500013075769,
+        "geometry_material_ms": 3.5183999862056226,
+        "total_ms": 5.333299981430173
+      },
+      {
+        "segmentation_ms": 0.5708000098820776,
+        "tracking_ms": 0.662000005831942,
+        "geometry_material_ms": 2.3615999962203205,
+        "total_ms": 3.594700014218688
+      },
+      {
+        "segmentation_ms": 0.5281000048853457,
+        "tracking_ms": 0.7955000037327409,
+        "geometry_material_ms": 2.601999993203208,
+        "total_ms": 3.9259000041056424
+      },
+      {
+        "segmentation_ms": 0.7297999982256442,
+        "tracking_ms": 0.7964999822434038,
+        "geometry_material_ms": 3.933800006052479,
+        "total_ms": 5.4604999895673245
+      },
+      {
+        "segmentation_ms": 0.7166000141296536,
+        "tracking_ms": 0.7384000055026263,
+        "geometry_material_ms": 2.837999985786155,
+        "total_ms": 4.2941000137943774
+      }
+    ],
+    "frame_timings_ms": [
+      11.920299992198125,
+      1.2816000089515,
+      9.770599979674444,
+      3.7198000063654035,
+      8.297399996081367,
+      5.452599987620488,
+      3.7261000252328813,
+      4.109700006665662,
+      5.6151999742724,
+      4.566600022371858
+    ]
+  },
+  {
+    "name": "19_brief_loss",
+    "source_frames": 22,
+    "structures": 1,
+    "regions": 3,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 12600,
+    "material_area": {
+      "GREEN_SOLID": 4200,
+      "BLUE_BOUNCE": 4200,
+      "ORANGE_ONE_WAY": 4200
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 0.831899989861995,
+        "tracking_ms": 0.6478000141214579,
+        "geometry_material_ms": 3.0405999859794974,
+        "total_ms": 4.520499991485849
+      },
+      {
+        "segmentation_ms": 0.4241999995429069,
+        "tracking_ms": 0.7211000192910433,
+        "geometry_material_ms": 2.4967999779619277,
+        "total_ms": 3.642499999841675
+      },
+      {
+        "segmentation_ms": 0.8762000070419163,
+        "tracking_ms": 1.590500003658235,
+        "geometry_material_ms": 4.6381999854929745,
+        "total_ms": 7.106200006091967
+      },
+      {
+        "segmentation_ms": 0.667500018607825,
+        "tracking_ms": 0.8663999906275421,
+        "geometry_material_ms": 2.7187000086996704,
+        "total_ms": 4.252900020219386
+      },
+      {
+        "segmentation_ms": 0.7825999928172678,
+        "tracking_ms": 1.3105999969411641,
+        "geometry_material_ms": 3.15730000147596,
+        "total_ms": 5.250899994280189
+      },
+      {
+        "segmentation_ms": 0.9034999820869416,
+        "tracking_ms": 1.3436000153888017,
+        "geometry_material_ms": 3.829199995379895,
+        "total_ms": 6.076599995139986
+      },
+      {
+        "segmentation_ms": 10.249899991322309,
+        "tracking_ms": 1.2006000033579767,
+        "geometry_material_ms": 4.5661999902222306,
+        "total_ms": 16.017199988709763
+      },
+      {
+        "segmentation_ms": 0.6836000247858465,
+        "tracking_ms": 0.8830000006128103,
+        "geometry_material_ms": 3.2171999919228256,
+        "total_ms": 4.784300021128729
+      },
+      {
+        "segmentation_ms": 0.9621000208426267,
+        "tracking_ms": 1.125699986005202,
+        "geometry_material_ms": 3.3934999955818057,
+        "total_ms": 5.481700005475432
+      },
+      {
+        "segmentation_ms": 0.7854000141378492,
+        "tracking_ms": 1.1360000062268227,
+        "geometry_material_ms": 3.324099991004914,
+        "total_ms": 5.255399999441579
+      },
+      {
+        "segmentation_ms": 1.2245999823790044,
+        "tracking_ms": 1.5147000085562468,
+        "geometry_material_ms": 3.7453999975696206,
+        "total_ms": 6.48499999078922
+      },
+      {
+        "segmentation_ms": 0.7291999936569482,
+        "tracking_ms": 0.6525999924633652,
+        "geometry_material_ms": 2.492800005711615,
+        "total_ms": 3.8748999941162765
+      },
+      {
+        "segmentation_ms": 0.6631000142078847,
+        "tracking_ms": 0.9573999850545079,
+        "geometry_material_ms": 3.849500004434958,
+        "total_ms": 5.470300005981699
+      },
+      {
+        "segmentation_ms": 2.2729999909643084,
+        "tracking_ms": 1.561800017952919,
+        "geometry_material_ms": 3.5849999985657632,
+        "total_ms": 7.4201999814249575
+      },
+      {
+        "segmentation_ms": 1.1014000046998262,
+        "tracking_ms": 1.2508999789133668,
+        "geometry_material_ms": 2.9374000150710344,
+        "total_ms": 5.2900000009685755
+      },
+      {
+        "segmentation_ms": 0.7746999908704311,
+        "tracking_ms": 0.8049000171013176,
+        "geometry_material_ms": 3.4073999850079417,
+        "total_ms": 4.9878999998327345
+      }
+    ],
+    "frame_timings_ms": [
+      10.763099999167025,
+      0.9288000001106411,
+      7.238699996378273,
+      2.5166999839711934,
+      4.6322999987751245,
+      3.8238000124692917,
+      7.364200020674616,
+      4.370300011942163,
+      5.367300007492304,
+      6.229199992958456,
+      10.571499995421618,
+      1.520699996035546,
+      16.135199985001236,
+      5.025300022680312,
+      5.651600018609315,
+      5.477300001075491,
+      6.602499983273447,
+      4.001599998446181,
+      5.630500003462657,
+      7.594900002004579,
+      5.433599988464266,
+      5.109099991386756
+    ]
+  },
+  {
+    "name": "20_reappearance",
+    "source_frames": 32,
+    "structures": 1,
+    "regions": 3,
+    "pixel_error": 0,
+    "overlap_pixels": 0,
+    "iou": 1.0,
+    "reference_area": 12600,
+    "material_area": {
+      "GREEN_SOLID": 4200,
+      "BLUE_BOUNCE": 4200,
+      "ORANGE_ONE_WAY": 4200
+    },
+    "merges": 0,
+    "splits": 0,
+    "region_identity_ambiguities": 0,
+    "timings": [
+      {
+        "segmentation_ms": 0.97339999047108,
+        "tracking_ms": 1.524999999674037,
+        "geometry_material_ms": 5.713499995181337,
+        "total_ms": 8.212299988372251
+      },
+      {
+        "segmentation_ms": 1.268099993467331,
+        "tracking_ms": 1.219199999468401,
+        "geometry_material_ms": 4.508399986661971,
+        "total_ms": 6.996199983404949
+      },
+      {
+        "segmentation_ms": 0.8329999982379377,
+        "tracking_ms": 1.264699996681884,
+        "geometry_material_ms": 4.1843999933917075,
+        "total_ms": 6.2827999936416745
+      },
+      {
+        "segmentation_ms": 1.0645999864209443,
+        "tracking_ms": 1.4825999969616532,
+        "geometry_material_ms": 3.3064000017475337,
+        "total_ms": 5.853899987414479
+      },
+      {
+        "segmentation_ms": 0.9552999981679022,
+        "tracking_ms": 0.6809000042267144,
+        "geometry_material_ms": 2.584700006991625,
+        "total_ms": 4.2212000116705894
+      },
+      {
+        "segmentation_ms": 0.9140000038314611,
+        "tracking_ms": 1.3999000075273216,
+        "geometry_material_ms": 4.8862999828998,
+        "total_ms": 7.200399995781481
+      },
+      {
+        "segmentation_ms": 0.8607000054325908,
+        "tracking_ms": 0.1818999880924821,
+        "geometry_material_ms": 0.41710000368766487,
+        "total_ms": 1.4615000109188259
+      },
+      {
+        "segmentation_ms": 1.1230999953113496,
+        "tracking_ms": 0.12270000297576189,
+        "geometry_material_ms": 0.1345000055152923,
+        "total_ms": 1.3810000091325492
+      },
+      {
+        "segmentation_ms": 1.1273999989498407,
+        "tracking_ms": 0.1680999994277954,
+        "geometry_material_ms": 0.17159999697469175,
+        "total_ms": 1.4680000022053719
+      },
+      {
+        "segmentation_ms": 0.524200004292652,
+        "tracking_ms": 0.03819999983534217,
+        "geometry_material_ms": 0.04220000118948519,
+        "total_ms": 0.604800006840378
+      },
+      {
+        "segmentation_ms": 0.3228000132367015,
+        "tracking_ms": 0.030499999411404133,
+        "geometry_material_ms": 0.03470000228844583,
+        "total_ms": 0.3882000164594501
+      },
+      {
+        "segmentation_ms": 0.3479000006336719,
+        "tracking_ms": 0.0433000095654279,
+        "geometry_material_ms": 0.040799990529194474,
+        "total_ms": 0.4322000022511929
+      },
+      {
+        "segmentation_ms": 0.615699973423034,
+        "tracking_ms": 0.9221000073011965,
+        "geometry_material_ms": 5.163900001207367,
+        "total_ms": 6.702099984977394
+      },
+      {
+        "segmentation_ms": 1.0480000055395067,
+        "tracking_ms": 1.1410000151954591,
+        "geometry_material_ms": 3.895699977874756,
+        "total_ms": 6.08500000089407
+      },
+      {
+        "segmentation_ms": 0.9587999957147986,
+        "tracking_ms": 0.822600006358698,
+        "geometry_material_ms": 3.4665999992284924,
+        "total_ms": 5.248400004347786
+      },
+      {
+        "segmentation_ms": 0.374700000975281,
+        "tracking_ms": 0.49330000183545053,
+        "geometry_material_ms": 2.1772000181954354,
+        "total_ms": 3.0456000240519643
+      },
+      {
+        "segmentation_ms": 0.5554999806918204,
+        "tracking_ms": 0.7464000082109123,
+        "geometry_material_ms": 4.734599991934374,
+        "total_ms": 6.037199986167252
+      },
+      {
+        "segmentation_ms": 0.607900001341477,
+        "tracking_ms": 0.8457000076305121,
+        "geometry_material_ms": 3.008499974384904,
+        "total_ms": 4.462399985641241
+      }
+    ],
+    "frame_timings_ms": [
+      11.18309999583289,
+      2.016899990849197,
+      8.89110000571236,
+      3.295599977718666,
+      8.471499982988462,
+      7.267999986652285,
+      6.5055000013671815,
+      6.03159997262992,
+      4.355999990366399,
+      7.309100008569658,
+      7.749100012006238,
+      2.3776000016368926,
+      1.508000015746802,
+      1.497599994763732,
+      1.3208000164013356,
+      1.4198999851942062,
+      1.4838000060990453,
+      1.3955000031273812,
+      1.4823999954387546,
+      0.6256999913603067,
+      0.39289999403990805,
+      0.438000017311424,
+      7.168699987232685,
+      0.8104000007733703,
+      5.449100019177422,
+      4.097099998034537,
+      6.902099994476885,
+      6.303600006503984,
+      5.355900007998571,
+      3.2139999966602772,
+      6.19309998000972,
+      4.618500010110438
+    ]
+  }
+]

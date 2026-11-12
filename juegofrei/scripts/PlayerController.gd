@@ -3,6 +3,8 @@ const Movement = preload("res://scripts/PlayerMovement.gd")
 const Combat = preload("res://scripts/CombatController.gd")
 enum State { IDLE, RUN, JUMP, FALL, ATTACK, DODGE, HITSTUN, RESPAWN, ELIMINATED }
 var state: State = State.IDLE
+# Optional environment adapter, assigned only in the material laboratory.
+var material_adapter: Node = null
 @onready var combat: Combat = $Combat
 signal respawned(player_id: int)
 
@@ -40,20 +42,22 @@ func _physics_process(delta: float) -> void:
 	if combat.eliminated:
 		state = State.ELIMINATED
 		return
+	if is_instance_valid(material_adapter): material_adapter.before_motion(delta)
 	if not combat.tick(delta):
 		# Freeze voluntary/launch motion while retaining native moving-platform carry.
 		var saved_velocity: Vector2 = velocity
 		velocity = Vector2.ZERO
-		move_and_slide()
+		_move_character(delta,false)
 		velocity = saved_velocity
 		_cancel_descending_on_contact()
 		_update_state()
 		return
+	if is_instance_valid(material_adapter): material_adapter.after_combat_input(delta)
 	if combat.hitstun_left > 0 or combat.dodge_left > 0 or combat.respawn_left > 0 or combat.match_locked:
 		_forced_motion(delta)
 		_update_state()
 		return
-	var grounded: bool = is_on_floor()
+	var grounded: bool = is_on_floor() and not _material_dropping()
 	drop_left = maxf(0.0, drop_left - delta)
 	set_collision_mask_value(2, drop_left <= 0.0)
 	buffer_left = maxf(0.0, buffer_left - delta)
@@ -87,7 +91,7 @@ func _physics_process(delta: float) -> void:
 			velocity.y = move_toward(velocity.y,target,combat.attack.descent_acceleration*delta)
 			velocity.y = minf(velocity.y,target)
 
-	if buffer_left > 0.0 and drop_left <= 0.0 and combat.attack_frame < 0:
+	if buffer_left > 0.0 and drop_left <= 0.0 and combat.attack_frame < 0 and not _material_dropping():
 		if grounded or coyote_left > 0.0:
 			_jump(movement.jump_speed, 1)
 		elif jumps_used < 2:
@@ -95,9 +99,17 @@ func _physics_process(delta: float) -> void:
 			_jump(movement.double_jump_speed, 2)
 	if Input.is_action_just_released(jump_action) and velocity.y < 0.0:
 		velocity.y *= movement.jump_cut_multiplier
-	move_and_slide()
+	_move_character(delta)
 	_cancel_descending_on_contact()
 	_update_state()
+
+func _material_dropping() -> bool:
+	return is_instance_valid(material_adapter) and material_adapter.ignoring_support()
+
+func _move_character(delta: float,apply_materials: bool=true) -> void:
+	var incoming: Vector2 = velocity
+	move_and_slide()
+	if apply_materials and is_instance_valid(material_adapter): material_adapter.after_motion(delta,incoming)
 
 func _cancel_descending_on_contact() -> void:
 	if is_on_floor() and combat.is_descending_attack():
@@ -141,7 +153,7 @@ func _forced_motion(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0.0, combat.knockback_drag * delta if combat.hitstun_left > 0 else movement.deceleration * delta)
 		var gravity: float = movement.ascent_gravity if velocity.y < 0 else movement.descent_gravity
 		velocity.y = minf(velocity.y + gravity * delta, movement.fast_fall_speed if combat.hitstun_left > 0 else movement.terminal_speed)
-	move_and_slide()
+	_move_character(delta)
 
 func _update_state() -> void:
 	if combat.eliminated:
